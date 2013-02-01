@@ -1,2 +1,2 @@
--e git://github.com/getpelican/pelican.git@HEAD#egg=pelican-dev
+-e git://github.com/getpelican/pelican.git@3.0#egg=pelican-dev
 markdown
