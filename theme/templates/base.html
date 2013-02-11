@@ -27,11 +27,11 @@
 
         <img id="logo" alt="{{ SITENAME }}" src="{{ 'theme/img/logo/OMBU_logo_wood.png' | cdn }}">
 
-        <div id="main-nav" class="navbar navbar-fixed-top">
+        <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="row-fluid">
-                    <div class="span10">
-                        <ul class="nav">
+                    <div class="span12">
+                        <ul id="main-nav" class="nav">
                             <li class="active"><a href="#home">Home</a></li>
                             <li><a href="#skill">Services</a></li>
                             <li><a href="#work">Work</a></li>
@@ -40,8 +40,10 @@
                             {% for title, link in MENUITEMS %}
                             <li><a href="{{ link }}">{{ title }}</a></li>
                             {% endfor %}
+                            <li><a href="careers" class="msg">We're Hiring
+                                <span class="badge">2</span></a></li>
                         </ul>
-                    </div><!-- /.span10 -->
+                    </div>
                 </div>
             </div>
         </div> <!-- /#menu -->
