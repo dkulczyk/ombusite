@@ -23,7 +23,7 @@
 
     </head>
 
-    <body data-spy="scroll" data-target='#main-nav'>
+    <body data-spy="scroll" data-target='#main-nav' class='{{body_class}}'>
 
         <img id="logo" alt="{{ SITENAME }}" src="{{ 'theme/img/logo/OMBU_logo_wood.png' | cdn }}">
 
@@ -32,6 +32,7 @@
                 <div class="row-fluid">
                     <div class="span12">
                         <ul id="main-nav" class="nav">
+                            {% block navitems %}
                             <li class="active"><a href="#home">Home</a></li>
                             <li><a href="#skill">Services</a></li>
                             <li><a href="#work">Work</a></li>
@@ -40,8 +41,9 @@
                             {% for title, link in MENUITEMS %}
                             <li><a href="{{ link }}">{{ title }}</a></li>
                             {% endfor %}
-                            <li><a href="careers" class="msg">We're Hiring
+                            <li><a href="{{SITEURL}}/pages/careers.html" class="msg">We're Hiring
                                 <span class="badge">2</span></a></li>
+                            {% endblock %}
                         </ul>
                     </div>
                 </div>
