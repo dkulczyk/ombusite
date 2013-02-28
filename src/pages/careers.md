@@ -14,12 +14,12 @@ We're looking for two new partners in crime. Care to join us?
 <a id="ux-lead"></a> User Experience Lead
 -----------------------------------------
 
-OMBU is looking for someone person to head our user experience and front-end
-practice. This position is responsible for leading our team and clients in the
-design and implementation of outstanding websites and applications. This is
-both a leadership and technical position so it involves collaboration with the
-team and clients, as well as the ability to get your hands dirty to prototype
-and develop.
+OMBU is looking for someone to head our user experience and front-end practice.
+This position is responsible for leading our team and clients in the design and
+implementation of outstanding websites and applications. This is both a
+leadership and technical position so it involves collaboration with the team
+and clients, as well as the ability to get your hands dirty to prototype and
+develop.
 
 ### Requirements
 
