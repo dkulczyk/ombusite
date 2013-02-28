@@ -13,8 +13,9 @@ THEME = 'theme'
 PATH = 'src'
 STATIC_PATHS = ['images']
 FEED_ATOM = None
+FEED_ALL_ATOM = None
 FEED_RSS = None
-WEBASSETS = True
+PLUGINS = ['pelican.plugins.assets', ]
 DIRECT_TEMPLATES = ('index',)
 GOOGLE_ANALYTICS = 'UA-16055309-1'
 
