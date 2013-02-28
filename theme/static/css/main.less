@@ -19,6 +19,7 @@
 // Components: Nav
 @import "../../../lib/bootstrap/less/navs.less";
 @import "../../../lib/bootstrap/less/navbar.less";
+@import "../../../lib/bootstrap/less/buttons.less";
 @import "../../../lib/bootstrap/less/carousel.less";
 @import "../../../lib/bootstrap/less/responsive.less";
 
@@ -353,13 +354,7 @@ p {
         margin-bottom: 2em;
     }
     .btn {
-        background-color: darken(@blue, 25%);
         padding: 0.5em;
-        color: @white;
-        &:hover {
-            text-decoration: none;
-            background-color: darken(@blue, 23%);
-        }
     }
 }
 
@@ -390,6 +385,7 @@ body.page {
         .border-radius(12px);
         padding: 1px 3px 1px 12px;
         margin-top: 8px;
+        font-weight: normal;
         > .badge {
             color: @red;
             background-color: @white;
