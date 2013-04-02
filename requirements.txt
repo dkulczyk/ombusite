@@ -1,2 +1,4 @@
--e git://github.com/getpelican/pelican.git@HEAD#egg=pelican-dev
+-e git://github.com/getpelican/pelican.git@3.1.1#egg=pelican-stable
 markdown
+webassets
+cssmin
