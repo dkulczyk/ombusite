@@ -372,7 +372,11 @@ p {
 }
 
 body.page {
-   margin-top: 5em;
+  margin-top: 5em;
+
+  .container-fluid {
+    padding: 0 @padding-left;
+  }
 }
 
 /********************************************************************************
@@ -482,6 +486,9 @@ body.page {
         font-size: 14px;
         padding-left: inherit;
         padding-right: inherit;
+        &.page {
+          margin-top: 0;
+        }
     }
 
     .navbar-fixed-top {
@@ -583,12 +590,20 @@ body.page {
 }
 
 @media (max-width: 480px) {
+    @padding-left: 1em;
+
+    body.page {
+      .container-fluid {
+        padding: 0 @padding-left;
+      }
+    }
+
     #work {
         .highlights {
             display: none;
         }
     }
-    @padding-left: 1em;
+
     #logo {
       left: @padding-left;
     }
