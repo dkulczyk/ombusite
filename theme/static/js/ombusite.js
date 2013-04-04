@@ -51,11 +51,14 @@ jQuery(document).ready(function($) {
     // Scroll panes when clicking on nav items
     $("#main-nav a[href^='#']").click(function(event) {
         event.preventDefault();
-        var x = $(this.hash).offset().top - $('#main-nav').height() + 2;
+        var y = $(this.hash).offset().top + 2;
+        if ($('.navbar').css('position') === "fixed") {
+          y = y - $('.navbar').height();
+        }
         var hash = this.hash;
         $('html,body').animate(
             {
-                scrollTop: x
+                scrollTop: y
             },
             {
             complete: function() {
