@@ -102,20 +102,24 @@ p {
     z-index: @zindexFixedNavbar + 1;
     position: fixed;
     top: -25px;
-    left: @padding-left;
-    width: 113px;
-    // max-width: 140px;
-    // min-width: 90px;
-    box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    left: 0;
+    width: 19%;
 
     img {
       display: block;
+      margin: 0 auto;
+      box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
     }
 }
 
+.navbar .navbar-inner .container-fluid {
+  padding: 0 2em;
+}
 #main-nav.nav {
-    margin-left: 12em;
     & > li {
+        &:first-child > a {
+          margin-left: -15px;
+        }
         > a {
             color: @gray;
             font-weight: bold;
@@ -503,6 +507,8 @@ body.page {
         .box-shadow(none);
         overflow: hidden;
         height: 62px;
+        left: @padding-left;
+        width: 113px;
 
         img {
           position: relative;
