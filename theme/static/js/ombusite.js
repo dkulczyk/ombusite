@@ -7,7 +7,7 @@ $.fx.speeds._default = 300;
  * Bootstrp's scrollspy offset such that main nav updates at the correct
  * position.
  */
-$.fn.scrollspy.defaults.offset = 40;
+$.fn.scrollspy.defaults.offset = 41;
 
 // function closestToTop() {
 //     var currDelta = Number.POSITIVE_INFINITY, currElem;
@@ -51,7 +51,7 @@ jQuery(document).ready(function($) {
     // Scroll panes when clicking on nav items
     $("#main-nav a[href^='#']").click(function(event) {
         event.preventDefault();
-        var y = $(this.hash).offset().top + 2;
+        var y = $(this.hash).offset().top;
         if ($('.navbar').css('position') === "fixed") {
           y = y - $('.navbar').height();
         }
