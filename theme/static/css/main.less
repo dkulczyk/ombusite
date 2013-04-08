@@ -506,10 +506,21 @@ body.page {
         }
     }
     #main-nav.nav {
-        margin-top: 15px;
+        margin: 5px -2em 3px;
         & > li {
+            background: rgba(0, 0, 0, 0.4);
             &:first-child > a {
               margin-left: 0;
+            }
+            a {
+              .border-radius(0);
+              color: rgb(220, 220, 220);
+              padding-left: 2.25em;
+              margin-bottom: 1px;
+              &:hover,
+              &:focus {
+                background-color: #F2F2F2 !important;
+              }
             }
         }
     }
