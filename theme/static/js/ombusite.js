@@ -7,7 +7,7 @@ $.fx.speeds._default = 300;
  * Bootstrp's scrollspy offset such that main nav updates at the correct
  * position.
  */
-$.fn.scrollspy.defaults.offset = 41;
+$.fn.scrollspy.defaults.offset = 40;
 
 // function closestToTop() {
 //     var currDelta = Number.POSITIVE_INFINITY, currElem;
@@ -25,11 +25,15 @@ $.fn.scrollspy.defaults.offset = 41;
 jQuery(document).ready(function($) {
 
     // Lazy image loading
-    $('img.lazy').lazyload({
-        effect: 'fadeIn',
-        threshold: 200,
-        skip_invisible: false
-    });
+    $('img.lazy')
+      .lazyload({
+          effect: 'fadeIn',
+          threshold: 200,
+          skip_invisible: false
+      })
+      .load(function() {
+        $(this).addClass('lazy-loaded');
+      });
     $(window).on('slid', function(e) { $(window).resize(); });
     $('a[data-toggle="tab"]').on('shown', function(e) { $(window).resize(); });
 
@@ -52,9 +56,6 @@ jQuery(document).ready(function($) {
     $("#main-nav a[href^='#']").click(function(event) {
         event.preventDefault();
         var y = $(this.hash).offset().top;
-        if ($('.navbar').css('position') === "fixed") {
-          y = y - $('.navbar').height();
-        }
         var hash = this.hash;
         $('html,body').animate(
             {
@@ -62,7 +63,12 @@ jQuery(document).ready(function($) {
             },
             {
             complete: function() {
-                window.location.hash = hash;
+                if (history.pushState) {
+                  history.pushState(null, null, hash);
+                }
+                else {
+                  window.location.hash = hash;
+                }
             }
         });
     });
@@ -81,5 +87,24 @@ jQuery(document).ready(function($) {
         c = $th.parents('.project').find('.carousel');
         c.data('carousel').to($th.index());
     });
-});
 
+    // Refresh scrollspy when new images are lazy loaded.
+    function refreshScrollspy() {
+      var scrollspy = $('body').data('scrollspy');
+      if (scrollspy) {
+        scrollspy.refresh();
+      }
+    }
+
+    $(window)
+      .on('appear', refreshScrollspy)
+      .on('resize', refreshScrollspy);
+
+    scrollspyInterval = setInterval(function() {
+      refreshScrollspy();
+      if ($('img.lazy:not(.lazy-loaded)').length === 0) {
+        clearInterval(scrollspyInterval);
+      }
+    }, 5*1000);
+
+});

@@ -188,7 +188,7 @@ p {
 }
 
 .pane {
-    padding: 0 @padding-left;
+    padding: 56px @padding-left 0;
     .box-sizing(border-box);
     min-height: 100%;
     position: relative;
@@ -196,7 +196,6 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     h1 {
-        margin-top: 45px;
     }
 }
 
@@ -218,6 +217,7 @@ p {
     }
 
     h1 {
+        margin-top: 45px;
         font-size: 350%;
     }
 
@@ -288,7 +288,8 @@ p {
 }
 
 #team {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
     // min-height: 0;
     background: url(../img/wood-grain.jpg) repeat;
     .hero-unit {
@@ -350,6 +351,9 @@ p {
 
 #contact {
     background-image: url(../img/omcc.jpg);
+    h1 {
+      margin-top: 1em;
+    }
     h2 {
         color: lighten(@blue, 35%);
     }
