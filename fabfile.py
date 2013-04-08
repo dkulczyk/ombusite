@@ -43,3 +43,5 @@ def push(ref='origin/master'):
     if env.host_type != 'production':
         run("chown -R %(user)s:%(host_webserver_user)s %(host_site_path)s "
             "&& chmod -R 02750 %(host_site_path)s" % env)
+        find -type d -exec chmod 0755 {} \;
+        find -type f -exec chmod 0644 {} \;
