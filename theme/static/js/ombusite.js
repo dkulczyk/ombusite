@@ -88,6 +88,42 @@ jQuery(document).ready(function($) {
         c.data('carousel').to($th.index());
     });
 
+    /**
+     * Set up mobile tab "dots" navigation.
+     */
+    $('.nav-pills').each(function() {
+      var $dots = $('<ul class="nav-dots visible-phone">');
+      $('li a', this).each(function(i, tab) {
+        var $tab = $(tab);
+        var $li = $('<li></li>');
+        var $dot = $('<a href="#"></a>');
+        $dot.appendTo($li);
+        $dot.data('navtarget', this);
+        $tab.data('dot', $dot[0]);
+        if ($tab.hasClass('active')) {
+          $li.addClass('active');
+        }
+        $li.appendTo($dots);
+      });
+      if ($('li.active', $dots).length === 0) {
+        $('li:first', $dots).addClass('active');
+      }
+      $(this).before($dots);
+    });
+    // Click on dots, click on original link.
+    $('.nav-dots a').click(function(e) {
+      e.preventDefault();
+      var tab = $(this).data('navtarget');
+      $(tab).click();
+    });
+    // Activate the correct dot when tabs change.
+    $(window).on('shown', function(e) {
+      var $dot = $($(e.target).data('dot'));
+      $dot.parents('.nav-dots').find('li').removeClass('active');
+      $dot.parents('li').addClass('active');
+    });
+
+
     // Refresh scrollspy when new images are lazy loaded.
     function refreshScrollspy() {
       var scrollspy = $('body').data('scrollspy');

@@ -44,6 +44,39 @@
 @padding-left: 2em; /* padding from the left of the viewport for certain
                        elements such as logo */
 
+// FontAwesome
+@FontAwesomePath:   "fonts/fontawesome";
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('@{FontAwesomePath}/fontawesome-webfont.eot?v=3.0.1');
+  src: url('@{FontAwesomePath}/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+    url('@{FontAwesomePath}/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+    url('@{FontAwesomePath}/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+//    url('@{FontAwesomePath}/fontawesome-webfont.svg#fontawesomeregular?v=3.0.1') format('svg');
+
+//  src: url('@{FontAwesomePath}/FontAwesome.otf') format('opentype');
+
+  font-weight: normal;
+  font-style: normal;
+}
+#FontAwesome() {
+  .font() {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+  }
+  .icon-circle-blank() {
+    #FontAwesome.font();
+    &:before { content: "\f021"; }
+  }
+  .icon-circle() {
+    #FontAwesome.font();
+    &:before { content: "\f022"; }
+  }
+}
+
 // Bootstrap variable overrides
 @navbarCollapseWidth: 768px;
 @navbarLinkBackgroundActive: transparent;
@@ -284,6 +317,9 @@ p {
             color: darken(@red, 30%);
             background-color: @white;
         }
+    }
+    .nav-dots a {
+      color:  @white !important;
     }
 }
 
@@ -542,10 +578,6 @@ body.page {
         padding-top: 2em;
         padding-bottom: @padding-left;
 
-        ul.projects {
-            margin-top: 25px;
-        }
-
         h1 {
           margin-top: 0.5em;
         }
@@ -620,6 +652,43 @@ body.page {
         }
     }
 
+    .nav-pills {
+      overflow: hidden;
+      position: relative;
+      li {
+        display: none;
+        margin: 0;
+        &.active {
+          display: block;
+        }
+      }
+    }
+    .nav-dots {
+      text-align: center;
+      li {
+        display: inline-block;
+        background: none !important;
+        padding: 0 !important;
+        margin: 0 .5em !important;
+        list-style: none !important;
+        a {
+          display: block;
+          #FontAwesome.icon-circle-blank();
+          line-height: 1.9em;
+          width: 1.9em;
+          height: 1.9em;
+          font-size: 1.125em;
+          &:hover {
+            #FontAwesome.icon-circle();
+          }
+        }
+        &.active {
+          a {
+            #FontAwesome.icon-circle();
+          }
+        }
+      }
+    }
 }
 
 @media (max-width: 480px) {
