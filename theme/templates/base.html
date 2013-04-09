@@ -25,28 +25,42 @@
 
     </head>
 
-    <body data-spy="scroll" data-target='#main-nav' class='{{body_class}}'>
+    <body data-spy="scroll" data-target='.navbar' class='{{body_class}}'>
 
-        <img id="logo" alt="{{ SITENAME }}" src="{{ 'theme/img/logo/OMBU_logo_wood.png' | cdn }}">
+        <div id="logo">
+          <img class="hidden-phone" alt="{{ SITENAME }}" src="{{ 'theme/img/logo/OMBU_logo_wood.png' | cdn }}">
+          <img class="visible-phone" width="71" height="20" alt="{{ SITENAME }}" src="{{ 'theme/img/logo/OMBU.png' | cdn }}">
+        </div>
 
         <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
-                <div class="row-fluid">
-                    <div class="span12">
-                        <ul id="main-nav" class="nav">
-                            {% block navitems %}
-                            <li class="active"><a href="#home">Home</a></li>
-                            <li><a href="#skill">Services</a></li>
-                            <li><a href="#work">Work</a></li>
-                            <li><a href="#team">Team</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            {% for title, link in MENUITEMS %}
-                            <li><a href="{{ link }}">{{ title }}</a></li>
-                            {% endfor %}
-                            <li><a href="{{SITEURL}}/pages/careers.html"
-                                class="msg">We're Hiring! <span class="badge">2</span></a></li>
-                            {% endblock %}
-                        </ul>
+                <div class="">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </a>
+                    <div class="nav-collapse collapse">
+                        <div class="container-fluid">
+                            <div class="row-fluid">
+                                <div class="offset2 span10">
+                                    <ul id="main-nav" class="nav">
+                                        {% block navitems %}
+                                        <li class="active"><a href="#home">Home</a></li>
+                                        <li><a href="#skill">Services</a></li>
+                                        <li><a href="#work">Work</a></li>
+                                        <li><a href="#team">Team</a></li>
+                                        <li><a href="#contact">Contact</a></li>
+                                        {% for title, link in MENUITEMS %}
+                                        <li><a href="{{ link }}">{{ title }}</a></li>
+                                        {% endfor %}
+                                        <li><a href="{{SITEURL}}/pages/careers.html"
+                                            class="msg">We're Hiring! <span class="badge">2</span></a></li>
+                                        {% endblock %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -61,8 +75,11 @@
             src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         {% assets filters="rjsmin", output="js/packed.js",
             "js/jquery.lazyload.js",
-            "js/bootstrap-tab.js", "js/bootstrap-carousel.js",
-            "js/bootstrap-scrollspy.js",  "js/ombusite.js" %}
+            "js/bootstrap-tab.js",
+            "js/bootstrap-collapse.js",
+            "js/bootstrap-carousel.js",
+            "js/bootstrap-scrollspy.js",
+            "js/ombusite.js" %}
             <script src="{{ ASSET_URL | cdn }}"></script>
         {% endassets %}
         <script type="text/javascript"
