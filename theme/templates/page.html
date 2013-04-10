@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base-page.html" %}
 {% set body_class = "page" %}
 
 {% block navitems %}
@@ -14,9 +14,5 @@
 {% endblock %}
 
 {% block content %}
-<div class="row-fluid">
-    <div class="span7 offset2">
     {{ page.content }}
-    </div>
-</div>
 {% endblock %}
