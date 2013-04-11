@@ -45,17 +45,9 @@
                             <div class="row-fluid">
                                 <div class="offset2 span10">
                                     <ul id="main-nav" class="nav">
-                                        {% block navitems %}
-                                        <li class="active"><a href="#home">Home</a></li>
-                                        <li><a href="#skill">Services</a></li>
-                                        <li><a href="#work">Work</a></li>
-                                        <li><a href="#team">Team</a></li>
-                                        <li><a href="#contact">Contact</a></li>
-                                        {% for title, link in MENUITEMS %}
-                                        <li><a href="{{ link }}">{{ title }}</a></li>
-                                        {% endfor %}
-                                        <li><a href="{{SITEURL}}/pages/careers.html"
-                                            class="msg">We're Hiring! <span class="badge">2</span></a></li>
+                                        {% block menu_items %}
+                                          {% set active_menu_item = active_menu_item or "index" %}
+                                          {% include "_menu_items.html" %}
                                         {% endblock %}
                                     </ul>
                                 </div>
