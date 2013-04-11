@@ -30,6 +30,7 @@ TRANSLATION_FEED_ATOM = None
 USE_FOLDER_AS_CATEGORY = False
 
 if BLOG_ENABLED == True:
+    DISQUS_SITENAME = ''
     ARTICLE_DIR = 'posts'
     FEED_RSS = 'feeds/rss.xml'
     DEFAULT_PAGINATION = 10
