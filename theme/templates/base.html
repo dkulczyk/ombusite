@@ -10,6 +10,9 @@
         <meta name="author" content="{{AUTHOR}}">
         <meta name="google-site-verification"
         content="A-U6_TK2x4CfcumOj0cxWgflyFl19BQW1-teBvM0bBA" />
+        {% if FEED_RSS %}
+            <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+        {% endif %}
         {% endblock head %}
 
         {% assets filters="less,cssmin", output="css/main.min.css", "css/main.less" %}
