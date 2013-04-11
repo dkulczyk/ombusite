@@ -26,6 +26,8 @@
 
 // Misc
 @import "../../../lib/bootstrap/less/labels-badges.less";
+@import "codehilite-solarized.less";
+
 
 // Colors
 @red: hsl(1, 65%, 58%);
@@ -112,6 +114,24 @@ h2 {
 
 h3 {
     font-size: 1.4em;
+}
+
+.codeFont() {
+    font-family: "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+.codehilite {
+  pre {
+    .codeFont();
+    line-height: 1.3em;
+    padding: 1em;
+  }
+}
+code {
+  .codeFont();
+  background-color: #002B36;
+  color: #93A1A1;
+  padding: 2px;
 }
 
 .page-content {
@@ -694,6 +714,10 @@ body.page {
           }
         }
       }
+    }
+
+    .page-content {
+      margin-top: 2em;
     }
 }
 
