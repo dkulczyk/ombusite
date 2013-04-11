@@ -53,10 +53,14 @@ jQuery(document).ready(function($) {
     // });
 
     // Scroll panes when clicking on nav items
-    $("#main-nav a[href^='#']").click(function(event) {
+    $("#main-nav a[data-target]").click(function(event) {
+        var hash = $(this).data('target');
+        var $target = $(hash);
+        if ($target.length === 0) {
+          return;
+        }
         event.preventDefault();
-        var y = $(this.hash).offset().top;
-        var hash = this.hash;
+        var y = $target.offset().top;
         $('html,body').animate(
             {
                 scrollTop: y
