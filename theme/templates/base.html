@@ -59,7 +59,7 @@
         </div> <!-- /#menu -->
 
         <div class="container-fluid">
-            {% block content %}{% endblock %}
+            {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
         </div><!--/.fluid-container-->
 
         {% block js %}
