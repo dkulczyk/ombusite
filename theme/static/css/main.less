@@ -79,7 +79,7 @@
 }
 
 // Bootstrap variable overrides
-@navbarCollapseWidth: 768px;
+@navbarCollapseWidth: 767px;
 @navbarLinkBackgroundActive: transparent;
 @navbarLinkColorActive: @orange;
 @linkColor: @blue;
@@ -435,22 +435,6 @@ body.page {
 }
 
 @media (min-width: 979px) {
-    #main-nav.nav > li a.msg {
-        position:fixed;
-        right: 2em;
-        color: @white;
-        background-color: @red;
-        .border-radius(12px);
-        padding: 1px 3px 1px 12px;
-        margin-top: 8px;
-        font-weight: normal;
-        > .badge {
-            color: @red;
-            background-color: @white;
-            padding-left: 6px;
-            padding-right: 6px;
-        }
-    }
     .nav-pills {
         border-bottom: 1px solid;
         > li > a {
@@ -520,6 +504,24 @@ body.page {
 @media (min-width: 768px) and (max-width: 979px) {
 }
 
+@media (min-width: 768px) {
+    #main-nav.nav > li a.msg {
+        position:fixed;
+        right: 2em;
+        color: @white;
+        background-color: @red;
+        .border-radius(12px);
+        padding: 1px 3px 1px 12px;
+        margin-top: 8px;
+        font-weight: normal;
+        > .badge {
+            color: @red;
+            background-color: @white;
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+    }
+}
 @media (max-width: 767px) {
 
     // Padding to set content in a bit
@@ -566,6 +568,7 @@ body.page {
             }
         }
     }
+
 
     .nav-pills li {
         float: none;
