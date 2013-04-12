@@ -1,0 +1,13 @@
+<li class="{% if active_menu_item == 'index' %}active{% endif %}"><a href="{{ SITEURL }}#home" data-target="#home">Home</a></li>
+<li><a href="{{ SITEURL }}#skill" data-target="#skill">Services</a></li>
+<li><a href="{{ SITEURL }}#work" data-target="#work">Work</a></li>
+<li><a href="{{ SITEURL }}#team" data-target="#team">Team</a></li>
+<li><a href="{{ SITEURL }}#contact" data-target="#contact">Contact</a></li>
+{% if BLOG_ENABLED %}
+<li class="{% if active_menu_item == 'blog' %}active{% endif %}">
+  <a href="{{ SITEURL }}/blog.html">Blog</a>
+</li>
+{% endif %}
+<li class="{% if active_menu_item == 'careers' %}active{% endif %}">
+  <a href="{{ SITEURL }}/pages/careers.html" class="msg">We're Hiring <span class="badge">2</span></a>
+</li>

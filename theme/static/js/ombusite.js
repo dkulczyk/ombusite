@@ -25,11 +25,15 @@ $.fn.scrollspy.defaults.offset = 40;
 jQuery(document).ready(function($) {
 
     // Lazy image loading
-    $('img.lazy').lazyload({
-        effect: 'fadeIn',
-        threshold: 200,
-        skip_invisible: false
-    });
+    $('img.lazy')
+      .lazyload({
+          effect: 'fadeIn',
+          threshold: 200,
+          skip_invisible: false
+      })
+      .load(function() {
+        $(this).addClass('lazy-loaded');
+      });
     $(window).on('slid', function(e) { $(window).resize(); });
     $('a[data-toggle="tab"]').on('shown', function(e) { $(window).resize(); });
 
@@ -49,17 +53,26 @@ jQuery(document).ready(function($) {
     // });
 
     // Scroll panes when clicking on nav items
-    $("#main-nav a[href^='#']").click(function(event) {
+    $("#main-nav a[data-target]").click(function(event) {
+        var hash = $(this).data('target');
+        var $target = $(hash);
+        if ($target.length === 0) {
+          return;
+        }
         event.preventDefault();
-        var x = $(this.hash).offset().top - $('#main-nav').height() + 2;
-        var hash = this.hash;
+        var y = $target.offset().top;
         $('html,body').animate(
             {
-                scrollTop: x
+                scrollTop: y
             },
             {
             complete: function() {
-                window.location.hash = hash;
+                if (history.pushState) {
+                  history.pushState(null, null, hash);
+                }
+                else {
+                  window.location.hash = hash;
+                }
             }
         });
     });
@@ -78,5 +91,60 @@ jQuery(document).ready(function($) {
         c = $th.parents('.project').find('.carousel');
         c.data('carousel').to($th.index());
     });
-});
 
+    /**
+     * Set up mobile tab "dots" navigation.
+     */
+    $('.nav-pills').each(function() {
+      var $dots = $('<ul class="nav-dots visible-phone">');
+      $('li a', this).each(function(i, tab) {
+        var $tab = $(tab);
+        var $li = $('<li></li>');
+        var $dot = $('<a href="#"></a>');
+        $dot.appendTo($li);
+        $dot.data('navtarget', this);
+        $tab.data('dot', $dot[0]);
+        if ($tab.hasClass('active')) {
+          $li.addClass('active');
+        }
+        $li.appendTo($dots);
+      });
+      if ($('li.active', $dots).length === 0) {
+        $('li:first', $dots).addClass('active');
+      }
+      $(this).before($dots);
+    });
+    // Click on dots, click on original link.
+    $('.nav-dots a').click(function(e) {
+      e.preventDefault();
+      var tab = $(this).data('navtarget');
+      $(tab).click();
+    });
+    // Activate the correct dot when tabs change.
+    $(window).on('shown', function(e) {
+      var $dot = $($(e.target).data('dot'));
+      $dot.parents('.nav-dots').find('li').removeClass('active');
+      $dot.parents('li').addClass('active');
+    });
+
+
+    // Refresh scrollspy when new images are lazy loaded.
+    function refreshScrollspy() {
+      var scrollspy = $('body').data('scrollspy');
+      if (scrollspy) {
+        scrollspy.refresh();
+      }
+    }
+
+    $(window)
+      .on('appear', refreshScrollspy)
+      .on('resize', refreshScrollspy);
+
+    scrollspyInterval = setInterval(function() {
+      refreshScrollspy();
+      if ($('img.lazy:not(.lazy-loaded)').length === 0) {
+        clearInterval(scrollspyInterval);
+      }
+    }, 5*1000);
+
+});

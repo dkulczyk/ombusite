@@ -19,12 +19,15 @@
 // Components: Nav
 @import "../../../lib/bootstrap/less/navs.less";
 @import "../../../lib/bootstrap/less/navbar.less";
+@import "../../../lib/bootstrap/less/pager.less";
 @import "../../../lib/bootstrap/less/buttons.less";
 @import "../../../lib/bootstrap/less/carousel.less";
 @import "../../../lib/bootstrap/less/responsive.less";
 
 // Misc
 @import "../../../lib/bootstrap/less/labels-badges.less";
+@import "codehilite-solarized.less";
+
 
 // Colors
 @red: hsl(1, 65%, 58%);
@@ -44,7 +47,41 @@
 @padding-left: 2em; /* padding from the left of the viewport for certain
                        elements such as logo */
 
+// FontAwesome
+@FontAwesomePath:   "fonts/fontawesome";
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('@{FontAwesomePath}/fontawesome-webfont.eot?v=3.0.1');
+  src: url('@{FontAwesomePath}/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+    url('@{FontAwesomePath}/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+    url('@{FontAwesomePath}/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+//    url('@{FontAwesomePath}/fontawesome-webfont.svg#fontawesomeregular?v=3.0.1') format('svg');
+
+//  src: url('@{FontAwesomePath}/FontAwesome.otf') format('opentype');
+
+  font-weight: normal;
+  font-style: normal;
+}
+#FontAwesome() {
+  .font() {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+  }
+  .icon-circle-blank() {
+    #FontAwesome.font();
+    &:before { content: "\f021"; }
+  }
+  .icon-circle() {
+    #FontAwesome.font();
+    &:before { content: "\f022"; }
+  }
+}
+
 // Bootstrap variable overrides
+@navbarCollapseWidth: 767px;
 @navbarLinkBackgroundActive: transparent;
 @navbarLinkColorActive: @orange;
 @linkColor: @blue;
@@ -79,11 +116,29 @@ h3 {
     font-size: 1.4em;
 }
 
-p {
-    max-width: 50em;
+.codeFont() {
+    font-family: "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 }
 
-.container-fluid ul:not(.nav) {
+.codehilite {
+  pre {
+    .codeFont();
+    line-height: 1.3em;
+    padding: 1em;
+  }
+}
+code {
+  .codeFont();
+  background-color: #002B36;
+  color: #93A1A1;
+  padding: 2px;
+}
+
+.page-content {
+  max-width: 50em;
+}
+
+#skill .tab ul {
     margin-left: 0;
     li {
         padding-left: 1.2em;
@@ -101,16 +156,29 @@ p {
     z-index: @zindexFixedNavbar + 1;
     position: fixed;
     top: -25px;
-    left: @padding-left;
-    width: 120px;
-    // max-width: 140px;
-    // min-width: 90px;
-    box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    left: 0;
+    width: 19%;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    }
 }
 
+.navbar .navbar-inner {
+  .btn-navbar {
+    margin-right: @padding-left;
+  }
+  .container-fluid {
+    padding: 0 2em;
+  }
+}
 #main-nav.nav {
-    margin-left: 12em;
     & > li {
+        &:first-child > a {
+          margin-left: -15px;
+        }
         > a {
             color: @gray;
             font-weight: bold;
@@ -174,7 +242,7 @@ p {
 }
 
 .pane {
-    padding: 0 @padding-left;
+    padding: 56px @padding-left 0;
     .box-sizing(border-box);
     min-height: 100%;
     position: relative;
@@ -182,7 +250,6 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     h1 {
-        margin-top: 45px;
     }
 }
 
@@ -199,12 +266,12 @@ p {
         margin-bottom: 2em;
         color: @white;
         border: 9px solid;
-        padding: 0 2em 0 135px;
-        min-height: 14em;
+        padding: 0 2em 1em 135px;
         text-shadow: 0 1px 1px hsla(0, 0%, 0%, .4),0 0 2px hsla(0, 0%, 0%, .2);
     }
 
     h1 {
+        margin-top: 45px;
         font-size: 350%;
     }
 
@@ -223,6 +290,7 @@ p {
 }
 
 #work {
+    padding-bottom: 1em;
     a {
         color: @orange;
     }
@@ -253,6 +321,7 @@ p {
 }
 
 #skill {
+    padding-bottom: 1em;
     background-color: @red;
     color: @white;
     .hero-unit {
@@ -272,10 +341,14 @@ p {
             background-color: @white;
         }
     }
+    .nav-dots a {
+      color:  @white !important;
+    }
 }
 
 #team {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
     // min-height: 0;
     background: url(../img/wood-grain.jpg) repeat;
     .hero-unit {
@@ -337,6 +410,9 @@ p {
 
 #contact {
     background-image: url(../img/omcc.jpg);
+    h1 {
+      margin-top: 0;
+    }
     h2 {
         color: lighten(@blue, 35%);
     }
@@ -344,8 +420,12 @@ p {
         margin-top: 50px;
         .box-shadow(3px 0px 9px hsla(0, 0%, 0%, 0.3));
         background-color: darken(@blue, 15%);
-        padding: 0 3em;
+        padding: @padding-left;
         color: @white;
+
+        address {
+          margin-bottom: 0;
+        }
     }
     .map {
         background: transparent url(../img/map.png) center center;
@@ -359,7 +439,11 @@ p {
 }
 
 body.page {
-   margin-top: 5em;
+  margin-top: 55px;
+
+  .container-fluid {
+    padding: 0 @padding-left;
+  }
 }
 
 /********************************************************************************
@@ -377,22 +461,6 @@ body.page {
 }
 
 @media (min-width: 979px) {
-    #main-nav.nav > li a.msg {
-        position:fixed;
-        right: 2em;
-        color: @white;
-        background-color: @red;
-        .border-radius(12px);
-        padding: 1px 3px 1px 12px;
-        margin-top: 8px;
-        font-weight: normal;
-        > .badge {
-            color: @red;
-            background-color: @white;
-            padding-left: 6px;
-            padding-right: 6px;
-        }
-    }
     .nav-pills {
         border-bottom: 1px solid;
         > li > a {
@@ -462,6 +530,24 @@ body.page {
 @media (min-width: 768px) and (max-width: 979px) {
 }
 
+@media (min-width: 768px) {
+    #main-nav.nav > li a.msg {
+        position:fixed;
+        right: 2em;
+        color: @white;
+        background-color: @red;
+        .border-radius(12px);
+        padding: 1px 3px 1px 12px;
+        margin-top: 8px;
+        font-weight: normal;
+        > .badge {
+            color: @red;
+            background-color: @white;
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+    }
+}
 @media (max-width: 767px) {
 
     // Padding to set content in a bit
@@ -469,13 +555,46 @@ body.page {
         font-size: 14px;
         padding-left: inherit;
         padding-right: inherit;
+        &.page {
+          margin-top: 0;
+        }
     }
 
     .navbar-fixed-top {
-        position: absolute;
+        position: relative;
         margin-right:0;
         margin-left:0;
+        background: url(../img/wood-grain.jpg) 0 0 transparent;
+
+        .navbar-inner {
+          background-color: transparent;
+        }
     }
+    .navbar .btn-navbar,
+    .navbar .btn-navbar:hover {
+      background-image: none;
+      background-color: transparent;
+    }
+    #main-nav.nav {
+        margin: 5px -2em 3px;
+        & > li {
+            background: rgba(0, 0, 0, 0.4);
+            &:first-child > a {
+              margin-left: 0;
+            }
+            a {
+              .border-radius(0);
+              color: rgb(220, 220, 220);
+              padding-left: 2.25em;
+              margin-bottom: 1px;
+              &:hover,
+              &:focus {
+                background-color: #F2F2F2 !important;
+              }
+            }
+        }
+    }
+
 
     .nav-pills li {
         float: none;
@@ -486,26 +605,58 @@ body.page {
 
     .pane {
         min-height: 0;
+        padding-top: 2em;
+        padding-bottom: @padding-left;
 
-        ul.projects {
-            margin-top: 25px;
+        h1 {
+          margin-top: 0.5em;
         }
-
     }
 
     #logo {
         position: absolute;
-        width: 120px;
+        overflow: hidden;
+        top: 0;
+        left: @padding-left;
+        width: 113px;
+        height: 36px;
+
+        img {
+          .box-shadow(0 0 0 transparent);
+          display: block;
+          margin-left: 0;
+          margin-top: 8px;
+        }
+    }
+
+    #home {
+      min-height: 0;
+      .hero {
+        background-image: none;
+        padding: 1em 2em;
+        margin: 0;
+        max-width: none;
+        border: none;
+
+        h1 {
+          margin-top: 0.25em;
+        }
+      }
     }
 
     #contact {
+        .address {
+          margin-top: 0;
+        }
         .map {
             height: 15em;
+            margin-bottom: 0;
         }
 
         h1 {
             margin: 0;
             opacity: 0;
+            height: 0;
         }
     }
 
@@ -513,10 +664,10 @@ body.page {
         min-height: 30em;
     }
     #team {
+        padding-bottom: 0;
         .team-member {
-            width: 33%;
+            width: 100% / 3;
             &:nth-of-type(3n+1) {
-                width: 34%;
                 clear:left;
             }
             &:nth-of-type(4n+1) {
@@ -536,12 +687,91 @@ body.page {
         }
     }
 
+    .nav-pills {
+      overflow: hidden;
+      position: relative;
+      li {
+        display: none;
+        margin: 0;
+        &.active {
+          display: block;
+        }
+      }
+    }
+    .nav-dots {
+      margin-left: 0;
+      text-align: center;
+      li {
+        display: inline-block;
+        background: none !important;
+        padding: 0 !important;
+        margin: 0 .5em !important;
+        list-style: none !important;
+        a {
+          display: block;
+          #FontAwesome.icon-circle-blank();
+          line-height: 1.9em;
+          width: 1.9em;
+          height: 1.9em;
+          font-size: 1.125em;
+          &:hover {
+            #FontAwesome.icon-circle();
+          }
+        }
+        &.active {
+          a {
+            #FontAwesome.icon-circle();
+          }
+        }
+      }
+    }
+
+    .page-content {
+      margin-top: 2em;
+    }
 }
 
 @media (max-width: 480px) {
+    @padding-left: 1em;
+
+    body.page {
+      .container-fluid {
+        padding: 0 @padding-left;
+      }
+    }
+
     #work {
         .highlights {
             display: none;
         }
+    }
+
+    #logo {
+      left: @padding-left;
+    }
+    .navbar .navbar-inner {
+      .btn-navbar {
+        margin-right: @padding-left;
+      }
+    }
+    .pane {
+      padding: 0 @padding-left @padding-left;
+    }
+
+    #home {
+      padding: 1em;
+      .hero {
+        padding: @padding-left;
+        margin-bottom: 0;
+        h1 {
+          font-size: 300%;
+        }
+      }
+    }
+    #contact {
+      padding: @padding-left;
+      .address {
+        padding: @padding-left;
+      }
     }
 }

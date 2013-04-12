@@ -2,22 +2,8 @@
 # -*- coding: utf-8 -*- #
 import sys
 sys.path.append('./lib/local')
+sys.path.append('.')
+from config_default import *
 
 BUILD_ENV = 'production'
-AUTHOR = u"Martin Rio"
-SITENAME = u"OMBU: Web Development in Portland, Oregon"
-TIMEZONE = 'US/Pacific'
-DEFAULT_LANG = 'en'
-DEFAULT_PAGINATION = False
-THEME = 'theme'
-PATH = 'src'
-STATIC_PATHS = ['images']
-FEED_ATOM = None
-FEED_ALL_ATOM = None
-FEED_RSS = None
-PLUGINS = ['pelican.plugins.assets', ]
-DIRECT_TEMPLATES = ('index',)
 GOOGLE_ANALYTICS = 'UA-16055309-1'
-
-from custom_filters import cdn
-JINJA_FILTERS = {'cdn': cdn}

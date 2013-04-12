@@ -1,23 +1,7 @@
-{% extends "base.html" %}
+{% extends "base-page.html" %}
 {% set body_class = "page" %}
-
-{% block navitems %}
-<li><a href="{{SITEURL}}/#home">Home</a></li>
-<li><a href="{{SITEURL}}/#skill">Services</a></li>
-<li><a href="{{SITEURL}}/#work">Work</a></li>
-<li><a href="{{SITEURL}}/#team">Team</a></li>
-<li><a href="{{SITEURL}}/#contact">Contact</a></li>
-{% for title, link in MENUITEMS %}
-<li><a href="{{ link }}">{{ title }}</a></li>
-{% endfor %}
-<li><a href="{{SITEURL}}/pages/careers.html" class="msg">We're Hiring!
-    <span class="badge">2</span></a></li>
-{% endblock %}
+{% set active_menu_item = page.slug %}
 
 {% block content %}
-<div class="row-fluid">
-    <div class="span7 offset2">
     {{ page.content }}
-    </div>
-</div>
 {% endblock %}
