@@ -12,10 +12,16 @@ virtualenv is installed, this will install this project's dependencies:
     workon ombusite
     pip install -r requirements.txt
 
+The v1.3.1 LESS compiler is also required, which can be installed with npm:
+
+    npm install -g less@1.3.1
+
 Build the site
 --------------
 
     pelican -s config.py -v -r
+
+For debugging purposes, add the -D switch
 
 License
 -------
