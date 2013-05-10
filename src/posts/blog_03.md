@@ -1,5 +1,5 @@
 Title: Yet another blog post
-Date: 2013-05-06
+Date: 2013-05-09
 Author: Adam
 Tags: lorem, ipsum
 
