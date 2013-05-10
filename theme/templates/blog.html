@@ -36,7 +36,7 @@
                         <abbr class="published" title="{{ article.date.isoformat() }}">{{ article.date.strftime('%b %d, %Y') }}</abbr>
                         <ul>
                             {% for tag in article.tags %}
-                                <li><a href="/tag/{{ tag }}/">{{ tag }}</a></li>
+                                <li>{{ tag }}</li>
                             {% endfor %}
                         </ul>
                     <aside>
