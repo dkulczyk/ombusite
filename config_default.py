@@ -18,7 +18,7 @@ PAGINATED_DIRECT_TEMPLATES = ()
 #PAGE_EXCLUDES = ('careers',)
 
 # Blog
-BLOG_ENABLED = False
+BLOG_ENABLED = True
 FEED_RSS = False
 FEED_ATOM = None
 FEED_ALL_ATOM = None

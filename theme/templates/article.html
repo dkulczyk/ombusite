@@ -1,14 +1,38 @@
-{% extends "base-page.html" %}
-{% set body_class = "page" %}
+{% extends "base.html" %}
+{% set body_class = "page blog article" %}
 {% set active_menu_item = "blog" %}
 
 {% block content %}
-      <header> <h1 class="entry-title">{{ article.title }}</h1> </header>
-      <footer class="post-info">
-        <abbr class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr>
-        {% if article.author %}<address class="vcard author">By {{ article.author }}</address>{% endif %}
-      </footer><!-- /.post-info -->
-      <div class="entry-content"> {{ article.content }} </div><!-- /.entry-content -->
+
+    <header class="title">
+        <div class="row-fluid">
+            <div class="span10 offset2">
+                <h1 class="entry-title">{{ article.title }}</h1>
+            </div>
+        </div>
+    </header>
+    <div class="row-fluid">
+        <div class="span2">
+            <aside class="post-info">
+                {% if article.author %}
+                    <img src="{{ 'theme/img/team/ap-1.jpg' | cdn }}" width="50" height="50" alt="Adam Page" />
+                    <address class="vcard author">By {{ article.author }}</address>
+                    <p class="bio">Seasoned Web architect, team lead, and client advocate. Thrives on making projects happen and seeing them succeed. Cook, pet trainer, and craft brew assessor.</p>
+                {% endif %}
+                <abbr class="published" title="{{ article.date.isoformat() }}">{{ article.date.strftime('%b %d, %Y') }}</abbr>
+                <ul>
+                    {% for tag in article.tags %}
+                        <li><a href="/tag/{{ tag }}/">{{ tag }}</a></li>
+                    {% endfor %}
+                </ul>
+            </aside>
+        </div>
+        <div class="span7 page-content">
+            <div class="entry-content">
+                {{ article.content }}
+            </div>
+        </div>
+    </div>
 
       {% if DISQUS_SITENAME %}
       <div class="comments">

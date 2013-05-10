@@ -1,22 +1,58 @@
-{% extends "base-page.html" %}
-{% set body_class = "page blog-list" %}
+{% extends "base.html" %}
+{% set body_class = "page blog blog-list" %}
 {% set active_menu_item = "blog" %}
 
 {% block content %}
 
-      <h1>Blog{% if articles_page.has_previous() %} - Page {{ articles_page.number }}{% endif %}</h1>
+    <header class="title">
+        <div class="row-fluid">
+            <div class="span10 offset2">
+                <h1>Blog{% if articles_page.has_previous() %} - Page {{ articles_page.number }}{% endif %}</h1>
+            </div>
+        </div>
+    </header>
 
-      {% for article in articles_page.object_list %}
-              <article>
-                      <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
-                      <footer class="post-info">
-                          <abbr class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr>
-                          {% if article.author %}<address class="vcard author">By {{ article.author }}</address>{% endif %}
-                      </footer><!-- /.post-info -->
-                      <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
-              </article>
-      {% endfor %}
+    {% for article in articles_page.object_list %}
 
-      {% include '_pagination.html' %}
+        <article>
+            <div class="row-fluid">
+                <div class="span2">
+                    <aside class="post-info">
+                        {% if article.author %}
+                            <img src="{{ 'theme/img/team/ap-1.jpg' | cdn }}" width="50" height="50" alt="Adam Page" />
+                            <address class="vcard author">By {{ article.author }}</address>
+                        {% endif %}
+                        <abbr class="published" title="{{ article.date.isoformat() }}">{{ article.date.strftime('%b %d, %Y') }}</abbr>
+                        <ul>
+                            {% for tag in article.tags %}
+                                <li><a href="/tag/{{ tag }}/">{{ tag }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    <aside>
+                </div>
+                <div class="span7 page-content">
+                    <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+                    <div class="entry-content">
+                        {{ article.summary }}
+                        <p class="more"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">Read more &rang;</a></p>
+                    </div><!-- /.entry-content -->
+                </div>
+            </div>
+        </article>
+
+    {% endfor %}
+
+    <div class="row-fluid">
+        <div class="span10 offset2 page-content">
+            {% include '_pagination.html' %}
+        </div>
+    </div>
+
+    <div class="about">
+        <h5>RSS</h5>
+        <p><a href="{{ SITEURL }}/feeds/rss.xml">Subscribe to our feed</a></p>
+        <h5>About OMBU</h5>
+        <p>We're a Web technology firm. We plan, build, and launch websites, applications, content management systems, and cloud infrastructures.</p>
+    </div>
 
 {% endblock content %}
