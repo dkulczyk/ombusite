@@ -561,27 +561,8 @@ body.blog {
   }
 
   .about {
-    position: relative;
-
     > div {
-      position: absolute;
-      top: 24px;
-      right: 0;
-      // top: -68px;
-      // top: -120px;
-      // background-color: @blue;
-      // padding: 15px;
-      // color: white;
-      // margin-right: -28px;
       font-size: 0.85em;
-
-      // background-color: #b8c1e0;
-
-      h5 {
-        // background-color: @blue;
-        // margin: 0 -28px 0 0;
-        // padding: 5px 10px;
-      }
 
       p {
         margin-bottom: 3.0em;
@@ -691,6 +672,19 @@ body.blog {
             padding-right: 6px;
         }
     }
+
+  body.blog {
+
+    .about {
+      position: relative;
+
+      > div {
+        position: absolute;
+        top: 24px;
+        right: 0;
+      }
+    }
+  }
 }
 @media (max-width: 767px) {
 
