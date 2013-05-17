@@ -8,9 +8,12 @@
             </div>
         </div>
     </header>
-    <div class="row-fluid">
-        <div class="span3 offset9 about">
-            <div>
+
+    {% block content %}{% endblock %}
+
+    <div class="row-fluid about">
+        <div class="span3 offset9">
+            <div class="wrap">
                 <h5>About OMBU</h5>
                 <p>We're a Web technology firm. We plan, build, and launch websites, applications, content management systems, and cloud infrastructures.</p>
                 <h5>RSS</h5>
@@ -18,7 +21,5 @@
             </div>
         </div>
     </div>
-
-    {% block content %}{% endblock %}
 {% endblock %}
 

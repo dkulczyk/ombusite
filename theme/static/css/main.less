@@ -688,18 +688,26 @@ body.blog {
         }
     }
 
-  body.blog {
+    body.blog {
+        .about {
+            position: fixed;
+            width: 100%;
+            top: 88px;
+            left: 0;
 
-    .about {
-      position: relative;
+            .span3 {
+                position: relative;
+                min-height: 0;
 
-      > div {
-        position: absolute;
-        top: 24px;
-        right: 0;
-      }
+                .wrap {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding-right: @padding-left;
+                }
+            }
+        }
     }
-  }
 }
 @media (max-width: 767px) {
 
