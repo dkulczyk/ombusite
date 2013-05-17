@@ -605,15 +605,28 @@ body.blog {
     }
   }
 
-  .about {
-    > div {
-      font-size: 0.85em;
+    .about {
+        .wrap {
+            margin: 10px;
+            padding: 20px;
+            font-size: 0.85em;
+            background-color: lighten(@beige, 20);
+            border-top: 1px solid @beige;
+            color: darken(@beige, 40);
+            line-height: 1.7em;
 
-      p {
-        margin-bottom: 3.0em;
-      }
+            h5 {
+                color: darken(@beige, 20);
+                text-shadow: 0 1px 0 white;
+                margin-top: 2.0em;
+                text-transform: uppercase;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
     }
-  }
 }
 
 /********************************************************************************
@@ -757,7 +770,6 @@ body.blog {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    padding-right: @padding-left;
                 }
             }
         }
