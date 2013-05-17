@@ -471,55 +471,69 @@ body.page {
 
 body.blog {
 
-  .title {
-    padding-top: 13px;
-  }
-
-  aside.post-info {
-    text-align: center;
-    margin-top: -0.5em;
-
-    abbr {
-      display: block;
-      border-bottom: 0;
-      cursor: default;
-      color: gray;
+    .title {
+      padding-top: 13px;
+      padding-bottom: 20px;
     }
 
-    .bio {
-      border-top: 1px dotted #ccc;
-      border-bottom: 1px dotted #ccc;
-      font-size: 0.85em;
-      line-height: 1.6em;
-      padding: 1.0em;
-      text-align: left;
-      color: #666;
-    }
+    aside.post-info {
 
-    img {
-      border-radius: 25px;
-      margin-bottom: 0.5em;
-    }
-
-    ul {
-      list-style: none;
-      margin: 0;
-
-      li {
-        display: inline;
-        color: #999;
-
-        &:not(:first-child) {
-          border-left: 1px solid #ccc;
-          padding: 0 0 0 8px;
+        address {
+            margin: 0.4em 0 0 0;
+            display: inline-block;
         }
 
-        a {
-          color: @blue;
+        abbr {
+            margin: 0.4em 0 0 0;
+            display: inline-block;
+            border-bottom: 0;
+            cursor: default;
+            color: gray;
+
+            &:before {
+                content: ('on ');
+            }
         }
-      }
+
+        .bio {
+            border-top: 1px dotted #ccc;
+            border-bottom: 1px dotted #ccc;
+            font-size: 0.85em;
+            line-height: 1.6em;
+            padding: 1.0em;
+            text-align: left;
+            color: #666;
+
+            margin-top: 2.0em;
+        }
+
+        img {
+            border-radius: 25px;
+            margin-bottom: 0.5em;
+
+            float: left;
+            margin-right: 1.0em;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+
+            li {
+                display: inline;
+                color: #999;
+
+                &:not(:first-child) {
+                    border-left: 1px solid #ccc;
+                    padding: 0 0 0 8px;
+                }
+
+                a {
+                    color: @blue;
+                }
+            }
+        }
     }
-  }
 
   article {
     margin: 2.0em 0;
@@ -705,6 +719,30 @@ body.blog {
     }
 
     body.blog {
+
+        aside.post-info {
+            margin-top: -0.5em;
+            text-align: center;
+
+            address {
+                display: block;
+                margin-bottom: 1.0em;
+            }
+
+            abbr {
+                display: block;
+
+                &:before {
+                    content: ('');
+                }
+            }
+
+            img {
+                float: none;
+                margin-right: 0;
+            }
+        }
+
         .about {
             position: fixed;
             width: 100%;

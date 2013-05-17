@@ -11,14 +11,16 @@
                 {% if article.author %}
                     <img src="{{ 'theme/img/team/ap-1.jpg' | cdn }}" width="50" height="50" alt="Adam Page" />
                     <address class="vcard author">By {{ article.author }}</address>
-                    <p class="bio">Seasoned Web architect, team lead, and client advocate. Thrives on making projects happen and seeing them succeed. Cook, pet trainer, and craft brew assessor.</p>
                 {% endif %}
                 <abbr class="published" title="{{ article.date.isoformat() }}">{{ article.date.strftime('%b %d, %Y') }}</abbr>
                 <ul>
                     {% for tag in article.tags %}
-                        <li><a href="/tag/{{ tag }}/">{{ tag }}</a></li>
+                        <li>{{ tag }}</li>
                     {% endfor %}
                 </ul>
+                {% if article.author %}
+                    <p class="bio">Seasoned Web architect, team lead, and client advocate. Thrives on making projects happen and seeing them succeed. Cook, pet trainer, and craft brew assessor.</p>
+                {% endif %}
             </aside>
         </div>
         <div class="span7 page-content">
