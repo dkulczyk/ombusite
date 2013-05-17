@@ -32,12 +32,16 @@
 
     <body data-spy="scroll" data-target='.navbar' class='{{body_class}}'>
 
-        <a href="/" id="logo">
-         <img class="hidden-phone" width="113" height="126"
-              alt="{{ SITENAME }}" src="/{{ 'theme/img/logo/OMBU_logo_wood.png' }}">
-          <img class="visible-phone" width="71" height="20"
-               alt="{{ SITENAME }}" src="/{{ 'theme/img/logo/OMBU.png' }}">
-        </a>
+        <div id="logo">
+            <div class="wrap">
+                <div class="logo-inner">
+                    <a href="/">
+                      <img class="hidden-phone" width="113" height="126" alt="{{ SITENAME }}" src="{{ 'theme/img/logo/OMBU_logo_wood.png' | cdn }}">
+                      <img class="visible-phone" width="71" height="20" alt="{{ SITENAME }}" src="{{ 'theme/img/logo/OMBU.png' | cdn }}">
+                    </a>
+                </div>
+            </div>
+        </div>
 
         <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">

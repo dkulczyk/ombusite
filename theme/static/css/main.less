@@ -153,22 +153,37 @@ code {
 }
 
 #logo {
-    z-index: @zindexFixedNavbar + 1;
     position: fixed;
-    top: -25px;
+    z-index: @zindexFixedNavbar + 1;
+    top: 0;
     left: 0;
-    width: 19%;
-    width: 18.2%;
+    width: 100%;
 
-    img {
-      display: block;
-      margin: 0 auto;
-      box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    .wrap {
+        padding: 0 @padding-left;
 
-      &.hidden-phone {
-          width: 113px;
-          height: auto;
-      }
+        .logo-inner {
+            width: 14.52991452991453%;
+            position: relative;
+
+            a {
+                position: absolute;
+                top: -25px;
+                left: 50%;
+                margin-left: -56px;
+
+                img {
+                  display: block;
+                  margin: 0 auto;
+                  box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+
+                    &.hidden-phone {
+                        width: 113px;
+                        height: auto;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -752,18 +767,27 @@ body.blog {
     }
 
     #logo {
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: @padding-left;
-        width: 113px;
-        height: 36px;
+        position: relative;
+        padding-left: @padding-left;
 
-        img {
-          .box-shadow(0 0 0 transparent);
-          display: block;
-          margin-left: 0;
-          margin-top: 8px;
+        .wrap {
+            .logo-inner {
+                a {
+                    position: absolute;
+                    overflow: hidden;
+                    top: 0;
+                    left: @padding-left;
+                    width: 113px;
+                    height: 36px;
+
+                    img {
+                      .box-shadow(0 0 0 transparent);
+                      display: block;
+                      margin-left: 0;
+                      margin-top: 8px;
+                    }
+                }
+            }
         }
     }
 
@@ -885,7 +909,13 @@ body.blog {
     }
 
     #logo {
-      left: @padding-left;
+        .wrap {
+            .logo-inner {
+                a {
+                  left: @padding-left;
+                }
+            }
+        }
     }
     .navbar .navbar-inner {
       .btn-navbar {
