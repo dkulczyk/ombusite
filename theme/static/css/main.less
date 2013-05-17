@@ -547,8 +547,24 @@ body.blog {
     }
 
     hr {
-      border: 0;
-      border-bottom: 1px solid #ccc;
+        margin: 2.5em 10% 0 10%;
+        border: 0;
+        height: 1px;
+        background-image: -webkit-linear-gradient(left, rgba(201, 201, 192, 0), rgba(201, 201, 192, 0.5), rgba(201, 201, 192, 0));
+        background-image:    -moz-linear-gradient(left, rgba(201, 201, 192, 0), rgba(201, 201, 192, 0.5), rgba(201, 201, 192, 0));
+        background-image:     -ms-linear-gradient(left, rgba(201, 201, 192, 0), rgba(201, 201, 192, 0.5), rgba(201, 201, 192, 0));
+        background-image:      -o-linear-gradient(left, rgba(201, 201, 192, 0), rgba(201, 201, 192, 0.5), rgba(201, 201, 192, 0));
+        text-align: center;
+        color: @beige;
+    }
+    hr:after {
+        content: "● ● ●";
+        display: inline-block;
+        position: relative;
+        top: -12px;
+        font-size: 18px;
+        padding: 0 0.45em;
+        background: white;
     }
   }
 
