@@ -15,7 +15,9 @@ STATIC_PATHS = ['images']
 PLUGINS = ['pelican.plugins.assets', ]
 DIRECT_TEMPLATES = ('index',)
 PAGINATED_DIRECT_TEMPLATES = ()
-#PAGE_EXCLUDES = ('careers',)
+PAGE_EXCLUDES = ('careers',)
+PAGE_URL = '{slug}'
+PAGE_SAVE_AS = '/{slug}/index.html'
 
 # Blog
 BLOG_ENABLED = True
@@ -31,12 +33,14 @@ TRANSLATION_FEED_ATOM = None
 USE_FOLDER_AS_CATEGORY = False
 
 if BLOG_ENABLED == True:
+    BLOG_URL = 'blog'
+    BLOG_SAVE_AS = 'blog/index.html'
     DISQUS_SITENAME = ''
     ARTICLE_DIR = 'posts'
     FEED_RSS = 'feeds/rss.xml'
     DEFAULT_PAGINATION = 10
     DIRECT_TEMPLATES = ('index','blog')
     PAGINATED_DIRECT_TEMPLATES = ('blog',)
-    ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
-    ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
+    ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}'
+    ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
