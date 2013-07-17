@@ -1,4 +1,4 @@
-from fabric.api import task, env, local, run, cd
+from fabric.api import task, env, local, run, cd, execute
 from fabric.contrib.project import rsync_project
 
 @task
