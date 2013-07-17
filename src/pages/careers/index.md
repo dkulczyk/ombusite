@@ -4,87 +4,52 @@ Date: 2013-02-12
 Careers
 =======
 
-We're looking for two new partners in crime. Care to join us?
+We're have an open position, and it's awesome. Please take a look!
 
-- [User Experience Lead](#ux-lead)
 - [Full-stack Developer](#full-stack-developer)
 
 * * *
 
-<a id="ux-lead"></a> User Experience Lead
------------------------------------------
-
-OMBU is looking for someone to head our user experience and front-end practice.
-This position is responsible for leading our team and clients in the design and
-implementation of outstanding websites and applications. This is both a
-leadership and technical position so it involves collaboration with the team
-and clients, as well as the ability to get your hands dirty to prototype and
-develop.
-
-### Requirements
-
-- You have the vision and creativity to inspire and lead the team in delivering
-  outstanding Web user experiences.
-- You have superb leadership and communication skills to work with clients,
-  designers, and developers.
-- You enjoy staying on top of evolving Web technologies, and can identify which
-  ones should become part of the company's stack.
-- You are proficient with the modern front-end development stack, which
-  includes JavaScript, and have experience with the issues brought by today's
-  wild environment of devices, screen sizes, and resolutions.
-- You're familiar with front-end performance, version control, and the Unix
-  command line.
-
-### Benefits
-
-- A leadership role within a team that's highly skilled, lean, and efficient,
-  with a proven record to deliver large-scale and high-quality solutions.
-- Exposure to a wide range of clients, projects, and industries, including
-  entertainment, technology, NGO, and government.
-- A hassle-free, modern work environment with a strong emphasis on life/work
-  balance, remote-work, and flexible schedules.
-- Competitive salary and benefits.
-
-<a href="mailto:martin@ombuweb.com" class="btn btn-primary">Get in touch about
-the UX Lead Position</a>
-
-* * *
-
-<a id="full-stack-developer"></a> Full-stack Developer
+<a id="full-stack-developer"></a> Full-stack Web Developer with an emphasis on Drupal
 ------------------------------------------------------
 
-OMBU is a dynamic and well-rounded technology firm where full-stack developers
-play an essential role. We put an emphasis on identifying and implementing the
-best solution to our clients' challenges rather than focusing on a single
-platform. In the past few years we launched projects that leveraged Drupal,
-Django, Flask, Zend Framework, WordPress, MongoDB, Solr, jQuery, Dojo Toolkit,
-Sencha Touch, Bootstrap, AWS, and Fabric.
+OMBU is a dynamic and well-rounded development shop focused on designing and
+deploying the best solutions for our clients Web needs. Our tool chest is
+large, eclectic, and evolving - over the past few years we launched successful
+projects using Drupal, Django, Zend Framework, WordPress, MongoDB, Solr, all
+sorts of JavaScript, Bootstrap - the list goes on. So you can imagine how
+full-stack developers play an central role at OMBU.
 
-We're currently looking for a developer comfortable working across the full Web
-stack. The ideal candidate will be a constant learner who thrives designing and
-implementing solutions to technical challenges with the support of a team. If
-you think you may fit the bill, or would like to learn more, let's chat!
+Due to our current project pipeline, we're looking for a developer with
+substantial experience in Drupal and/or Django. The ideal candidate will be
+someone with a well-rounded understanding of the Web stack, a constant learner
+able to push the boundaries with confidence and class, someone who thrives
+designing and implementing sustainable Web solutions in collaboration with a
+seasoned and proven team.
 
 ### Requirements
 
-- You have a solid grasp of the HTTP protocol - it all begins here.
+- You have a track record of shipping quality work in Drupal and/or Django.
+- You have a solid grasp of the HTTP protocol — it all begins there.
 - You're comfortable with the full Web development stack: front- and back-end
   architecture, and infrastructure.
-- You have a track record of shipping quality work using PHP and/or Python.
 - You're eager to commit to a team, its products, and clients.
-- You have a killer development setup, grock version control, and are at home
-  on the Unix command line.
+- You have a solid development environment, mastery of version control, and
+  can't wait to get your hands on exciting projects and seeing them go-live.
 
 ### Benefits
 
-- Opportunity to join a small, lean, and efficient team with a proven record of
-  designing and shipping large-scale and high-quality solutions.
-- Exposure to a wide range of clients, projects, and industries, including
-  entertainment, NGOs, and government, each with unique technical challenges for
-  which you'll have a large stake in the solution and implementation.
+- The opportunity to join an established small and efficient team with a record
+  of designing and shipping scalable high-quality solutions, and a portfolio of
+  happy clients.
+- Exposure to a wide range of technologies, projects, and industries, including
+  entertainment, education, NGOs, and government, each with unique technical
+  challenges.
 - A hassle-free, modern work environment with a strong emphasis on life/work
   balance, remote-work, and flexible schedules.
 - Competitive salary and benefits.
 
-<a href="mailto:martin@ombuweb.com" class="btn btn-primary">Get in touch about
-the Full-stack Developer Position</a>
+If you think this may be your type of gig and you fit the bill, or you'd like
+to learn more about OMBU, don't hesitate to <a href="mailto:martin@ombuweb.com"
+class="btn btn-primary">get in touch about this opportunity</a>.
+

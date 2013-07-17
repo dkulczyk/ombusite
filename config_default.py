@@ -15,7 +15,7 @@ STATIC_PATHS = ['images']
 PLUGINS = ['pelican.plugins.assets', ]
 DIRECT_TEMPLATES = ('index',)
 PAGINATED_DIRECT_TEMPLATES = ()
-PAGE_EXCLUDES = ('careers',)
+#PAGE_EXCLUDES = ('careers',)
 
 # Blog
 BLOG_ENABLED = False
