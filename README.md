@@ -19,6 +19,12 @@ The v1.3.1 LESS compiler is also required, which can be installed with npm:
 Build the site
 --------------
 
+Using Fabric:
+
+    fab local build
+
+Using the `pelican` command:
+
     pelican -s config.py -v -r
 
 For debugging purposes, add the -D switch

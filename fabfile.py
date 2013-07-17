@@ -1,5 +1,12 @@
-from fabric.api import task, env
+from fabric.api import task, env, local, run, cd
+from fabric.contrib.project import rsync_project
 
+@task
+def dev():
+    """
+    The dev server definition
+    """
+    env.config_file = 'config_development.py'
 
 @task
 def qa():
@@ -32,9 +39,7 @@ def push(ref='origin/master'):
     """
     Deploy a commit to a host
     """
-    from fabric.api import local, run, cd
-    from fabric.contrib.project import rsync_project
-    local('pelican -s %s -d' % env.config_file)
+    execute(build)
     rsync_project(
         remote_dir=env.host_site_path,
         local_dir='output/',
@@ -45,3 +50,10 @@ def push(ref='origin/master'):
             "&& chmod -R 02750 %(host_site_path)s" % env)
     else:
         run("cd %(host_site_path)s && find -type d -exec chmod 0755 {} \; && find -type f -exec chmod 0644 {} \;" % env)
+
+@task
+def build():
+    """
+    Build the site
+    """
+    local('pelican -s %s -d' % env.config_file)
