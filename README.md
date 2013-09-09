@@ -12,6 +12,12 @@ virtualenv is installed, this will install this project's dependencies:
     workon ombusite
     pip install -r requirements.txt
 
+If pip fails to install requirements, you may need to install pytz separately
+using easy_install from within the virtualenv:
+
+    workon ombusite
+    easy_install pytz
+
 The v1.3.1 LESS compiler is also required, which can be installed with npm:
 
     npm install -g less@1.3.1
