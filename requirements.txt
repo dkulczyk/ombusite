@@ -2,3 +2,5 @@
 markdown
 webassets
 cssmin
+# Development requirements
+Fabric>=1.8.0

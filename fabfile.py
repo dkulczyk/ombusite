@@ -13,12 +13,11 @@ def qa():
     """
     The qa server definition
     """
-    env.config_file = 'config_production.py'
-    env.hosts = ['ombu@d2.ombuweb.com:34165']
+    env.config_file = 'config_development.py'
+    env.hosts = ['pepe']
     env.host_type = 'qa'
-    env.user = 'ombu'
     env.host_webserver_user = 'www-data'
-    env.host_site_path = '/mnt/main/qa/qa2/public'
+    env.host_site_path = '/var/www/qa14/current'
 
 
 @task
@@ -35,7 +34,7 @@ def production():
 
 
 @task
-def push(ref='origin/master'):
+def deploy():
     """
     Deploy a commit to a host
     """
@@ -45,10 +44,7 @@ def push(ref='origin/master'):
         local_dir='output/',
         delete=True
     )
-    if env.host_type != 'production':
-        run("chown -R %(user)s:%(host_webserver_user)s %(host_site_path)s "
-            "&& chmod -R 02750 %(host_site_path)s" % env)
-    else:
+    if env.host_type == 'production':
         run("cd %(host_site_path)s && find -type d -exec chmod 0755 {} \; && find -type f -exec chmod 0644 {} \;" % env)
 
 @task
