@@ -7,8 +7,8 @@
             <div class="carousel-inner">
                 {% for f in features %}
                 <div class="{{ loop.index }} item {{ 'active' if loop.index == 1 }}">
-                    <img class="lazy" src="{{ 'theme/img/grey.gif' | cdn }}"
-                    data-original="{{ ('theme/img/work/' + f.image) | cdn }}"
+                    <img class="lazy" src="{{ 'theme/img/grey.gif' }}"
+                    data-original="{{ ('theme/img/work/' + f.image) }}"
                     width="100%">
                 </div>
                 {% endfor %}
@@ -59,7 +59,10 @@
                     Pictures</a>
             </li>
             <li>
-                <a data-toggle="tab" href="#amaa">Ankrom Moisan</a>
+                <a data-toggle="tab" href="#uolcb">University of Oregon</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#cartalk">Car Talk</a>
             </li>
             <li>
                 <a data-toggle="tab" href="#stand">Stand for
@@ -100,39 +103,62 @@
                 },
             ])
             }}
-
         </div>
 
-        <div id="amaa" class="tab">
+        <div id="uolcb" class="tab">
             {{ project(
-            title='Ankrom Moisan Architects',
-            description=""" <p>Ankrom Moisan is one of the Northwest's premier
-            architectural, interior, and urban design firm. Ankrom reached out
-            to OMBU with an ambitious site idea, and tight deadline after trying
-            to work with other vendors. OMBU studied the project requirements
-            and laid out a process that would allow us to launch the site on
-            time, without sacrificing quality or critical features. After
-            completing development, we helped Ankrom's IT staff build the
-            requisite hosting infrastructure and manage the site launch. Site
-            design by <a href='http://www.ankrommoisan.com'>Ankrom
-                Moisan</a>.</p> """,
+            title='Lundquist College of Business',
+            description="""
+            <p>
+            OMBU planned and developed a customized CMS for the five schools
+            of the University of Oregon's Lundquist College of Busines.
+            The College needed a powerful publishing and moderation
+            system capable of delivering its message in a forward-looking
+            design that could reach their wide audience, on any device. We
+            delivered a solution that not only met these requirements, but
+            leveraged and extended existing Univeristy systems, such as their
+            calander and single sign-on solutions, so this shiny new website
+            remained a good neighor in the University's web infrastructure. Site
+            design by <a href='http://www.whitehorse.com'>White Horse</a>.</p>""",
             features=[
                 {
-                'caption':'Full-width, retina-quality photography',
-                'image':'amaa-1.jpg',
+                'caption':'Stunning responsive design',
+                'image':'uolcb-1.jpg',
                 },
                 {
-                'caption':'A modern fluid grid layout',
-                'image':'amaa-2.jpg',
+                'caption':'Integration with social media outlets',
+                'image':'uolcb-2.jpg',
                 },
                 {
-                'caption':'A user-friendly Drupal CMS',
-                'image':'amaa-3.jpg',
-                }
+                'caption':'Robust publishing and moderation workflow',
+                'image':'uolcb-3.jpg',
+                },
             ])
             }}
         </div>
 
+        <div id="cartalk" class="tab">
+            {{ project(
+            title='Car Talk',
+            description=""" <p>When the classic NPR radio show Car Talk saw
+             that their growing web traffic was starting to clog their servers
+             like rush hour traffic on I-95, they came to OMBU for the design and
+             management of a cloud-based infrastructure that could handle pretty
+             much anything. With that success under the timing belt, we then
+             helped them make their porpular content available to smartphone
+             users, their largest growing Web segment.</p> """,
+            features=[
+                {
+                'caption':'Mobile Website',
+                'image':'cartalk-1.jpg',
+                },
+                {
+                'caption':'Scalable Cloud Infrastructure',
+                'image':'cartalk-2.png',
+                }
+            ])
+            }}
+        </div>
 
         <div id="stand" class="tab">
             {{ project(

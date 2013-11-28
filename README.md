@@ -12,28 +12,35 @@ virtualenv is installed, this will install this project's dependencies:
     workon ombusite
     pip install -r requirements.txt
 
-If pip fails to install requirements, you may need to install pytz separately
-using easy_install from within the virtualenv:
+### Other requirements
 
-    workon ombusite
-    easy_install pytz
-
-The v1.3.1 LESS compiler is also required, which can be installed with npm:
+- A current LESS compiler is also required. One way to install it is with
+`npm`:
 
     npm install -g less@1.3.1
 
-Build the site
---------------
+- For deployment, you will also need to have `awscli` installed and configured.
 
-Using Fabric:
-
-    fab local build
+Building the site
+-----------------
 
 Using the `pelican` command:
 
-    pelican -s config.py -v -r
+    pelican -s config_production.py -d
+
+Alternative, if you have Fabric installed:
+
+    fab build
 
 For debugging purposes, add the -D switch
+
+Deploying
+---------
+
+Deployment requires the Python `awscli` package configured with AWS
+credentials. With that, you can deploy with:
+
+    fab deploy
 
 License
 -------

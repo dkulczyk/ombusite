@@ -1,4 +1,6 @@
--e git://github.com/getpelican/pelican.git@3.1.1#egg=pelican-stable
+-e git://github.com/getpelican/pelican.git@eafcecd75dbfacc19fcfb018112683ee96c47a2d#egg=pelican-3.1.1
 markdown
 webassets
 cssmin
+# Development requirements
+Fabric>=1.8.0
