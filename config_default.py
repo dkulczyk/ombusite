@@ -40,5 +40,3 @@ if BLOG_ENABLED == True:
     ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
     ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 
-from custom_filters import cdn
-JINJA_FILTERS = {'cdn': cdn}

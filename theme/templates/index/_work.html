@@ -7,8 +7,8 @@
             <div class="carousel-inner">
                 {% for f in features %}
                 <div class="{{ loop.index }} item {{ 'active' if loop.index == 1 }}">
-                    <img class="lazy" src="{{ 'theme/img/grey.gif' | cdn }}"
-                    data-original="{{ ('theme/img/work/' + f.image) | cdn }}"
+                    <img class="lazy" src="{{ 'theme/img/grey.gif' }}"
+                    data-original="{{ ('theme/img/work/' + f.image) }}"
                     width="100%">
                 </div>
                 {% endfor %}
