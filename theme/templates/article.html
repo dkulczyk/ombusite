@@ -9,7 +9,7 @@
         <div class="span2">
             <aside class="post-info">
                 {% if article.author %}
-                    <img src="{{ 'theme/img/team/ap-1.jpg' }}" width="50" height="50" alt="Adam Page" />
+                    <img src="{{ '/theme/img/team/ap-1.jpg' }}" width="50" height="50" alt="Adam Page" />
                     <address class="vcard author">By {{ article.author }}</address>
                 {% endif %}
                 <abbr class="published" title="{{ article.date.isoformat() }}">{{ article.date.strftime('%b %d, %Y') }}</abbr>
