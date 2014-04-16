@@ -13,7 +13,7 @@ PATH = 'src'
 ARTICLE_DIR = 'null'
 STATIC_PATHS = ['images']
 PLUGINS = ['pelican.plugins.assets', ]
-DIRECT_TEMPLATES = ('index',)
+DIRECT_TEMPLATES = ('index', 'work')
 PAGINATED_DIRECT_TEMPLATES = ()
 #PAGE_EXCLUDES = ('careers',)
 
@@ -35,7 +35,7 @@ if BLOG_ENABLED == True:
     ARTICLE_DIR = 'posts'
     FEED_RSS = 'feeds/rss.xml'
     DEFAULT_PAGINATION = 10
-    DIRECT_TEMPLATES = ('index','blog')
+    DIRECT_TEMPLATES = ('index', 'work', 'blog')
     PAGINATED_DIRECT_TEMPLATES = ('blog',)
     ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
     ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
