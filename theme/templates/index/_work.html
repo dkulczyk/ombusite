@@ -43,6 +43,16 @@
 
 <div id="work" class="pane">
 
+    {% for project in projects %}
+        <h1>{{ project.title }}</h1>
+        <p>{{ project.content }}</p>
+        <ul>
+            {% for image in project.images %}
+            <li>{{ image }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+
     <div class="row-fluid">
         <div class="span10 offset2">
             <div class="hero-unit">

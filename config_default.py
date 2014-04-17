@@ -1,5 +1,7 @@
 import sys
 sys.path.append('./lib/local')
+sys.path.append('./lib')
+sys.path.append('./lib/pelican-plugins')
 
 # General
 AUTHOR = u"Martin Rio"
@@ -11,9 +13,11 @@ DEFAULT_PAGINATION = False
 THEME = 'theme'
 PATH = 'src'
 ARTICLE_DIR = 'null'
+PROJECT_DIR = 'projects'
 STATIC_PATHS = ['images']
-PLUGINS = ['pelican.plugins.assets', ]
+PLUGINS = ['assets', 'ombu_work']
 DIRECT_TEMPLATES = ('index', 'work')
+WORK_SAVE_AS = 'work.html'
 PAGINATED_DIRECT_TEMPLATES = ()
 #PAGE_EXCLUDES = ('careers',)
 
