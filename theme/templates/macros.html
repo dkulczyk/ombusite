@@ -1,0 +1,10 @@
+{% macro card(project) %}
+    <h1>{{ project.title }}</h1>
+    <p>{{ project.content }}</p>
+    <ul>
+    {% for image in project.images %}
+        <li>{{ image }}</li>
+    {% endfor %}
+    </ul>
+{%- endmacro %}
+

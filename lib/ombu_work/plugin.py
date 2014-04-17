@@ -2,7 +2,6 @@ import os
 import logging
 from pelican import signals
 from pelican.generators import Generator
-from pelican.contents import is_valid_content
 from contents import Project
 from pelican.readers import Readers
 

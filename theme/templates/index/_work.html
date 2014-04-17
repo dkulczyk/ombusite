@@ -1,56 +1,9 @@
-{% macro project(title, description, features) %}
-<div class="project">
-
-    <div class="span7 ">
-
-        <div class="carousel carousel-fade slide">
-            <div class="carousel-inner">
-                {% for f in features %}
-                <div class="{{ loop.index }} item {{ 'active' if loop.index == 1 }}">
-                    <img class="lazy" src="{{ 'theme/img/grey.gif' }}"
-                    data-original="{{ ('theme/img/work/' + f.image) }}"
-                    width="100%">
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-
-    </div>
-
-    <div class="span5">
-
-        <h2>{{ title }}</h2>
-
-        {{ description }}
-
-        <div class="highlights hidden-phone">
-
-            <ul class="nav nav-pills nav-stacked">
-                {% for f in features %}
-                <li class="{{ 'active' if loop.index == 1 }}">
-                    <a href="#">{{ f.caption }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-
-        </div><!-- /.higlights -->
-
-    </div>
-
-
-</div>
-{%- endmacro %}
+{% from 'macros.html' import card %}
 
 <div id="work" class="pane">
 
     {% for project in projects %}
-        <h1>{{ project.title }}</h1>
-        <p>{{ project.content }}</p>
-        <ul>
-            {% for image in project.images %}
-            <li>{{ image }}</li>
-            {% endfor %}
-        </ul>
+        {{ card(project) }}
     {% endfor %}
 
     <div class="row-fluid">
