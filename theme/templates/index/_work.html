@@ -2,10 +2,6 @@
 
 <div id="work" class="pane">
 
-    {% for project in projects %}
-        {{ card(project) }}
-    {% endfor %}
-
     <div class="row-fluid">
         <div class="span10 offset2">
             <div class="hero-unit">
@@ -18,17 +14,18 @@
         <div class="span8 offset2">
             <div class="project-cards">
                 <ul class="primary">
-                    <li class="paramount">{% include 'index/project-cards/paramount.html' %}</li>
-                    <li class="metro">{% include 'index/project-cards/metro.html' %}</li>
-                    <li class="uo-lcb">{% include 'index/project-cards/uo-lcb.html' %}</li>
-                    <li class="car-talk">{% include 'index/project-cards/car-talk.html' %}</li>
+                    {% for project in projects %}
+                        {% if project.featured == "primary" %}
+                            <li class="{{ project.token_client }}">{{ card(project) }}</li>
+                        {% endif %}
+                    {% endfor %}
                 </ul>
                 <ul class="secondary">
-                    <li class="paramount">{% include 'index/project-cards/paramount.html' %}</li>
-                    <li class="metro">{% include 'index/project-cards/metro.html' %}</li>
-                    <li class="uo-lcb">{% include 'index/project-cards/uo-lcb.html' %}</li>
-                    <li class="paramount">{% include 'index/project-cards/paramount.html' %}</li>
-                    <li class="metro">{% include 'index/project-cards/metro.html' %}</li>
+                    {% for project in projects %}
+                        {% if project.featured == "secondary" %}
+                            <li class="{{ project.token_client }}">{{ card(project) }}</li>
+                        {% endif %}
+                    {% endfor %}
                     <li><a href="#"><div class="card cta"><div class="tile"><div class="tile-container"><div class="table"><div class="table-cell"><span>View all work</span></div></div></div></div></div></a></li>
                 </ul>
             </div>
@@ -38,12 +35,3 @@
 
 
 </div><!-- /.pane -->
-
-<!--
-
-    <div class="teaser-image" style="background-image: url({{ 'theme/img/work/teaser-images/paramount-pictures.png' }});">
-      <div class="teaser-image-container">
-        <img src="{{ 'theme/img/work/teaser-images/paramount-pictures.png' }}" width="640" height="400" alt="Teaser image for Paramount Pictures project." />
-      </div>
-    </div>
- -->

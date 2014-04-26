@@ -1,10 +1,24 @@
 {% macro card(project) %}
-    <h1>{{ project.title }}</h1>
-    <p>{{ project.content }}</p>
-    <ul>
-    {% for image in project.images %}
-        <li>{{ image }}</li>
-    {% endfor %}
-    </ul>
+  <a href="/project.html">
+    <div class="card project">
+      <h3>{{ project.title }}</h3>
+      <div class="teaser-image" style="background-image: url(theme/img/work/teaser-images/{{ project.token_project }}.png);">
+        <div class="teaser-image-container">
+          <img src="theme/img/work/teaser-images/{{ project.token_project }}.png" width="640" height="400" alt="Teaser image for {{ project.title }} project." />
+        </div>
+      </div>
+      <div class="logo-container">
+        <div class="logo">
+          <div class="table">
+            <div class="table-cell">
+              <div class="svg-container">
+                <img class="fallback" src="theme/img/clients/{{ project.token_client }}.png" width="72" height="50" alt="{{ project.title }}" />
+                {% include 'svg/clients/' + project.token_client + '.html' %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
 {%- endmacro %}
-

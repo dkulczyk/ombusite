@@ -1,11 +1,11 @@
-title: Lundquist College of Business
-token_client: university-of-oregon
-token_project: uo-business
-featured: secondary
+title: Metro
+token_client: metro
+token_project: metro
+featured: primary
 date: 2010-02-17
 images: foo.jpg
         bar.gif
-quote: UO Woot Woot
+quote: Hello world
 
 OMBU planned and developed a customized CMS for the five schools
 of the University of Oregon's Lundquist College of Business.
