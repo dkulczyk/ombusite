@@ -662,11 +662,13 @@ code {
 
         ul {
             position: relative;
+            list-style: none;
             margin: 0;
             padding: 0;
             .transition(left 0.35s ease);
 
             li {
+                position: relative;
                 margin: 0;
                 padding: 0.5em 0;
                 opacity: 0.5;
@@ -686,7 +688,9 @@ code {
         &[data-active-index="3"] .captions ul li:first-child + li + li + li,
         &[data-active-index="4"] .captions ul li:first-child + li + li + li + li,
         &[data-active-index="5"] .captions ul li:first-child + li + li + li + li + li {
-            opacity: 1;
+            &, &:before {
+                opacity: 1;
+            }
         }
 
         &.at-start .prevnext ul li:first-child,
@@ -883,6 +887,23 @@ code {
 
         .captions {
             display: none;
+
+            ul {
+                li {
+                    &:before {
+                        font-family: sans-serif;
+                        content: '◀';
+                        position: absolute;
+                        top: 50%;
+                        left: -25px;
+                        margin-top: -7px;
+                        font-size: 14px;
+                        line-height: 1;
+                        opacity: 0;
+                        .transition(opacity 0.35s ease);
+                    }
+                }
+            }
         }
     }
 }
