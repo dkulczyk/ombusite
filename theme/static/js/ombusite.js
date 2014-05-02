@@ -94,10 +94,38 @@ jQuery(document).ready(function($) {
 
     // When a caption is clicked, identify its index and mark that as the active
     // index for the caption group and its associated set of images.
-    $('.captions li').on('click', function() {
-      var $captions = $(this).closest('.captions');
-      var $images = $($captions.attr('data-images'));
-      $captions.add($images).attr('data-active-index', $(this).index());
+    $('.captions li, .prevnext li').on('click', function() {
+      var $nav = $(this).closest('.images-nav');
+      var $images = $($nav.attr('data-images'));
+      var last = $('li', $images).size() - 1;
+
+      // Get the index of the currently active image.
+      var index = parseInt($images.attr('data-active-index'));
+
+      // If this is a prev/next link, decerement/increment accordingly.
+      // Otherwise, a caption has been clicked.
+      if ($(this).hasClass('prev')) {
+        --index;
+      } else if ($(this).hasClass('next')) {
+        ++index;
+      } else {
+        index = $(this).index();
+      }
+
+      // Make sure we stay within the starting and ending limits of the list.
+      if (index <= 0) {
+        index = 0;
+        $nav.removeClass('at-end').addClass('at-start');
+      } else if (index >= last) {
+        index = last;
+        $nav.removeClass('at-start').addClass('at-end');
+      }
+      else {
+        $nav.removeClass('at-start at-end');
+      }
+
+      // Set the active index.
+      $nav.add($images).attr('data-active-index', index);
     })
 
     /**
