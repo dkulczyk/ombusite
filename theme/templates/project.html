@@ -14,14 +14,16 @@
   <div class="row-fluid profile">
     <div class="span7">
       <div class="visuals">
-        <div class="images">
-          <ul>
-            <li>
-              <img class="fallback" src="theme/img/work/{{ project.images[0] }}" width="960" height="726" alt="Project image for {{ project.title }}" />
-            </li>
-          </ul>
+        <div id="images" class="images" data-active-index="0">
+          <ul
+            {% for image in project.images %}
+              ><li>
+                <img class="fallback" src="theme/img/work/{{ image }}" width="960" height="726" alt="Project image for {{ project.title }}" />
+              </li
+            {%  endfor %}
+          ></ul>
         </div>
-        <div class="captions">
+        <div class="captions" data-images="#images">
           <ul>
             {% for caption in project.captions %}
               <li>
@@ -35,7 +37,7 @@
     <div class="span5">
       <div class="content">
         {{ project.content }}
-        <div class="captions">
+        <div class="captions" data-images="#images" data-active-index="0">
           <h3>Features</h3>
           <ul>
             {% for caption in project.captions %}

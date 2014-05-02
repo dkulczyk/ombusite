@@ -92,6 +92,14 @@ jQuery(document).ready(function($) {
         c.data('carousel').to($th.index());
     });
 
+    // When a caption is clicked, identify its index and mark that as the active
+    // index for the caption group and its associated set of images.
+    $('.captions li').on('click', function() {
+      var $captions = $(this).closest('.captions');
+      var $images = $($captions.attr('data-images'));
+      $captions.add($images).attr('data-active-index', $(this).index());
+    })
+
     /**
      * Set up mobile tab "dots" navigation.
      */
