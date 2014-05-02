@@ -1,0 +1,13 @@
+{% from 'macros.html' import card %}
+
+<div class="row-fluid">
+    <div class="span12">
+        <div class="project-cards">
+            <ul class="primary">
+                {% for project in projects %}
+                    <li class="{{ project.token_client }}">{{ card(project) }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

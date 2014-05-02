@@ -15,40 +15,42 @@
   </div>
   <div class="row-fluid profile">
     <div class="span6">
-      <div class="images">
-        <ul>
-          <li>
-            <img class="fallback" src="theme/img/work/{{ project.images[0] }}" width="960" height="726" alt="Project image for {{ project.title }}" />
-          </li>
-        </ul>
-      </div>
-      <div class="captions">
-        <ul>
-          {% for caption in project.captions %}
+      <div class="visuals">
+        <div class="images">
+          <ul>
             <li>
-              {{ caption }}
+              <img class="fallback" src="theme/img/work/{{ project.images[0] }}" width="960" height="726" alt="Project image for {{ project.title }}" />
             </li>
-          {%  endfor %}
-        </ul>
+          </ul>
+        </div>
+        <div class="captions">
+          <ul>
+            {% for caption in project.captions %}
+              <li>
+                {{ caption }}
+              </li>
+            {%  endfor %}
+          </ul>
+        </div>
       </div>
     </div>
     <div class="span6">
       <div class="content">
         {{ project.content }}
-      </div>
-
-      <h3>View other projects</h3>
-      <div class="project-cards">
-          <ul class="secondary">
-              {% for project in projects %}
-                  <li class="{{ project.token_client }}">{{ card(project) }}</li>
-              {% endfor %}
-              <li><a href="#"><div class="card cta"><div class="tile"><div class="tile-container"><div class="table"><div class="table-cell"><span>View all work</span></div></div></div></div></div></a></li>
+        <div class="captions">
+          <ul>
+            {% for caption in project.captions %}
+              <li>
+                {{ caption }}
+              </li>
+            {%  endfor %}
           </ul>
+        </div>
       </div>
-
     </div>
   </div>
+
+  {% include 'index/_portfolio.html' %}
 </div>
 
 {% endblock %}
