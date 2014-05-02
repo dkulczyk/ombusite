@@ -5,7 +5,8 @@
         <div class="project-cards">
             <ul class="primary">
                 {% for project in projects %}
-                    <li class="{{ project.token_client }}">{{ card(project) }}</li>
+                    {% set class = 'active' if project.token_project == active else '' %}
+                    <li class="{{ project.token_client }} {{ class }}">{{ card(project) }}</li>
                 {% endfor %}
             </ul>
         </div>

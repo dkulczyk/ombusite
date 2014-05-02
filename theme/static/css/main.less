@@ -595,7 +595,7 @@ code {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .project-cards {
         ul {
             li {
@@ -628,11 +628,14 @@ code {
     }
 
     h2, h3 {
-        clear: both;
         font-size: 14px;
         text-transform: uppercase;
         color: darken(@blue, 15);
         margin: 2.0em 0 0 0;
+    }
+
+    h2 {
+        clear: both;
     }
 
     .header {
@@ -647,6 +650,24 @@ code {
     svg {
         display: block;
         height: 80px;
+    }
+
+    .captions {
+        color: darken(@blue, 15);
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 1.0em 0;
+                opacity: 0.5;
+
+                &:first-child {
+                    opacity: 1;
+                }
+            }
+        }
     }
 
     .visuals {
@@ -672,7 +693,6 @@ code {
             position: relative;
             margin: 2.0em 0;
             font-size: 14px;
-            color: darken(@blue, 15);
 
             &:before, &:after {
                 content: '〈';
@@ -697,11 +717,9 @@ code {
                 li {
                     display: none;
                     margin: 1.0em 0;
-                    opacity: 0.5;
 
                     &:first-child {
                         display: block;
-                        opacity: 1;
                     }
                 }
             }
@@ -737,8 +755,6 @@ code {
             }
 
             p:first-child + p {
-                // position: absolute;
-                // top: 100%;
                 padding-right: 80px;
                 text-align: right;
                 font-size: 13px;
