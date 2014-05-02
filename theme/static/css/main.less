@@ -356,16 +356,16 @@ code {
         display: block;
         position: relative;
         padding: 5px;
+    }
 
-        &:hover {
-            .card.project {
-                top: -5px;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-            }
+    a:hover, li.active a {
+        .card.project {
+            top: -5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        }
 
-            .card.cta {
-                background-color: darken(@red, 20);
-            }
+        .card.cta {
+            background-color: darken(@red, 20);
         }
     }
 
@@ -482,6 +482,18 @@ code {
         }
     }
 
+    .primary {
+        li {
+            .card {
+                border-bottom: 10px solid transparent;
+            }
+
+            &.active .card {
+                border-bottom-color: @blue;
+            }
+        }
+    }
+
     .secondary {
         padding-top: 10px;
 
@@ -508,7 +520,7 @@ code {
         padding: 0 34%;
 
         svg {
-            top: 12%;
+            margin-top: 6%;
         }
     }
 
@@ -549,18 +561,14 @@ code {
     .project-cards {
         a {
             padding: 10px;
-
-            &:hover {
-                .card.project {
-                    top: -10px;
-                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-                }
-            }
         }
 
         .primary {
-            a {
-                &:hover .card.project {
+            a:hover, li.active a {
+                .card.project {
+                    top: -10px;
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+
                     .teaser-image {
                         .opacity(100);
                     }
@@ -587,10 +595,8 @@ code {
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
     .project-cards {
-        margin: 0 -120px;
-
         ul {
             li {
                 width: percentage(1/4);
@@ -602,6 +608,12 @@ code {
                 width: percentage(1/6);
             }
         }
+    }
+}
+
+@media (min-width: 1280px) {
+    .project-cards {
+        width: percentage(10/12);
     }
 }
 
@@ -787,27 +799,11 @@ code {
                 margin-left: 0;
             }
         }
-
-        .project-cards {
-            a {
-                padding: 5px;
-            }
-
-            ul {
-                li {
-                    width: percentage(1/2);
-                }
-            }
-        }
     }
 }
 
 @media (min-width: 1024px) {
     .project.pane {
-        .images, .captions {
-            margin-left: -15px;
-        }
-
         .content {
             padding-top: 3.0em;
             padding-left: 0;
@@ -821,23 +817,6 @@ code {
                 margin-top: 0.5em;
                 margin-left: 3.0em;
                 margin-right: -100px;
-            }
-        }
-
-        .project-cards {
-            margin-left: 0;
-            margin-right: 100px;
-        }
-    }
-}
-
-@media (min-width: 1280px) {
-    .project.pane {
-        .project-cards {
-            ul {
-                li {
-                    width: percentage(1/4);
-                }
             }
         }
     }
