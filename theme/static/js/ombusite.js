@@ -24,6 +24,9 @@ $.fn.scrollspy.defaults.offset = 40;
 
 jQuery(document).ready(function($) {
 
+    // Instantiate FastClick.
+    FastClick.attach(document.body);
+
     // Lazy image loading
     $('img.lazy')
       .lazyload({
