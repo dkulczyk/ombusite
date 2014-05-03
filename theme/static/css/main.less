@@ -688,8 +688,13 @@ code {
         &[data-active-index="3"] .captions ul li:first-child + li + li + li,
         &[data-active-index="4"] .captions ul li:first-child + li + li + li + li,
         &[data-active-index="5"] .captions ul li:first-child + li + li + li + li + li {
-            &, &:before {
+            & {
                 opacity: 1;
+            }
+
+            &:before {
+                opacity: 1;
+                left: -20px;
             }
         }
 
@@ -895,12 +900,12 @@ code {
                         content: '◀';
                         position: absolute;
                         top: 50%;
-                        left: -25px;
+                        left: -8px;
                         margin-top: -7px;
                         font-size: 14px;
                         line-height: 1;
                         opacity: 0;
-                        .transition(opacity 0.35s ease);
+                        .transition(all 0.35s ease);
                     }
                 }
             }
