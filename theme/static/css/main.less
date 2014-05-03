@@ -614,6 +614,22 @@ code {
 @media (min-width: 1280px) {
     .project-cards {
         width: percentage(10/12);
+
+        .card {
+            &.cta {
+                font-size: 1.2em;
+                line-height: 1.2;
+
+                span {
+                    &:after {
+                        font-size: 10px;
+                        line-height: 1;
+                        top: -0.1em;
+                        right: -0.5em;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -694,7 +710,7 @@ code {
 
             &:before {
                 opacity: 1;
-                left: -20px;
+                left: -25px;
             }
         }
 
@@ -900,7 +916,7 @@ code {
                         content: '◀';
                         position: absolute;
                         top: 50%;
-                        left: -8px;
+                        left: -10px;
                         margin-top: -7px;
                         font-size: 14px;
                         line-height: 1;
