@@ -1,52 +1,119 @@
 Title: Careers
 Date: 2013-02-12
 
-Careers
+Come Work with Us!
 =======
 
-We're have an open position, and it's awesome. Please take a look!
+<br>
 
-- [Full-stack Developer](#full-stack-developer)
+![Alt Text](/theme/img/team/office.jpg)
 
-* * *
+<br>
 
-<a id="full-stack-developer"></a> Full-stack Web Developer with an emphasis on Drupal
-------------------------------------------------------
+OMBU is an Open Source Software technology expert specializing in designing and
+implementing websites, applications, and cloud hosting infrastructures. We've
+designed, built, and maintain some of the largest sites on the Web, from
+Portland State University's multi-site platform with 100+ sites, Paramount
+Pictures' site with 3000+ requests/second at peak times, and NPR's Car Talk with
+a community of over 35,000 users.
 
-OMBU is a dynamic and well-rounded development shop focused on designing and
-deploying the best solutions for our clients' Web needs. Our tool chest is
-large, eclectic, and evolving - over the past few years we launched successful
-projects using Drupal, Django, Zend Framework, WordPress, MongoDB, Solr, all
-sorts of JavaScript, Bootstrap - the list goes on. So you can imagine how
-full-stack developers play a central role at OMBU.
+Our clients choose us because we approach their projects with an open mind and 
+design unique and innovative solutions tailored to their needs and 
+goals. And, while we're passionate about working with the latest technologies,
+ we remain laser focused on our client's needs and goals, to deliver product 
+ on time and budget that will advance our client's goals and attract attention
+  to their organizations. 
 
-Due to our current project pipeline, we're looking for a developer with
-substantial experience in Drupal and/or Django. The ideal candidate will have a
-well-rounded understanding of the Web stack, be a constant learner, able to
-push boundaries with confidence and class, and thrive designing and
-implementing elegant, complete, and sustainable solutions as part of a team.
-
-### Requirements
-
-- You have a track record of shipping quality work in Drupal and/or Django.
-- You have a solid grasp of the HTTP protocol — it all begins there.
-- You're comfortable with the full Web development stack: front- and back-end
-  architecture, and infrastructure.
-- You're eager to commit to a team, its products, and clients.
-- You have a solid development environment, mastery of version control, and
-  can't wait to get your hands on exciting projects and seeing them go-live.
+OMBU team members thrive in a small, pragmatic teams, with well defined 
+processes but few other rules and policies. Succeeding at OMBU requires self 
+management and commitment to our team and clients, and a *getting 
+it done* attitude to focus effort where the most value lies. We don't have 
+individual rock stars. OMBU is a true collaborative team and it is not 
+unusual for the whole team to be involved in a project at some point or another.
 
 ### Benefits
 
-- The opportunity to join an established small and efficient team with a record
-  of designing and shipping scalable high-quality Web solutions, and a
+- A unique opportunity to become a part of a tight, functional team that 
+  consistently ships innovative, value-centric products to a growing 
   portfolio of happy clients.
 - Exposure to a wide range of technologies, projects, and industries, including
   entertainment, education, NGOs, and government, each with unique technical
   challenges.
-- A hassle-free, modern work environment with a strong emphasis on life/work
-  balance and modern benefits, like remote-work and flexible schedules.
+- A hassle-free, modern company with policies that reward pragmatism and 
+  results and puts a strong emphasis on life/work balance. 
 - Competitive salary and benefits.
+
+### Open Opportunities:
+
+- [Product Owner](#product-owner)
+- [Full-stack Developer](#full-stack-developer)
+
+* * *
+
+<a id="product-owner"></a> Product Owner 
+------------------------------------------------------
+
+Hello! OMBU is looking for a Product Owner. Could it be you? A Product Owner at
+OMBU shapes and executes our projects, leading our client and internal teams. 
+The job's responsibilities fall under three areas:
+
+- Account management: Shepherding OMBU's relationships with our clients, 
+helping them understand how and where we can bring value to their 
+organizations
+
+- Digital strategy: Helping our clients define their digital goals and
+needs, and designing innovative products that will advance their organization
+
+- Project management: Organizing the implementation and roll out of projects, 
+leading the client and internal teams to success
+
+This is not an entry level position, so we are looking for candidates with 
+successful and demonstrable experience in these roles.
+
+### Requirements
+
+- Desire to commit to a team, its products and clients.
+- Experiencing defining requirements for technology products
+- Ability to lead teams through large an complex projects at a consistent and 
+predictable pace
+- Superb communication and organization skills, including experience handling 
+difficult conversations with clients
+- A passion for all things Web and a desire to help create highly functional 
+  and valuable products
+- Effective use of Web tools for communication and project management 
+
+This is an extremely rewarding opportunity, but it's not for the 
+faint of heart. If we haven't scared you yet, you may be our next Product Owner! 
+
+<a href="mailto:martin@ombuweb.com"
+class="btn btn-primary">Get in touch about this opportunity</a>
+
+* * *
+
+<a id="full-stack-developer"></a> Full-stack Web Developer
+------------------------------------------------------
+
+OMBU's tool chest is large, eclectic, and ever evolving - over the past few 
+years we launched successful projects using Drupal, Django, Zend Framework, 
+WordPress, MongoDB, Solr, all sorts of JavaScript, Bootstrap - the list goes on.
+So you can imagine how full-stack developers play a central role at OMBU.
+
+Given our project pipeline, we're currently looking for a developer with 
+substantial experience in Drupal and/or Django. However, given the breadth of
+our technology use, we seek candidates with diverse technology interests and 
+experiences. The ideal candidate will have a well-rounded understanding of  the
+Web stack, be a self-starter and avid learner, able to push boundaries with 
+confidence and class, and thrive designing and implementing elegant, complete,
+and sustainable solutions as part of a team.
+
+### Requirements
+
+- A demonstrable record of shipping quality work in Drupal and/or Django.
+- A solid grasp of the HTTP protocol — it all begins there
+- Comfort with the full Web development stack: front- and back-end
+  architecture, and infrastructure
+- Desire to commit to a team, its products and clients
+- An solid development environment and  mastery of version control
 
 If you think this may be your type of gig and you fit the bill, or you'd like
 to learn more about OMBU, don't hesitate to <a href="mailto:martin@ombuweb.com"
