@@ -88,6 +88,18 @@
 @baseFontSize: 14px;
 
 // Mixins
+
+// LESS 2.x compatibility fix.
+// @see https://stackoverflow.com/a/28182792/325018
+#grid {
+  .core  {
+    .span(@gridColumns) {
+      width: (@gridColumnWidth * @gridColumns) + (@gridGutterWidth * (@gridColumns - 1));
+    }
+  }
+}
+
+
 html, body, .container-fluid { height: 100% }
 
 body {
