@@ -45,48 +45,7 @@ unusual for the whole team to be involved in a project at some point or another.
 
 ### Open Opportunities:
 
-- [Product Owner](#product-owner)
 - [Full-stack Developer](#full-stack-developer)
-
-* * *
-
-<a id="product-owner"></a> Product Owner 
-------------------------------------------------------
-
-Hello! OMBU is looking for a Product Owner. Could it be you? A Product Owner at
-OMBU shapes and executes our projects, leading our client and internal teams. 
-The job's responsibilities fall under three areas:
-
-- Account management: Shepherding OMBU's relationships with our clients, 
-helping them understand how and where we can bring value to their 
-organizations
-
-- Digital strategy: Helping our clients define their digital goals and
-needs, and designing innovative products that will advance their organization
-
-- Project management: Organizing the implementation and roll out of projects, 
-leading the client and internal teams to success
-
-This is not an entry level position, so we are looking for candidates with 
-successful and demonstrable experience in these roles.
-
-### Requirements
-
-- Desire to commit to a team, its products and clients.
-- Experiencing defining requirements for technology products
-- Ability to lead teams through large an complex projects at a consistent and 
-predictable pace
-- Superb communication and organization skills, including experience handling 
-difficult conversations with clients
-- A passion for all things Web and a desire to help create highly functional 
-  and valuable products
-- Effective use of Web tools for communication and project management 
-
-This is an extremely rewarding opportunity, but it's not for the 
-faint of heart. If we haven't scared you yet, you may be our next Product Owner! 
-
-<a href="mailto:martin@ombuweb.com"
-class="btn btn-primary">Get in touch about this opportunity</a>
 
 * * *
 
