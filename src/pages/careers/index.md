@@ -20,11 +20,11 @@ a community of over 35,000 users.
 Our clients choose us because we approach their projects with an open mind and 
 design unique and innovative solutions tailored to their needs and 
 goals. And, while we're passionate about working with the latest technologies,
- we remain laser focused on our client's needs and goals, to deliver product 
+ we remain laser-focused on our client's needs and goals, to deliver product 
  on time and budget that will advance our client's goals and attract attention
   to their organizations. 
 
-OMBU team members thrive in a small, pragmatic teams, with well defined 
+OMBU team members thrive in small, pragmatic teams, with well defined 
 processes but few other rules and policies. Succeeding at OMBU requires self 
 management and commitment to our team and clients, and a *getting 
 it done* attitude to focus effort where the most value lies. We don't have 
@@ -45,36 +45,47 @@ unusual for the whole team to be involved in a project at some point or another.
 
 ### Open Opportunities:
 
-- [Full-stack Developer](#full-stack-developer)
+- [Product Owner](#product-owner)
 
 * * *
 
-<a id="full-stack-developer"></a> Full-stack Web Developer
+<a id="product-owner"></a> Product Owner 
 ------------------------------------------------------
 
-OMBU's tool chest is large, eclectic, and ever evolving - over the past few 
-years we launched successful projects using Drupal, Django, Zend Framework, 
-WordPress, MongoDB, Solr, all sorts of JavaScript, Bootstrap - the list goes on.
-So you can imagine how full-stack developers play a central role at OMBU.
+Hello! OMBU is looking for a Product Owner. Could it be you? Product Owners at
+OMBU shape and execute our projects, leading our client and internal teams. 
+The job responsibilities fall under three areas:
 
-Given our project pipeline, we're currently looking for a developer with 
-substantial experience in Drupal and/or Django. However, given the breadth of
-our technology use, we seek candidates with diverse technology interests and 
-experiences. The ideal candidate will have a well-rounded understanding of  the
-Web stack, be a self-starter and avid learner, able to push boundaries with 
-confidence and class, and thrive designing and implementing elegant, complete,
-and sustainable solutions as part of a team.
+- **Account management:** Shepherding OMBU's relationships with our clients, 
+helping define how we'll bring value to their organizations
+
+- **Digital strategy:** Helping identify our client's technology needs and 
+goals and defining projects that will advance their organizations 
+
+- **Project management:** Managing the execution of projects by leading the 
+project team to a successful outcome
 
 ### Requirements
 
-- A demonstrable record of shipping quality work in Drupal and/or Django.
-- A solid grasp of the HTTP protocol — it all begins there
-- Comfort with the full Web development stack: front- and back-end
-  architecture, and infrastructure
-- Desire to commit to a team, its products and clients
-- An solid development environment and  mastery of version control
+- A passion for all things Web and a desire to help deliver innovative 
+  high-value products hat our clients will love
+- Experience defining requirements for technology products and drafting 
+  proposals and statements of work 
+- Ability to lead teams through large an complex technology projects at a 
+  consistent and predictable pace, and having fun while at it
+- Experience managing schedules, budgets, and task priorities
+- Superb organization skills to stay ahead of projects
+- Excellent communication skills, including the ability to navigate difficult 
+  conversations with clients
+- A web development or consulting background is desired but not required
 
-If you think this may be your type of gig and you fit the bill, or you'd like
-to learn more about OMBU, don't hesitate to <a href="mailto:martin@ombuweb.com"
-class="btn btn-primary">get in touch about this opportunity</a>.
+A successful Product Owner at OMBU is highly-organized, driven, and thrives as
+the meeting point between our clients and team. This is an extremely rewarding
+opportunity, but it's not for the faint of heart. It is also not an entry level
+position. We are looking for candidates with a demonstrable successful track
+record in these roles.
+ 
+If we haven't scared you yet, you may be our next Product Owner!
 
+<a href="mailto:martin@ombuweb.com"
+class="btn btn-primary">Get in touch about this opportunity</a>
