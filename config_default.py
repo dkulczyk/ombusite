@@ -1,5 +1,5 @@
 import sys
-sys.path.append('./lib/local')
+sys.path.append('./lib')
 
 # General
 AUTHOR = u"Martin Rio"
@@ -10,11 +10,11 @@ DELETE_OUTPUT_DIRECTORY = True
 DEFAULT_PAGINATION = False
 THEME = 'theme'
 PATH = 'src'
-ARTICLE_DIR = 'null'
+SITEURL = 'http://ombuweb.com'
 STATIC_PATHS = ['images']
-PLUGINS = ['pelican.plugins.assets', ]
 DIRECT_TEMPLATES = ('index',)
 PAGINATED_DIRECT_TEMPLATES = ()
+PLUGINS = ['assets', ]
 #PAGE_EXCLUDES = ('careers',)
 
 # Blog

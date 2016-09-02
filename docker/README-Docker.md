@@ -16,5 +16,5 @@ able to access the site through the ip or hostname of your Docker host.
 
 Invoke Pelican commands:
 
-    docker exec ombusite pelican -s config_development.py -d -v
+    docker exec ombusite pelican -s config_development.py -d -v --relative-urls
 

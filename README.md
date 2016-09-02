@@ -26,7 +26,7 @@ Building the site
 
 Using the `pelican` command:
 
-    pelican -s config_production.py -d
+    pelican -s config_production.py -d --relative-urls
 
 Alternative, if you have Fabric installed:
 
