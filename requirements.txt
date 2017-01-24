@@ -2,3 +2,5 @@ pelican==3.6.3
 markdown
 webassets
 cssmin
+awscli==1.11.29
+Fabric==1.13.1
