@@ -1175,7 +1175,8 @@ h5 {
   @media (min-width: 992px) {
     h5 {
       font-size: calc(19 / 18 * 1em);
-      line-height: calc(30 / 19 * 1em); } }
+      line-height: calc(30 / 19 * 1em);
+      text-align: center; } }
 
 h6 {
   font-size: calc(16 / 16 * 1em);
@@ -1326,6 +1327,21 @@ http://flickity.metafizzy.co
     .container {
       padding-left: 70px;
       padding-right: 70px; } }
+
+.page-title--title.page-title--title--prominent {
+  text-align: center; }
+  @media (min-width: 992px) {
+    .page-title--title.page-title--title--prominent {
+      font-size: calc(65 / 18 * 1em);
+      line-height: calc(80 / 65 * 1em); } }
+
+#header {
+  padding-bottom: 1.6667rem;
+  padding-top: 1.6667rem; }
+  @media (min-width: 992px) {
+    #header {
+      padding-bottom: 4.8333rem;
+      padding-top: 4.8333rem; } }
 
 .btn-primary {
   background-color: #6dc5d4;

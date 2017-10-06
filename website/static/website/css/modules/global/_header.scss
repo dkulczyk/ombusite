@@ -1,1 +1,11 @@
 // Header
+
+#header {
+  padding-bottom: 1.6667rem;
+  padding-top: 1.6667rem;
+
+  @media (min-width: $breakpoint-notebook) {
+    padding-bottom: 4.8333rem;
+    padding-top: 4.8333rem;
+  }
+}

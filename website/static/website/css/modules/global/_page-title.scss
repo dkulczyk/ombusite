@@ -1,1 +1,10 @@
 // Page Title
+
+.page-title--title.page-title--title--prominent {
+  text-align: center;
+  
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(65 / 18 * 1em);
+    line-height: calc(80 / 65 * 1em);   
+  }
+}
