@@ -1,0 +1,43 @@
+/**
+ * Theme Colors
+ *
+ * Named with http://chir.ag/projects/name-that-color
+ */
+
+// Colors
+$color-white: rgb(255, 255, 255);
+$color-body: rgb(67, 94, 116);
+$color-primary: rgb(109, 197, 212); // Blue
+$color-secondary: rgb(243, 167, 173); // Dusk (light)
+$color-secondary-dark: rgb(229, 125, 133); // Dush (dark)
+$color-tertiary: rgb(67, 94, 116); // Midnight
+
+// Custom fonts
+$font-halisr-book: 'halis_rbook', 'Helvetica', sans-serif;
+$font-halisr-medium: 'halis_rmedium', 'Helvetica', sans-serif;
+$font-halisr-regular: 'halis_rregular', 'Helvetica', sans-serif;
+$font-halisr-bold: 'halis_rbold', 'Helvetica', sans-serif;
+
+$font-tisapro-regular: 'tisaproregular', 'Georgia', serif;
+$font-tisapro-bold: 'tisaprobold', 'Georgia', serif;
+$font-tisapro-italic: 'tisaproitalic', 'Georgia', serif;
+$font-tisapro-bold-italic: 'tisaproitalicbold', 'Georgia', serif;
+
+// Font sizes
+$base-font-size: 18px;
+$base-line-height: calc(30 / 18 * 1em);
+
+// Transition effects
+$transition-duration-default: 0.2s;
+
+// Gutters and breakpoints
+$gutter-side-tile: 20px;
+$gutter-side-mobile: 20px;
+$gutter-side-tablet: 20px;
+$gutter-side-desktop: 70px;
+
+$breakpoint-tablet: 768px;
+$breakpoint-notebook: 992px;
+$breakpoint-desktop: 1200px;
+
+$max-site-width: 1300px;

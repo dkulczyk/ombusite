@@ -1,0 +1,107 @@
+// 
+// Base
+//
+// Base styles
+//
+
+html,body {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+body {
+  color: $color-body;
+  font-family: $font-tisapro-regular;
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    font-size: calc(16 / 18 * 1em);
+    line-height: calc(28 / 16 * 1em);
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $font-halisr-medium;
+}
+
+h1 {
+  font-family: $font-halisr-regular;
+  font-size: calc(36 / 16 * 1em);
+  line-height: calc(44 / 36 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(50 / 18 * 1em);
+    line-height: 1.5;
+  }
+}
+
+h2 {
+  font-size: calc(30 / 16 * 1em);
+  line-height: 1.4;
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(38 / 18 * 1em);
+    line-height: calc(50 / 38 * 1em);    
+  }  
+}
+
+h3 {
+  font-size: calc(26 / 16 * 1em);
+  line-height: calc(38 / 26 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(32 / 18 * 1em);
+    line-height: calc(42 / 32 * 1em);    
+  }  
+}
+
+h4 {
+  font-size: calc(22 / 16 * 1em);
+  line-height: calc(32 / 22 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(26 / 18 * 1em);
+    line-height: calc(38 / 26 * 1em);    
+  }  
+}
+
+h5 {
+  font-size: calc(38 / 16 * 1em);
+  line-height: calc(22 / 22 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(19 / 18 * 1em);
+    line-height: calc(30 / 19 * 1em);    
+  }  
+}
+
+h6 {
+  font-size: calc(16 / 16 * 1em);
+  line-height: calc(28 / 16 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(38 / 18 * 1em);
+    line-height: calc(30 / 18 * 1em);    
+  }  
+}
+
+a {
+  color: $color-body;
+  text-decoration: underline;
+  transition: all $transition-duration-default ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-primary;
+  }
+}
+
+img,iframe {
+  height: auto;
+  max-width: 100%;
+}
+
+caption {
+  font-size: calc(12 / 18 * 1em);
+  line-height: 1.5;
+}

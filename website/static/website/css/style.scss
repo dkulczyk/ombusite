@@ -1,12 +1,27 @@
-$color-dusk: hsl(355, 67%, 69%);
-$color-blue: hsl(190, 50%, 59%);
+//
+// The primary stylesheet
+//
 
-html {
-  background-color: $color-blue;
-}
+// Init
+@import 'init';
 
-h1 {
-  text-align: center;
-  font-size:400%;
-  color: $color-dusk;
-}
+// Base
+@import 'base/reset';
+@import 'base/base';
+
+// Plugins
+@import 'flickity.min';
+
+// Layouts
+@import 'layout/layout';
+
+// Module
+@import 'modules/global/page';
+@import 'modules/global/rte';
+@import 'modules/global/page-title';
+@import 'modules/global/header';
+@import 'modules/global/footer';
+
+@import 'modules/features/buttons';
+
+@import 'modules/blocks/richtextblock';

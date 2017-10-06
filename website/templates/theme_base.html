@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+      <title>{% block title %}{% endblock %} {{ site_config.site_title }}</title>
+      <meta name="description" content="{% block meta_description %}{% endblock %}"></meta>
+      {% block extrahead %}{% endblock %}
+      <link href="{% static "website/css/style.css" %}" rel="stylesheet" type="text/css" />
+      {% block extrastyle %}{% endblock %}
+  </head>
+  <body {% block body_attrs %}{% endblock %}>
+
+    <div id="page">
+      {% block content_top %}
+        <header id="header"{% block header_attributes %}{% endblock %}>
+          <div class="container">
+            {% include 'svg/logo.svg.html' %}
+          </div>
+        </header>
+      {% endblock content_top %}
+
+      {% block content %}{% endblock content %}
+
+      {% block content_bottom %}
+        <footer id="footer">
+        </footer>
+      {% endblock content_bottom %}
+    </div>
+
+    {% block post_content %}
+    {% endblock post_content %}
+
+    {% block modals %}{% endblock %}
+
+    <script type="text/javascript" src="{% static "website/js/scripts-all.js" %}"></script>
+
+    {% block extrascript %}{% endblock %}
+    {% block page_bottom %}{% endblock %}
+
+  </body>
+</html>

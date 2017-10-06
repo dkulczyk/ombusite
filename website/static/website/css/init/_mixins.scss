@@ -1,0 +1,79 @@
+// Mixins
+
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px; width: 1px; 
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Buttons
+@mixin btn-base($color: $color-white, $bg: $color-primary, $border-color: $color-primary) {
+  background-color: $bg;
+  background-image: none;
+  border: 2px solid $border-color;
+  border-radius: 100px;
+  color: $color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-halisr-bold;
+  font-size: 1rem;
+  line-height: calc(32 / 18 * 1em);
+  margin-bottom: 0;
+  padding: calc(7 / 18 * 1em) 1em;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  &:hover {
+    color: $color;
+    text-decoration: none;
+  }
+}
+
+@mixin btn-primary() {
+  @include btn-base($color: $color-white, $bg: $color-primary, $border-color: $color-primary);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($color-primary, 12%);
+    border-color: darken($color-primary, 12%);
+  }
+}
+
+@mixin btn-secondary() {
+  @include btn-base($color: $color-primary, $bg: $color-white, $border-color: $color-primary);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-white;
+    border-color: darken($color-primary, 12%);
+    color: darken($color-primary, 12%);
+  }  
+}
