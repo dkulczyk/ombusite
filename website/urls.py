@@ -21,4 +21,10 @@ urlpatterns = [
     url(r'^$', website.views.home),
     url(r'^admin/', admin.site.urls),
     url(r'^about$', website.views.about),
+
+    # Experimental
+    # --------------------------------------------------------------------------
+    url(r'^exp/transitions$', website.views.exp_transitions_rock),
+    url(r'^exp/transitions/paper$', website.views.exp_transitions_paper),
+    url(r'^exp/transitions/scissors$', website.views.exp_transitions_scissors),
 ]

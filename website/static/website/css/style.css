@@ -1403,3 +1403,10 @@ http://flickity.metafizzy.co
     background-color: white;
     border-color: #3eb2c6;
     color: #3eb2c6; }
+
+.exp-transition--artwork {
+  max-width: 400px;
+  margin: 0 auto; }
+
+.exp-transition--artwork--svg {
+  display: block; }
