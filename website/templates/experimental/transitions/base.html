@@ -46,7 +46,32 @@
 
     {% block modals %}{% endblock %}
 
-    <script type="text/javascript" src="{% static "website/js/scripts-all.js" %}"></script>
+    <script type="text/javascript">
+      function expTransitionCallback(e) {
+        var e = window.e || e;
+        var href = e.target.href;
+
+        if (e.target.tagName === 'A') {
+          e.preventDefault();
+          document.documentElement.classList.remove("animate-in");
+          document.documentElement.classList.add("animate-out");
+          setTimeout(function() {
+            location.href = href;
+          }, 1000);
+        }
+      }
+
+      if (document.addEventListener) {
+        document.addEventListener('click', expTransitionCallback, false);
+      } else {
+        document.attachEvent('onclick', expTransitionCallback);
+      }
+
+      document.documentElement.classList.add("animate-in");
+
+    </script>
+
+    <!-- <script type="text/javascript" src="{% static "website/js/scripts-all.js" %}"></script> -->
 
     {% block extrascript %}{% endblock %}
     {% block page_bottom %}{% endblock %}

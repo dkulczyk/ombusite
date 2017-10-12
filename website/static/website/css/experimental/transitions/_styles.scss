@@ -11,6 +11,8 @@ $border-width-max: 80px;
 
 .exp-transitions--artwork {
   margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 
   @media screen and (min-width: $breakpoint-tablet) {
     max-width: 400px;
@@ -38,9 +40,10 @@ $border-width-max: 80px;
 
   rect {
     fill: transparent;
+    stroke-width: $border-width-max;
     stroke: url(#exp-transitions--page-border--gradient);
-    stroke-width: $border-width-min;
     vector-effect: non-scaling-stroke;
+    transition: stroke-width 0.5s ease;
   }
 }
 
@@ -48,6 +51,12 @@ $border-width-max: 80px;
   list-style: none;
   margin: 0;
   padding: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  .exp-transitions.animate-in & {
+    transition: opacity 0.5s ease 0.5s;
+  }
 
   @media screen and (min-width: $breakpoint-tablet) {
     margin-top: 50px;
@@ -69,5 +78,25 @@ $border-width-max: 80px;
     &:last-child {
       right: 0;
     }
+  }
+}
+
+.exp-transitions.animate-in {
+  .exp-transitions--page-border rect {
+    stroke-width: $border-width-min;
+  }
+
+  .exp-transitions--artwork, .exp-transitions--page-links {
+    opacity: 1;
+  }
+}
+
+.exp-transitions.animate-out {
+  .exp-transitions--page-border rect {
+    stroke-width: $border-width-max;
+  }
+
+  .exp-transitions--artwork, .exp-transitions--page-links {
+    opacity: 0;
   }
 }

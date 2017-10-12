@@ -1411,7 +1411,9 @@ http://flickity.metafizzy.co
   margin-top: 150vh; }
 
 .exp-transitions--artwork {
-  margin: 0 auto; }
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.5s ease; }
   @media screen and (min-width: 768px) {
     .exp-transitions--artwork {
       max-width: 400px;
@@ -1434,14 +1436,19 @@ http://flickity.metafizzy.co
   transform: translate3d(0, 0, 0); }
   .exp-transitions--page-border rect {
     fill: transparent;
+    stroke-width: 80px;
     stroke: url(#exp-transitions--page-border--gradient);
-    stroke-width: 30px;
-    vector-effect: non-scaling-stroke; }
+    vector-effect: non-scaling-stroke;
+    transition: stroke-width 0.5s ease; }
 
 .exp-transitions--page-links {
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease; }
+  .exp-transitions.animate-in .exp-transitions--page-links {
+    transition: opacity 0.5s ease 0.5s; }
   @media screen and (min-width: 768px) {
     .exp-transitions--page-links {
       margin-top: 50px;
@@ -1457,3 +1464,15 @@ http://flickity.metafizzy.co
         left: 0; }
       .exp-transitions--page-link:last-child {
         right: 0; } }
+
+.exp-transitions.animate-in .exp-transitions--page-border rect {
+  stroke-width: 30px; }
+
+.exp-transitions.animate-in .exp-transitions--artwork, .exp-transitions.animate-in .exp-transitions--page-links {
+  opacity: 1; }
+
+.exp-transitions.animate-out .exp-transitions--page-border rect {
+  stroke-width: 80px; }
+
+.exp-transitions.animate-out .exp-transitions--artwork, .exp-transitions.animate-out .exp-transitions--page-links {
+  opacity: 0; }
