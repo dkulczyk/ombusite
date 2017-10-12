@@ -1,8 +1,73 @@
-.exp-transition--artwork {
-  max-width: 400px;
-  margin: 0 auto;
+$border-width-min: 30px;
+$border-width-max: 80px;
+
+.exp-transitions {
+  padding: $border-width-max;
 }
 
-.exp-transition--artwork--svg {
+.exp-transitions #footer {
+  margin-top: 150vh;
+}
+
+.exp-transitions--artwork {
+  margin: 0 auto;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    max-width: 400px;
+    margin-top: -200px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    max-width: 600px;
+    margin-top: -250px;
+  }
+}
+
+.exp-transitions--artwork--svg {
   display: block;
+}
+
+.exp-transitions--page-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  transform: translate3d(0,0,0);
+
+  rect {
+    fill: transparent;
+    stroke: url(#exp-transitions--page-border--gradient);
+    stroke-width: $border-width-min;
+    vector-effect: non-scaling-stroke;
+  }
+}
+
+.exp-transitions--page-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-top: 50px;
+    position: relative;
+  }
+}
+
+.exp-transitions--page-link {
+  margin: 1.0em 0;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    position: absolute;
+    top: 0;
+
+    &:first-child {
+      left: 0;
+    }
+
+    &:last-child {
+      right: 0;
+    }
+  }
 }

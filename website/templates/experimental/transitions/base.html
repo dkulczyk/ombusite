@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html {% block html_attrs %}{% endblock %}>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+      <title>{% block title %}{% endblock %} {{ site_config.site_title }}</title>
+      <meta name="description" content="{% block meta_description %}{% endblock %}"></meta>
+      {% block extrahead %}{% endblock %}
+      <link href="{% static "website/css/style.css" %}" rel="stylesheet" type="text/css" />
+      {% block extrastyle %}{% endblock %}
+  </head>
+  <body {% block body_attrs %}{% endblock %}>
+
+    <div id="page">
+      {% block content_top %}
+        <header id="header"{% block header_attributes %}{% endblock %}>
+          <div class="container">
+            {% include 'svg/logo.svg.html' %}
+          </div>
+        </header>
+      {% endblock content_top %}
+
+      {% block content %}{% endblock content %}
+
+      {% block content_bottom %}
+        <footer id="footer">
+          <p>Yay, you scrolled and the page border remained fixed.</p>
+        </footer>
+      {% endblock content_bottom %}
+    </div>
+
+    {% block post_content %}
+    {% endblock post_content %}
+
+    <svg class="exp-transitions--page-border" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <defs>
+        <linearGradient id="exp-transitions--page-border--gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#00bc9b" />
+          <stop offset="100%" stop-color="#5eaefd" />
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="100" height="100" />
+    </svg>
+
+    {% block modals %}{% endblock %}
+
+    <script type="text/javascript" src="{% static "website/js/scripts-all.js" %}"></script>
+
+    {% block extrascript %}{% endblock %}
+    {% block page_bottom %}{% endblock %}
+
+  </body>
+</html>
