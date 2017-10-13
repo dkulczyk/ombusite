@@ -1,6 +1,7 @@
 $border-width-min: 30px;
 $border-width-max: 60px;
 $border-width-max-desktop: 100px;
+$border-transition-duration-baseline: 0.5s;
 
 .exp-transitions {
   padding: $border-width-max;
@@ -92,25 +93,25 @@ $border-width-max-desktop: 100px;
 .exp-transitions.animate-in {
   .exp-transitions--page-border rect {
     stroke-width: $border-width-min;
-    transition-duration: 0.5s;
+    transition-duration: $border-transition-duration-baseline;
   }
 
   .exp-transitions--artwork {
     opacity: 1;
-    transition-duration: 0.5s;
+    transition-duration: $border-transition-duration-baseline;
   }
 
   .exp-transitions--page-links {
     opacity: 1;
-    transition-duration: 0.5s;
-    transition-delay: 0.25s;
+    transition-duration: $border-transition-duration-baseline;
+    transition-delay: $border-transition-duration-baseline / 2;
   }
 }
 
 .exp-transitions.animate-out {
   .exp-transitions--page-border rect {
     stroke-width: $border-width-max;
-    transition-duration: 0.5s;
+    transition-duration: $border-transition-duration-baseline;
 
     @media screen and (min-width: $breakpoint-desktop) {
       stroke-width: $border-width-max-desktop;
@@ -119,12 +120,12 @@ $border-width-max-desktop: 100px;
 
   .exp-transitions--artwork {
     opacity: 0;
-    transition-duration: 0.5s;
+    transition-duration: $border-transition-duration-baseline;
   }
 
   .exp-transitions--page-links {
     opacity: 0;
-    transition-duration: 0.5s;
+    transition-duration: $border-transition-duration-baseline;
     transition-delay: 0s;
   }
 }

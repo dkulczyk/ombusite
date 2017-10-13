@@ -36,9 +36,9 @@
 
     <svg class="exp-transitions--page-border" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
       <defs>
-        <linearGradient id="exp-transitions--page-border--gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#00bc9b" />
-          <stop offset="100%" stop-color="#5eaefd" />
+        <linearGradient id="exp-transitions--page-border--gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#6DC5D4" />
+          <stop offset="100%" stop-color="#F3A7AD" />
         </linearGradient>
       </defs>
       <rect x="0" y="0" width="100" height="100" fill="transparent" />
@@ -57,7 +57,7 @@
           document.documentElement.classList.add("animate-out");
           setTimeout(function() {
             location.href = href;
-          }, 1000);
+          }, 500);
         }
       }
 
@@ -71,7 +71,7 @@
 
       setTimeout(function() {
         document.documentElement.classList.add("animate-in");
-      }, 500);
+      }, 0);
 
     </script>
 
