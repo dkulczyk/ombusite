@@ -15,9 +15,10 @@
 
     <div id="page">
       {% block content_top %}
-        <header id="header"{% block header_attributes %}{% endblock %}>
+        <header id="header" {% block header_attributes %}{% endblock %}>
           <div class="container">
-            {% include 'svg/logo.svg.html' %}
+            <a href="home" class="header--logo">{% include 'svg/logo.svg.html' %}</a>
+            <a href="#" class="header--menu-toggle">{% include 'svg/menu.svg.html' %}<span>Menu</span></a>
           </div>
         </header>
       {% endblock content_top %}

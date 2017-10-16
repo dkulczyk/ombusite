@@ -7,3 +7,7 @@ def home(request, context={}):
 def about(request, context={}):
     context['title'] = "About OMBU Website homepage"
     return render(request, 'about.html', context)
+
+def kitchensink(request, context={}):
+    context['title'] = "Kitchen Sink"
+    return render(request, 'kitchen_sink.html', context)    
