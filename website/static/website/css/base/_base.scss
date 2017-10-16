@@ -21,6 +21,8 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
   font-family: $font-halisr-medium;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 h1 {
@@ -80,7 +82,7 @@ h6 {
   line-height: calc(28 / 16 * 1em);
 
   @media (min-width: $breakpoint-notebook) {
-    font-size: calc(38 / 18 * 1em);
+    font-size: calc(18 / 18 * 1em);
     line-height: calc(30 / 18 * 1em);    
   }  
 }
@@ -103,6 +105,5 @@ img,iframe {
 }
 
 caption {
-  font-size: calc(12 / 18 * 1em);
-  line-height: 1.5;
+  @include caption();
 }

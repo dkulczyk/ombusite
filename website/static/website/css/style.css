@@ -1134,7 +1134,9 @@ body {
       line-height: calc(28 / 16 * 1em); } }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "halis_rmedium", "Helvetica", sans-serif; }
+  font-family: "halis_rmedium", "Helvetica", sans-serif;
+  margin-top: 1em;
+  margin-bottom: 1em; }
 
 h1 {
   font-family: "halis_rregular", "Helvetica", sans-serif;
@@ -1183,7 +1185,7 @@ h6 {
   line-height: calc(28 / 16 * 1em); }
   @media (min-width: 992px) {
     h6 {
-      font-size: calc(38 / 18 * 1em);
+      font-size: calc(18 / 18 * 1em);
       line-height: calc(30 / 18 * 1em); } }
 
 a {
@@ -1198,6 +1200,7 @@ img, iframe {
   max-width: 100%; }
 
 caption {
+  font-family: "halis_rregular", "Helvetica", sans-serif;
   font-size: calc(12 / 18 * 1em);
   line-height: 1.5; }
 
@@ -1328,6 +1331,52 @@ http://flickity.metafizzy.co
       padding-left: 70px;
       padding-right: 70px; } }
 
+.rte strong {
+  font-family: "tisaprobold", "Georgia", serif;
+  font-weight: normal !important; }
+
+.rte em {
+  font-family: "tisaproitalic", "Georgia", serif;
+  font-style: normal !important; }
+
+.rte strong em,
+.rte em strong {
+  font-family: "tisaproitalicbold", "Georgia", serif; }
+
+.rte .caption {
+  font-family: "halis_rregular", "Helvetica", sans-serif;
+  font-size: calc(12 / 18 * 1em);
+  line-height: 1.5; }
+
+@media (max-width: 768px) {
+  .rte .pull-left,
+  .rte .pull-right {
+    float: none !important; } }
+
+@media (min-width: 768px) {
+  .rte .pull-left,
+  .rte .pull-right {
+    max-width: 300px; } }
+
+@media (min-width: 768px) {
+  .rte .ombuassets-document-left,
+  .rte .ombuassets-document-right {
+    max-width: 300px; } }
+
+@media (min-width: 768px) {
+  .rte .pull-right,
+  .rte .ombuassets-document-right {
+    clear: right;
+    float: right;
+    margin-left: 3rem; } }
+
+@media (min-width: 768px) {
+  .rte .pull-left,
+  .rte .ombuassets-document-left {
+    clear: left;
+    float: left;
+    margin-right: 3rem; } }
+
 .page-title--title.page-title--title--prominent {
   text-align: center; }
   @media (min-width: 992px) {
@@ -1343,7 +1392,8 @@ http://flickity.metafizzy.co
       padding-bottom: 4.8333rem;
       padding-top: 4.8333rem; } }
 
-.btn-primary {
+.btn-primary,
+.btn {
   background-color: #6dc5d4;
   background-image: none;
   border: 2px solid #6dc5d4;
@@ -1366,14 +1416,19 @@ http://flickity.metafizzy.co
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none; }
-  .btn-primary:hover {
+  .btn-primary:hover,
+  .btn:hover {
     color: white;
     text-decoration: none; }
-  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active,
+  .btn:hover,
+  .btn:focus,
+  .btn:active {
     background-color: #3eb2c6;
     border-color: #3eb2c6; }
 
-.btn-secondary {
+.btn-secondary,
+.cta {
   background-color: white;
   background-image: none;
   border: 2px solid #6dc5d4;
@@ -1396,10 +1451,46 @@ http://flickity.metafizzy.co
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none; }
-  .btn-secondary:hover {
+  .btn-secondary:hover,
+  .cta:hover {
     color: #6dc5d4;
     text-decoration: none; }
-  .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active,
+  .cta:hover,
+  .cta:focus,
+  .cta:active {
     background-color: white;
     border-color: #3eb2c6;
     color: #3eb2c6; }
+
+.btn-tertiary,
+.cta-tertiary {
+  padding-right: 33px;
+  position: relative;
+  color: #6dc5d4;
+  display: inline-block;
+  text-decoration: none; }
+  .btn-tertiary:after,
+  .cta-tertiary:after {
+    background-color: #6dc5d4;
+    content: "";
+    display: block;
+    height: 14px;
+    position: absolute;
+    right: 0;
+    top: 9px;
+    width: 24px;
+    -webkit-mask-image: url("../images/arrow-right-long.svg");
+    mask-image: url("../images/arrow-right-long.svg");
+    transition: all 0.2s ease; }
+  .btn-tertiary:hover:after, .btn-tertiary:focus:after, .btn-tertiary:active:after,
+  .cta-tertiary:hover:after,
+  .cta-tertiary:focus:after,
+  .cta-tertiary:active:after {
+    background-color: #3eb2c6; }
+  .btn-tertiary:hover, .btn-tertiary:focus, .btn-tertiary:active,
+  .cta-tertiary:hover,
+  .cta-tertiary:focus,
+  .cta-tertiary:active {
+    color: #3eb2c6;
+    text-decoration: none; }

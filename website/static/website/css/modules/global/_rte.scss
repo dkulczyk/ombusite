@@ -1,4 +1,57 @@
 // Rich Text Styles
 .rte {
+  strong {
+    font-family: $font-tisapro-bold;
+    font-weight: normal !important;
+  }
 
+  em {
+    font-family: $font-tisapro-italic;
+    font-style: normal !important;
+  }
+
+  strong em,
+  em strong {
+    font-family: $font-tisapro-bold-italic;
+  }
+
+  .caption {
+    @include caption();
+  }
+
+  .pull-left,
+  .pull-right {
+    @media (max-width: $breakpoint-tablet) {
+      float: none !important;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      max-width: 300px;
+    }
+  }
+
+  .ombuassets-document-left,
+  .ombuassets-document-right {
+    @media (min-width: $breakpoint-tablet) {
+      max-width: 300px;
+    }
+  }  
+
+  .pull-right,
+  .ombuassets-document-right {
+    @media (min-width: $breakpoint-tablet) {
+      clear: right;
+      float: right;
+      margin-left: 3rem;
+    }
+  }
+
+  .pull-left,
+  .ombuassets-document-left {
+    @media (min-width: $breakpoint-tablet) {
+      clear: left;
+      float: left;
+      margin-right: 3rem;
+    }
+  }
 }
