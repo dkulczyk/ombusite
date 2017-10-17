@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Theme Colors
  *
@@ -1121,13 +1122,14 @@ hr {
 * {
   box-sizing: border-box; }
 
-html, body {
-  font-size: 18px;
-  line-height: calc(30 / 18 * 1em); }
+html {
+  font-size: 18px; }
 
 body {
   color: #435e74;
-  font-family: "tisaproregular", "Georgia", serif; }
+  font-family: "tisaproregular", "Georgia", serif;
+  font-size: 18px;
+  line-height: calc(30 / 18 * 1em); }
   @media (max-width: 991px) {
     body {
       font-size: calc(16 / 18 * 1em);
@@ -1187,6 +1189,52 @@ h6 {
     h6 {
       font-size: calc(18 / 18 * 1em);
       line-height: calc(30 / 18 * 1em); } }
+
+p {
+  margin-top: 1.75em;
+  margin-bottom: 1.75em; }
+
+blockquote {
+  background-image: url("../images/quote.svg");
+  background-position: 0 2em;
+  background-repeat: no-repeat;
+  background-size: 24px 17px;
+  border-top: 1px solid #b9bcbf;
+  border-bottom: 1px solid #b9bcbf;
+  font-family: "tisaproitalic", "Georgia", serif;
+  margin: 1em 0;
+  padding-left: 34px;
+  padding-top: 2em;
+  padding-bottom: 2em; }
+  @media (min-width: 992px) {
+    blockquote {
+      background-size: 31px 23px;
+      font-size: calc(28 / 18 * 1em);
+      line-height: calc(40 / 28 * 1em);
+      padding-left: 50px; } }
+
+cite {
+  display: block;
+  font-family: "tisaproregular", "Georgia", serif;
+  font-size: 18px;
+  line-height: calc(30 / 18 * 1em);
+  margin-top: 1em; }
+  cite:before {
+    content: "\2014 \20"; }
+  @media (max-width: 991px) {
+    cite {
+      font-size: calc(16 / 18 * 1em);
+      line-height: calc(28 / 16 * 1em); } }
+
+hr {
+  border-top: 1px solid #b9bcbf;
+  margin-top: 1.75em;
+  margin-bottom: 1.75em; }
+
+ul, ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 3em; }
 
 a {
   color: #435e74;
@@ -1343,6 +1391,31 @@ http://flickity.metafizzy.co
 .rte em strong {
   font-family: "tisaproitalicbold", "Georgia", serif; }
 
+.rte blockquote {
+  background-position: 0 1em;
+  margin-top: 0.5em;
+  padding-top: 1em;
+  padding-bottom: 1em; }
+
+.rte li {
+  margin-bottom: 0.5em;
+  padding-left: 1em; }
+
+.rte ol li {
+  padding-left: 1em; }
+
+.rte ul {
+  list-style: none; }
+  .rte ul li {
+    padding-left: 1em;
+    position: relative; }
+    .rte ul li:before {
+      content: "•";
+      right: 100%;
+      line-height: 1.5em;
+      position: absolute;
+      top: 0; }
+
 .rte .caption {
   font-family: "halis_rregular", "Helvetica", sans-serif;
   font-size: calc(12 / 18 * 1em);
@@ -1357,6 +1430,9 @@ http://flickity.metafizzy.co
   .rte .pull-left,
   .rte .pull-right {
     max-width: 300px; } }
+
+.rte .ombuassets-image {
+  margin-bottom: 1em; }
 
 @media (min-width: 768px) {
   .rte .ombuassets-document-left,

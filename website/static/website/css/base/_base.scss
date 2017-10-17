@@ -4,14 +4,15 @@
 // Base styles
 //
 
-html,body {
-  font-size: $base-font-size;
-  line-height: $base-line-height;
+html {
+  font-size: $base-root-font-size;
 }
 
 body {
   color: $color-body;
   font-family: $font-tisapro-regular;
+  font-size: $base-font-size;
+  line-height: $base-line-height;  
 
   @media (max-width: $breakpoint-notebook - 1px) {
     font-size: calc(16 / 18 * 1em);
@@ -85,6 +86,61 @@ h6 {
     font-size: calc(18 / 18 * 1em);
     line-height: calc(30 / 18 * 1em);    
   }  
+}
+
+p {
+  margin-top: 1.75em;
+  margin-bottom: 1.75em;
+}
+
+blockquote {
+  background-image: url('../images/quote.svg');
+  background-position: 0 2em;
+  background-repeat: no-repeat;
+  background-size: 24px 17px;
+  border-top: 1px solid $color-gray-light;
+  border-bottom: 1px solid $color-gray-light;  
+  font-family: $font-tisapro-italic;
+  margin: 1em 0;
+  padding-left: 34px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  @media (min-width: $breakpoint-notebook) {  
+    background-size: 31px 23px;    
+    font-size: calc(28 / 18 * 1em);
+    line-height: calc(40 / 28 * 1em);
+    padding-left: 50px;
+  }
+}
+
+cite {
+  display: block;
+  font-family: $font-tisapro-regular;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  margin-top: 1em;
+
+  &:before {
+    content: "\2014 \20";
+  }
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    font-size: calc(16 / 18 * 1em);
+    line-height: calc(28 / 16 * 1em);
+  }
+}
+
+hr {
+  border-top: 1px solid $color-gray-light;
+  margin-top: 1.75em;
+  margin-bottom: 1.75em;
+}
+
+ul,ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 3em;
 }
 
 a {

@@ -15,6 +15,41 @@
     font-family: $font-tisapro-bold-italic;
   }
 
+  blockquote {
+    background-position: 0 1em;
+    margin-top: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+  }
+
+  ol {
+    li {
+      padding-left: 1em;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      padding-left: 1em;      
+      position: relative;
+
+      &:before {
+        content: "•";
+        right: 100%;
+        line-height: 1.5em;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+
   .caption {
     @include caption();
   }
@@ -28,6 +63,10 @@
     @media (min-width: $breakpoint-tablet) {
       max-width: 300px;
     }
+  }
+
+  .ombuassets-image {
+    margin-bottom: 1em;
   }
 
   .ombuassets-document-left,
