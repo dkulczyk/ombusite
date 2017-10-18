@@ -1,3 +1,11 @@
+.exp-page {
+  padding-top: 50px;
+}
+
+.exp-header {
+  padding-top: 0.25em;
+}
+
 .exp-index-menu {
   margin: 0;
   padding: 0;
@@ -57,7 +65,6 @@
 .exp-back-link {
   display: block;
   width: 146px;
-  overflow: auto;
   text-transform: uppercase;
 
   &, &:hover {

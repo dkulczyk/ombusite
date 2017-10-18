@@ -2073,6 +2073,12 @@ body.navigation--active {
   /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px); }
 
+.exp-page {
+  padding-top: 50px; }
+
+.exp-header {
+  padding-top: 0.25em; }
+
 .exp-index-menu {
   margin: 0;
   padding: 0;
@@ -2120,7 +2126,6 @@ body.navigation--active {
 .exp-back-link {
   display: block;
   width: 146px;
-  overflow: auto;
   text-transform: uppercase; }
   .exp-index-link, .exp-index-link:hover,
   .exp-back-link,
@@ -2154,9 +2159,6 @@ body.navigation--active {
   .exp-back-link:hover span {
     transform: translate(0px, 0px);
     opacity: 1; }
-
-.exp-transition-a {
-  padding: 60px; }
 
 .exp-transition-a #footer {
   margin-top: 150vh; }
@@ -2248,9 +2250,6 @@ body.navigation--active {
   opacity: 0;
   transition-duration: 0.5s;
   transition-delay: 0s; }
-
-.exp-transition-b {
-  padding: 60px; }
 
 .exp-transition-b #footer {
   margin-top: 150vh; }
