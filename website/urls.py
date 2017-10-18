@@ -35,4 +35,7 @@ urlpatterns = [
     url(r'^exp/transitions/b$', website.views.exp_transitions_b_rock),
     url(r'^exp/transitions/b/paper$', website.views.exp_transitions_b_paper),
     url(r'^exp/transitions/b/scissors$', website.views.exp_transitions_b_scissors),
+
+    url(r'^exp/rings$', website.views.exp_rings),
+    url(r'^exp/rings/a$', website.views.exp_rings_a),
 ]

@@ -1409,6 +1409,8 @@ http://flickity.metafizzy.co
   padding: 0;
   list-style: none;
   text-align: center; }
+  .exp-index-menu li {
+    margin: 1.0em 0; }
 
 .exp-concept-menu {
   margin: 0;

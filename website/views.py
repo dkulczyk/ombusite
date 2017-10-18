@@ -43,3 +43,11 @@ def exp_transitions_b_paper(request, context={}):
 def exp_transitions_b_scissors(request, context={}):
     context['title'] = "Experimental — Page Transitions B — Scissors"
     return render(request, 'experimental/transitions/b/scissors.html', context)
+
+def exp_rings(request, context={}):
+    context['title'] = "Experimental — Rings"
+    return render(request, 'experimental/rings/index.html', context)
+
+def exp_rings_a(request, context={}):
+    context['title'] = "Experimental — Rings A"
+    return render(request, 'experimental/rings/a/index.html', context)
