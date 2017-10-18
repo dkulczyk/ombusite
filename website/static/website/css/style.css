@@ -1404,6 +1404,12 @@ http://flickity.metafizzy.co
     border-color: #3eb2c6;
     color: #3eb2c6; }
 
+.exp-index-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center; }
+
 .exp-concept-menu {
   margin: 0;
   padding: 0;
@@ -1420,7 +1426,8 @@ http://flickity.metafizzy.co
         width: 33.33333%; } }
   .exp-concept-menu a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    overflow: auto; }
 
 .exp-concept-menu--concept {
   margin: 20px;
@@ -1437,6 +1444,45 @@ http://flickity.metafizzy.co
 
 .exp-concept-menu--concept--description {
   margin: 0; }
+
+.exp-index-link,
+.exp-back-link {
+  display: block;
+  width: 146px;
+  overflow: auto;
+  text-transform: uppercase; }
+  .exp-index-link, .exp-index-link:hover,
+  .exp-back-link,
+  .exp-back-link:hover {
+    text-decoration: none; }
+
+.exp-index-link h3 {
+  margin: 0;
+  font-size: 21px;
+  font-family: "halis_rbook", "Helvetica", sans-serif;
+  font-weight: normal; }
+
+.exp-back-link {
+  position: relative;
+  text-transform: uppercase;
+  font-family: "halis_rbold", "Helvetica", sans-serif;
+  font-size: 16px;
+  display: block;
+  border-top: 1px solid #91aabf;
+  margin-top: 0.75em;
+  padding-top: 0.5em; }
+  .exp-back-link span {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -0.75em;
+    margin-right: 0.25em;
+    transform: translate(30px, 0px);
+    opacity: 0;
+    transition: all 0.25s ease; }
+  .exp-back-link:hover span {
+    transform: translate(0px, 0px);
+    opacity: 1; }
 
 .exp-transition-a {
   padding: 60px; }

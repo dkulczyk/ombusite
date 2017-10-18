@@ -17,9 +17,11 @@
       {% block content_top %}
         <header id="header"{% block header_attributes %}{% endblock %}>
           <div class="container">
-            <a href="/exp/transitions">
+            <a href="/">
               {% include 'svg/logo.svg.html' %}
             </a>
+            <a class="exp-index-link" href="/exp"><h3>Experiments</h3></a>
+            <a class="exp-back-link" href="/exp/transitions"><span>⟻</span>Back</a>
           </div>
         </header>
       {% endblock content_top %}
@@ -57,7 +59,7 @@
         var e = window.e || e;
         var href = e.target.href;
 
-        if (e.target.tagName === 'A') {
+        if (e.target.tagName === 'A' && e.target.className === 'btn-primary') {
           e.preventDefault();
           document.documentElement.classList.add("animate-out");
           document.getElementById("exp-transition-a--page-border--gradient--animate-1").beginElement();
