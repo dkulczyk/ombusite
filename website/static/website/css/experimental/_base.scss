@@ -1,0 +1,42 @@
+.exp-concept-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  li {
+    margin: 0 0 0 -0.25em;
+    padding: 0;
+    display: inline-block;
+    width: percentage(1/1);
+    vertical-align: top;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      width: percentage(1/3);
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+}
+
+.exp-concept-menu--concept {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid $color-primary;
+  border-radius: 20px;
+  text-align: left;
+  min-height: 12.0em;
+}
+
+.exp-concept-menu--concept--name {
+  font-size: 24px;
+  font-family: $font-halisr-medium;
+  padding-bottom: 0.5em;
+}
+
+.exp-concept-menu--concept--description {
+  margin: 0;
+}

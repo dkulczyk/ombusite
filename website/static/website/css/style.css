@@ -1404,6 +1404,40 @@ http://flickity.metafizzy.co
     border-color: #3eb2c6;
     color: #3eb2c6; }
 
+.exp-concept-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center; }
+  .exp-concept-menu li {
+    margin: 0 0 0 -0.25em;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top; }
+    @media screen and (min-width: 768px) {
+      .exp-concept-menu li {
+        width: 33.33333%; } }
+  .exp-concept-menu a {
+    display: block;
+    text-decoration: none; }
+
+.exp-concept-menu--concept {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #6dc5d4;
+  border-radius: 20px;
+  text-align: left;
+  min-height: 12.0em; }
+
+.exp-concept-menu--concept--name {
+  font-size: 24px;
+  font-family: "halis_rmedium", "Helvetica", sans-serif;
+  padding-bottom: 0.5em; }
+
+.exp-concept-menu--concept--description {
+  margin: 0; }
+
 .exp-transition-a {
   padding: 60px; }
 
