@@ -20,6 +20,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^1.5.3",
     "gulp-watch": "^4.3.5",
+    "jquery": "^3.0.0",
     "flickity": "~2.0.5"
   }
 }
