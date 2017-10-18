@@ -17,7 +17,9 @@
       {% block content_top %}
         <header id="header"{% block header_attributes %}{% endblock %}>
           <div class="container">
-            {% include 'svg/logo.svg.html' %}
+            <a href="/exp">
+              {% include 'svg/logo.svg.html' %}
+            </a>
           </div>
         </header>
       {% endblock content_top %}
@@ -34,9 +36,9 @@
     {% block post_content %}
     {% endblock post_content %}
 
-    <svg class="exp-transitions--page-border" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <svg class="exp-transition-a--page-border" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
       <defs>
-        <linearGradient id="exp-transitions--page-border--gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="exp-transition-a--page-border--gradient" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stop-color="#6DC5D4">
             <animate id="exp-transition--page-border--gradient--animate-1" attributeName="stop-color" values="#6DC5D4;#F3A7AD;#6DC5D4" dur="1s" from="0" to="100%" repeatCount="indefinite" begin="click" />
           </stop>
@@ -62,7 +64,7 @@
           document.getElementById("exp-transition--page-border--gradient--animate-2").beginElement();
           setTimeout(function() {
             location.href = href;
-          }, 500);
+          }, 2500);
         }
       }
 

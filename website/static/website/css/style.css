@@ -1404,27 +1404,27 @@ http://flickity.metafizzy.co
     border-color: #3eb2c6;
     color: #3eb2c6; }
 
-.exp-transitions {
+.exp-transition-a {
   padding: 60px; }
 
-.exp-transitions #footer {
+.exp-transition-a #footer {
   margin-top: 150vh; }
 
-.exp-transitions--artwork {
+.exp-transition-a--artwork {
   margin: 0 auto; }
   @media screen and (min-width: 768px) {
-    .exp-transitions--artwork {
+    .exp-transition-a--artwork {
       max-width: 400px;
       margin-top: -200px; } }
   @media screen and (min-width: 1200px) {
-    .exp-transitions--artwork {
+    .exp-transition-a--artwork {
       max-width: 600px;
       margin-top: -250px; } }
 
-.exp-transitions--artwork--svg {
+.exp-transition-a--artwork--svg {
   display: block; }
 
-.exp-transitions--page-border {
+.exp-transition-a--page-border {
   position: fixed;
   top: 0;
   left: 0;
@@ -1432,68 +1432,68 @@ http://flickity.metafizzy.co
   height: 100vh;
   pointer-events: none;
   transform: translate3d(0, 0, 0); }
-  .exp-transitions--page-border rect {
+  .exp-transition-a--page-border rect {
     fill: transparent;
     stroke-width: 30px;
-    stroke: url(#exp-transitions--page-border--gradient);
+    stroke: url(#exp-transition-a--page-border--gradient);
     vector-effect: non-scaling-stroke; }
 
-.exp-transitions--page-links {
+.exp-transition-a--page-links {
   list-style: none;
   margin: 0;
   padding: 0; }
   @media screen and (min-width: 768px) {
-    .exp-transitions--page-links {
+    .exp-transition-a--page-links {
       margin-top: 50px;
       position: relative; } }
 
-.exp-transitions--page-link {
+.exp-transition-a--page-link {
   margin: 1.0em 0; }
   @media screen and (min-width: 768px) {
-    .exp-transitions--page-link {
+    .exp-transition-a--page-link {
       position: absolute;
       top: 0; }
-      .exp-transitions--page-link:first-child {
+      .exp-transition-a--page-link:first-child {
         left: 0; }
-      .exp-transitions--page-link:last-child {
+      .exp-transition-a--page-link:last-child {
         right: 0; } }
 
-.exp-transitions.animate-init .exp-transitions--page-border rect {
+.exp-transition-a.animate-init .exp-transition-a--page-border rect {
   stroke-width: 60px;
   transition: stroke-width 0 ease; }
   @media screen and (min-width: 1200px) {
-    .exp-transitions.animate-init .exp-transitions--page-border rect {
+    .exp-transition-a.animate-init .exp-transition-a--page-border rect {
       stroke-width: 100px; } }
 
-.exp-transitions.animate-init .exp-transitions--artwork, .exp-transitions.animate-init .exp-transitions--page-links {
+.exp-transition-a.animate-init .exp-transition-a--artwork, .exp-transition-a.animate-init .exp-transition-a--page-links {
   opacity: 0;
   transition: opacity 0 ease; }
 
-.exp-transitions.animate-in .exp-transitions--page-border rect {
+.exp-transition-a.animate-in .exp-transition-a--page-border rect {
   stroke-width: 30px;
   transition-duration: 0.5s; }
 
-.exp-transitions.animate-in .exp-transitions--artwork {
+.exp-transition-a.animate-in .exp-transition-a--artwork {
   opacity: 1;
   transition-duration: 0.5s; }
 
-.exp-transitions.animate-in .exp-transitions--page-links {
+.exp-transition-a.animate-in .exp-transition-a--page-links {
   opacity: 1;
   transition-duration: 0.5s;
   transition-delay: 0.25s; }
 
-.exp-transitions.animate-out .exp-transitions--page-border rect {
+.exp-transition-a.animate-out .exp-transition-a--page-border rect {
   stroke-width: 60px;
   transition-duration: 0.5s; }
   @media screen and (min-width: 1200px) {
-    .exp-transitions.animate-out .exp-transitions--page-border rect {
+    .exp-transition-a.animate-out .exp-transition-a--page-border rect {
       stroke-width: 100px; } }
 
-.exp-transitions.animate-out .exp-transitions--artwork {
+.exp-transition-a.animate-out .exp-transition-a--artwork {
   opacity: 0;
   transition-duration: 0.5s; }
 
-.exp-transitions.animate-out .exp-transitions--page-links {
+.exp-transition-a.animate-out .exp-transition-a--page-links {
   opacity: 0;
   transition-duration: 0.5s;
   transition-delay: 0s; }
