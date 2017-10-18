@@ -114,6 +114,14 @@ blockquote {
   }
 }
 
+article {
+  margin-bottom: 3rem;
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-bottom: 5rem;
+  }
+}
+
 cite {
   display: block;
   font-family: $font-tisapro-regular;

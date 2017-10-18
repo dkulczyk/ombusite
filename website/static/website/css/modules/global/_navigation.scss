@@ -6,8 +6,7 @@ body.navigation--active {
 }
 
 .navigation--label,
-.navigation--primary-group-label,
-.navigation--social-link-label {
+.navigation--primary-group-label {
   @include element-invisible;
 }
 
@@ -178,64 +177,7 @@ body.navigation--active {
   @include btn-tertiary();
 }
 
-.navigation--social-links {
-  list-style: none;
-  margin-bottom: calc(30 / 18 * 1em);
-  margin-top: 3rem;
-  padding-left: 0;
-
-  @media (max-width: $breakpoint-notebook - 1px) {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  @media (min-width: $breakpoint-notebook) {
-    margin-top: calc(30 / 18 * 1rem);
-    margin-bottom: calc(73 / 18 * 1em);
-  }
-}
-
-.navigation--social-link-item {
-  @media (max-width: $breakpoint-notebook - 1px) {
-    flex: 0 0 auto;
-    text-align: center;
-  }  
-
-  @media (min-width: $breakpoint-notebook) {
-    display: inline-block;
-    margin-right: calc(30 / 18 * 1rem);
-    vertical-align: middle;
-  }
-}
-
-.navigation--social-link {
-  svg {
-    height: 39px;
-    width: 39px;
-
-    * {
-      fill: $color-body;
-      transition: all $transition-duration-default ease;
-    }
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    svg * {
-      fill: $color-primary;
-    }
-  }
-
-  @media (min-width: $breakpoint-notebook) {
-    svg {
-      height: 24px;
-      width: 24px;
-    }
-  }
-}
-
-.header--background {
+.navigation--background {
   @media (min-width: $breakpoint-notebook) {
     bottom: 0;
     height: 805px;
@@ -247,6 +189,7 @@ body.navigation--active {
     svg {
       height: 100%;
       width: 100%;
+      vertical-align: top;
     }
   }
 }

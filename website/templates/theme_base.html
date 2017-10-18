@@ -62,14 +62,10 @@
                   </li>  
                   <li class="navigation--primary-group">
                     <span class="navigation--primary-group-label">Social Links</span>
-                    <ul class="navigation--social-links">
-                      <li class="navigation--social-link-item"><a href="#" class="navigation--social-link">{% include 'svg/social-twitter.svg.html' %}<span class="navigation--social-link-label">Twitter</span></a></li>
-                      <li class="navigation--social-link-item"><a href="#" class="navigation--social-link">{% include 'svg/social-facebook.svg.html' %}<span class="navigation--social-link-label">Facebook</span></a></li>
-                      <li class="navigation--social-link-item"><a href="#" class="navigation--social-link">{% include 'svg/social-linkedin.svg.html' %}<span class="navigation--social-link-label">LinkedIn</span></a></li>
-                      <li class="navigation--social-link-item"><a href="#" class="navigation--social-link">{% include 'svg/social-instagram.svg.html' %}<span class="navigation--social-link-label">Instagram</span></a></li>
+                    {% include 'features/social-links.html' %}
                   </li>
                 </ul>              
-                <span class="header--background" role="presentation">{% include 'svg/tree.svg.html' %}</span>
+                <span class="navigation--background" role="presentation">{% include 'svg/tree.svg.html' %}</span>
               </li>
             </div>
           </nav>
@@ -80,6 +76,31 @@
 
       {% block content_bottom %}
         <footer id="footer">
+          <div class="container">
+            <div class="footer--contents">
+              <span class="footer--background" role="presentation">{% include 'svg/tree.svg.html' %}</span>
+              <div class="footer--primary">
+                <div class="footer--primary-inner">
+                  <div class="footer--cta-image"><img src="{% static 'website/images/high-five.png' %}"/></div>
+                  <h2 class="footer--cta-title">What's Your Vision</h2>
+                  <div class="footer--cta-description">Let's chat and see how we can help you bring your vision to life. Get in touch.</div>
+                  <a href="#" class="footer-cta-cta">Coffee's on us</a>
+                </div>
+              </div>
+              <div class="footer--secondary">
+                <ul class="footer--links">
+                  <li class="footer--link-item"><a href="#" class="footer--link">Work</a></li>
+                  <li class="footer--link-item"><a href="#" class="footer--link">Services</a></li>
+                  <li class="footer--link-item"><a href="#" class="footer--link">Contact</a></li>
+                  <li class="footer--link-item"><a href="#" class="footer--link">About</a></li>
+                  <li class="footer--link-item"><a href="#" class="footer--link">Careers</a></li>
+                </ul>
+                <div class="footer--social-links social-links--light">
+                  {% include 'features/social-links.html' %}
+                </div>
+              </div>
+            </div>
+          </div>
         </footer>
       {% endblock content_bottom %}
     </div>

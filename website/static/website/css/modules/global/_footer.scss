@@ -1,1 +1,203 @@
 // Footer styles
+
+#footer {
+  background-image: linear-gradient(to left, $color-primary, $color-secondary);
+  overflow: hidden;
+  text-align: center;
+}
+
+.footer--contents {
+  position: relative;
+  padding-bottom: 3.5rem;
+  padding-top: 5rem;
+
+  @media (min-width: $breakpoint-notebook) {
+    padding-bottom: 8.8rem;
+    padding-top: 8.8rem;
+  }  
+}
+
+.footer--primary {
+  background-color: $color-white;
+  border: 1px solid rgb(151, 151, 151);
+  border-radius: 48px;
+  margin-bottom: 3.8rem;
+  padding: calc(60 / 18 * 1rem) calc(20 / 18 * 1rem);
+
+  @media (min-width: $breakpoint-notebook) {
+    border: none;
+    height: 30rem;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4.3rem;
+    padding: 0;
+    position: relative;
+    width: 30rem;
+  }
+}
+
+.footer--primary-inner {
+  @media (min-width: $breakpoint-notebook) {
+    height: 21rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 21rem;
+  }
+}
+
+.footer--cta-image {
+  display: block;
+  height: calc(140 / 18 * 1rem);
+  margin: 0 auto;
+  width: calc(140 / 18 * 1rem);
+
+  img {
+    border-radius: 100%;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.footer--cta-title {
+  font-size: calc(28 / 16 * 1em);
+  margin-top: calc(20 / 28 * 1em);
+  margin-bottom: calc(10 / 28 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(32 / 18 * 1em);
+    line-height: calc(44 / 32 * 1em);
+    margin-top: calc(30 / 32 * 1em);
+    margin-bottom: calc(10 / 32 * 1em);    
+  }
+}
+
+.footer--cta-description {
+  margin-bottom: calc(20 / 16 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-bottom: calc(36 / 18 * 1em);
+  }
+}
+
+.footer-cta-cta {
+  @include btn-primary();
+  padding-left: calc(27 / 18 * 1em);
+  padding-right: calc(27 / 18 * 1em)
+}
+
+.footer--secondary {
+  @media (min-width: $breakpoint-notebook) {
+    position: relative;
+  }
+}
+
+.footer--links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.footer--link-item {
+  @media (max-width: $breakpoint-notebook - 1px) {
+    flex: 0 0 auto;
+
+    &:nth-child(2) {
+      min-width: 33%;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      flex-basis: 50%;
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-notebook - 1px) {
+    &:nth-child(2) {
+      min-width: 0;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      flex-basis: auto;
+    }
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    display: inline-block;
+    vertical-align: top;
+  }  
+}
+
+.footer--link {
+  color: $color-white;
+  display: block;
+  font-family: $font-halisr-regular;
+  font-size: calc(19 / 16 * 1em);
+  line-height: calc(24 / 19 * 1em);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-white;
+    text-decoration: underline;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(16 / 18 * 1em);
+    line-height: calc(28 / 16 * 1em);
+    padding: 0 1.5em;
+  }  
+}
+
+.footer--social-links {
+  margin-bottom: 0;
+  
+  @media (min-width: $breakpoint-notebook) {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+}
+
+.footer--background {
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    display: none;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    bottom: 0;
+    right: 42%;
+    position: absolute;
+
+    svg {
+      height: 757px;
+      width: 1011px;
+      vertical-align: top;
+
+      * {
+        fill: rgb(255, 255, 255);
+        fill-opacity: 0.05;
+        stroke-width: 0px;
+      }
+    }
+  }
+}
