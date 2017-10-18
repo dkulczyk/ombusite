@@ -31,4 +31,8 @@ urlpatterns = [
     url(r'^exp/transitions/a$', website.views.exp_transitions_a_rock),
     url(r'^exp/transitions/a/paper$', website.views.exp_transitions_a_paper),
     url(r'^exp/transitions/a/scissors$', website.views.exp_transitions_a_scissors),
+
+    url(r'^exp/transitions/b$', website.views.exp_transitions_b_rock),
+    url(r'^exp/transitions/b/paper$', website.views.exp_transitions_b_paper),
+    url(r'^exp/transitions/b/scissors$', website.views.exp_transitions_b_scissors),
 ]

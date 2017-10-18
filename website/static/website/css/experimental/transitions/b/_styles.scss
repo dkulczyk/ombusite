@@ -1,0 +1,142 @@
+$border-width-resting: 30px;
+$border-width-resting-desktop: 60px;
+$border-width-transition: 0;
+$border-width-transition-desktop: 0;
+$border-transition-duration-baseline: 0.5s;
+
+.exp-transition-b {
+  padding: $border-width-resting-desktop;
+}
+
+.exp-transition-b #footer {
+  margin-top: 150vh;
+}
+
+.exp-transition-b--artwork {
+  margin: 0 auto;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    max-width: 400px;
+    margin-top: -200px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    max-width: 600px;
+    margin-top: -250px;
+  }
+}
+
+.exp-transition-b--artwork--svg {
+  display: block;
+}
+
+.exp-transition-b--page-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  transform: translate3d(0,0,0);
+
+  rect {
+    fill: transparent;
+    stroke-width: $border-width-resting;
+    stroke: url(#exp-transition-b--page-border--gradient);
+    vector-effect: non-scaling-stroke;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    rect {
+      stroke-width: $border-width-resting-desktop;
+    }
+  }
+}
+
+.exp-transition-b--page-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-top: 50px;
+    position: relative;
+  }
+}
+
+.exp-transition-b--page-link {
+  margin: 1.0em 0;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    position: absolute;
+    top: 0;
+
+    &:first-child {
+      left: 0;
+    }
+
+    &:last-child {
+      right: 0;
+    }
+  }
+}
+
+.exp-transition-b.animate-init {
+  .exp-transition-b--page-border rect {
+    stroke-width: $border-width-transition;
+    transition: stroke-width 0 ease;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      stroke-width: $border-width-transition-desktop;
+    }
+  }
+
+  .exp-transition-b--artwork, .exp-transition-b--page-links {
+    opacity: 0;
+    transition: opacity 0 ease;
+  }
+}
+
+.exp-transition-b.animate-in {
+  .exp-transition-b--page-border rect {
+    stroke-width: $border-width-resting;
+    transition-duration: $border-transition-duration-baseline;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      stroke-width: $border-width-resting-desktop;
+    }
+  }
+
+  .exp-transition-b--artwork {
+    opacity: 1;
+    transition-duration: $border-transition-duration-baseline;
+  }
+
+  .exp-transition-b--page-links {
+    opacity: 1;
+    transition-duration: $border-transition-duration-baseline;
+    transition-delay: $border-transition-duration-baseline / 2;
+  }
+}
+
+.exp-transition-b.animate-out {
+  .exp-transition-b--page-border rect {
+    stroke-width: $border-width-transition;
+    transition-duration: $border-transition-duration-baseline;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      stroke-width: $border-width-transition-desktop;
+    }
+  }
+
+  .exp-transition-b--artwork {
+    opacity: 0;
+    transition-duration: $border-transition-duration-baseline;
+  }
+
+  .exp-transition-b--page-links {
+    opacity: 0;
+    transition-duration: $border-transition-duration-baseline;
+    transition-delay: 0s;
+  }
+}

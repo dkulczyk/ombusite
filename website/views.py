@@ -31,3 +31,15 @@ def exp_transitions_a_paper(request, context={}):
 def exp_transitions_a_scissors(request, context={}):
     context['title'] = "Experimental — Page Transitions A — Scissors"
     return render(request, 'experimental/transitions/a/scissors.html', context)
+
+def exp_transitions_b_rock(request, context={}):
+    context['title'] = "Experimental — Page Transitions B — Rock"
+    return render(request, 'experimental/transitions/b/rock.html', context)
+
+def exp_transitions_b_paper(request, context={}):
+    context['title'] = "Experimental — Page Transitions B — Paper"
+    return render(request, 'experimental/transitions/b/paper.html', context)
+
+def exp_transitions_b_scissors(request, context={}):
+    context['title'] = "Experimental — Page Transitions B — Scissors"
+    return render(request, 'experimental/transitions/b/scissors.html', context)

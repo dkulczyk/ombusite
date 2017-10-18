@@ -36,14 +36,14 @@
     {% block post_content %}
     {% endblock post_content %}
 
-    <svg class="exp-transition-a--page-border" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <svg class="exp-transition-b--page-border" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
       <defs>
-        <linearGradient id="exp-transition-a--page-border--gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="exp-transition-b--page-border--gradient" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stop-color="#6DC5D4">
-            <animate id="exp-transition-a--page-border--gradient--animate-1" attributeName="stop-color" values="#6DC5D4;#F3A7AD;#6DC5D4" dur="1s" from="0" to="100%" repeatCount="indefinite" begin="click" />
+            <animate id="exp-transition-b--page-border--gradient--animate-1" attributeName="stop-color" values="#6DC5D4;#F3A7AD;#6DC5D4" dur="1s" from="0" to="100%" repeatCount="indefinite" begin="click" />
           </stop>
           <stop offset="100%" stop-color="#F3A7AD">
-            <animate id="exp-transition-a--page-border--gradient--animate-2" attributeName="stop-color" values="#F3A7AD;#6DC5D4;#F3A7AD" dur="1s" from="0" to="100%" repeatCount="indefinite" begin="click" />
+            <animate id="exp-transition-b--page-border--gradient--animate-2" attributeName="stop-color" values="#F3A7AD;#6DC5D4;#F3A7AD" dur="1s" from="0" to="100%" repeatCount="indefinite" begin="click" />
           </stop>
         </linearGradient>
       </defs>
@@ -60,11 +60,9 @@
         if (e.target.tagName === 'A') {
           e.preventDefault();
           document.documentElement.classList.add("animate-out");
-          document.getElementById("exp-transition-a--page-border--gradient--animate-1").beginElement();
-          document.getElementById("exp-transition-a--page-border--gradient--animate-2").beginElement();
           setTimeout(function() {
             location.href = href;
-          }, 2500);
+          }, 1000);
         }
       }
 
