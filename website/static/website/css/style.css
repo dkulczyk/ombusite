@@ -1861,6 +1861,7 @@ body.navigation--active {
   position: relative;
   color: #6dc5d4;
   display: inline-block;
+  font-family: "halis_rregular", "Helvetica", sans-serif;
   text-decoration: none; }
   .navigation--secondary-link.navigation--secondary-link--cta:after {
     background-color: #6dc5d4;
@@ -1970,6 +1971,7 @@ body.navigation--active {
   position: relative;
   color: #6dc5d4;
   display: inline-block;
+  font-family: "halis_rregular", "Helvetica", sans-serif;
   text-decoration: none; }
   .btn-tertiary:after,
   .cta-tertiary:after {
