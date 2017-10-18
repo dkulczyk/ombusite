@@ -1,11 +1,69 @@
 // Header
 
 #header {
-  padding-bottom: 1.6667rem;
+  padding-bottom: 3.1111rem;
   padding-top: 1.6667rem;
 
   @media (min-width: $breakpoint-notebook) {
-    padding-bottom: 4.8333rem;
-    padding-top: 4.8333rem;
+    padding-bottom: calc(70 / 18 * 1rem);
+    padding-top: calc(70 / 18 * 1rem);
   }
+}
+
+.header--contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header--logo {
+  display: block;
+  flex: 0 0 auto;
+
+  svg {
+    height: 30px;
+    vertical-align: top;
+
+    @media (min-width: $breakpoint-tablet) {
+      height: 37px;
+    }
+  }
+}
+
+.header--menu-toggle {
+  flex: 0 0 auto;
+
+  span {
+    @include element-invisible;
+  }
+
+  svg {
+    height: 30px;
+    width: 30px;  
+    vertical-align: top;  
+    
+    * {
+      fill: $color-primary;
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    background-color: $color-primary;
+    border-radius: 100%;
+    display: block;
+    height: 70px;
+    position: relative;
+    width: 70px;
+
+    svg {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      * {
+        fill: $color-white;
+      }
+    }
+  }  
 }

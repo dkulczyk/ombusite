@@ -1,0 +1,105 @@
+.social-links {
+  list-style: none;
+  margin-bottom: calc(30 / 18 * 1em);
+  margin-top: 3rem;
+  padding-left: 0;
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-top: calc(30 / 18 * 1rem);
+    margin-bottom: calc(73 / 18 * 1em);
+  }
+
+  .footer--social-links & {
+    @media (min-width: $breakpoint-notebook) {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-top: 0;
+      vertical-align: middle;
+    }
+  }
+}
+
+.social-links--item {
+  @media (max-width: $breakpoint-notebook - 1px) {
+    flex: 0 0 auto;
+    text-align: center;
+  }  
+
+  @media (min-width: $breakpoint-notebook) {
+    display: inline-block;
+    margin-right: calc(30 / 18 * 1rem);
+    vertical-align: middle;
+  }
+
+  .footer--social-links & {
+    @media (min-width: $breakpoint-notebook) {
+      margin-right: 0;
+    }
+  }
+}
+
+.social-links--link {
+  svg {
+    height: 39px;
+    width: 39px;
+
+    * {
+      fill: $color-body;
+      transition: all $transition-duration-default ease;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    svg * {
+      fill: $color-primary;
+    }
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    svg {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  .footer--social-links & {
+    @media (max-width: $breakpoint-notebook - 1px) {
+      svg {
+        height: 36px;
+        width: 36px;
+      }
+    }
+
+    @media (min-width: $breakpoint-notebook) {
+      padding-left: 0.8em;
+      padding-right: 0.8em;
+    }
+  }
+
+  .social-links--light & {
+    svg {
+      * {
+        fill: $color-white
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      svg * {
+        fill: $color-white;
+      }
+    }
+  }
+}
+
+.social-links--label {
+  @include element-invisible;
+}

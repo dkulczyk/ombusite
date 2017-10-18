@@ -15,10 +15,60 @@
 
     <div id="page">
       {% block content_top %}
-        <header id="header"{% block header_attributes %}{% endblock %}>
+        <header id="header" {% block header_attributes %}{% endblock %}>
           <div class="container">
-            {% include 'svg/logo.svg.html' %}
+            <div class="header--contents">
+              <a href="home" class="header--logo">{% include 'svg/logo.svg.html' %}</a>
+              <a href="#menu" class="header--menu-toggle">{% include 'svg/menu.svg.html' %}<span>Menu</span></a>
+            </div>
           </div>
+          <nav role="navigation" class="navigation" id="menu">
+            <div class="container">
+              <div class="navigation--contents">
+                <h2 class="navigation--label">Menu</h2>
+                <div class="navigation--actions">
+                  <a href="#" class="header--menu-close">{% include 'svg/close.svg.html' %}</a>
+                </div>              
+                <ul class="navigation--primary">
+                  <li class="navigation--primary-group navigation--primary-group--has-secondary">
+                    <a class="navigation--primary-link" href="#">Work</a>
+                    <ul class="navigation--secondary">
+                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Navex Global</a><span class="navigation--secondary-description">Building a CMS for the global compliance leader</span></li>
+                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Northwest Power Pool</a><span class="navigation--secondary-description">Modernizing power utility training for an entire region</span></li>
+                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Saturday Academy</a><span class="navigation--secondary-description">Engaging the next generation of scientists and artists</span></li>
+                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link navigation--secondary-link--cta">See More Work</a></li>
+                    </ul>
+                  </li>
+                  <li class="navigation--primary-group navigation--primary-group--has-secondary">
+                    <a class="navigation--primary-link" href="#">Services</a>
+                    <ul class="navigation--secondary">
+                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Enterprise CMS</a><span class="navigation--secondary-description">Fast. Powerful. Easy.</span></li>
+                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Business Applications</a><span class="navigation--secondary-description">Streamlined experiences for any need</span></li>
+                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Infrastructure</a><span class="navigation--secondary-description">Never have an outage again</span></li>
+                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Technology Strategy</a><span class="navigation--secondary-description">Find the tech to build your vision</span></li>
+                    </ul>
+                  </li>
+                  <li class="navigation--primary-group navigation--primary-group--has-secondary">
+                    <a class="navigation--primary-link" href="#">Contact</a>
+                    <ul class="navigation--secondary">
+                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Coffee's on us</a><span class="navigation--secondary-description">business@ombuweb.com<br>503.298.4888</span></li>
+                    </ul>
+                  </li>
+                  <li class="navigation--primary-group navigation--primary-group--single-item">
+                    <a class="navigation--primary-link" href="#">About</a>
+                  </li>      
+                  <li class="navigation--primary-group navigation--primary-group--single-item">
+                    <a class="navigation--primary-link" href="#">Careers</a>
+                  </li>  
+                  <li class="navigation--primary-group">
+                    <span class="navigation--primary-group-label">Social Links</span>
+                    {% include 'features/social-links.html' %}
+                  </li>
+                </ul>              
+                <span class="navigation--background" role="presentation">{% include 'svg/tree.svg.html' %}</span>
+              </li>
+            </div>
+          </nav>
         </header>
       {% endblock content_top %}
 
@@ -26,6 +76,31 @@
 
       {% block content_bottom %}
         <footer id="footer">
+          <div class="container">
+            <div class="footer--contents">
+              <span class="footer--background" role="presentation">{% include 'svg/tree.svg.html' %}</span>
+              <div class="footer--primary">
+                <div class="footer--primary-inner">
+                  <div class="footer--cta-image"><img src="{% static 'website/images/high-five.png' %}"/></div>
+                  <h2 class="footer--cta-title">What's Your Vision</h2>
+                  <div class="footer--cta-description">Let's chat and see how we can help you bring your vision to life. Get in touch.</div>
+                  <a href="#" class="footer-cta-cta">Coffee's on us</a>
+                </div>
+              </div>
+              <div class="footer--secondary">
+                <ul class="footer--links">
+                  <li class="footer--link-item"><a href="#" class="footer--link">Work</a></li>
+                  <li class="footer--link-item"><a href="#" class="footer--link">Services</a></li>
+                  <li class="footer--link-item"><a href="#" class="footer--link">Contact</a></li>
+                  <li class="footer--link-item"><a href="#" class="footer--link">About</a></li>
+                  <li class="footer--link-item"><a href="#" class="footer--link">Careers</a></li>
+                </ul>
+                <div class="footer--social-links social-links--light">
+                  {% include 'features/social-links.html' %}
+                </div>
+              </div>
+            </div>
+          </div>
         </footer>
       {% endblock content_bottom %}
     </div>

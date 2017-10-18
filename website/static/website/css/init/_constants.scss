@@ -12,6 +12,9 @@ $color-secondary: rgb(243, 167, 173); // Dusk (light)
 $color-secondary-dark: rgb(229, 125, 133); // Dush (dark)
 $color-tertiary: rgb(67, 94, 116); // Midnight
 
+$color-gray-light: rgb(185, 188, 191);
+$color-gray-medium: rgb(149, 177, 164);
+
 // Custom fonts
 $font-halisr-book: 'halis_rbook', 'Helvetica', sans-serif;
 $font-halisr-medium: 'halis_rmedium', 'Helvetica', sans-serif;
@@ -24,6 +27,7 @@ $font-tisapro-italic: 'tisaproitalic', 'Georgia', serif;
 $font-tisapro-bold-italic: 'tisaproitalicbold', 'Georgia', serif;
 
 // Font sizes
+$base-root-font-size: 18px;
 $base-font-size: 18px;
 $base-line-height: calc(30 / 18 * 1em);
 

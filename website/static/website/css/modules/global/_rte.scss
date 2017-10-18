@@ -1,4 +1,102 @@
 // Rich Text Styles
 .rte {
+  > h1, > h2, > h3, > h4, > h5, > h6 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
+  strong {
+    font-family: $font-tisapro-bold;
+    font-weight: normal !important;
+  }
+
+  em {
+    font-family: $font-tisapro-italic;
+    font-style: normal !important;
+  }
+
+  strong em,
+  em strong {
+    font-family: $font-tisapro-bold-italic;
+  }
+
+  blockquote {
+    background-position: 0 1em;
+    margin-top: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+  }
+
+  ol {
+    li {
+      padding-left: 1em;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      padding-left: 1em;      
+      position: relative;
+
+      &:before {
+        content: "•";
+        right: 100%;
+        line-height: 1.5em;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+
+  .caption {
+    @include caption();
+  }
+
+  .pull-left,
+  .pull-right {
+    @media (max-width: $breakpoint-tablet) {
+      float: none !important;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      max-width: 300px;
+    }
+  }
+
+  .ombuassets-image {
+    margin-bottom: 1em;
+  }
+
+  .ombuassets-document-left,
+  .ombuassets-document-right {
+    @media (min-width: $breakpoint-tablet) {
+      max-width: 300px;
+    }
+  }  
+
+  .pull-right,
+  .ombuassets-document-right {
+    @media (min-width: $breakpoint-tablet) {
+      clear: right;
+      float: right;
+      margin-left: 3rem;
+    }
+  }
+
+  .pull-left,
+  .ombuassets-document-left {
+    @media (min-width: $breakpoint-tablet) {
+      clear: left;
+      float: left;
+      margin-right: 3rem;
+    }
+  }
 }
