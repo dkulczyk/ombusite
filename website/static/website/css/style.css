@@ -2077,7 +2077,31 @@ body.navigation--active {
   padding-top: 50px; }
 
 .exp-header {
+  position: relative;
   padding-top: 0.25em; }
+
+@media screen and (min-width: 768px) {
+  #exp-reset {
+    position: absolute;
+    bottom: 57px;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease; }
+    #exp-reset.visibility-triggered {
+      visibility: visible;
+      opacity: 1; } }
+
+.exp-title {
+  font-size: 24px; }
+  @media screen and (min-width: 768px) {
+    .exp-title {
+      position: absolute;
+      left: 200px;
+      right: 200px;
+      bottom: 1.15em;
+      margin: 0;
+      font-size: 36px; } }
 
 .exp-index-menu {
   margin: 0;
@@ -2347,3 +2371,59 @@ body.navigation--active {
   opacity: 0;
   transition-duration: 0.5s;
   transition-delay: 0s; }
+
+.exp-rings-a--svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px; }
+  .exp-rings-a--svg circle {
+    stroke-width: 0px;
+    stroke: url(#exp-ombu-gradient-01);
+    transition: all 0s ease-in; }
+  .exp-rings-a--svg.animation-triggered circle {
+    stroke-width: 10px;
+    transition-duration: 1.5s; }
+
+.exp-rings-b--svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px; }
+  .exp-rings-b--svg circle {
+    stroke-width: 0px;
+    stroke: url(#exp-ombu-gradient-01);
+    stroke-linecap: round;
+    stroke-dashoffset: 909.29;
+    stroke-dasharray: 879.29;
+    transform-origin: 50% 50%;
+    transform: rotate(270deg);
+    transition: all 0s linear; }
+  .exp-rings-b--svg.animation-triggered circle {
+    stroke-width: 5px;
+    stroke-dashoffset: 0;
+    transition-duration: 2s; }
+
+.exp-rings-c--svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px; }
+  .exp-rings-c--svg circle {
+    stroke-width: 0px;
+    stroke: url(#exp-ombu-gradient-01);
+    stroke-linecap: round;
+    stroke-dashoffset: 879.29;
+    stroke-dasharray: 879.29;
+    transform-origin: 50% 50%;
+    transform: rotate(-20deg);
+    transition: all 0s ease; }
+    .exp-rings-c--svg circle:nth-of-type(2) {
+      transform: rotate(-200deg); }
+    .exp-rings-c--svg circle:nth-of-type(3) {
+      transform: rotate(-200deg); }
+  .exp-rings-c--svg.animation-triggered circle {
+    stroke-width: 5px;
+    stroke-dashoffset: 30;
+    transition-duration: 2s; }
+    .exp-rings-c--svg.animation-triggered circle:nth-of-type(2) {
+      transition-delay: 1.6s; }
+    .exp-rings-c--svg.animation-triggered circle:nth-of-type(3) {
+      transition-delay: 3.2s; }

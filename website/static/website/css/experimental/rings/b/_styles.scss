@@ -1,0 +1,24 @@
+// C = 2πr
+
+.exp-rings-b--svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+
+  circle {
+    stroke-width: 0px;
+    stroke: url(#exp-ombu-gradient-01);
+    stroke-linecap: round;
+    stroke-dashoffset: 909.29;
+    stroke-dasharray: 879.29;
+    transform-origin: 50% 50%;
+    transform: rotate(270deg);
+    transition: all 0s linear;
+  }
+
+  &.animation-triggered circle {
+    stroke-width: 5px;
+    stroke-dashoffset: 0;
+    transition-duration: 2s;
+  }
+}

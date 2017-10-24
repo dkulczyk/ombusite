@@ -1,0 +1,18 @@
+// C = 2πr
+
+.exp-rings-a--svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+
+  circle {
+    stroke-width: 0px;
+    stroke: url(#exp-ombu-gradient-01);
+    transition: all 0s ease-in;
+  }
+
+  &.animation-triggered circle {
+    stroke-width: 10px;
+    transition-duration: 1.5s;
+  }
+}
