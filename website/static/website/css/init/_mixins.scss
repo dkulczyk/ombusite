@@ -129,3 +129,10 @@
     text-decoration: none;
   }
 }
+
+// Section styles
+@mixin section-bg() {
+  background-color: $color-gray-xtra-light;
+  border-top: 1px solid $color-section-border;
+  border-bottom: 1px solid $color-section-border;
+}

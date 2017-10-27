@@ -1,7 +1,7 @@
 {% load static %}
 
 {% if navex %}
-<div class="callout">
+<div class="callout{% if fullwidth %} callout--fullwidth{% endif %}">
   <div class="callout--content">
     <h2 class="callout--title"><span class="callout--title-prefix">NAVEX Global</span>Enterprise CMS for the Global  Ethics Leader</h2>
     <div class="callout--body rte">
@@ -10,12 +10,16 @@
     <a href="#" class="callout--cta">Read the Case Study</a>
   </div>
   <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}">
-    <img src="{% static 'website/images/callout/callout_navex-1.png' %}" alt="NAVEX Global screenshot">
+    {% if fullwidth %}
+      <img src="{% static 'website/images/callout/callout_navex-2.png' %}" alt="NAVEX Global screenshot">
+    {% else %}
+      <img src="{% static 'website/images/callout/callout_navex-1.png' %}" alt="NAVEX Global screenshot">
+    {% endif %}
   </aside>  
 </div>
 
 {% elif nwpp %}
-<div class="callout">
+<div class="callout{% if fullwidth %} callout--fullwidth{% endif %}">
   <div class="callout--content">
     <h2 class="callout--title"><span class="callout--title-prefix">Northwest Power Pool</span>Modernizing Power Utility Training</h2>
     <div class="callout--body rte">
@@ -24,12 +28,16 @@
     <a href="#" class="callout--cta">Read the Case Study</a>
   </div>
   <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}">
-    <img src="{% static 'website/images/callout/callout_nwpp-1.png' %}" alt="NWPP screenshot">
+    {% if fullwidth %}
+      <img src="{% static 'website/images/callout/callout_nwpp-2.png' %}" alt="NWPP screenshot">
+    {% else %}
+      <img src="{% static 'website/images/callout/callout_nwpp-1.png' %}" alt="NWPP screenshot">
+    {% endif %}
   </aside>  
 </div>
 
 {% elif sa %}
-<div class="callout">
+<div class="callout{% if fullwidth %} callout--fullwidth{% endif %}">
   <div class="callout--content">
     <h2 class="callout--title"><span class="callout--title-prefix">Saturday Academy</span>Reaching the Next Generation of Scientists, Engineers, and Artists</h2>
     <div class="callout--body rte">
@@ -38,7 +46,11 @@
     <a href="#" class="callout--cta">Read the Case Study</a>
   </div>
   <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}">
-    <img src="{% static 'website/images/callout/callout_sa-1.png' %}" alt="Saturday Academy screenshot">
+    {% if fullwidth %}
+      <img src="{% static 'website/images/callout/callout_sa-2.png' %}" alt="Saturday Academy screenshot">
+    {% else %}
+      <img src="{% static 'website/images/callout/callout_sa-1.png' %}" alt="Saturday Academy screenshot">
+    {% endif %}
   </aside>  
 </div>
 

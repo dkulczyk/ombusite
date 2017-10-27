@@ -1,0 +1,26 @@
+{% extends 'theme_base.html' %}
+
+{% block content %}
+  <main>
+    <div class="container">
+      <section class="page-title">
+        <h1 class="page-title--title">Work</h1>
+      </section>
+      <section class="work-primary">
+        {% include 'features/_callout.html' with navex=True fullwidth=True %}
+        {% include 'features/_callout.html' with nwpp=True fullwidth=True %}
+        {% include 'features/_callout.html' with sa=True fullwidth=True %}
+      </section>
+    </div>
+    <section class="work-projects">
+      <div class="container">
+        {% include 'features/_project-list.html' %}
+      </div>
+    </section>
+    <section class="work-logos">
+      <div class="container">
+        {% include 'features/_image-grid.html' with prominent=True %}        
+      </div>
+    </section>
+  </main>
+{% endblock content %}

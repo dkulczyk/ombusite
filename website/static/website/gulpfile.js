@@ -7,6 +7,7 @@ var livereload = require('gulp-livereload');
 var bootstrapDir = './node_modules/bootstrap-sass/assets';
 var flickityDir = './node_modules/flickity/dist';
 var jqueryDir = './node_modules/jquery/dist';
+var waypointsDir = './node_modules/waypoints/lib';
 
 gulp.task('sass', function() {
   return gulp.src('css/style.scss')
@@ -29,7 +30,9 @@ var jsFiles = [
 
   jqueryDir + '/jquery.slim.min.js',
   flickityDir + '/flickity.pkgd.min.js',
-  './js/navigation.js'
+  waypointsDir + '/jquery.waypoints.min.js',
+  './js/navigation.js',
+  './js/callout-fullwidth.js'
 ];
 gulp.task('js', function() {
   return gulp.src(jsFiles)

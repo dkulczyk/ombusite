@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^about$', website.views.about),
     url(r'^kitchen-sink$', website.views.kitchensink),
+    url(r'^work$', website.views.work),
 ]

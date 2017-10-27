@@ -1,0 +1,73 @@
+// Project Card
+
+.project-card {
+  display: block;
+  margin-bottom: 3.75rem;
+  text-decoration: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: calc(94 / 18 * 1rem);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-body;
+    text-decoration: none;
+  }
+}
+
+.project-card--media {
+  background-color: rgba($color-body, 0.2);
+  height: 0;
+  margin-bottom: calc(20 / 18 * 1rem);
+  padding-bottom: 46%;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-bottom: 66.666%;
+  }
+}
+
+.project-card--title {
+  color: $color-body;
+  font-family: $font-halisr-regular;
+  font-size: calc(19 / 16 * 1em);
+  line-height: calc(30 / 19 * 1em);
+  margin-top: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  transition: all $transition-duration-default ease;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: calc(22 / 18 * 1em);
+    line-height: calc(33 / 22 * 1em);
+    margin-bottom: calc(10 / 18 * 1rem);
+  }
+
+  .project-card:hover &,
+  .project-card:focus &,
+  .project-card:active & {
+    color: $color-primary;
+    text-decoration: underline;
+  }  
+}
+
+.project-card--body {
+  color: $color-body;
+  text-decoration: none;
+
+  .project-card:hover &,
+  .project-card:focus &,
+  .project-card:active & {
+    color: $color-body;
+    text-decoration: none;  
+  }
+}

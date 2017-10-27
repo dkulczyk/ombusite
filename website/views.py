@@ -11,3 +11,7 @@ def about(request, context={}):
 def kitchensink(request, context={}):
     context['title'] = "Kitchen Sink"
     return render(request, 'kitchen_sink.html', context)    
+
+def work(request, context={}):
+    context['title'] = "Work"
+    return render(request, 'work.html', context)

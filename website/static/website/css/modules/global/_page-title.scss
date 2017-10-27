@@ -1,8 +1,12 @@
 // Page Title
 
-.page-title--title.page-title--title--prominent {
+.page-title--title {
   margin-top: 0;
   text-align: center;
+}
+
+.page-title--title.page-title--title--prominent {
+  margin-top: 0;
   
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(65 / 18 * 1em);
