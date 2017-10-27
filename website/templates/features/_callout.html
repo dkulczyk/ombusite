@@ -1,0 +1,45 @@
+{% load static %}
+
+{% if navex %}
+<div class="callout">
+  <div class="callout--content">
+    <h2 class="callout--title"><span class="callout--title-prefix">NAVEX Global</span>Enterprise CMS for the Global  Ethics Leader</h2>
+    <div class="callout--body rte">
+      <p>NAVEX Global, the largest consulting firm for ethics and compliance, needed a robust content management system to reach their global audiences. We designed and built a rich new website with powerful marketing tools and a filterable resource center to showcase NAVEX’s thought leadership  in the industry.</p>
+    </div>
+    <a href="#" class="callout--cta">Read the Case Study</a>
+  </div>
+  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}">
+    <img src="{% static 'website/images/callout/callout_navex-1.png' %}" alt="NAVEX Global screenshot">
+  </aside>  
+</div>
+
+{% elif nwpp %}
+<div class="callout">
+  <div class="callout--content">
+    <h2 class="callout--title"><span class="callout--title-prefix">Northwest Power Pool</span>Modernizing Power Utility Training</h2>
+    <div class="callout--body rte">
+      <p>OMBU designed a powerful centralized training platform so NWPP could help its member utilities keep up-to-date on mandated certifications and the latest trends, meaning greater safety, more engagement, and more benefit to the whole membership base and their customers.</p>
+    </div>
+    <a href="#" class="callout--cta">Read the Case Study</a>
+  </div>
+  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}">
+    <img src="{% static 'website/images/callout/callout_nwpp-1.png' %}" alt="NWPP screenshot">
+  </aside>  
+</div>
+
+{% elif sa %}
+<div class="callout">
+  <div class="callout--content">
+    <h2 class="callout--title"><span class="callout--title-prefix">Saturday Academy</span>Reaching the Next Generation of Scientists, Engineers, and Artists</h2>
+    <div class="callout--body rte">
+      <p>Saturday Academy offers over 700 STEAM-curriculum classes per year, but registration was cumbersome for parents and data was a mess for staff. We designed and built a Salesforce CRM and integrated website that lets parents register their children while data flows in real-time for instant reporting  and analysis.</p>
+    </div>
+    <a href="#" class="callout--cta">Read the Case Study</a>
+  </div>
+  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}">
+    <img src="{% static 'website/images/callout/callout_sa-1.png' %}" alt="Saturday Academy screenshot">
+  </aside>  
+</div>
+
+{% endif %}

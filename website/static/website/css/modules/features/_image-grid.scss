@@ -1,0 +1,56 @@
+.image-grid {
+  margin-left: -$gutter-side-tile;
+  margin-right: -$gutter-side-tile;  
+  text-align: center;
+
+  @media (max-width: $breakpoint-tablet - 1px) {
+    margin-top: 5.625em;
+    margin-bottom: 4.375em;    
+  }  
+
+  @media (min-width: $breakpoint-tablet) {
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.image-grid--item {
+  font-size: 0;
+  padding-left: $gutter-side-tile;
+  padding-right: $gutter-side-tile;  
+  text-align: center;
+
+  img,svg {
+    height: auto;
+  }
+
+  @media (max-width: $breakpoint-tablet - 1px) {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    vertical-align: middle;
+    width: 32%;
+
+    img,svg {
+      max-height: 40px;
+      max-width: 100%;
+      vertical-align: middle;
+      width: auto;      
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;  
+    min-width: 0;
+
+    img,svg {
+      max-height: 93px;
+      max-width: 190px;
+      width: auto;
+    }  
+  }
+}

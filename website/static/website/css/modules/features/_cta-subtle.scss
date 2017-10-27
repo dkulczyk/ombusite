@@ -1,0 +1,14 @@
+.cta-subtle {
+  margin-top: 5.625rem;
+  margin-bottom: 5.625rem;
+  text-align: center;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: calc(160 / 18 * 1rem);
+    margin-bottom: calc(160 / 18 * 1rem);
+  }
+}
+
+.cta-subtle--item {
+  @include btn-secondary;
+}
