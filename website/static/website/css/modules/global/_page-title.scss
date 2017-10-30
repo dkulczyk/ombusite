@@ -14,3 +14,13 @@
     margin-top: 0.4em;
   }
 }
+
+.page-title--title.page-title--title--project {
+  margin-bottom: calc(20 / 36 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(46 / 18 * 1em);
+    margin-bottom: calc(30 / 50 * 1em);
+    text-align: left;
+  }
+}

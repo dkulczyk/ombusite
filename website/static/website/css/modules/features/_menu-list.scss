@@ -1,0 +1,44 @@
+// Menu List
+
+.menu-list {
+
+  @media (max-width: $breakpoint-notebook) {
+    border: 1px solid rgb(202,202,202);
+    border-radius: 2px;
+    margin-top: calc(30 / 18 * 1rem);
+    padding: $gutter-side-tile ($gutter-side-tile / 2);
+  }
+}
+
+.menu-list--title {
+  font-size: calc(16 / 16 * 1em);
+  line-height: calc(28 / 16 * 1em);
+  margin-top: 0;
+  margin-bottom: calc(10 / 16 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(18 / 18 * 1em);
+    line-height: calc(30 / 18 * 1em);   
+    margin-bottom: calc(10 / 18 * 1em); 
+  } 
+}
+
+.menu-list--list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-list--item {
+  display: block;
+}
+
+.menu-list--link {
+  display: block;
+  font-family: $font-halisr-book;
+  font-size: calc(12 / 16 * 1em);
+  line-height: calc(18 / 12 * 1em);
+  padding-top: calc(5 / 12 * 1em);
+  padding-bottom: calc(5 / 12 * 1em);
+  text-decoration: none;
+}

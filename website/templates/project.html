@@ -1,0 +1,135 @@
+{% extends 'theme_base.html' %}
+{% load static %}
+
+{% block header_attributes %}class="header--project"{% endblock %}
+
+{% block header_bottom %}
+  <div class="project-slider">
+    <div class="container">
+      <div class="row">
+        <div class="slider">
+          <div class="slider--slide slider--slide--has-shadow">
+            <img src="{% static 'website/images/slider/slider-1.png' %}" title="">
+          </div>
+          <div class="slider--slide slider--slide--has-text">
+            <div class="slide--text">
+              <span class="slide--text-prominent">92%</span>
+              <span class="slide--text-default">of Event Organizers Described the<br>New Site as “Good” or “Excellent”</span>
+            </div>
+          </div>
+          <div class="slider--slide slider--slide--has-two-images">
+            <div class="slider--slide-image">
+              <img src="{% static 'website/images/slider/slider-2.png' %}" title="">
+            </div>
+            <div class="slider--slide-image">
+              <a href="#" class="image-ovelay"><img src="{% static 'website/images/slider/slider-3.png' %}" title=""></a>
+            </div>
+          </div>    
+          <div class="slider--slide slider--slide--has-shadow">
+            <img src="{% static 'website/images/slider/slider-4.png' %}" title="">
+          </div>   
+          <div class="slider--slide">
+            <img src="{% static 'website/images/slider/slider-5.png' %}" title="">
+          </div>        
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock header_bottom %}
+
+{% block content %}
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="project--content">
+          <section class="page-title project-section">
+            <div class="project-section--main">
+              <div class="project-title--cta"><a href="#" class="project-title--cta-link">Visit Website{% include 'svg/website.svg.html' %}</a></div>
+              <h1 class="page-title--title page-title--title--project">Oregon Convention Center</h1>
+              <div class="rte project-intro--body">
+                <h6>Making the world’s most useful convention center website</h6>
+                <p>The Oregon Convention Center is a prominent institution of the West Coast, one of only two LEED Platinum certified convention centers in the US. When the OCC approached OMBU, however, their website had two major failings: it looked woefully outdated and cheap, and the site’s navigation and content were messy and confusing.</p>
+                <p>The OCC engaged OMBU in a guided Discovery phase, to figure out how to organize, design, and build a web presence that communicated the OCC’s prestigious yet friendly brand and guide audiences to the information they need. </p>
+                <p>OMBU then took the information from Discovery and designed and built a sleek, modern, mobile-friendly and easy-to-navigate website that highlights the </p>
+              </div>
+            </div>
+            <aside class="project-section--supplementary">
+              <div class="project-section--supplementary-content">
+                <a href="#" class="project-section--cta">Visit Website {% include 'svg/website.svg.html' %}</a>
+                <div class="menu-list">
+                  <h2 class="menu-list--title">Services</h2>
+                  <ul class="menu-list--list">
+                    <li class="menu-list--item"><a href="#" class="menu-list--link">Technology Strategy</a></li>
+                    <li class="menu-list--item"><a href="#" class="menu-list--link">User Experience Design</a></li>
+                    <li class="menu-list--item"><a href="#" class="menu-list--link">Systems Integration</a></li>
+                    <li class="menu-list--item"><a href="#" class="menu-list--link">Development</a></li>
+                    <li class="menu-list--item"><a href="#" class="menu-list--link">Infrastructure</a></li>
+                  </ul>
+                </div>
+              </div>
+            </aside>        
+          </section>
+          <blockquote class="blockquote--has-image"><aside class="blockquote--image"><img src="{% static 'website/images/project_occ_image-3.png' %}"></aside><div class="blockquote--content">The OCC website is our front door and delivers exactly what we are – a place where things happen, modern, exciting, sustainable and service oriented.  OMBU created a very successful site for us on time and on budget<cite>Matt Pizzuti, Interim Executive Director</cite><div></blockquote>
+          <section class="project-section">
+            <div class="project-section--main rte">
+              <h2>Insights</h2>
+              <h6>Get people what they need quickly</h6>
+              <p>The Oregon Convention Center’s audiences fall clearly into three groups: visitors, exhibitors, and event planners. Each of these audiences needs to quickly find the information that is relevant to them, so we designed a prominent navigation bar that immediately guides people to the right area of content for them.</p>
+              <p>We also promoted a curated list of the most important links for each audience, so with one tap exhibitors could order services, planners could view floor plans, and visitors could find parking, for example.</p>
+              <ul><li>Example one dolor sit amer</li><li>Lorem Ipsum as another point</li><li>Taboris nisi ut ullamco</li></ul>
+              <p>We also identified a small number of resources that are so critical that everyone should be able to find them immediately. For example, parking in the busy Lloyd District can be tricky, so we promoted parking and a handful of other key links to the very top, and made them especially prominent on mobile. We know folks are trying to find where to park, so when they’re pulled over where they shouldn’t be, we give them that info as quickly as possible.</p>
+              <div class="ombuassets-image ombuassets-image-align-center">
+                <img src="{% static 'website/images/project_occ_image-1.png' %}" title="">
+              </div>          
+              <h6>I’m hungry! What can I eat?</h6>
+              <p>During Discovery, we learned that 40% of the convention center’s revenue comes from the rich and diverse concessions venues located throughout the building. However, the venue hours are inconsistent and confusing since they’re based on convention event times, so visitors were confused about what was open when.</p>
+              <div class="ombuassets-image ombuassets-image-align-left pull-left image-overlay">
+                <img src="{% static 'website/images/project_occ_image-2.png' %}" title="">
+              </div>
+              <p>Hungry and confused visitors are not happy visitors, and so we devised the idea of a one-tap “Eat Now” feature. We designed and built this feature and linked it to the convention center’s existing scheduling system, and now hungry convention-goers can pull out their phone and with one touch find delicious food near them.</p>
+              <h6>OCC is people</h6>
+              <p>We met the staff at the convention center, and it turns out the OCC has a truly passionate, friendly team of people, eager to give personal help and attention. When we saw their enthusiasm we recognized this as both a part of the OCC brand and also an opportunity to extend their service online. </p>
+              <p>We highlighted staff faces and direct contact info on the pages each person is responsible for. We also implemented real-time web chat for all team members, meaning an exhibitor who has a question about the event service offerings can immediately start chatting with an event manager without even picking up a phone. Chat operators can then answer questions, or even interactively guide the person to the right place to find information on the website.</p>
+            </div>
+            <aside class="project-section--supplementary">
+              <div class="project-section--supplementary-content">
+                <div class="menu-list">
+                  <h2 class="menu-list--title">Technologies & Innovations</h2>
+                  <ul class="menu-list--list">
+                    <li class="menu-list--item"><a href="#" class="menu-list--link">OMBU Core Drupal CMS</a></li>
+                    <li class="menu-list--item"><a href="#" class="menu-list--link">Responsive design</a></li>
+                    <li class="menu-list--item"><a href="#" class="menu-list--link">60fps UI animations</a></li>
+                    <li class="menu-list--item"><a href="#" class="menu-list--link">Integration with EBMS event system</a></li>
+                    <li class="menu-list--item"><a href="#" class="menu-list--link">Apache Solr faceted search</a></li>
+                    <li class="menu-list--item"><a href="#" class="menu-list--link">Live chat</a></li>
+                    <li class="menu-list--item"><a href="#" class="menu-list--link">High-availability managed infrastructure</a></li>
+                  </ul>
+                </div>
+              </div>
+            </aside>          
+          </section>
+          <section class="project-section">
+            <div class="project-section--pager">
+              <ul class="project-pager">
+                <li>
+                  <a href="#" class="project-pager--link">
+                    <div class="project-pager--label">Case Study:</div>
+                    <h2 class="project-pager--title">Car Talk</h2>
+                    <span class="project-pager--cta">Don't Drive Like My Brother</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="project-pager--link">
+                    <div class="project-pager--label">Case Study:</div>
+                    <h2 class="project-pager--title">Paramount Pictures</h2>
+                    <span class="project-pager--cta">Now Playing</span>
+                  </a>
+                </li>          
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock content %}

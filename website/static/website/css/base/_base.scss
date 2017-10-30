@@ -101,7 +101,7 @@ blockquote {
   border-top: 1px solid $color-gray-light;
   border-bottom: 1px solid $color-gray-light;  
   font-family: $font-tisapro-italic;
-  margin: 1em 0;
+  margin: calc(60 / 18 * 1rem) 0;
   padding-left: 34px;
   padding-top: 2em;
   padding-bottom: 2em;
@@ -110,6 +110,7 @@ blockquote {
     background-size: 31px 23px;    
     font-size: calc(28 / 18 * 1em);
     line-height: calc(40 / 28 * 1em);
+    margin: calc(60 / 18 * 1rem) 0 calc(120 / 18 * 1rem);
     padding-left: 50px;
   }
 }
@@ -125,6 +126,7 @@ article {
 cite {
   display: block;
   font-family: $font-tisapro-regular;
+  font-style: normal;
   font-size: $base-font-size;
   line-height: $base-line-height;
   margin-top: 1em;
@@ -148,7 +150,11 @@ hr {
 ul,ol {
   margin-top: 1em;
   margin-bottom: 1em;
-  padding-left: 3em;
+  padding-left: 1.5em;
+
+  @media (min-width: $breakpoint-notebook) {
+    padding-left: 3em;
+  }
 }
 
 a {

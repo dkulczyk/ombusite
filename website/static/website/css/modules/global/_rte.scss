@@ -6,6 +6,32 @@
     }
   }
 
+  h2 {
+    margin-bottom: calc(10 / 30 * 1em);
+
+    @media (min-width: $breakpoint-notebook) {
+      margin-bottom: calc(30 / 38 * 1em);
+    }
+  }
+
+  h6 {
+    margin-bottom: calc(10 / 16 * 1em);
+    margin-top: calc(10 / 16 * 1em);
+
+    & + p {
+      margin-top: calc(10 / 16 * 1em);
+    }    
+
+    @media (min-width: $breakpoint-notebook) {
+      margin-bottom: calc(10 / 18 * 1em);
+      margin-top: calc(10 / 18 * 1em);
+
+      & + p {
+        margin-top: calc(10 / 18 * 1em);
+      }
+    }
+  }
+
   strong {
     font-family: $font-tisapro-bold;
     font-weight: normal !important;
@@ -73,6 +99,17 @@
 
   .ombuassets-image {
     margin-bottom: 1em;
+
+    @media (max-width: $breakpoint-notebook - 1px) {
+      margin-top: calc(50 / 18 * 1rem);
+      margin-bottom: calc(50 / 18 * 1rem);
+      text-align: center;
+    }
+  }
+
+  .ombuassets-image-align-center {
+    margin-top: calc(60 / 18 * 1rem);
+    margin-bottom: calc(60 / 18 * 1rem);
   }
 
   .ombuassets-document-left,

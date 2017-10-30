@@ -15,3 +15,7 @@ def kitchensink(request, context={}):
 def work(request, context={}):
     context['title'] = "Work"
     return render(request, 'work.html', context)
+
+def project(request, context={}):
+    context['title'] = "Oregon Convention Center"
+    return render(request, 'project.html', context)

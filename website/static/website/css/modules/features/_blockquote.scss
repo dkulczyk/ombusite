@@ -1,0 +1,44 @@
+// Blockquote
+// Inherits from base styles
+
+.blockquote--has-image {
+  background-image: none; 
+  padding-left: 0;
+
+  @media (min-width: $breakpoint-notebook) {
+    display: flex;
+    padding-left: 0;
+  }
+}
+
+.blockquote--image {
+  margin-bottom: calc(24 / 18 * 1rem); 
+  padding-left: calc(30 / 18 * 1rem);
+  padding-right: calc(30 / 18 * 1rem);
+  text-align: center;
+  width: 100%;
+
+  @media (min-width: $breakpoint-notebook) {
+    flex: 0 0 auto;
+    margin-bottom: 0;
+    max-width: 40%;
+    padding-right: 0;
+    width: auto;
+    order: 2;
+  }
+}
+
+.blockquote--content {
+  background-image: url('../images/quote.svg');
+  background-position: 0 0.5em;
+  background-repeat: no-repeat;
+  background-size: 24px 17px;
+  padding-left: 34px;
+  position: relative;
+
+  @media (min-width: $breakpoint-notebook) {  
+    background-position: 0 0;
+    background-size: 31px 23px;    
+    padding-left: 50px;
+  }
+}

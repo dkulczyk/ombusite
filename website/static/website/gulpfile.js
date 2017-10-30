@@ -32,7 +32,8 @@ var jsFiles = [
   flickityDir + '/flickity.pkgd.min.js',
   waypointsDir + '/jquery.waypoints.min.js',
   './js/navigation.js',
-  './js/callout-fullwidth.js'
+  './js/callout-fullwidth.js',
+  './js/slider.js'
 ];
 gulp.task('js', function() {
   return gulp.src(jsFiles)

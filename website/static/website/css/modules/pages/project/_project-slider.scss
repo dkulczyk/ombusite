@@ -1,0 +1,38 @@
+.project-slider {
+  overflow: hidden;
+  padding-bottom: calc(44 / 18 * 1rem);
+  
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 4px;
+  }    
+}
+
+.slider {
+  .project-slider & {
+    @include make-xs-column(12);
+    @include make-md-column(11);
+    @include make-md-column-push(1);
+  }
+}
+
+.flickity-viewport {
+  .project-slider & {
+    @media (min-width: $breakpoint-tablet) {
+      overflow: visible;
+    }
+  }
+}
+
+.flickity-page-dots {
+  .project-slider & {
+    bottom: -34px;
+
+    .dot {
+      background: $color-body;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      bottom: -44px;
+    }
+  }
+}

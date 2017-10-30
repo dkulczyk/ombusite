@@ -1,12 +1,28 @@
 // Header
 
 #header {
-  padding-bottom: 3.1111rem;
-  padding-top: 1.6667rem;
+  padding-bottom: calc(56 / 18 * 1rem);
+  padding-top: calc(30 / 18 * 1rem);
 
   @media (min-width: $breakpoint-notebook) {
     padding-bottom: calc(70 / 18 * 1rem);
     padding-top: calc(70 / 18 * 1rem);
+  }
+
+  &.header--project {
+    background-color: $color-gray-xtra-light;
+    border-bottom: 1px solid $color-section-border;
+    margin-bottom: calc(30 / 18 * 1rem);
+    padding-bottom: calc(17 / 18 * 1rem);
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-bottom: calc(30 / 18 * 1rem);
+    }
+
+    @media (min-width: $breakpoint-notebook) {
+      margin-bottom: calc(58 / 18 * 1rem);
+      padding-bottom: calc(30 / 18 * 1rem);
+    }
   }
 }
 
@@ -14,6 +30,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  .header--project & {
+    padding-bottom: calc(30 / 18 * 1rem);
+
+    @media (min-width: $breakpoint-notebook) {
+      padding-bottom: calc(55 / 18 * 1rem);
+    }
+  }
 }
 
 .header--logo {

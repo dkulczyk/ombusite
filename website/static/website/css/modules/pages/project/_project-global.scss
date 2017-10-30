@@ -1,0 +1,88 @@
+// Project global
+
+.project-title--cta {
+  margin-bottom: calc(10 / 18 * 1rem);
+  text-align: center;
+
+  @media (min-width: $breakpoint-notebook) {
+    display: none;
+  }
+}
+
+.project-title--cta-link {
+  color: $color-primary;
+  font-family: $font-halisr-bold;
+  font-size: calc(18 / 16 * 1em);
+  line-height: calc(32 / 18 * 1em);
+  text-decoration: none;
+
+  svg {
+    display: inline-block;
+    height: 16px;
+    margin-left: 10px;
+    width: 16px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.project--content {
+  @include make-xs-column(12);
+  @include make-lg-column(10);
+  @include make-lg-column-push(1);
+}
+
+.project-section {
+  @include make-row();
+
+  p,ul,ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.project-section--cta {
+  @include btn-secondary();
+  margin-bottom: calc(50 / 18 * 1rem);
+
+  svg {
+    height: 16px;
+    width: 16px;
+  }
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    display: none;
+  }
+}
+
+.project-section--main {
+  @include make-xs-column(12);
+  @include make-md-column(8);
+}
+
+.project-section--supplementary {
+  @include make-xs-column(12);
+  @include make-md-column(4);
+
+  @media (min-width: $breakpoint-notebook) {
+    bottom: 0;
+    position: sticky;
+    top: 1rem;
+  }
+}
+
+.project-section--supplementary-content {
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-left: 1rem;
+  }
+}
+
+.project-section--pager {
+  @include make-xs-column(12);
+}
