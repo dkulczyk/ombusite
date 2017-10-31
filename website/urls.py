@@ -41,4 +41,5 @@ urlpatterns = [
     url(r'^exp/rings/a$', website.views.exp_rings_a),
     url(r'^exp/rings/b$', website.views.exp_rings_b),
     url(r'^exp/rings/c$', website.views.exp_rings_c),
+    url(r'^exp/rings/d$', website.views.exp_rings_d),
 ]

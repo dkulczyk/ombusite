@@ -2427,3 +2427,19 @@ body.navigation--active {
       transition-delay: 1.6s; }
     .exp-rings-c--svg.animation-triggered circle:nth-of-type(3) {
       transition-delay: 3.2s; }
+
+.exp-rings-d--svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 270px; }
+  .exp-rings-d--svg path {
+    stroke-width: 0px;
+    stroke: url(#exp-ombu-gradient-01);
+    stroke-linecap: round;
+    stroke-dashoffset: 416.858825684;
+    stroke-dasharray: 416.858825684;
+    transition: all 0s ease; }
+  .exp-rings-d--svg.animation-triggered path {
+    stroke-width: 5px;
+    stroke-dashoffset: 30;
+    transition-duration: 2s; }

@@ -62,3 +62,7 @@ def exp_rings_b(request, context={}):
 def exp_rings_c(request, context={}):
     context['title'] = "Experimental — Rings C"
     return render(request, 'experimental/rings/c/index.html', context)
+
+def exp_rings_d(request, context={}):
+    context['title'] = "Experimental — Rings D"
+    return render(request, 'experimental/rings/d/index.html', context)
