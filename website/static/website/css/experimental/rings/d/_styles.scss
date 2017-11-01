@@ -1,24 +1,89 @@
-// C = 2πr
+$ring-count: 3;
+$ring-width: 270;
+$ring-chain-offset: 50;
+$chain-width: ($ring-width * $ring-count) - ($ring-chain-offset * ($ring-count - 1));
+$ring-pos-left: percentage(($ring-width - $ring-chain-offset) / $chain-width);
+$transition-duration: 0.75s;
+$transition-stagger-factor: 0.5;
+$stroke-width-start: 0px;
+$stroke-width-final: 3px;
 
-$transition-duration: 2s;
+.exp-rings-d--chain {
+  position: relative;
+  margin: 0 auto;
+  max-width: $chain-width * 1px;
+  height: 0;
+  padding-top: percentage($ring-width/$chain-width);
+
+  .rings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .exp-rings-d--svg {
+    position: absolute;
+    top: 0;
+
+    &:nth-child(1) {
+      left: $ring-pos-left * 0;
+    }
+
+    &:nth-child(2) {
+      left: $ring-pos-left * 1;
+    }
+
+    &:nth-child(3) {
+      left: $ring-pos-left * 2;
+    }
+  }
+}
 
 .exp-rings-d--svg {
   display: block;
-  margin: 0 auto;
-  max-width: 270px;
+  max-width: percentage($ring-width/$chain-width);
 
   path {
-    stroke-width: 0px;
+    stroke-width: $stroke-width-start;
     stroke: url(#exp-ombu-gradient-01);
     stroke-linecap: round;
-    stroke-dashoffset: 416.858825684;
-    stroke-dasharray: 416.858825684;
     transition: all 0s ease;
   }
 
-  &.animation-triggered path {
-    stroke-width: 5px;
-    stroke-dashoffset: 30;
-    transition-duration: $transition-duration;
+  &.exp-rings-d--svg--start path,
+  &.exp-rings-d--svg--end path {
+    // document.querySelector('#exp-rings_svg_1 path').getTotalLength();
+    stroke-dashoffset: 761.34912109375;
+    stroke-dasharray: 761.34912109375;
   }
+
+  &.exp-rings-d--svg--middle path {
+    // document.querySelector('#exp-rings_svg_2 path').getTotalLength();
+    // Divided by two since the path is a compound of two segments
+    stroke-dashoffset: (737.1893310546875 / 2);
+    stroke-dasharray: (737.1893310546875 / 2);
+  }
+
+  &.animation-triggered {
+    path {
+      stroke-width: $stroke-width-final;
+      stroke-dashoffset: 0;
+      transition-duration: $transition-duration;
+    }
+
+    &#exp-rings_svg_1 path {
+      transition-delay: 0;
+    }
+
+    &#exp-rings_svg_2 path {
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 1;
+    }
+
+    &#exp-rings_svg_3 path {
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 2;
+    }
+  }
+
 }
