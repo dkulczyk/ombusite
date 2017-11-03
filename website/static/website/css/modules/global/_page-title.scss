@@ -1,5 +1,9 @@
 // Page Title
 
+.page-title.page-title--page-title--has-info {
+  @include make-row();
+}
+
 .page-title--title {
   margin-top: 0;
   text-align: center;
@@ -22,5 +26,102 @@
     font-size: calc(46 / 18 * 1em);
     margin-bottom: calc(30 / 50 * 1em);
     text-align: left;
+  }
+}
+
+.page-title--title.page-title--title--has-info {
+  margin-bottom: calc(20 / 36 * 1em);
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(12);
+  @include make-lg-column(10);
+  @include make-lg-column-push(1);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(46 / 18 * 1em);
+    line-height: calc(69 / 46 * 1em);
+    margin-bottom: calc(18 / 46 * 1em);
+    text-align: left;    
+  }
+}
+
+.page-title--supplementary-info {
+  @include clearfix();
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-bottom: calc(160 / 18 * 1rem);
+  }
+}
+
+.page-title--body {
+  font-size: calc(20 / 16 * 1em);
+  line-height: calc(32 / 20 * 1em);
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(8);
+  @include make-lg-column(6);
+  @include make-lg-column-push(1);
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    border-bottom: 1px solid $color-section-border;
+    padding-bottom: calc(60 / 18 * 1rem);
+    margin-bottom: calc(60 / 18 * 1rem);
+    text-align: justify;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(28 / 18 * 1em);
+    line-height: calc(58 / 28 * 1em);
+  }
+}
+
+.page-title--cta {
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(4);
+  @include make-lg-column(3);
+  @include make-lg-column-push(2);
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    margin-bottom: calc(60 / 18 * 1rem);
+    text-align: center;
+  }
+}
+
+.page-title--cta-label {
+  font-family: $font-halisr-medium;
+  font-size: calc(16 / 16 * 1em);
+  line-height: calc(28 / 16 * 1em);
+  margin-bottom: calc(20 / 16 * 1em);
+  margin-top: 0;
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(18 / 18 * 1em);
+    line-height: calc(30 / 18 * 1em);
+    margin-bottom: calc(20 / 18 * 1em);
+    margin-top: 0;
+  }
+}
+
+.page-title--menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-title--menu-link {
+  display: block;
+  padding-top: calc(5 / 18 * 1rem);
+  padding-bottom: calc(5 / 18 * 1rem);
+}
+
+.page-title--menu-link.page-title--menu-link--cta {
+  @include btn-tertiary();
+  margin-top: calc(13 / 18 * 1rem);
+  padding-top: 0;
+  padding-bottom: 0;
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    display: none;
   }
 }

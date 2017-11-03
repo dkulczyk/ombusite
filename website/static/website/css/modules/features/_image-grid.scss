@@ -32,10 +32,17 @@
       text-align: center;
     }
 
-    @media (min-width: $breakpoint-notebook) {
+    @media (min-width: $breakpoint-desktop) {
       margin-left: -$gutter-side-tile * 2;
       margin-right: -$gutter-side-tile * 2;          
     }    
+  }
+
+  &,
+  &.image-grid--prominent {
+    .section-intro + & {
+      margin-top: 0;
+    }
   }
 }
 
@@ -86,6 +93,7 @@
 
       img,svg {
         max-height: 60px;
+        max-width: 130px;
       }
     }
 

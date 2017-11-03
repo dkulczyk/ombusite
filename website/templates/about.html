@@ -1,5 +1,48 @@
 {% extends 'theme_base.html' %}
 
 {% block content %}
-  <h1>About</h1>
+  <div class="container">
+    <section class="page-title page-title--has-info">
+      <h1 class="page-title--title page-title--title--about page-title--title--has-info">About</h1>
+      <div class="page-title--supplementary-info">
+        <div class="page-title--body">OMBU designs and builds the web’s best technology. We believe that technology is changing the world, and our job is to help companies and organizations harness that power so they can make the greatest impact.
+        </div>
+        <aside class="page-title--cta">
+          <h2 class="page-title--cta-label">Our clients come to us for<br>four solution areas:</h2>
+          <ul class="page-title--menu">
+            <li class="page-title--menu-item"><a href="#" class="page-title--menu-link">Enterprise CMS</a></li>
+            <li class="page-title--menu-item"><a href="#" class="page-title--menu-link">Business Applications</a></li>
+            <li class="page-title--menu-item"><a href="#" class="page-title--menu-link">Infrastructure</a></li>
+            <li class="page-title--menu-item"><a href="#" class="page-title--menu-link">Technology Strategy</a></li>
+            <li class="page-title--menu-item"><a href="#" class="page-title--menu-link page-title--menu-link--cta">Learn More</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>   
+  </div>
+  <section class="about--story">
+    <div class="container">
+      <div class="about--story-inner">
+        <div class="about--story-callout">
+          {% include 'features/_callout.html' with story=True titleProminent=True subtleMargins=True %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about--team">
+    <div class="container">
+      <div class="about--team-inner">
+        <div class="about--team-content">
+          {% include 'features/_section-intro.html' with team=True %}
+          {% include 'features/_team.html' %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about--clients">
+    <div class="container">
+      {% include 'features/_section-intro.html' with clients=True subtle=True %}
+      {% include 'features/_image-grid.html' with prominent=True %}
+    </div>
+  </section>  
 {% endblock content %}

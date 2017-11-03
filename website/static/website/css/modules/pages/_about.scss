@@ -1,0 +1,20 @@
+// About
+
+.about--story,
+.about--clients {
+  @include section-bg();
+}
+
+.about--story-inner,
+.about--team-inner {
+  @include make-row();
+}
+
+.about--story-callout,
+.about--team-content {
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(12);
+  @include make-lg-column(10);
+  @include make-lg-column-push(1);
+}

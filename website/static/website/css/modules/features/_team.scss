@@ -1,0 +1,64 @@
+.team {
+  @include clearfix();
+  margin-left: -$gutter-side-tile / 2;
+  margin-right: -$gutter-side-tile / 2;
+  margin-bottom: calc(30 / 18 * 1rem);
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: calc(130 / 18 * 1rem);
+  }
+}
+
+.team--item {
+  float: left;
+  padding-left: $gutter-side-tile / 2;
+  padding-right: $gutter-side-tile / 2;
+  margin-bottom: calc(30 / 18 * 1rem);
+  width: 50%;
+
+  &:nth-child(2n+3) {
+    clear: left;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 25%;
+
+    &:nth-child(2n+3) {
+      clear: none;
+    } 
+
+    &:nth-child(4n+5) {
+      clear: left;
+    }     
+  }
+}
+
+.team--media {
+  margin-bottom: calc(10 / 18 * 1rem);
+  text-align: center;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: calc(20 / 18 * 1rem);
+  }
+}
+
+.team--info {
+  text-align: center;
+}
+
+.team--name {
+  font-family: $font-halisr-bold;
+  font-size: calc(12 / 16 * 1em);
+  line-height: calc(18 / 12 * 1em);
+  margin-bottom: 0;
+}
+
+.team--title {
+  font-family: $font-halisr-book;
+  font-size: calc(12 / 16 * 1em);
+  line-height: calc(18 / 12 * 1em);
+}

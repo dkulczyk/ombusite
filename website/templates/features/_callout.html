@@ -54,4 +54,18 @@
   </aside>  
 </div>
 
+{% elif story %}
+<div class="callout{% if fullwidth %} callout--fullwidth{% endif %}{% if subtleMargins %} callout--subtle{% endif %}">
+  <div class="callout--content">
+    <h2 class="callout--title{% if titleProminent %} callout--title--prominent{% endif %}">Our Story</h2>
+    <div class="callout--body rte">
+      <p>OMBU was founded in 2009 by Martin Rio, who drove across the country in a VW Bus with a laptop, a phone, and a love of technology. A few short years later in 2012, we launched a redesigned paramount.com for Paramount Pictures, proving that a small team of top talent can build big things on the web.</p>
+      <p>Since then, we’ve worked with clients like the Smithsonian Institute, Car Talk, Nike, and Stand for Children to come up with great ideas that turn into enterprise applications.</p>
+    </div>
+  </div>
+  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}">
+    <img src="{% static 'website/images/callout/about-story.png' %}" alt="Van image">
+  </aside>  
+</div>
+
 {% endif %}
