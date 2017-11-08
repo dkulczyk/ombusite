@@ -109,6 +109,17 @@
     {% block post_content %}
     {% endblock post_content %}
 
+    <!-- Modal -->
+    <div class="modal" id="image-overlay-modal" tabindex="-1" role="dialog" aria-labelledby="image-overlay-label">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img class="image-overlay" src="" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     {% block modals %}{% endblock %}
 
     <script type="text/javascript" src="{% static "website/js/scripts-all.js" %}"></script>

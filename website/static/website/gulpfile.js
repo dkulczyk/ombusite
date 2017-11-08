@@ -5,6 +5,7 @@ var concat = require('gulp-concat');
 var livereload = require('gulp-livereload');
 
 var bootstrapDir = './node_modules/bootstrap-sass/assets';
+var bootstrapJsDir = bootstrapDir + '/javascripts/bootstrap';
 var flickityDir = './node_modules/flickity/dist';
 var jqueryDir = './node_modules/jquery/dist';
 var waypointsDir = './node_modules/waypoints/lib';
@@ -27,13 +28,14 @@ gulp.task('templates', function() {
 
 var bootstrapJsDir = bootstrapDir + '/javascripts/bootstrap';
 var jsFiles = [
-
   jqueryDir + '/jquery.slim.min.js',
   flickityDir + '/flickity.pkgd.min.js',
   waypointsDir + '/jquery.waypoints.min.js',
+  bootstrapJsDir + '/modal.js',
   './js/navigation.js',
   './js/callout-fullwidth.js',
-  './js/slider.js'
+  './js/slider.js',
+  './js/image-overlay.js'
 ];
 gulp.task('js', function() {
   return gulp.src(jsFiles)

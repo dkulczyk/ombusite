@@ -11,6 +11,7 @@
 
 // Plugins
 @import 'flickity.min';
+@import "bootstrap/modals";
 
 // Layouts
 @import 'layout/layout';
@@ -36,6 +37,7 @@
 @import 'modules/features/blockquote';
 @import 'modules/features/section-intro';
 @import 'modules/features/team';
+@import 'modules/features/image-overlay';
 
 @import 'modules/pages/work';
 @import 'modules/pages/project/project-slider';

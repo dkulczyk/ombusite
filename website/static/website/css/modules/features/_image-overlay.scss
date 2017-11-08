@@ -1,0 +1,105 @@
+// Image overlay
+
+.image-overlay--link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-body;
+  }
+}
+
+.image-overlay--prompt {
+  display: block;
+  font-family: $font-halisr-bold;
+  font-size: calc(18 / 16 * 1em);
+  line-height: calc(32 / 18 * 1em);
+  margin-top: calc(20 / 18 * 1rem);
+  text-align: center;
+  width: 100%;
+
+  svg {
+    display: inline-block;
+    height: 24px;
+    margin-right: calc(5 / 18 * 1rem);
+    vertical-align: middle;
+    width: 24px;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(18 / 18 * 1em);
+  }
+
+  .image-overlay--link--gallery.image-overlay--link & {
+    margin-top: 0;
+  }
+
+  .image-overlay--link:hover &,
+  .image-overlay--link:focus &,
+  .image-overlay--link:active & {
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  .image-overlay--link--gallery.image-overlay--link:hover &,
+  .image-overlay--link--gallery.image-overlay--link:focus &,
+  .image-overlay--link--gallery.image-overlay--link:active & {
+    span {
+      text-decoration: none;
+    }
+  }  
+}
+
+// Gallery modifiers
+.image-overlay--link.image-overlay--link--gallery {
+
+}
+
+.image-overlay--prompt-wrapper {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  bottom: 0;
+  display: flex;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transition: all $transition-duration-default ease;
+  visibility: hidden;
+
+  .image-overlay--link.image-overlay--link--gallery:hover &,
+  .image-overlay--link.image-overlay--link--gallery:focus &,
+  .image-overlay--link.image-overlay--link--gallery:active & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Modal
+#image-overlay-modal {
+  text-align: center;
+}
+
+.modal-dialog {
+  #image-overlay-modal & {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.modal-body {
+  #image-overlay-modal & {
+    text-align: center;
+  }
+}
