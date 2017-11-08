@@ -1,0 +1,100 @@
+.cta-card {
+  margin-bottom: calc(10 / 18 * 1rem);
+}
+
+.cta-card--inner {
+  border: 1px solid $color-primary;
+  padding: calc(20 / 18 * 1rem);
+
+  @media (min-width: $breakpoint-notebook) {
+    padding: calc(40 / 18 * 1rem);
+  }
+}
+
+.cta-card--primary {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-tablet) {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+
+.cta-card--title-group {
+  flex: 1 1 auto;
+}
+
+.cta-card--label {
+  font-family: $font-halisr-book;
+  font-size: calc(12 / 16 * 1em);
+  line-height: calc(18 / 12 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(12 / 18 * 1em);
+  }
+}
+
+.cta-card--title {
+  font-family: $font-halisr-medium;
+  font-size: calc(16 / 16 * 1em);
+  line-height: calc(28 / 16 * 1em);
+  margin-top: calc(10 / 16 * 1em);
+  margin-bottom: calc(10 / 16 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(18 / 18 * 1em);
+    line-height: calc(30 / 18 * 1em);
+    margin-top: 0;
+    margin-bottom: calc(15 / 18 * 1em);
+  }
+}
+
+.cta-card--media {
+  order: -1;
+  margin-bottom: calc(10 / 18 * 1rem);
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 0;
+    margin-right: calc(20 / 18 * 1rem);
+  }
+}
+
+.cta-card--body {
+  margin-bottom: calc(20 / 18 * 1rem);
+}
+
+.cta-card--cta {
+  @include btn-primary;
+  width: 100%;
+
+  @media (max-width: $breakpoint-tablet - 1px) {
+    font-size: calc(16 / 18 * 1em);
+    padding-top: calc(13 / 18 * 1em);
+    padding-bottom: calc(13 / 18 * 1em);
+  }
+}
+
+.cta-card--cta.cta-card--cta--secondary {
+  @include btn-secondary;
+
+  svg {
+    display: inline-block;
+    height: 18px;
+    margin-bottom: calc(10 / 18 * 1rem);
+    transform: rotate(90deg);
+    vertical-align: middle;
+    width: 24px;
+  }
+
+  @media (max-width: $breakpoint-tablet - 1px) {
+    font-size: calc(16 / 18 * 1em);
+    padding-top: calc(13 / 18 * 1em);
+    padding-bottom: calc(13 / 18 * 1em);    
+
+    svg {
+      display: none;
+    }
+  }
+}

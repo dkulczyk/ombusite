@@ -19,3 +19,7 @@ def work(request, context={}):
 def project(request, context={}):
     context['title'] = "Oregon Convention Center"
     return render(request, 'project.html', context)
+
+def services(request, context={}):
+    context['title'] = "Services"
+    return render(request, 'services.html', context)

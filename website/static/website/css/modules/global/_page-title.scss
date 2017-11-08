@@ -45,6 +45,26 @@
   }
 }
 
+.page-title--subtitle {
+  font-family: $font-halisr-medium;
+  font-size: calc(19 / 16 * 1em);
+  line-height: calc(30 / 19 * 1em);
+  text-align: center;
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(22 / 18 * 1em);
+    line-height: calc(33 / 22 * 1em);
+  }
+
+  .page-title--title + & {
+    margin-top: calc(-26 / 18 * 1rem);
+
+    @media (min-width: $breakpoint-notebook) {
+      margin-top: calc(-37 / 18 * 1rem);
+    }
+  }
+}
+
 .page-title--supplementary-info {
   @include clearfix();
 

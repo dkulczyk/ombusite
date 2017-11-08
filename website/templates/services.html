@@ -1,0 +1,36 @@
+{% extends 'theme_base.html' %}
+
+{% block content %}
+  <div class="container">
+    <section class="page-title page-title--has-info">
+      <h1 class="page-title--title">Services</h1>
+      <div class="page-title--subtitle">We design and build technology<br> for visionaries.</div>
+    </section>   
+  </div>
+  <section class="services--content">
+    <div class="container">
+      <div class="row">
+        <div class="services--content-inner">
+          {% include 'features/_callout.html' with enterprise=True bigGap=True titleProminent=True mediaSubtle=True %}
+          <div class="card-grid--row">
+            {% include 'features/_cta-card.html' with caseStudyEnterprise=True %}
+            {% include 'features/_cta-card.html' with whitepaperEnterprise=True secondary=True %}
+          </div>
+          {% include 'features/_callout.html' with business=True prominent=True bigGap=True titleProminent=True mediaSubtle=True %}
+          <div class="card-grid--row card-grid--row--secondary">
+            {% include 'features/_cta-card.html' with caseStudyBusiness=True %}
+          </div>
+          {% include 'features/_callout.html' with infrastructure=True bigGap=True titleProminent=True mediaSubtle=True %}
+          <div class="card-grid--row">
+            {% include 'features/_cta-card.html' with whitepaperInfrastructure=True secondary=True %}
+          </div>      
+          {% include 'features/_callout.html' with technology=True prominent=True bigGap=True titleProminent=True mediaSubtle=True %}
+          <div class="card-grid--row">
+            {% include 'features/_cta-card.html' with caseStudyTechnology=True %}
+            {% include 'features/_cta-card.html' with whitepaperTechnology=True secondary=True %}
+          </div>  
+        </div>    
+      </div>
+    </div>
+  </section>  
+{% endblock content %}

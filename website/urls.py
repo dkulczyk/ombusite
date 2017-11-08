@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^kitchen-sink$', website.views.kitchensink),
     url(r'^work$', website.views.work),
     url(r'^project$', website.views.project),
+    url(r'^services$', website.views.services),
 ]

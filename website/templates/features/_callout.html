@@ -9,7 +9,7 @@
     </div>
     <a href="#" class="callout--cta">Read the Case Study</a>
   </div>
-  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}">
+  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
     {% if fullwidth %}
       <img src="{% static 'website/images/callout/callout_navex-2.png' %}" alt="NAVEX Global screenshot">
     {% else %}
@@ -27,7 +27,7 @@
     </div>
     <a href="#" class="callout--cta">Read the Case Study</a>
   </div>
-  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}">
+  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
     {% if fullwidth %}
       <img src="{% static 'website/images/callout/callout_nwpp-2.png' %}" alt="NWPP screenshot">
     {% else %}
@@ -45,7 +45,7 @@
     </div>
     <a href="#" class="callout--cta">Read the Case Study</a>
   </div>
-  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}">
+  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
     {% if fullwidth %}
       <img src="{% static 'website/images/callout/callout_sa-2.png' %}" alt="Saturday Academy screenshot">
     {% else %}
@@ -63,8 +63,61 @@
       <p>Since then, we’ve worked with clients like the Smithsonian Institute, Car Talk, Nike, and Stand for Children to come up with great ideas that turn into enterprise applications.</p>
     </div>
   </div>
-  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}">
+  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
     <img src="{% static 'website/images/callout/about-story.png' %}" alt="Van image">
+  </aside>  
+</div>
+
+{% elif enterprise %}
+<div class="callout{% if fullwidth %} callout--fullwidth{% endif %}{% if subtleMargins %} callout--subtle{% endif %}{% if bigGap %} callout--gap{% endif %}">
+  <div class="callout--content">
+    <h2 class="callout--title{% if titleProminent %} callout--title--prominent{% endif %}">Enterprise CMS</h2>
+    <div class="callout--body rte">
+      <p>Successful organizations react quickly as the competitive landscape changes. Your website should never be in the way of fast action.</p><p>We design and build modern websites that run on a powerful, flexible content management system (CMS), so that our clients can reach more audiences and move more quickly.</p><ul><li>Faster time-to-market</li><li>Digital asset management</li><li>Support for global audiences, with translation and localization</li><li>Content creation, review, and approval workflows</li><li>Performant and scalable in cloud and on-premise deployments</li></ul>
+    </div>
+  </div>
+  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
+    <img src="{% static 'website/images/callout/callout_enterprise.png' %}" alt="Enterprise Graphics">
+  </aside>  
+</div>
+
+{% elif business %}
+<div class="callout{% if fullwidth %} callout--fullwidth{% endif %}{% if subtleMargins %} callout--subtle{% endif %}{% if bigGap %} callout--gap{% endif %}">
+  <div class="callout--content">
+    <h2 class="callout--title{% if titleProminent %} callout--title--prominent{% endif %}">Business Applications</h2>
+    <div class="callout--body rte">
+      <p>We help companies and organizations achieve their goals by crafting custom business applications that target their specific processes and needs. We’ve created learning management systems, community organizing apps, training forums, and more. We’re able to build the application you need.</p><ul><li>Custom support platforms</li><li>Systems-integrated dashboards</li><li>Learning systems</li><li>Community organizing apps</li><li>Business applications</li></ul>
+    </div>
+  </div>
+  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
+    <img src="{% static 'website/images/callout/callout_business.png' %}" alt="Business Graphics">
+  </aside>  
+</div>
+
+{% elif infrastructure %}
+<div class="callout{% if fullwidth %} callout--fullwidth{% endif %}{% if subtleMargins %} callout--subtle{% endif %}{% if bigGap %} callout--gap{% endif %}">
+  <div class="callout--content">
+    <h2 class="callout--title{% if titleProminent %} callout--title--prominent{% endif %}">Infrastructure</h2>
+    <div class="callout--body rte">
+      <p>When our clients go viral, everyone is able to breathe easy, because we architect and manage advanced cloud infrastructure that is geographically distributed and immediately scalable. As a certified Amazon Web Services partner, we help our clients deploy on AWS to increase uptime and lower hosting costs by as much as 50%.</p><ul><li>High-availability (HA) redundant cloud infrastructure</li><li>Automated backups</li><li>White-glove maintenance service</li><li>Powered by Amazon</li></ul>
+    </div>
+  </div>
+  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
+    <img src="{% static 'website/images/callout/callout_infrastructure.png' %}" alt="Infrastructure Graphics">
+  </aside>  
+</div>
+
+{% elif technology %}
+<div class="callout{% if fullwidth %} callout--fullwidth{% endif %}{% if subtleMargins %} callout--subtle{% endif %}{% if bigGap %} callout--gap{% endif %}">
+  <div class="callout--content">
+    <h2 class="callout--title{% if titleProminent %} callout--title--prominent{% endif %}">Technology Strategy</h2>
+    <div class="callout--body rte">
+      <p>Who’s looking out for your technology? How do you know you’re making the smartest choices?</p>
+      <p>Our clients are experts in their fields — and we’re experts in the web. We help guide our clients’ tech strategy, so we build the right solution and maximize budget and impact.</p><ul><li>Smarter decisions through discovery</li><li>Pick the right technologies</li><li>Putting you in control of your tech budget</li></ul>
+    </div>
+  </div>
+  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
+    <img src="{% static 'website/images/callout/callout_technology.png' %}" alt="Technology Graphics">
   </aside>  
 </div>
 

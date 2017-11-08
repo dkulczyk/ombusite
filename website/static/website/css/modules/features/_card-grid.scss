@@ -1,0 +1,30 @@
+// Card grid
+
+.card-grid--row {
+  margin-bottom: $block-margin-mobile;
+
+  .callout + & {
+    margin-top: -$block-margin-mobile * (2/3);
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: -$block-margin-desktop / 2;
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: calc(200 / 18 * 1rem);
+
+    > div {
+      width: calc(50% - #{$callout-gap});
+    }
+  }
+}
+
+.card-grid--row.card-grid--row--secondary {
+  @media (min-width: $breakpoint-tablet) {
+    justify-content: flex-end;
+  }
+}

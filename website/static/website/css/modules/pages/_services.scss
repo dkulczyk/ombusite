@@ -1,0 +1,8 @@
+// Services
+.services--content-inner {
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(12);
+  @include make-lg-column(10);
+  @include make-lg-column-push(1);
+}

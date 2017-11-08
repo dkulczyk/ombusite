@@ -48,3 +48,8 @@ $breakpoint-notebook: 992px;
 $breakpoint-desktop: 1200px;
 
 $max-site-width: 1300px;
+
+// Custom margins
+$block-margin-mobile: 5rem;
+$block-margin-desktop: calc(160 / 18 * 1rem);
+$callout-gap: calc(40 / 18 * 1rem);
