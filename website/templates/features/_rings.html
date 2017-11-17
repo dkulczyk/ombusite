@@ -1,0 +1,69 @@
+<div class="rings{% if vertical %} rings--vertical{% elif verticalMobile %} rings--vertical--mobile{% endif %}">
+  {% include 'svg/ring-gradient.svg.html' %}
+  <div class="rings--group">
+    <div class="rings--inner">
+      <div class="rings--item">
+        <div class="rings--item-inner">
+          {% include 'svg/ring-first.svg.html' %}
+          <div class="rings--content">
+            <div class="rings--title-group"><h2 class="rings--title">Enterprise CMS</h2></div>
+            <div class="rings--summary">We make content<br>manageable</div>
+          </div>
+        </div>
+      </div>
+      {% if ringTotal is 3 or ringTotal is 4 or ringTotal is 5 or ringTotal is 6 %}
+      <div class="rings--item">
+        <div class="rings--item-inner">
+          {% include 'svg/ring-middle.svg.html' %}
+          <div class="rings--content">
+            <div class="rings--title-group"><h2 class="rings--title">Business Applications</h2></div>
+            <div class="rings--summary">We make businesses<br>profitable</div>
+          </div>
+        </div>
+      </div>      
+      {% endif %}
+      {% if ringTotal is 4 or ringTotal is 5 or ringTotal is 6 %}
+      <div class="rings--item">
+        <div class="rings--item-inner">
+          {% include 'svg/ring-middle.svg.html' %}
+          <div class="rings--content">
+            <div class="rings--title-group"><h2 class="rings--title">Business Applications</h2></div>
+            <div class="rings--summary">We make businesses<br>profitable</div>
+          </div>
+        </div>
+      </div>  
+      {% endif %}  
+      {% if ringTotal is 5 or ringTotal is 6 %}
+      <div class="rings--item">
+        <div class="rings--item-inner">
+          {% include 'svg/ring-middle.svg.html' %}
+          <div class="rings--content">
+            <div class="rings--title-group"><h2 class="rings--title">Business Applications</h2></div>
+            <div class="rings--summary">We make businesses<br>profitable</div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% if ringTotal is 6 %}
+      <div class="rings--item">
+        <div class="rings--item-inner">
+          {% include 'svg/ring-middle.svg.html' %}
+          <div class="rings--content">
+            <div class="rings--title-group"><h2 class="rings--title">Business Applications</h2></div>
+            <div class="rings--summary">We make businesses<br>profitable</div>
+          </div>
+        </div>
+      </div>            
+      {% endif %}      
+      <div class="rings--item">
+        <div class="rings--item-inner">
+          {% include 'svg/ring-last.svg.html' %}
+          <div class="rings--content">
+            <div class="rings--title-group"><h2 class="rings--title">Infrastructure</h2></div>
+            <div class="rings--summary">We make systems reliable</div>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>

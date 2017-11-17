@@ -1,0 +1,289 @@
+// Rings horizontal
+// Layout
+
+.rings {
+  position: relative;
+
+  > svg {
+    @include element-invisible;
+  }
+}
+
+.rings--group {
+  display: flex;
+  justify-content: center;;
+}
+
+@mixin rings--inner--vertical {
+  flex-direction: column;
+}
+
+.rings--inner {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+
+  .rings--vertical & {
+    @include rings--inner--vertical;
+  }
+
+  @media (max-width: $breakpoint-tablet - 1px) {
+    .rings--vertical--mobile & {
+      @include rings--inner--vertical;
+    }
+  }
+}
+
+@mixin rings--item-number($item-count) {
+  max-width: percentage(1/$item-count);
+
+  &:nth-child(n+2) {
+    margin-left: $ring-chain-offset / ($item-count * $ring-width) * -100%;
+  }
+
+  .rings--content { 
+    padding-left: $ring-chain-offset / ($item-count * $ring-width) * 300%;
+    padding-right: $ring-chain-offset / ($item-count * $ring-width) * 300%;
+  }
+}
+
+@mixin rings--item-number--vertical($item-count) {
+  max-height: percentage(1/$item-count);
+  max-width: 100%;
+
+  &:nth-child(n+2) {
+    margin-left: 0;
+    margin-top: $ring-chain-offset / ($item-count * $ring-width) * -100%;
+  }  
+
+  .rings--content { 
+    padding-left: $ring-chain-offset / ($item-count * $ring-width) * 200%;
+    padding-right: $ring-chain-offset / ($item-count * $ring-width) * 200%;
+  }   
+}
+
+@mixin rings--item--vertical {
+  height: auto;
+  max-height: 100%;
+  width: $ring-width * 1px;
+}
+
+.rings--item {
+  max-width: 100%;
+  position: relative;
+  width: $ring-width * 1px;
+
+  &:nth-child(2) {
+    .ring--svg path,
+    .rings--content {
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 1;
+    }
+  }
+
+  &:nth-child(3) {
+    .ring--svg path,
+    .rings--content {
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 2;
+    }
+  } 
+
+  &:nth-child(4) {
+    .ring--svg path,
+    .rings--content {
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 3;
+    }
+  }  
+
+  &:nth-child(5) {
+    .ring--svg path,
+    .rings--content {    
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 4;
+    }
+  }
+
+  &:nth-child(6){
+    .ring--svg path,
+    .rings--content {
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 5;
+    }
+  }        
+
+   /* one item */
+  &:first-child:nth-last-child(1) {
+    max-width: 100%;
+  }
+
+  /* two items */
+  &:first-child:nth-last-child(2),
+  &:first-child:nth-last-child(2) ~ .rings--item {
+
+    @include rings--item-number(2);
+
+    .rings--vertical & {
+      @include rings--item-number--vertical(2);
+    }
+
+    @media (max-width: $breakpoint-tablet - 1px) {
+      .rings--vertical--mobile & {
+        @include rings--item-number--vertical(2);
+      }
+    } 
+  }
+
+  /* three items */
+  &:first-child:nth-last-child(3),
+  &:first-child:nth-last-child(3) ~ .rings--item {
+    @include rings--item-number(3);
+
+    .rings--vertical & {
+      @include rings--item-number--vertical(3);
+    }
+
+    @media (max-width: $breakpoint-tablet - 1px) {
+      .rings--vertical--mobile & {
+        @include rings--item-number--vertical(3);
+      }
+    }    
+  }
+
+  /* four items */
+  &:first-child:nth-last-child(4),
+  &:first-child:nth-last-child(4) ~ .rings--item {
+    @include rings--item-number(4);
+
+    .rings--vertical & {
+      @include rings--item-number--vertical(4);
+    }
+
+    @media (max-width: $breakpoint-tablet - 1px) {
+      .rings--vertical--mobile & {
+        @include rings--item-number--vertical(4);
+      }
+    }        
+  } 
+
+  /* five items */
+  &:first-child:nth-last-child(5),
+  &:first-child:nth-last-child(5) ~ .rings--item {
+    @include rings--item-number(5);
+
+    .rings--vertical & {
+      @include rings--item-number--vertical(5);
+    }
+
+    @media (max-width: $breakpoint-tablet - 1px) {
+      .rings--vertical--mobile & {
+        @include rings--item-number--vertical(5);
+      }
+    }        
+  } 
+
+  /* four items */
+  &:first-child:nth-last-child(6),
+  &:first-child:nth-last-child(6) ~ .rings--item {
+    @include rings--item-number(6);
+
+    .rings--vertical & {
+      @include rings--item-number--vertical(6);
+    }
+
+    @media (max-width: $breakpoint-tablet - 1px) {
+      .rings--vertical--mobile & {
+        @include rings--item-number--vertical(6);
+      }
+    }        
+  }     
+
+  .rings--vertical & {
+    @include rings--item--vertical;
+  }
+
+  @media (max-width: $breakpoint-tablet - 1px) {
+    .rings--vertical--mobile & {
+      @include rings--item--vertical;
+    }
+  }  
+}
+
+.rings--item-inner {
+  height: 0;
+  padding-top: 100%;
+  position: relative;
+  width: 100%;
+}
+
+// Content
+.rings--content {
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transition: opacity $transition-duration ease, visibility $transition-duration ease;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  width: 100%;
+
+  .animation-triggered & {
+    opacity: 1;
+    visibility: visible
+  }
+}
+
+.rings--title-group {
+  display: flex;
+  align-items: center;
+  font-family: $font-halisr-medium; 
+  min-height: calc(60 / 18 * 1em);
+  text-align: center;
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-bottom: 1rem;
+  }
+
+  .rings--vertical & {
+    min-height: 0;
+  }
+
+  @media (max-width: $breakpoint-tablet - 1px) {
+    .rings--vertical--mobile & {
+      min-height: 0;
+    }
+  } 
+}
+
+.rings--title {
+  font-size: calc(17 / 16 * 1em);
+  line-height: calc(30 / 19 * 1em);   
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+  width: 100%;
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(22 / 18 * 1em);
+    line-height: calc(28 / 22 * 1em);
+  }
+}
+
+.rings--summary {
+  font-family: $font-halisr-book;
+  font-size: calc(12 / 18 * 1em);
+  line-height: calc(18 / 12 * 1em);
+  min-height: calc(18 / 12 * 2em);
+
+  @media (max-width: $breakpoint-tablet - 1px) {
+    display: none;
+  }
+
+  .rings--vertical & {
+    min-height: 0;
+  }
+
+  @media (max-width: $breakpoint-tablet - 1px) {
+    .rings--vertical--mobile & {
+      min-height: 0;
+    }
+  } 
+}

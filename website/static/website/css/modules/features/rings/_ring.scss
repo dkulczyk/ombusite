@@ -27,11 +27,21 @@
     stroke-dasharray: (737.1893310546875 / 2);
   }
 
-  &.animation-triggered {
+  .animation-triggered & {
     path {
       stroke-width: $stroke-width-final;
       stroke-dashoffset: 0;
       transition-duration: $transition-duration;
     }
   }
+
+  .rings--vertical & {
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  @media (max-width: $breakpoint-tablet - 1px) {
+    .rings--vertical--mobile & {
+      transform: translateY(-50%) rotate(90deg);
+    }
+  } 
 }
