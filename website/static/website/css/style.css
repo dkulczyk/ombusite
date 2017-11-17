@@ -3331,32 +3331,12 @@ body.navigation--active {
   .card-grid--row.card-grid--row--secondary {
     justify-content: flex-end; } }
 
-.rings-horizontal {
-  position: relative;
-  margin: 0 auto;
-  max-width: 710px;
-  height: 0;
-  padding-top: 38.02817%; }
-  .rings-horizontal .rings-horizontal--inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
-
-.rings-horizontal--item {
-  max-width: 38.02817%;
-  position: absolute;
-  top: 0; }
-  .rings-horizontal--item:nth-child(1) {
-    left: 0%; }
-  .rings-horizontal--item:nth-child(2) {
-    left: 30.98592%; }
-  .rings-horizontal--item:nth-child(3) {
-    left: 61.97183%; }
-
 .ring--svg {
-  display: block; }
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
   .ring--svg path {
     stroke-width: 0px;
     stroke: url(#exp-ombu-gradient-01);
@@ -3373,35 +3353,119 @@ body.navigation--active {
     stroke-width: 3px;
     stroke-dashoffset: 0;
     transition-duration: 0.75s; }
-  .ring--svg.animation-triggered#ring--svg--first path {
-    transition-delay: 0; }
-  .ring--svg.animation-triggered#ring--svg--middle path {
-    transition-delay: 0.375s; }
-  .ring--svg.animation-triggered#ring--svg--last path {
-    transition-delay: 0.75s; }
+
+.rings-horizontal {
+  position: relative; }
+  .rings-horizontal > svg {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px); }
+
+.rings-horizontal--group {
+  display: flex;
+  justify-content: center; }
+
+.rings-horizontal--inner {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  max-width: 100%; }
+
+.rings-horizontal--item {
+  max-width: 100%;
+  position: relative;
+  width: 270px;
+  /* one item */
+  /* two items */
+  /* three items */
+  /* four items */ }
+  .rings-horizontal--item:first-child:nth-last-child(1) {
+    margin-left: 0;
+    max-width: 100%; }
+  .rings-horizontal--item:first-child:nth-last-child(2),
+  .rings-horizontal--item:first-child:nth-last-child(2) ~ .rings-horizontal--item {
+    max-width: 50%; }
+    .rings-horizontal--item:first-child:nth-last-child(2):nth-child(n+1),
+    .rings-horizontal--item:first-child:nth-last-child(2) ~ .rings-horizontal--item:nth-child(n+1) {
+      margin-left: -9.25926%; }
+    .rings-horizontal--item:first-child:nth-last-child(2):nth-child(2) path,
+    .rings-horizontal--item:first-child:nth-last-child(2) ~ .rings-horizontal--item:nth-child(2) path {
+      transition-delay: 0.375s; }
+    .rings-horizontal--item:first-child:nth-last-child(2) .rings-horizontal--content,
+    .rings-horizontal--item:first-child:nth-last-child(2) ~ .rings-horizontal--item .rings-horizontal--content {
+      padding-left: 27.77778%;
+      padding-right: 27.77778%; }
+  .rings-horizontal--item:first-child:nth-last-child(3),
+  .rings-horizontal--item:first-child:nth-last-child(3) ~ .rings-horizontal--item {
+    max-width: 33.3333%; }
+    .rings-horizontal--item:first-child:nth-last-child(3):nth-child(n+2),
+    .rings-horizontal--item:first-child:nth-last-child(3) ~ .rings-horizontal--item:nth-child(n+2) {
+      margin-left: -6.17284%; }
+    .rings-horizontal--item:first-child:nth-last-child(3):nth-child(2) .ring--svg path,
+    .rings-horizontal--item:first-child:nth-last-child(3) ~ .rings-horizontal--item:nth-child(2) .ring--svg path {
+      transition-delay: 0.375s; }
+    .rings-horizontal--item:first-child:nth-last-child(3):nth-child(3) .ring--svg path,
+    .rings-horizontal--item:first-child:nth-last-child(3) ~ .rings-horizontal--item:nth-child(3) .ring--svg path {
+      transition-delay: 0.75s; }
+    .rings-horizontal--item:first-child:nth-last-child(3) .rings-horizontal--content,
+    .rings-horizontal--item:first-child:nth-last-child(3) ~ .rings-horizontal--item .rings-horizontal--content {
+      padding-left: 18.51852%;
+      padding-right: 18.51852%; }
+  .rings-horizontal--item:first-child:nth-last-child(4),
+  .rings-horizontal--item:first-child:nth-last-child(4) ~ .rings-horizontal--item {
+    max-width: 25%; }
+    .rings-horizontal--item:first-child:nth-last-child(4):nth-child(n+1),
+    .rings-horizontal--item:first-child:nth-last-child(4) ~ .rings-horizontal--item:nth-child(n+1) {
+      margin-left: -4.62963%; }
+    .rings-horizontal--item:first-child:nth-last-child(4):nth-child(2) .ring--svg path,
+    .rings-horizontal--item:first-child:nth-last-child(4) ~ .rings-horizontal--item:nth-child(2) .ring--svg path {
+      transition-delay: 0.375s; }
+    .rings-horizontal--item:first-child:nth-last-child(4):nth-child(3) .ring--svg path,
+    .rings-horizontal--item:first-child:nth-last-child(4) ~ .rings-horizontal--item:nth-child(3) .ring--svg path {
+      transition-delay: 0.75s; }
+    .rings-horizontal--item:first-child:nth-last-child(4):nth-child(4) .ring--svg path,
+    .rings-horizontal--item:first-child:nth-last-child(4) ~ .rings-horizontal--item:nth-child(4) .ring--svg path {
+      transition-delay: 1.125s; }
+    .rings-horizontal--item:first-child:nth-last-child(4) .rings-horizontal--content,
+    .rings-horizontal--item:first-child:nth-last-child(4) ~ .rings-horizontal--item .rings-horizontal--content {
+      padding-left: 13.88889%;
+      padding-right: 13.88889%; }
+
+.rings-horizontal--item-inner {
+  height: 0;
+  padding-top: 100%;
+  position: relative;
+  width: 100%; }
 
 .rings-horizontal--content {
   left: 50%;
   position: absolute;
   text-align: center;
   top: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  width: 100%; }
 
 .rings-horizontal--title-group {
   display: flex;
   align-items: center;
   font-family: "halis_rmedium", "Helvetica", sans-serif;
-  margin-bottom: 1rem;
-  min-height: calc(60 / 18 * 1em); }
+  min-height: calc(60 / 18 * 1em);
+  text-align: center; }
   @media (min-width: 992px) {
     .rings-horizontal--title-group {
       margin-bottom: 1rem; } }
 
 .rings-horizontal--title {
-  font-size: calc(19 / 16 * 1em);
+  font-size: calc(8px + (19 - 8) * ((100vw - 320px) / (992 - 320)));
   line-height: calc(30 / 19 * 1em);
   margin-bottom: 0;
-  margin-top: 0; }
+  margin-top: 0;
+  text-align: center;
+  width: 100%; }
   @media (min-width: 992px) {
     .rings-horizontal--title {
       font-size: calc(22 / 18 * 1em);
@@ -3412,7 +3476,7 @@ body.navigation--active {
   font-size: calc(12 / 18 * 1em);
   line-height: calc(18 / 12 * 1em);
   min-height: calc(18 / 12 * 2em); }
-  @media (max-width: 991px) {
+  @media (max-width: 767px) {
     .rings-horizontal--summary {
       display: none; } }
 
@@ -3764,3 +3828,9 @@ body.navigation--active {
   @media (min-width: 1200px) {
     .services--content-inner {
       left: 8.33333%; } }
+
+.services--rings {
+  margin-top: calc(30 / 18 * 1rem); }
+  @media (min-width: 992px) {
+    .services--rings {
+      margin-top: calc(46 / 18 * 1rem); } }

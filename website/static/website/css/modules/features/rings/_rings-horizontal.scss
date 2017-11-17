@@ -1,19 +1,130 @@
 // Rings horizontal
+// Layout
 
+.rings-horizontal {
+  position: relative;
+
+  > svg {
+    @include element-invisible;
+  }
+}
+
+.rings-horizontal--group {
+  display: flex;
+  justify-content: center;;
+}
+
+.rings-horizontal--inner {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+}
+
+.rings-horizontal--item {
+  max-width: 100%;
+  position: relative;
+  width: $ring-width * 1px;
+
+   /* one item */
+  &:first-child:nth-last-child(1) {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  /* two items */
+  &:first-child:nth-last-child(2),
+  &:first-child:nth-last-child(2) ~ .rings-horizontal--item {
+    max-width: 50%;
+
+    &:nth-child(n+1) {
+      margin-left: $ring-chain-offset / (2 * $ring-width) * -100%;
+    }
+
+    &:nth-child(2) path {
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 1;
+    }
+
+    .rings-horizontal--content { 
+      padding-left: $ring-chain-offset / (2 * $ring-width) * 300%;
+      padding-right: $ring-chain-offset / (2 * $ring-width) * 300%;
+    }
+  }
+
+  /* three items */
+  &:first-child:nth-last-child(3),
+  &:first-child:nth-last-child(3) ~ .rings-horizontal--item {
+    max-width: 33.3333%;
+    
+    &:nth-child(n+2) {
+      margin-left: $ring-chain-offset / (3 * $ring-width) * -100%;
+    }  
+
+    &:nth-child(2) .ring--svg path {
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 1;
+    }
+
+    &:nth-child(3) .ring--svg path {
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 2;
+    }    
+
+    .rings-horizontal--content { 
+      padding-left: $ring-chain-offset / (3 * $ring-width) * 300%;
+      padding-right: $ring-chain-offset / (3 * $ring-width) * 300%;
+    }     
+  }
+
+  /* four items */
+  &:first-child:nth-last-child(4),
+  &:first-child:nth-last-child(4) ~ .rings-horizontal--item {
+    max-width: 25%;
+
+    &:nth-child(n+1) {
+      margin-left: $ring-chain-offset / (4 * $ring-width) * -100%;
+    } 
+
+    &:nth-child(2) .ring--svg path {
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 1;
+    }
+
+    &:nth-child(3) .ring--svg path {
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 2;
+    } 
+
+    &:nth-child(4) .ring--svg path {
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 3;
+    }     
+
+    .rings-horizontal--content { 
+      padding-left: $ring-chain-offset / (4 * $ring-width) * 300%;
+      padding-right: $ring-chain-offset / (4 * $ring-width) * 300%;
+    }    
+  } 
+}
+
+.rings-horizontal--item-inner {
+  height: 0;
+  padding-top: 100%;
+  position: relative;
+  width: 100%;
+}
+
+// Content
 .rings-horizontal--content {
   left: 50%;
   position: absolute;
   text-align: center;
   top: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .rings-horizontal--title-group {
   display: flex;
   align-items: center;
   font-family: $font-halisr-medium; 
-  margin-bottom: 1rem;
   min-height: calc(60 / 18 * 1em);
+  text-align: center;
 
   @media (min-width: $breakpoint-notebook) {
     margin-bottom: 1rem;
@@ -21,10 +132,12 @@
 }
 
 .rings-horizontal--title {
-  font-size: calc(19 / 16 * 1em);
+  font-size: calc(8px + (19 - 8) * ((100vw - 320px) / (992 - 320)));
   line-height: calc(30 / 19 * 1em);   
   margin-bottom: 0;
   margin-top: 0;
+  text-align: center;
+  width: 100%;
 
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(22 / 18 * 1em);
@@ -38,7 +151,7 @@
   line-height: calc(18 / 12 * 1em);
   min-height: calc(18 / 12 * 2em);
 
-  @media (max-width: $breakpoint-notebook - 1px) {
+  @media (max-width: $breakpoint-tablet - 1px) {
     display: none;
   }
 }

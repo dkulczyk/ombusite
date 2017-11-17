@@ -6,3 +6,11 @@
   @include make-lg-column(10);
   @include make-lg-column-push(1);
 }
+
+.services--rings {
+  margin-top: calc(30 / 18 * 1rem);
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-top: calc(46 / 18 * 1rem);
+  }
+}
