@@ -1,4 +1,4 @@
-// Menu
+// Callout fullwidth
 $(function() {
   $('.callout--fullwidth').each(function( index, element ) {
     var calloutBottomWaypoint = new Waypoint({

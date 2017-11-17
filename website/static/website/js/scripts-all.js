@@ -377,7 +377,7 @@ $(function() {
     $('#menu').removeClass('navigation--active');    
   });
 });
-// Menu
+// Callout fullwidth
 $(function() {
   $('.callout--fullwidth').each(function( index, element ) {
     var calloutBottomWaypoint = new Waypoint({
@@ -417,4 +417,9 @@ $(function() {
     $('#image-overlay-modal').modal();
   });
 
+});
+
+// Horizontal rings transition
+$(function() {
+  $('.ring--svg').addClass('animation-triggered');
 });

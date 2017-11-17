@@ -35,7 +35,8 @@ var jsFiles = [
   './js/navigation.js',
   './js/callout-fullwidth.js',
   './js/slider.js',
-  './js/image-overlay.js'
+  './js/image-overlay.js',
+  './js/rings.js'
 ];
 gulp.task('js', function() {
   return gulp.src(jsFiles)

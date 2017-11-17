@@ -1,0 +1,81 @@
+// Rings base
+
+.rings-horizontal {
+  position: relative;
+  margin: 0 auto;
+  max-width: $chain-width * 1px;
+  height: 0;
+  padding-top: percentage($ring-width/$chain-width);
+
+  .rings-horizontal--inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.rings-horizontal--item {
+  max-width: percentage($ring-width/$chain-width);  
+  position: absolute;
+  top: 0;
+
+  &:nth-child(1) {
+    left: $ring-pos-left * 0;
+  }
+
+  &:nth-child(2) {
+    left: $ring-pos-left * 1;
+  }
+
+  &:nth-child(3) {
+    left: $ring-pos-left * 2;
+  }
+}
+
+.ring--svg {
+  display: block;
+
+  path {
+    stroke-width: $stroke-width-start;
+    stroke: url(#exp-ombu-gradient-01);
+    stroke-linecap: round;
+    transition: all 0s ease;
+  }
+
+  &.ring--svg--first path,
+  &.ring--svg--last path {
+    // document.querySelector('#exp-rings_svg_1 path').getTotalLength();
+    stroke-dashoffset: 761.34912109375;
+    stroke-dasharray: 761.34912109375;
+  }
+
+  &.ring--svg--middle path {
+    // document.querySelector('#exp-rings_svg_2 path').getTotalLength();
+    // Divided by two since the path is a compound of two segments
+    stroke-dashoffset: (737.1893310546875 / 2);
+    stroke-dasharray: (737.1893310546875 / 2);
+  }
+
+  &.animation-triggered {
+    path {
+      stroke-width: $stroke-width-final;
+      stroke-dashoffset: 0;
+      transition-duration: $transition-duration;
+    }
+
+    &#ring--svg--first path {
+      transition-delay: 0;
+    }
+
+    &#ring--svg--middle path {
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 1;
+    }
+
+    &#ring--svg--last path {
+      transition-delay: ($transition-duration * $transition-stagger-factor) * 2;
+    }
+  }
+
+}

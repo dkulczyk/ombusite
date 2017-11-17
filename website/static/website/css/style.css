@@ -3331,6 +3331,91 @@ body.navigation--active {
   .card-grid--row.card-grid--row--secondary {
     justify-content: flex-end; } }
 
+.rings-horizontal {
+  position: relative;
+  margin: 0 auto;
+  max-width: 710px;
+  height: 0;
+  padding-top: 38.02817%; }
+  .rings-horizontal .rings-horizontal--inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
+.rings-horizontal--item {
+  max-width: 38.02817%;
+  position: absolute;
+  top: 0; }
+  .rings-horizontal--item:nth-child(1) {
+    left: 0%; }
+  .rings-horizontal--item:nth-child(2) {
+    left: 30.98592%; }
+  .rings-horizontal--item:nth-child(3) {
+    left: 61.97183%; }
+
+.ring--svg {
+  display: block; }
+  .ring--svg path {
+    stroke-width: 0px;
+    stroke: url(#exp-ombu-gradient-01);
+    stroke-linecap: round;
+    transition: all 0s ease; }
+  .ring--svg.ring--svg--first path,
+  .ring--svg.ring--svg--last path {
+    stroke-dashoffset: 761.34912109375;
+    stroke-dasharray: 761.34912109375; }
+  .ring--svg.ring--svg--middle path {
+    stroke-dashoffset: 368.59467;
+    stroke-dasharray: 368.59467; }
+  .ring--svg.animation-triggered path {
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    transition-duration: 0.75s; }
+  .ring--svg.animation-triggered#ring--svg--first path {
+    transition-delay: 0; }
+  .ring--svg.animation-triggered#ring--svg--middle path {
+    transition-delay: 0.375s; }
+  .ring--svg.animation-triggered#ring--svg--last path {
+    transition-delay: 0.75s; }
+
+.rings-horizontal--content {
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.rings-horizontal--title-group {
+  display: flex;
+  align-items: center;
+  font-family: "halis_rmedium", "Helvetica", sans-serif;
+  margin-bottom: 1rem;
+  min-height: calc(60 / 18 * 1em); }
+  @media (min-width: 992px) {
+    .rings-horizontal--title-group {
+      margin-bottom: 1rem; } }
+
+.rings-horizontal--title {
+  font-size: calc(19 / 16 * 1em);
+  line-height: calc(30 / 19 * 1em);
+  margin-bottom: 0;
+  margin-top: 0; }
+  @media (min-width: 992px) {
+    .rings-horizontal--title {
+      font-size: calc(22 / 18 * 1em);
+      line-height: calc(28 / 22 * 1em); } }
+
+.rings-horizontal--summary {
+  font-family: "halis_rbook", "Helvetica", sans-serif;
+  font-size: calc(12 / 18 * 1em);
+  line-height: calc(18 / 12 * 1em);
+  min-height: calc(18 / 12 * 2em); }
+  @media (max-width: 991px) {
+    .rings-horizontal--summary {
+      display: none; } }
+
 .work-projects {
   background-color: #f5f7f8;
   border-top: 1px solid #d1d8dd;
