@@ -48,14 +48,37 @@
   }
 }
 
+@mixin rings--offset--vertical($item-count, $item-number) {
+  top: $ring-chain-offset / ($item-count * $ring-width) * -100% * ($item-number - 1);
+}
+
 @mixin rings--item-number--vertical($item-count) {
   max-height: percentage(1/$item-count);
   max-width: 100%;
 
   &:nth-child(n+2) {
     margin-left: 0;
-    margin-top: $ring-chain-offset / ($item-count * $ring-width) * -100%;
   }  
+
+  &:nth-child(2) {
+    @include rings--offset--vertical($item-count, 2);
+  }
+
+   &:nth-child(3) {
+    @include rings--offset--vertical($item-count, 3);
+  }
+  
+  &:nth-child(4) {
+    @include rings--offset--vertical($item-count, 4);
+  }
+
+  &:nth-child(5) {
+    @include rings--offset--vertical($item-count, 5);
+  }
+
+  &:nth-child(6) {
+    @include rings--offset--vertical($item-count, 6);
+  }       
 
   .rings--content { 
     padding-left: $ring-chain-offset / ($item-count * $ring-width) * 200%;
