@@ -64,3 +64,10 @@ $transition-duration: 0.75s;
 $transition-stagger-factor: 0.5;
 $stroke-width-start: 0px;
 $stroke-width-final: 3px;
+
+// Page transition metrics
+$border-width-resting: 15px;
+$border-width-resting-desktop: 60px;
+$border-width-transition: 0;
+$border-width-transition-desktop: 0;
+$border-transition-duration-baseline: 0.5s;

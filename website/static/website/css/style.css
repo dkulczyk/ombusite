@@ -1855,7 +1855,7 @@ http://flickity.metafizzy.co
 #header {
   padding-bottom: calc(56 / 18 * 1rem);
   padding-top: calc(30 / 18 * 1rem); }
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     #header {
       padding-bottom: calc(70 / 18 * 1rem);
       padding-top: calc(70 / 18 * 1rem); } }
@@ -1867,7 +1867,7 @@ http://flickity.metafizzy.co
     @media (min-width: 768px) {
       #header.header--project {
         padding-bottom: calc(30 / 18 * 1rem); } }
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       #header.header--project {
         margin-bottom: calc(58 / 18 * 1rem);
         padding-bottom: calc(30 / 18 * 1rem); } }
@@ -1878,7 +1878,7 @@ http://flickity.metafizzy.co
   justify-content: space-between; }
   .header--project .header--contents {
     padding-bottom: calc(30 / 18 * 1rem); }
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       .header--project .header--contents {
         padding-bottom: calc(55 / 18 * 1rem); } }
 
@@ -2132,6 +2132,17 @@ body.navigation--active {
   transition: all 0.2s ease;
   visibility: hidden;
   z-index: 3; }
+  .navigation:after {
+    background-image: linear-gradient(to right, #6dc5d4, #f3a7ad);
+    content: "";
+    height: 7.5px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    @media (min-width: 992px) {
+      .navigation:after {
+        height: 30px; } }
   .navigation.navigation--active {
     opacity: 1;
     visibility: visible; }
@@ -3797,6 +3808,74 @@ body.navigation--active {
   @media (max-width: 767px) {
     .rings--vertical--mobile .rings--summary {
       min-height: 0; } }
+
+.page-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0); }
+  .page-border rect {
+    fill: transparent;
+    stroke-width: 15px;
+    stroke: url(#page-border--gradient);
+    vector-effect: non-scaling-stroke; }
+  @media screen and (min-width: 1200px) {
+    .page-border rect {
+      stroke-width: 60px; } }
+
+.border-animate-init .page-border rect {
+  stroke-width: 0;
+  transition: stroke-width 0 ease; }
+  @media screen and (min-width: 1200px) {
+    .border-animate-init .page-border rect {
+      stroke-width: 0; } }
+
+.border-animate-init main,
+.border-animate-init .animation-target {
+  opacity: 0;
+  transition: opacity 0 ease; }
+
+.border-animate-in .page-border rect {
+  stroke-width: 15px;
+  transition-duration: 0.5s; }
+  @media screen and (min-width: 1200px) {
+    .border-animate-in .page-border rect {
+      stroke-width: 60px; } }
+
+.border-animate-in main,
+.border-animate-in .animation-target {
+  opacity: 1;
+  transition-duration: 0.5s; }
+
+.border-animate-out .page-border rect {
+  stroke-width: 0;
+  transition-duration: 0.5s; }
+  @media screen and (min-width: 1200px) {
+    .border-animate-out .page-border rect {
+      stroke-width: 0; } }
+
+.border-animate-out main,
+.border-animate-out .animation-target {
+  opacity: 0;
+  transition-duration: 0.5s; }
+
+.border-animate-out .navigation:after {
+  height: 0;
+  transition: height 0.5s ease; }
+
+.no-js main, .no-js .animation-target {
+  animation-name: no-js-page;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s; }
+
+@keyframes no-js-page {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .work-projects {
   background-color: #f5f7f8;

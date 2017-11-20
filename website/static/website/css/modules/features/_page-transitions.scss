@@ -1,0 +1,97 @@
+// Page transitions
+
+.page-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  transform: translate3d(0,0,0);
+
+  rect {
+    fill: transparent;
+    stroke-width: $border-width-resting;
+    stroke: url(#page-border--gradient);
+    vector-effect: non-scaling-stroke;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    rect {
+      stroke-width: $border-width-resting-desktop;
+    }
+  }
+}
+
+.border-animate-init {
+  .page-border rect {
+    stroke-width: $border-width-transition;
+    transition: stroke-width 0 ease;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      stroke-width: $border-width-transition-desktop;
+    }
+  }
+
+  main,
+  .animation-target {
+    opacity: 0;
+    transition: opacity 0 ease;
+  }
+}
+
+.border-animate-in {
+  .page-border rect {
+    stroke-width: $border-width-resting;
+    transition-duration: $border-transition-duration-baseline;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      stroke-width: $border-width-resting-desktop;
+    }
+  }
+
+  main,
+  .animation-target {
+    opacity: 1;
+    transition-duration: $border-transition-duration-baseline;
+  }
+}
+
+.border-animate-out {
+  .page-border rect {
+    stroke-width: $border-width-transition;
+    transition-duration: $border-transition-duration-baseline;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      stroke-width: $border-width-transition-desktop;
+    }
+  }
+
+  main,
+  .animation-target {
+    opacity: 0;
+    transition-duration: $border-transition-duration-baseline;
+  }
+
+
+  .navigation {
+    &:after {
+      height: $border-width-transition;
+      transition: height $border-transition-duration-baseline ease;
+    }
+  }  
+}
+
+// Fallback for no javascript
+main,.animation-target {
+  .no-js & {
+    animation-name: no-js-page;
+    animation-duration: $border-transition-duration-baseline;
+    animation-delay: $border-transition-duration-baseline;
+  }
+}
+
+@keyframes no-js-page {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
