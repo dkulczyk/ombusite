@@ -23,3 +23,9 @@ def project(request, context={}):
 def services(request, context={}):
     context['title'] = "Services"
     return render(request, 'services.html', context)
+
+def casestudy(request, context={}):
+    context['client'] = "Northwest PowerPool"
+    context['title'] = "Modernized Power Utility Training"
+    context['subtitle'] = "Learning Management System"
+    return render(request, 'case_study.html', context)    

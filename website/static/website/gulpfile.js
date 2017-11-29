@@ -36,6 +36,7 @@ var jsFiles = [
   './js/callout-fullwidth.js',
   './js/slider.js',
   './js/image-overlay.js',
+  './js/video-overlay.js',  
   './js/rings.js',
   './js/page-transitions.js'
 ];

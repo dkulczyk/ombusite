@@ -19,6 +19,7 @@
           <div class="container">
             <div class="header--contents">
               <a href="home" class="header--logo">{% include 'svg/logo.svg.html' %}</a>
+              {% block header_title_supplement %}{% endblock %}
               <a href="#menu" class="header--menu-toggle">{% include 'svg/menu.svg.html' %}<span>Menu</span></a>
             </div>
           </div>

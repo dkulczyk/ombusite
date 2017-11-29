@@ -1254,7 +1254,7 @@ a {
   a:hover, a:focus, a:active {
     color: #6dc5d4; }
 
-img, iframe {
+img, iframe, video {
   height: auto;
   max-width: 100%; }
 

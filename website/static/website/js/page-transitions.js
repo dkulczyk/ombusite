@@ -11,7 +11,7 @@ $(function() {
     }
   }
 
-  $('a:not(.header--menu-toggle').on('click', function(e) {
+  $('a:not(.header--menu-toggle):not(.video-overlay--link):not(.image-overlay--link)').on('click', function(e) {
     e.preventDefault();
     expTransitionCallback($(this));
   });
