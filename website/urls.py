@@ -18,13 +18,13 @@ from django.contrib import admin
 import website.views
 
 urlpatterns = [
-    url(r'^$', website.views.home),
-    url(r'^home$', website.views.home),
-    url(r'^admin/', admin.site.urls),
-    url(r'^about$', website.views.about),
+    url(r'^$', website.views.home, name='home'),
+    # url(r'^home$', website.views.home, name='home'),
+    # url(r'^admin/', admin.site.urls),
+    url(r'^about$', website.views.about, name='about'),
     url(r'^kitchen-sink$', website.views.kitchensink),
-    url(r'^work$', website.views.work),
-    url(r'^project$', website.views.project),
-    url(r'^services$', website.views.services),
-    url(r'^case-study$', website.views.casestudy),
+    url(r'^work$', website.views.work, name='work'),
+    url(r'^project$', website.views.project, name='project'),
+    url(r'^services$', website.views.services, name='services'),
+    url(r'^case-study$', website.views.casestudy, name='case-study-navex'),
 ]

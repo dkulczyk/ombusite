@@ -18,7 +18,7 @@
         <header id="header" {% block header_attributes %}{% endblock %}>
           <div class="container">
             <div class="header--contents">
-              <a href="home" class="header--logo">{% include 'svg/logo.svg.html' %}</a>
+              <a href="{% url 'home' %}" class="header--logo">{% include 'svg/logo.svg.html' %}</a>
               {% block header_title_supplement %}{% endblock %}
               <a href="#menu" class="header--menu-toggle">{% include 'svg/menu.svg.html' %}<span>Menu</span></a>
             </div>
@@ -32,21 +32,20 @@
                 </div>              
                 <ul class="navigation--primary">
                   <li class="navigation--primary-group navigation--primary-group--has-secondary">
-                    <a class="navigation--primary-link" href="/home">Work</a>
+                    <a class="navigation--primary-link" href="{% url 'work' %}">Work</a>
                     <ul class="navigation--secondary">
-                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Navex Global</a><span class="navigation--secondary-description">Building a CMS for the global compliance leader</span></li>
+                      <li class="navigation--secondary-item"><a href="{% url 'case-study-navex' %}" class="navigation--secondary-link">Navex Global</a><span class="navigation--secondary-description">Building a CMS for the global compliance leader</span></li>
                       <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Northwest Power Pool</a><span class="navigation--secondary-description">Modernizing power utility training for an entire region</span></li>
                       <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Saturday Academy</a><span class="navigation--secondary-description">Engaging the next generation of scientists and artists</span></li>
-                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link navigation--secondary-link--cta">See More Work</a></li>
+                      <li class="navigation--secondary-item"><a href="{% url 'work' %}" class="navigation--secondary-link navigation--secondary-link--cta">See More Work</a></li>
                     </ul>
                   </li>
                   <li class="navigation--primary-group navigation--primary-group--has-secondary">
-                    <a class="navigation--primary-link" href="#">Services</a>
+                    <a class="navigation--primary-link" href="{% url 'services' %}">Services</a>
                     <ul class="navigation--secondary">
-                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Enterprise CMS</a><span class="navigation--secondary-description">Fast. Powerful. Easy.</span></li>
-                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Business Applications</a><span class="navigation--secondary-description">Streamlined experiences for any need</span></li>
-                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Infrastructure</a><span class="navigation--secondary-description">Never have an outage again</span></li>
-                      <li class="navigation--secondary-item"><a href="#" class="navigation--secondary-link">Technology Strategy</a><span class="navigation--secondary-description">Find the tech to build your vision</span></li>
+                      <li class="navigation--secondary-item"><a href="{% url 'services' %}#enterprise-cms" class="navigation--secondary-link">Enterprise CMS</a><span class="navigation--secondary-description">Fast. Powerful. Easy.</span></li>
+                      <li class="navigation--secondary-item"><a href="{% url 'services' %}#business-applications" class="navigation--secondary-link">Business Applications</a><span class="navigation--secondary-description">Streamlined experiences for any need</span></li>
+                      <li class="navigation--secondary-item"><a href="{% url 'services' %}#infrastructure" class="navigation--secondary-link">Infrastructure</a><span class="navigation--secondary-description">Never have an outage again</span></li>
                     </ul>
                   </li>
                   <li class="navigation--primary-group navigation--primary-group--has-secondary">
@@ -56,7 +55,7 @@
                     </ul>
                   </li>
                   <li class="navigation--primary-group navigation--primary-group--single-item">
-                    <a class="navigation--primary-link" href="#">About</a>
+                    <a class="navigation--primary-link" href="{% url 'about' %}">About</a>
                   </li>      
                   <li class="navigation--primary-group navigation--primary-group--single-item">
                     <a class="navigation--primary-link" href="#">Careers</a>
