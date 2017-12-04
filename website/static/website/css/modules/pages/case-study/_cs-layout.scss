@@ -1,0 +1,70 @@
+// Case Study
+
+// Layout
+.cs-intro--lead {
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(8);
+  @include make-lg-column(6);
+  @include make-lg-column-offset(1);
+}
+
+.cs-intro--testimonial {
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(4);
+  @include make-lg-column(3);
+  @include make-lg-column-offset(2);
+}
+
+.cs-contributions--media {
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(8);
+  @include make-lg-column(8);
+}
+
+.cs-contributions--contributions {
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(4);
+  @include make-lg-column(3);  
+  @include make-lg-column-offset(1);  
+}
+
+.cs-main--primary {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(8);
+  @include make-lg-column(8);  
+
+  > div {
+    flex: 0 0 auto;
+  }
+}
+
+.cs-main--secondary {
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(4);
+  @include make-lg-column(3);  
+  @include make-lg-column-offset(1);   
+}
+
+.cs-main--body-section {
+  @media (min-width: $breakpoint-notebook) {
+    margin-left: calc(12.5%);
+    width: calc(75% + 2 * #{$gutter-side-tile});
+  }
+}
+
+.cs-outcomes--content {
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(12);
+  @include make-lg-column(10);  
+  @include make-lg-column-offset(1);   
+}

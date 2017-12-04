@@ -11,12 +11,14 @@ $color-primary: rgb(109, 197, 212); // Blue
 $color-secondary: rgb(243, 167, 173); // Dusk (light)
 $color-secondary-dark: rgb(229, 125, 133); // Dusk (dark)
 $color-tertiary: rgb(67, 94, 116); // Midnight
+$color-purple: rgb(139, 99, 159);
 
 $color-gray-xtra-light: rgb(245, 247, 248);
 $color-gray-light: rgb(185, 188, 191);
 $color-gray-medium: rgb(149, 177, 164);
 
 $color-section-border: rgb(209, 216, 221);
+$color-rule-light: rgba($color-tertiary, 0.4);
 
 // Custom fonts
 $font-halisr-book: 'halis_rbook', 'Helvetica', sans-serif;
@@ -36,6 +38,7 @@ $base-line-height: calc(30 / 18 * 1em);
 
 // Transition effects
 $transition-duration-default: 0.2s;
+$transition-duration-slow: 0.4s;
 
 // Gutters and breakpoints
 $gutter-side-tile: 20px;

@@ -1,0 +1,101 @@
+// Stat
+
+.stat {
+  border-bottom: 1px solid $color-rule-light;
+  border-top: 1px solid $color-rule-light;
+  margin-top: calc(36 / 18 * 1rem);
+  margin-bottom: calc(60 / 18 * 1rem);
+  padding-top: calc(30 / 18 * 1rem);
+  padding-bottom: calc(42 / 18 * 1rem);  
+  text-align: center;
+
+  @media (min-width: $breakpoint-notebook) {
+    align-items: flex-end;
+    border-bottom: none;
+    border-top: none;
+    display: flex;
+    margin-top: calc(80 / 18 * 1rem);
+    margin-bottom: calc(100 / 18 * 1rem);    
+    padding-bottom: 0;
+    padding-top: 0;
+    position: relative;
+    text-align: left;
+
+    &:after {
+      border-top: 1px solid $color-rule-light;
+      content: "";
+      left: calc(12.5%);
+      position: absolute;
+      top: 0;
+      width: calc(75% + 2 * #{$gutter-side-tile});
+    }
+
+    &.stat--subtle:after {
+      top: 100%;
+    }
+  }
+}
+
+.stat--primary {
+  @media (min-width: $breakpoint-notebook) {
+    border-right: 1px solid $color-rule-light;
+    flex: 1 1 0;
+    padding-right: calc(65 / 18 * 1rem);
+    padding-top: calc(60 / 18 * 1rem);
+    width: 30%;
+
+    .stat--subtle & {
+      padding-bottom: calc(60 / 18 * 1rem); 
+      padding-top: 0;
+    }
+  }
+}
+
+.stat--secondary {
+
+}
+
+.stat--number {
+  font-family: $font-halisr-medium;
+  font-size: calc(64 / 16 * 1em);
+  line-height: calc(80 / 64 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(100 / 18 * 1em);
+    line-height: calc(80 / 100 * 1em);   
+    text-align: right; 
+  }
+}
+
+.stat--label {
+  font-family: $font-halisr-book;
+  font-size: calc(24 / 16 * 1em);
+  line-height: calc(24 / 24 * 1em);
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(24 / 18 * 1em); 
+    margin-top: calc(10 / 18 * 1rem);
+    text-align: right; 
+  }
+}
+
+.stat--summary {
+  font-family: $font-tisapro-italic;
+  font-size: calc(16 / 16 * 1em);
+  line-height: calc(25 / 16 * 1em);
+  margin-top: calc(25 / 18 * 1rem);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(22 / 18 * 1em); 
+    line-height: calc(30 / 22 * 1em);
+    margin-top: 0;
+    padding-left: calc(69 / 18 * 1rem);    
+    text-align: left; 
+
+    .stat--subtle & {
+      padding-bottom: calc(60 / 18 * 1rem); 
+      padding-top: 0;
+    }    
+  }  
+}

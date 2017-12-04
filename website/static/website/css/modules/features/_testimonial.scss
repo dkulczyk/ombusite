@@ -1,0 +1,49 @@
+// Testimonial
+
+.testimonial {
+  margin-bottom: calc(100 / 18 * 1rem);
+  text-align: center;
+}
+
+blockquote.testimonial--quote {
+  background: none;
+  border: none;
+  font-family: $font-halisr-regular;
+  font-size: calc(22 / 16 * 1em);
+  line-height: calc(30 / 22 * 1em);
+  margin: calc(34 / 18 * 1rem) 0 0;
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  @media (min-width: $breakpoint-notebook) {  
+    font-size: calc(22 / 18 * 1em);
+    line-height: calc(30 / 22 * 1em);
+    margin: calc(34 / 18 * 1rem) 0 0;
+    padding-left: 0;
+  }
+}
+
+.testimonial--attribution-name {
+  font-family: $font-halisr-bold;
+  font-size: calc(14 / 16 * 1em);
+  line-height: calc(20 / 14 * 1em);
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(14 / 18 * 1em);
+    line-height: calc(20 / 14 * 1em);    
+  }
+}
+
+.testimonial--attribution-title {
+  font-family: $font-halisr-book;
+  font-size: calc(12 / 16 * 1em);
+  line-height: calc(20 / 12 * 1em);
+  margin-top: calc(5 / 12 * 1em);
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(12 / 18 * 1em);   
+  }  
+}

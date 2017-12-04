@@ -1,0 +1,231 @@
+// Case study contents
+
+// Reusable components
+.cs-sidebar--title {
+  font-size: calc(22 / 16 * 1em);
+  line-height: calc(32 / 22 * 1em);
+  margin-bottom: calc(28 / 22 * 1em);
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(22 / 18 * 1em);
+  }
+}
+
+.cs-subheading {
+  margin-top: 0;
+  margin-bottom: calc(36 / 32 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-top: 0;
+    margin-bottom: calc(30 / 38 * 1em);    
+  }
+}
+
+// Intro
+.cs-intro--lead {
+  margin-bottom: calc(130 / 18 * 1rem);
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(24 / 18 * 1em);
+    line-height: calc(50 / 24 * 1em);
+    margin-bottom: calc(90 / 18 * 1rem);
+  }
+}
+
+.cs-intro--emphasis {
+  @media (min-width: $breakpoint-notebook) {
+    font-family: $font-halisr-regular;
+  }
+}
+
+// Contributions
+.cs-contributions {
+  margin-bottom: calc(46 / 18 * 1rem);
+  
+  @media (min-width: $breakpoint-notebook) {
+    margin-bottom: calc(83 / 18 * 1rem);
+  }
+}
+
+.cs-contributions--content {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cs-contributions--media {
+  flex: 0 0 auto;
+
+  video,img {
+    width: 100%;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    order: 2;
+    width: 100%;
+  }
+}
+
+.cs-contributions--contributions {
+  flex: 0 0 auto;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: calc(170 / 18 * 1rem);
+    width: 100%;
+  }
+}
+
+// Main
+.cs-main {
+  margin-bottom: calc(80 / 18 * 1rem);
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-bottom: calc(163 / 18 * 1rem);
+  }
+}
+
+.cs-main--media {
+  width: 100%;
+  video,img {
+    width: 100%;
+  }
+}
+
+.cs-main--secondary {
+  @media (min-width: $breakpoint-notebook) {
+    margin-top: calc(14 / 18 * 1rem);
+  }
+}
+
+.cs-main--media--visionary {
+  margin-bottom: calc(66 / 18 * 1rem);
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-bottom: calc(113 / 18 * 1rem);
+  }
+}
+
+.cs-main--media--solution {
+
+  video,img {
+    width: 100%;
+  }
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    margin-top: calc(30 / 18 * 1rem);
+  }
+}
+
+.cs-main--stat--solution {
+  @media (max-width: $breakpoint-notebook - 1px) { 
+    order: 10;
+  }
+}
+
+.cs-main--secondary {
+   @media (max-width: $breakpoint-notebook - 1px) { 
+    @include element-invisible();
+  } 
+}
+
+// Outcomes
+.cs-outcomes--content {
+  @media (min-width: $breakpoint-notebook) {
+    padding-bottom: calc(150 / 18 * 1rem);
+  }
+}
+
+.cs-outcomes--title {
+  font-size: calc(32 / 16 * 1em);
+  line-height: calc(44 / 32 * 1em);
+  margin-top: calc(103 / 32 * 1em);
+  margin-bottom: calc(12 / 32 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(38 / 18 * 1em);
+    line-height: calc(50 / 38 * 1em);
+    margin-top: calc(90 / 38 * 1em);
+    margin-bottom: calc(50 / 38 * 1em);    
+    text-align: center;
+  }
+}
+
+.cs-outcomes--body {
+  font-size: calc(16 / 16 * 1em);
+  line-height: calc(28 / 16 * 1em);
+  margin-bottom: calc(57 / 16 * 1em);
+
+  p {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(24 / 18 * 1em);
+    line-height: calc(50 / 24 * 1em);
+    margin-bottom: calc(80 / 24 * 1em);    
+    text-align: center;
+  }
+}
+
+.cs-outcomes--actions {
+  margin-bottom: calc(70 / 18 * 1rem);
+  margin-top: -3rem;
+  text-align: center;
+
+  @media (min-width: $breakpoint-notebook) {
+    display: none;
+  }
+}
+
+.cs-outcomes--cta {
+  @include btn-download();
+  color: $color-primary;
+  border-color: $color-primary;
+
+  &:hover,
+  &:focus {
+    color: darken($color-primary, 10%);
+    border-color: darken($color-primary, 10%);
+  }  
+}
+
+// CTA
+.cs-cta {
+  background: linear-gradient(to right, $color-primary, $color-secondary);
+}
+
+.cs-cta--content {
+  color: $color-white;
+  font-family: $font-halisr-regular;
+  font-size: calc(24 / 16 * 1em);
+  line-height: calc(35 / 24 * 1em);
+  margin-top: calc(40 / 24 * 1em);
+  margin-bottom: calc(40 / 24 * 1em);
+
+  strong {
+    font-family: $font-halisr-bold;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(48 / 18 * 1em);
+    line-height: calc(55 / 48 * 1em);    
+    margin-top: calc(70 / 48 * 1em);
+    margin-bottom: calc(65 / 48 * 1em);    
+  }
+}

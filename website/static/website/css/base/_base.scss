@@ -177,3 +177,42 @@ img,iframe,video {
 caption {
   @include caption();
 }
+
+// Forms
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  color: $color-purple;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid $color-rule-light;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: calc(18 / 16 * 1em);
+  line-height: calc(30 / 18 * 1em);  
+  padding-bottom: calc(8 / 18 * 1em);
+  width: 100%;
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(24 / 18 * 1em);
+    line-height: calc(24 / 24 * 1em);   
+    padding-bottom: calc(14 / 24 * 1em);
+  }
+
+  &::placeholder {
+    opacity: 1;
+  }
+}
+
+input[type="submit"] {
+  @include btn-base($color: $color-white, $bg: $color-purple, $border-color: $color-purple);
+  transition: all $transition-duration-default ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($color-purple, 12%);
+    border-color: darken($color-purple, 12%);
+  }
+}

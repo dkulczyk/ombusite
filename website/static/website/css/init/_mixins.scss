@@ -86,7 +86,8 @@
   -moz-user-select: none;
   -ms-user-select: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $color;
     text-decoration: none;
   }
@@ -104,12 +105,12 @@
 }
 
 @mixin btn-secondary() {
-  @include btn-base($color: $color-primary, $bg: $color-white, $border-color: $color-primary);
+  @include btn-base($color: $color-primary, $bg: transparent, $border-color: $color-primary);
 
   &:hover,
   &:focus,
   &:active {
-    background-color: $color-white;
+    background-color: transparent;
     border-color: darken($color-primary, 12%);
     color: darken($color-primary, 12%);
   }  
@@ -127,6 +128,33 @@
   &:active {
     color: darken($color-primary, 12%);
     text-decoration: none;
+  }
+}
+
+@mixin btn-download() {
+  @include btn-base($color: $color-white, $bg: transparent, $border-color: $color-white);
+
+  svg {
+    height: 16px;
+    margin-left: 0.5rem;
+    width: 16px;
+    transform: rotate(90deg);
+
+    * {
+      stroke: $color-white;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-white;
+    color: $color-tertiary;
+     svg {
+      * {
+        stroke: $color-tertiary;
+      }
+    } 
   }
 }
 

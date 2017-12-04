@@ -1,83 +1,129 @@
 {% extends 'theme_base.html' %}
 {% load static %}
 
+{% block header_attributes %}class="header--with-supplement"{% endblock %}
+
 {% block header_title_supplement %}<div class="header--title-supplement">+ {{client}}</div>{% endblock %}
 
 {% block content %}
   <main>
     <section class="page-title page-title--banner" style="background-image: url('{% static 'website/images/cs_banner.png' %}');">
       <div class="container">
-        <div class="page-title--banner-primary">
-          <h1 class="page-title--title">{{title}}</h1>
-          <div class="page-title--subtitle">{{subtitle}}</div>
-        </div>
-        <div class="page-title--banner-secondary">
-          <a href="#" class="pag-title--cta">Download & Share{% include 'svg/arrow-right-long.svg.html' %}</a>
+        <div class="page-title--banner-main">
+          <div class="page-title--banner-primary">
+            <h1 class="page-title--title page-title--title--banner">Modernized <br>Power Utility Training</h1>
+            <div class="page-title--subtitle page-title--subtitle--banner">{{subtitle}}</div>
+          </div>
+          <div class="page-title--banner-secondary">
+            <a href="#" class="page-title--action page-title--action--banner">Download & Share{% include 'svg/arrow-right-long.svg.html' %}</a>
+          </div>
         </div>
       </div>
     </section>
     <section class="cs-intro">
       <div class="container">
-        <div class="cs-intro--lead">
-          <p>Northwest PowerPool (NWPP) brings together 32 power utilities in eight US states and two Canadian provinces. OMBU designed a powerful centralized training platform so NWPP could help its member utilities keep up-to-date on mandated certifications and the latest trends, meaning greater safety, more engagement, and more benefit to the whole membership base and their customers.</p>
+        <div class="row">
+          <div class="cs-intro--lead">
+            <p><span class="cs-intro--emphasis">Northwest PowerPool (NWPP)</span> brings together 32 power utilities in eight US states and two Canadian provinces. OMBU designed a powerful centralized training platform so NWPP could help its member utilities keep up-to-date on mandated certifications and the latest trends, meaning greater safety, more engagement, and more benefit to the whole membership base and their customers.</p>
+          </div>
+          <aside class="cs-intro--testimonial cs-sidebar">
+            {% include 'features/_testimonial.html' %}
+          </aside>
         </div>
-        <aside class="cs-intro--testimonial cs-sidebar">
-          {% include 'features/_testimonial.html' %}
-        </aside>
       </div>
     </section>
     <section class="cs-contributions">
       <div class="container">
-        <div class="cs-contributions--media">
-          <video muted autoplay>
-            <source src="{% static 'website/videos/sample.mp4' %}" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <aside class="cs-contributions cs-sidebar">
-          <h2 class="cs-sidebar--title">Contributions</h2>
-          {% include 'features/_skills-grid.html' %}
-        </aside>
-      </div>
-    </section>
-    <section class="cs-main">
-      <div class="container">
-        <div class="cs-main--primary">
-          <div class="cs-main--body-section">
-            <h2 class="cs-subheading">The Visionary</h2>
-            <div class="cs-main--body-text rte">
-              <p>NWPP came to us with a simple vision: <strong>Make federally-mandated power safety training easy and fun via an engaging video learning platform</strong>, so that employees of their member utilities would complete more trainings, engage more with the training material for better results, and ultimately create a safer and more productive world of power.</p><p>NWPP has trainers and video production talent in-house, so they wanted a technology partner who could come up with a learning system that would be a great platform for their training.</p>
-            </div>
-          </div>
-          <div class="cs-main--stat">
-            {% include 'features/_stat.html' with stat_number=32 stat_label="Member<br>Utilities" stat_summary="Why member utilities are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar extraterrestrial alchemy." %}
-          </div>
-          <div class="cs-main--body-section">
-            <h2 class="cs-subheading">The Solution</h2>
-            <div class="cs-main--body-text rte">
-              <p>We built a modern, fun training platform targeted specifically for training utility workers, with integrated videos and interactive quizzes.</p><p>Powering this platform, we built a powerful yet easy-to-use Learning Management System (LMS) that lets the NWPP content team quickly put together new courses for their members in minutes.</p><p>Things like 3D models, skilled trainers, and fun easter eggs like blooper reels and jokes make the whole experience engaging</p><p>This platform integrates directly with industry-standard data systems, like the LRS/XAPI datastore and exports for federal compliance systems.</p><p>Ultimately, the most important feature is the fun and informative training materials that mean our client can increase education in an industry where knowledge and safety are critical.</p>
-            </div>
-          </div>   
-          <div class="cs-main--stat">
-            {% include 'features/_stat.html' with stat_number="≥1200" stat_label="UTILITY<br>OPERATORS<br>SERVED" stat_summary="Why utility operators are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar alchemy." %}          
-          </div>
-          <div class="cs-main--media">
+        <div class="row cs-contributions--content">
+          <div class="cs-contributions--media">
             <a href="#video-overlay-modal" class="video-overlay--link">
               <video muted autoplay>
                 <source src="{% static 'website/videos/sample.mp4' %}" type="video/mp4">
                 Your browser does not support the video tag.
-              </video>   
+              </video>
             </a>
-          </div>      
+          </div>
+          <aside class="cs-contributions--contributions cs-sidebar">
+            <h2 class="cs-sidebar--title cs-sidebar--title--contributions">Contributions</h2>
+            {% include 'features/_skills-grid.html' %}
+          </aside>
         </div>
-        <aside class="cs-contributions cs-sidebar">
-          <h2 class="cs-sidebar--title">Outcomes</h2>
-          {% include 'features/_rings.html' with ringTotal=4  vertical=True%}
-        </aside>        
+      </div>
+    </section>
+    <section class="cs-main">
+      <div class="container">
+        <div class="row">
+          <div class="cs-main--primary">
+            <div class="cs-main--body-section">
+              <h2 class="cs-subheading">The Visionary</h2>
+              <div class="cs-main--body-text rte">
+                <p>NWPP came to us with a simple vision: <strong>Make federally-mandated power safety training easy and fun via an engaging video learning platform</strong>, so that employees of their member utilities would complete more trainings, engage more with the training material for better results, and ultimately create a safer and more productive world of power.</p><p>NWPP has trainers and video production talent in-house, so they wanted a technology partner who could come up with a learning system that would be a great platform for their training.</p>
+              </div>
+            </div>
+            <div class="cs-main--stat">
+              {% include 'features/_stat.html' with stat_number=32 stat_label="Member<br>Utilities" stat_summary="Why member utilities are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar extraterrestrial alchemy." %}
+            </div>
+            <div class="cs-main--media cs-main--media--visionary">
+              <a href="#video-overlay-modal" class="video-overlay--link">              
+                <video muted autoplay>
+                  <source src="{% static 'website/videos/sample.mp4' %}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </a>
+            </div>            
+            <div class="cs-main--body-section">
+              <h2 class="cs-subheading">The Solution</h2>
+              <div class="cs-main--body-text rte">
+                <p>We built a modern, fun training platform targeted specifically for training utility workers, with integrated videos and interactive quizzes.</p><p>Powering this platform, we built a powerful yet easy-to-use Learning Management System (LMS) that lets the NWPP content team quickly put together new courses for their members in minutes.</p><p>Things like 3D models, skilled trainers, and fun easter eggs like blooper reels and jokes make the whole experience engaging</p><p>This platform integrates directly with industry-standard data systems, like the LRS/XAPI datastore and exports for federal compliance systems.</p><p>Ultimately, the most important feature is the fun and informative training materials that mean our client can increase education in an industry where knowledge and safety are critical.</p>
+              </div>
+            </div>   
+            <div class="cs-main--stat cs-main--stat--solution">
+              {% include 'features/_stat.html' with stat_number="≥1200" stat_label="UTILITY<br>OPERATORS<br>SERVED" stat_summary="Why utility operators are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar alchemy." borderBottom=True %}          
+            </div>
+            <div class="cs-main--media cs-main--media--solution">
+              <a href="#video-overlay-modal" class="video-overlay--link">
+                <video muted autoplay>
+                  <source src="{% static 'website/videos/sample.mp4' %}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>   
+              </a>
+            </div>      
+          </div>
+          <aside class="cs-main--secondary cs-sidebar">
+            <h2 class="cs-sidebar--title">Outcomes</h2>
+            {% include 'features/_rings.html' with ringTotal=4 vertical=True delayed=True %}
+          </aside>        
+        </div>
       </div>
     </section>
     <section class="cs-innovations">
       {% include 'features/_innovation-carousel.html' %}
+    </section>
+    <section class="cs-outcomes">
+      <div class="container">
+        <div class="row">
+          <div class="cs-outcomes--content">
+            <h2 class="cs-outcomes--title">Project Outcomes</h2>
+            <div class="cs-outcomes--body">
+              <p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>
+            </div>
+            {% include 'features/_rings.html' with ringTotal=4 verticalMobile=True delayed=True %}
+            <div class="cs-outcomes--actions">
+              <a href="#" class="cs-outcomes--cta">Download & Share{% include 'svg/arrow-right-long.svg.html' %}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>   
+    <section class="cs-cta">
+      <div class="container">
+        <div class="cs-cta--content">We helped Northwest PowerPool<br>modernize their power utility training.<br><strong>What can we modernize for you?</strong></div>
+      </div>
+    </section>
+    <section class="cs-contact">
+      <div class="container">
+        {% include 'features/_contact.html' %}
+      </div>
     </section>
   </main>
 {% endblock content %}

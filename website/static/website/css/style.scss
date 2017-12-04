@@ -43,6 +43,13 @@
 @import 'modules/features/rings/ring';
 @import 'modules/features/rings/rings';
 @import 'modules/features/page-transitions';
+@import 'modules/features/testimonial';
+@import 'modules/features/skills-grid';
+@import 'modules/features/skill';
+@import 'modules/features/stat';
+@import 'modules/features/innovation-carousel';
+@import 'modules/features/video-overlay';
+@import 'modules/features/contact';
 
 @import 'modules/pages/work';
 @import 'modules/pages/project/project-slider';
@@ -50,3 +57,5 @@
 @import 'modules/pages/project/project-pager';
 @import 'modules/pages/about';
 @import 'modules/pages/services';
+@import 'modules/pages/case-study/cs-layout';
+@import 'modules/pages/case-study/cs-contents';

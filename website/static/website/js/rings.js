@@ -1,4 +1,14 @@
 // Horizontal rings transition
 $(function() {
-  $('.rings').addClass('animation-triggered');
+  $('.rings:not(.rings--delayed)').addClass('animation-triggered');
+
+  $('.rings.rings--delayed').each(function( index, element ) {
+    var ringsDelayedWapoint = new Waypoint({
+      element: $(this),
+      handler: function(direction) {
+        $(this.element).addClass('animation-triggered')
+      },
+      offset: 400
+    });
+  });
 });

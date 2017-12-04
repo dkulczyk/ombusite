@@ -38,7 +38,8 @@ var jsFiles = [
   './js/image-overlay.js',
   './js/video-overlay.js',  
   './js/rings.js',
-  './js/page-transitions.js'
+  './js/page-transitions.js',
+  './js/innovation-carousel.js'
 ];
 gulp.task('js', function() {
   return gulp.src(jsFiles)

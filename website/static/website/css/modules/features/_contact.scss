@@ -1,0 +1,53 @@
+// Contact
+
+.contact {
+  padding: calc(40 / 18 * 1rem) 0;
+
+  @media (min-width: $breakpoint-notebook) {
+    padding: calc(101 / 18 * 1rem) 0 calc(140 / 18 * 1rem);
+  }   
+}
+
+label {
+  .contact & {
+    @include element-invisible();
+  }
+}
+
+.contact--primary,
+.contact--secondary {
+  @media (min-width: $breakpoint-notebook) {
+    float: left;
+    width: calc(50% - #{$gutter-side-tile});
+  }  
+}
+
+.contact--secondary {
+  @media (min-width: $breakpoint-notebook) {
+    float: right;
+  }
+}
+
+.form-group {
+  .contact & {
+    margin-bottom: calc(50 / 18 * 1rem);  
+  }
+}
+
+.contact--actions {
+  clear: both;
+  text-align: center;
+  width: 100%;
+}
+
+.contact--submit {
+  display: block;
+  margin-top: calc(10 / 18 * 1rem);
+  margin-bottom: calc(30 / 18 * 1rem);
+  width: 100%;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: inline-block;
+    width: 360px;
+  }
+}

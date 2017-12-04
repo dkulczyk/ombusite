@@ -1,0 +1,204 @@
+// Innovations carousel
+
+.ic {
+  background-color: $color-gray-xtra-light;
+  border-top: 1px solid $color-rule-light;
+  border-bottom: 1px solid $color-rule-light;
+  text-align: center;
+
+  .flickity-slider { 
+    transform: none !important; 
+  }
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      flex: 0 0 100%;
+    }
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    border-bottom: none;
+  }
+}
+
+.ic--title {
+  font-size: calc(32 / 16 * 1em);
+  line-height: calc(44 / 32 * 1em);
+  margin-top: calc(50 / 32 * 1em);
+  margin-bottom: calc(50 / 32 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(38 / 16 * 1em);
+    line-height: calc(50 / 38 * 1em); 
+  }
+}
+
+.ic--slide {
+  background-size: cover;
+  background-position: center center;
+  background-color: $color-tertiary;
+  background-blend-mode: multiply;
+  left: 0 !important;
+  opacity: 0;
+  transition: opacity $transition-duration-slow ease !important;
+  width: 100%;
+
+  &.is-selected {
+    opacity: 1;
+  }
+}
+
+.ic--slide-contents {
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(12);
+  @include make-lg-column(10);  
+  @include make-lg-column-offset(1);  
+  min-height: calc(510 / 18 * 1rem);    
+  padding-top: calc(20 / 18 * 1rem);
+  padding-bottom: calc(20 / 18 * 1rem);  
+  z-index: 2; 
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    display: flex;
+    flex-direction: column;
+  } 
+
+  @media (min-width: $breakpoint-notebook) {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(710 / 18 * 1rem);
+    padding-top: calc(40 / 18 * 1rem);
+    padding-bottom: calc(40 / 18 * 1rem);    
+  }    
+}
+
+.ic--slide-title-group {
+  text-align: center;
+  @media (min-width: $breakpoint-notebook) {
+    display: none;
+  }
+}
+
+.ic--slide-title {
+  @include btn-primary();
+  font-size: calc(14 / 16 * 1em);
+  padding-top: calc(13 / 18 * 1em);
+  padding-bottom: calc(13 / 18 * 1em);  
+  transition: all $transition-duration-default ease;
+  width: 100%;
+}
+
+.ic--slide-text {
+  align-items: flex-end;
+  color: $color-white;
+  display: flex;
+  flex: 1 1 auto;
+  font-family: $font-tisapro-bold-italic;
+  font-size: calc(17 / 16 * 1em);
+  line-height: calc(30 / 17 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(36 / 18 * 1em);
+    line-height: calc(50 / 36 * 1em);  
+  }
+}
+
+.ic--slide-actions {
+  margin-bottom: calc(30 / 18 * 1rem);
+  margin-top: calc(50 / 18 * 1rem);
+  text-align: center;
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-top: calc(130 / 18 * 1rem);
+  }
+}
+
+.ic--slide-action {
+  align-items: center;
+  border: 2px solid $color-primary;
+  border-radius: 100%;
+  color: $color-white;
+  display: flex;
+  font-family: $font-halisr-bold;
+  font-size: calc(12 / 16 * 1em);
+  line-height: calc(15 / 12 * 1em);
+  justify-content: center;
+  height: 100px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  width: 100px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    border-color: $color-white;
+    color: $color-white;
+    text-decoration: none;
+  }
+}
+
+.ic--pager-group {
+  @media (max-width: $breakpoint-notebook - 1px) {
+    order: 3;
+  }  
+}
+
+.ic--pager {
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(12);
+  @include make-lg-column(10);  
+  @include make-lg-column-offset(1);  
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    margin-top: calc(20 / 18 * 1rem);
+  }  
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-bottom: calc(20 / 18 * 1rem);
+  }
+}
+
+.ic--pager-item {
+  @include btn-secondary();
+  margin-bottom: calc(20 / 18 * 1rem);
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+
+  &.active {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      background-color: darken($color-primary, 10%);
+      border-color: darken($color-primary, 10%);
+      color: $color-white;
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet - 1px) {
+    font-size: calc(14 / 16 * 1em);
+    display: block;
+    padding-top: calc(13 / 18 * 1em);
+    padding-bottom: calc(13 / 18 * 1em);
+    width: 100%;
+  }
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    &.active {
+      display: none;
+    }
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-left: calc(5 / 18 * 1rem);
+    margin-bottom: calc(10 / 18 * 1rem);
+  }
+}

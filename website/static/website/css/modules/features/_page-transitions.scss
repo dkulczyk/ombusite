@@ -8,6 +8,7 @@
   height: 100vh;
   pointer-events: none;
   transform: translate3d(0,0,0);
+  z-index: 5;
 
   rect {
     fill: transparent;

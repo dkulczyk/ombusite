@@ -1,4 +1,4 @@
-<div class="rings{% if vertical %} rings--vertical{% elif verticalMobile %} rings--vertical--mobile{% endif %}">
+<div class="rings{% if vertical %} rings--vertical{% elif verticalMobile %} rings--vertical--mobile{% endif %}{% if delayed %}  rings--delayed{% endif %}">
   {% include 'svg/ring-gradient.svg.html' %}
   <div class="rings--group">
     <div class="rings--inner">

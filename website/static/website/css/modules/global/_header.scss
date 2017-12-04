@@ -24,6 +24,14 @@
       padding-bottom: calc(30 / 18 * 1rem);
     }
   }
+
+  &.header--with-supplement {
+    padding-bottom: calc(10 / 18 * 1rem);
+    
+    @media (min-width: $breakpoint-tablet) {
+      padding-bottom: calc(33 / 18 * 1rem);
+    }
+  }
 }
 
 .header--contents {
@@ -37,6 +45,15 @@
     @media (min-width: $breakpoint-desktop) {
       padding-bottom: calc(55 / 18 * 1rem);
     }
+  }
+
+  .header--with-supplement & {
+    @media (max-width: $breakpoint-tablet - 1px) {
+      flex-wrap: wrap;
+    }
+    @media (min-width: $breakpoint-tablet) {
+      align-items: flex-end;
+    }    
   }
 }
 
@@ -90,4 +107,24 @@
       }
     }
   }  
+}
+
+// Supplement
+.header--title-supplement {
+  font-family: $font-halisr-regular;
+
+  @media (max-width: $breakpoint-tablet - 1px) {
+    flex-basis: 100%;
+    font-size: calc(24 / 16 * 1em);
+    line-height: calc(40 / 24 * 1em);
+    margin-top: calc(10 / 18 * 1rem);
+    order: 3;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    flex: 1 1 auto;
+    font-size: calc(32 / 18 * 1em);
+    line-height: calc(24 / 32 * 1em);   
+    margin-left: calc(12 / 18 * 1rem); 
+  }
 }

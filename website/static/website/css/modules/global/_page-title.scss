@@ -9,6 +9,42 @@
   text-align: center;
 }
 
+.page-title--title.page-title--title--banner {
+  color: $color-white;
+  font-size: calc(28 / 16 * 1em);
+  line-height: calc(35 / 28 * 1em);
+  margin-top: calc(15 / 28 * 1em);
+  text-align: left;
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(48 / 18 * 1em);
+    line-height: 1.25;
+    margin-top: calc(20 / 48 * 1em);
+  }
+}
+
+.page-title--subtitle.page-title--subtitle--banner {
+  color: $color-white;
+  font-family: $font-halisr-regular;
+  font-size: calc(14 / 16 * 1em);
+  line-height: calc(25 / 14 * 1em);
+  margin-top: calc(5 / 14 * 1em);
+  text-transform: uppercase;
+  text-align: left;
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(24 / 18 * 1em);
+    line-height: 1.25;
+    margin-top: calc(10 / 24 * 1em);
+  }
+}
+
 .page-title--title.page-title--title--prominent {
   margin-top: 0;
   
@@ -144,4 +180,41 @@
   @media (max-width: $breakpoint-notebook - 1px) {
     display: none;
   }
+}
+
+// Banner
+.page-title.page-title--banner {
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;  
+  margin-bottom: calc(40 / 18 * 1rem);
+  min-height: calc(250 / 18 * 1rem);
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-bottom: calc(90 / 18 * 1rem);
+    min-height: calc(500 / 18 * 1rem);
+  }
+}
+
+.page-title--banner-main {
+  @media (min-width: $breakpoint-notebook) {
+    display: flex;
+  }  
+}
+
+.page-title--banner-primary {
+  @media (min-width: $breakpoint-notebook) {
+    flex: 1 1 auto;
+  }
+}
+
+.page-title--banner-secondary {
+  @media (max-width: $breakpoint-notebook - 1px) {
+    display: none;
+  }
+}
+
+.page-title--action.page-title--action--banner {
+  margin-top: calc(33 / 18 * 1rem);
+  @include btn-download();
 }

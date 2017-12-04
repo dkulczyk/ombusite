@@ -447,7 +447,17 @@ $(function() {
 });
 // Horizontal rings transition
 $(function() {
-  $('.rings').addClass('animation-triggered');
+  $('.rings:not(.rings--delayed)').addClass('animation-triggered');
+
+  $('.rings.rings--delayed').each(function( index, element ) {
+    var ringsDelayedWapoint = new Waypoint({
+      element: $(this),
+      handler: function(direction) {
+        $(this.element).addClass('animation-triggered')
+      },
+      offset: 400
+    });
+  });
 });
 // Page transitions js
 $(function() {
@@ -462,7 +472,7 @@ $(function() {
     }
   }
 
-  $('a:not(.header--menu-toggle):not(.video-overlay--link):not(.image-overlay--link)').on('click', function(e) {
+  $('a:not(.header--menu-toggle):not(.video-overlay--link):not(.image-overlay--link):not(.ic--pager-item)').on('click', function(e) {
     e.preventDefault();
     expTransitionCallback($(this));
   });
@@ -474,5 +484,27 @@ $(function() {
     setTimeout(function() {
       document.documentElement.classList.add("border-animate-in");
     }, 1);
+  });
+});
+// Innovation Carousel
+
+$(function() {
+
+  $('.ic--slides').flickity({
+    // options
+    cellAlign: 'center',
+    contain: true,
+    prevNextButtons: false,
+    pageDots: false
+  });
+
+  $('.ic--pager').find('.ic--pager-item:first').addClass('active');
+
+  $('.ic--pager').on( 'click', '.ic--pager-item', function(e) {
+    e.preventDefault();
+    var index = $(this).index();
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+    $(this).closest('.ic').find('.ic--slides').flickity( 'select', index );
   });
 });

@@ -1,0 +1,13 @@
+// Skills grid
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skill {
+  .skills-grid & {
+    flex: 0 0 auto;
+    width: calc(50% - 10px);
+  }
+}
