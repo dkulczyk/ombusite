@@ -1,5 +1,7 @@
 {% extends 'theme_base.html' %}
 
+{% block title %}The web technology agency for visionaries{% endblock title %}
+
 {% block content %}
   <main>
     <div class="container">
@@ -19,7 +21,7 @@
             </ul>
           </aside>
         </div>
-      </section>   
+      </section>
     </div>
     <section class="about--story">
       <div class="container">
@@ -45,6 +47,6 @@
         {% include 'features/_section-intro.html' with clients=True subtle=True %}
         {% include 'features/_image-grid.html' with prominent=True %}
       </div>
-    </section>  
+    </section>
   </main>
 {% endblock content %}
