@@ -29,7 +29,7 @@
                 <h2 class="navigation--label">Menu</h2>
                 <div class="navigation--actions">
                   <a href="#" class="header--menu-close">{% include 'svg/close.svg.html' %}</a>
-                </div>              
+                </div>
                 <ul class="navigation--primary">
                   <li class="navigation--primary-group navigation--primary-group--has-secondary">
                     <a class="navigation--primary-link" href="{% url 'work' %}">Work</a>
@@ -56,15 +56,15 @@
                   </li>
                   <li class="navigation--primary-group navigation--primary-group--single-item">
                     <a class="navigation--primary-link" href="{% url 'about' %}">About</a>
-                  </li>      
+                  </li>
                   <li class="navigation--primary-group navigation--primary-group--single-item">
                     <a class="navigation--primary-link" href="#">Careers</a>
-                  </li>  
+                  </li>
                   <li class="navigation--primary-group">
                     <span class="navigation--primary-group-label">Social Links</span>
                     {% include 'features/_social-links.html' %}
                   </li>
-                </ul>              
+                </ul>
                 <span class="navigation--background" role="presentation">{% include 'svg/tree.svg.html' %}</span>
               </li>
             </div>
@@ -90,10 +90,10 @@
               </div>
               <div class="footer--secondary">
                 <ul class="footer--links">
-                  <li class="footer--link-item"><a href="#" class="footer--link">Work</a></li>
-                  <li class="footer--link-item"><a href="#" class="footer--link">Services</a></li>
+                  <li class="footer--link-item"><a href="{% url 'work' %}" class="footer--link">Work</a></li>
+                  <li class="footer--link-item"><a href="{% url 'services' %}" class="footer--link">Services</a></li>
                   <li class="footer--link-item"><a href="#" class="footer--link">Contact</a></li>
-                  <li class="footer--link-item"><a href="#" class="footer--link">About</a></li>
+                  <li class="footer--link-item"><a href="{% url 'about' %}" class="footer--link">About</a></li>
                   <li class="footer--link-item"><a href="#" class="footer--link">Careers</a></li>
                 </ul>
                 <div class="footer--social-links social-links--light">
@@ -121,7 +121,7 @@
         </linearGradient>
       </defs>
       <rect x="0" y="0" width="100" height="100" fill="transparent" />
-    </svg>    
+    </svg>
 
     <!-- Modal -->
     <div class="modal" id="image-overlay-modal" tabindex="-1" role="dialog" aria-labelledby="image-overlay-label">
