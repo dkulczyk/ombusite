@@ -39,7 +39,7 @@
       <div class="cta-card--media"><img src="{% static 'website/images/card-icon_nwpp.png' %}" alt="Business Graphics"></div>
     </div>
     <div class="cta-card--body">Lorem ipsum dolor sit amet, consec tetur adipi sicing elit, sed do eius mod tempor inci did unt ut labore et dolore magna.</div>
-    <a href="#" class="cta-card--cta{% if secondary %} cta-card--cta--secondary{% endif %}">Read the Case Study</a>
+    <a href="{% url 'case-study-nwpp' %}" class="cta-card--cta{% if secondary %} cta-card--cta--secondary{% endif %}">Read the Case Study</a>
   </div>
 </div>
 
@@ -77,7 +77,7 @@
     <div class="cta-card--primary">
       <div class="cta-card--title-group">
         <div class="cta-card--label">White Paper</div>
-        <h3 class="cta-card--title">Increase Stakeholder Buy-in  with Discovery Workshops</h3>
+        <h3 class="cta-card--title">Increase Stakeholder Buy-in with Discovery Workshops</h3>
       </div>
     </div>
     <a href="#" class="cta-card--cta{% if secondary %} cta-card--cta--secondary{% endif %}">Download the White Paper{% if secondary %}{% include 'svg/arrow-right-long.svg.html' %}{% endif %}</a>

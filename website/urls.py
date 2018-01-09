@@ -26,5 +26,5 @@ urlpatterns = [
     url(r'^work$', website.views.work, name='work'),
     url(r'^project$', website.views.project, name='project'),
     url(r'^services$', website.views.services, name='services'),
-    url(r'^case-study$', website.views.casestudy, name='case-study-navex'),
+    url(r'^case-study$', website.views.casestudy, name='case-study-nwpp'),
 ]
