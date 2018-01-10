@@ -28,4 +28,5 @@ urlpatterns = [
     url(r'^services$', website.views.services, name='services'),
     url(r'^case-study$', website.views.casestudy, name='case-study-nwpp'),
     url(r'^contact$', website.views.contact, name='contact'),
+    url(r'^careers$', website.views.careers, name='careers'),
 ]

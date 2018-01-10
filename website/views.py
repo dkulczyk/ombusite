@@ -33,3 +33,7 @@ def casestudy(request, context={}):
 def contact(request, context={}):
     context['title'] = "Contact"
     return render(request, 'contact.html', context)
+
+def careers(request, context={}):
+    context['title'] = "Careers"
+    return render(request, 'careers.html', context)
