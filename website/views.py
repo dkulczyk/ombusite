@@ -10,7 +10,7 @@ def about(request, context={}):
 
 def kitchensink(request, context={}):
     context['title'] = "Kitchen Sink"
-    return render(request, 'kitchen_sink.html', context)    
+    return render(request, 'kitchen_sink.html', context)
 
 def work(request, context={}):
     context['title'] = "Work"
@@ -28,4 +28,8 @@ def casestudy(request, context={}):
     context['client'] = "Northwest PowerPool"
     context['title'] = "Modernized Power Utility Training"
     context['subtitle'] = "Learning Management System"
-    return render(request, 'case_study.html', context)    
+    return render(request, 'case_study.html', context)
+
+def contact(request, context={}):
+    context['title'] = "Contact"
+    return render(request, 'contact.html', context)
