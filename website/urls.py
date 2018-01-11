@@ -26,7 +26,9 @@ urlpatterns = [
     url(r'^work$', website.views.work, name='work'),
     url(r'^project$', website.views.project, name='project'),
     url(r'^services$', website.views.services, name='services'),
-    url(r'^case-study$', website.views.casestudy, name='case-study-nwpp'),
     url(r'^contact$', website.views.contact, name='contact'),
     url(r'^careers$', website.views.careers, name='careers'),
+    url(r'^work/nwpp$', website.views.casestudy_nwpp, name='case-study-nwpp'),
+    url(r'^work/navex-global$', website.views.casestudy_navex, name='case-study-navex'),
+    url(r'^work/saturday-academy$', website.views.casestudy_sa, name='case-study-sa'),
 ]
