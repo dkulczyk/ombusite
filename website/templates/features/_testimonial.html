@@ -1,7 +1,9 @@
 {% load static %}
 
 <div class="testimonial">
+  {% if testimonial_image %}
   <img class="testimonial--image" src="{% static testimonial_image %}">
+  {% endif %}
   {% if testimonial_quote %}
   <blockquote class="testimonial--quote">{{ testimonial_quote }}</blockquote>
   {% endif %}
