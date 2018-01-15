@@ -1,6 +1,8 @@
 {% extends 'theme_base.html' %}
 {% load static %}
 
+{% block title %}{{title}}{% endblock title %}
+
 {% block header_attributes %}class="header--with-supplement"{% endblock %}
 
 {% block header_title_supplement %}<div class="header--title-supplement">+ {{client}}</div>{% endblock %}
