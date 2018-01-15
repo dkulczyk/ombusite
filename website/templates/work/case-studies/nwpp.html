@@ -7,19 +7,8 @@
 
 {% block content %}
   <main>
-    <section class="page-title page-title--banner" style="background-image: url('{% static 'website/images/cs_banner.png' %}');">
-      <div class="container">
-        <div class="page-title--banner-main">
-          <div class="page-title--banner-primary">
-            <h1 class="page-title--title page-title--title--banner">Modernized <br>Power Utility Training</h1>
-            <div class="page-title--subtitle page-title--subtitle--banner">{{subtitle}}</div>
-          </div>
-          <div class="page-title--banner-secondary">
-            <a href="#" class="page-title--action page-title--action--banner">Download & Share{% include 'svg/arrow-right-long.svg.html' %}</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    {% include 'features/case-study/_banner.html' with banner_image="website/images/case-studies/nwpp/banner.png" banner_title="Modernized Power Utility Training" banner_subtitle="" %}
+
     <section class="cs-intro">
       <div class="container">
         <div class="row">

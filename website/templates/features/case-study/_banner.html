@@ -1,0 +1,16 @@
+{% load static %}
+
+<section class="page-title page-title--banner" style="background-image: url('{% static banner_image %}');">
+  <div class="container">
+    <div class="page-title--banner-main">
+      <div class="page-title--banner-primary">
+        <h1 class="page-title--title page-title--title--banner">{{banner_title}}</h1>
+
+        <div class="page-title--subtitle page-title--subtitle--banner">{{banner_subtitle}}</div>
+      </div>
+      <div class="page-title--banner-secondary">
+        <a href="#" class="page-title--action page-title--action--banner">Download &amp; Share{% include 'svg/arrow-right-long.svg.html' %}</a>
+      </div>
+    </div>
+  </div>
+</section>
