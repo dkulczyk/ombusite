@@ -1,0 +1,44 @@
+{% load static %}
+
+<section class="cs-main">
+  <div class="container">
+    <div class="row">
+      <div class="cs-main--primary">
+        <div class="cs-main--body-section">
+          <h2 class="cs-subheading">The Visionary</h2>
+          <div class="cs-main--body-text rte">{% autoescape off %}{{visionary_body}}{% endautoescape %}</div>
+        </div>
+        <div class="cs-main--stat">
+          {% include 'features/_stat.html' with stat_number=32 stat_label="Member<br>Utilities" stat_summary="Why member utilities are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar extraterrestrial alchemy." %}
+        </div>
+        <div class="cs-main--media cs-main--media--visionary">
+          <a href="#video-overlay-modal" class="video-overlay--link">
+            <video muted autoplay>
+              <source src="{% static visionary_video %}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+        </div>
+        <div class="cs-main--body-section">
+          <h2 class="cs-subheading">The Solution</h2>
+          <div class="cs-main--body-text rte">{% autoescape off %}{{solution_body}}{% endautoescape %}</div>
+        </div>
+        <div class="cs-main--stat cs-main--stat--solution">
+          {% include 'features/_stat.html' with stat_number="≥1200" stat_label="UTILITY<br>OPERATORS<br>SERVED" stat_summary="Why utility operators are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar alchemy." borderBottom=True %}
+        </div>
+        <div class="cs-main--media cs-main--media--solution">
+          <a href="#video-overlay-modal" class="video-overlay--link">
+            <video muted autoplay>
+              <source src="{% static solution_video %}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+        </div>
+      </div>
+      <aside class="cs-main--secondary cs-sidebar">
+        <h2 class="cs-sidebar--title">Outcomes</h2>
+        {% include 'features/_rings.html' with ringTotal=4 vertical=True delayed=True %}
+      </aside>
+    </div>
+  </div>
+</section>
