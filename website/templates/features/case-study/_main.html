@@ -8,9 +8,12 @@
           <h2 class="cs-subheading">The Visionary</h2>
           <div class="cs-main--body-text rte">{% autoescape off %}{{visionary_body}}{% endautoescape %}</div>
         </div>
+        {% if visionary_stat_number %}
         <div class="cs-main--stat">
           {% include 'features/_stat.html' with stat_number=visionary_stat_number stat_label=visionary_stat_label stat_summary=visionary_stat_summary %}
         </div>
+        {% endif %}
+        {% if visionary_video %}
         <div class="cs-main--media cs-main--media--visionary">
           <a href="#video-overlay-modal" class="video-overlay--link">
             <video muted autoplay>
@@ -19,13 +22,17 @@
             </video>
           </a>
         </div>
+        {% endif %}
         <div class="cs-main--body-section">
           <h2 class="cs-subheading">The Solution</h2>
           <div class="cs-main--body-text rte">{% autoescape off %}{{solution_body}}{% endautoescape %}</div>
         </div>
+        {% if solution_stat_number %}
         <div class="cs-main--stat cs-main--stat--solution">
           {% include 'features/_stat.html' with stat_number=solution_stat_number stat_label=solution_stat_label stat_summary=solution_stat_summary borderBottom=True %}
         </div>
+        {% endif %}
+        {% if solution_video %}
         <div class="cs-main--media cs-main--media--solution">
           <a href="#video-overlay-modal" class="video-overlay--link">
             <video muted autoplay>
@@ -34,6 +41,7 @@
             </video>
           </a>
         </div>
+        {% endif %}
       </div>
       <aside class="cs-main--secondary cs-sidebar">
         <h2 class="cs-sidebar--title">Outcomes</h2>
