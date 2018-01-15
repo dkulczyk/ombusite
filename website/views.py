@@ -28,18 +28,21 @@ def casestudy_nwpp(request, context={}):
     context['client'] = "Northwest PowerPool"
     context['title'] = "Case study for Northwest Power Pool’s learning management system"
     context['subtitle'] = "Learning Management System"
+    context['contribution_skills'] = ["User Experience Design", "Python Application Development", "AWS Infrastructure", "Product Roadmap Planning"]
     return render(request, 'work/case-studies/nwpp.html', context)
 
 def casestudy_navex(request, context={}):
     context['client'] = "NAVEX Global"
     context['title'] = "Case study for NAVEX Global’s enterprise CMS"
     context['subtitle'] = ""
+    context['contribution_skills'] = ["Technology Strategy", "Enterprise CMS", "Drupal CMS Development", "Marketo Integration", "AWS Migration", "AWS Infrastructure Management"]
     return render(request, 'work/case-studies/navex.html', context)
 
 def casestudy_sa(request, context={}):
     context['client'] = "Saturday Academy"
     context['title'] = "Case study for Saturday Academy’s class registration system"
     context['subtitle'] = "Class Registration System"
+    context['contribution_skills'] = ["Technology Strategy", "User Experience Design", "Visual Design", "Salesforce CRM Development", "Drupal Application Development", "AWS Design & Implementation"]
     return render(request, 'work/case-studies/sa.html', context)
 
 def contact(request, context={}):

@@ -1,6 +1,5 @@
 <div class="skills-grid">
-  {% include 'features/_skill.html' with skill="User Experience Design" %}
-  {% include 'features/_skill.html' with skill="Python Application Development" %}
-  {% include 'features/_skill.html' with skill="AWS Infrastructure" %}
-  {% include 'features/_skill.html' with skill="Product Roadmap Planning" %}
+  {% for skill in skills %}
+    {% include 'features/_skill.html' with skill=skill %}
+  {% endfor %}
 </div>
