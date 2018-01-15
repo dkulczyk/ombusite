@@ -2,9 +2,13 @@
 
 <div class="testimonial">
   <img class="testimonial--image" src="{% static testimonial_image %}">
+  {% if testimonial_quote %}
   <blockquote class="testimonial--quote">{{ testimonial_quote }}</blockquote>
+  {% endif %}
+  {% if testimonial_attribution_name %}
   <footer>
     <div class="testimonial--attribution-name">{{ testimonial_attribution_name }}</div>
     <div class="testimonial--attribution-title">{{ testimonial_attribution_title }}</div>
   </footer>
+  {% endif %}
 </div>
