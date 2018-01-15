@@ -14,25 +14,8 @@
     {% if intro_testimonial_quote %}
       {% include 'features/_testimonial.html' with testimonial_image="" testimonial_quote=intro_testimonial_quote testimonial_attribution_name=intro_testimonial_attribution_name testimonial_attribution_title=intro_testimonial_attribution_title %}
     {% endif %}
+    {% include 'features/case-study/_contributions.html' %}
 
-    <section class="cs-contributions">
-      <div class="container">
-        <div class="row cs-contributions--content">
-          <div class="cs-contributions--media">
-            <a href="#video-overlay-modal" class="video-overlay--link">
-              <video muted autoplay>
-                <source src="{% static 'website/videos/sample.mp4' %}" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </a>
-          </div>
-          <aside class="cs-contributions--contributions cs-sidebar">
-            <h2 class="cs-sidebar--title cs-sidebar--title--contributions">Contributions</h2>
-            {% include 'features/_skills-grid.html' with skills=contribution_skills %}
-          </aside>
-        </div>
-      </div>
-    </section>
     <section class="cs-main">
       <div class="container">
         <div class="row">

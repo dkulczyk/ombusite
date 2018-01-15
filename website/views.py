@@ -46,6 +46,7 @@ def casestudy_nwpp(request, context={}):
     context['testimonial_quote'] = "“Partnering with OMBU on this evolution of our platform was one of the best decisions I’ve ever made.”"
     context['testimonial_attribution_name'] = "David Pennington"
     context['testimonial_attribution_title'] = "Curriculum Developer, NWPP"
+    context['contribution_video'] = 'website/videos/sample.mp4'
     context['contribution_skills'] = ["User Experience Design", "Python Application Development", "AWS Infrastructure", "Product Roadmap Planning"]
     return render(request, 'case-study.html', context)
 
@@ -59,6 +60,7 @@ def casestudy_navex(request, context={}):
     context['intro_testimonial_quote'] = "“Based on projects, the current uplift in high-value forms from the new pages will result in $4.6M in pipe and $1.4M in closed won business in the next 12 months!”"
     context['intro_testimonial_attribution_name'] = "Hillary Ervin"
     context['intro_testimonial_attribution_title'] = "Senior Director, Demand Generation & Sales Development Team"
+    context['contribution_video'] = 'website/videos/sample.mp4'
     context['contribution_skills'] = ["Technology Strategy", "Enterprise CMS", "Drupal CMS Development", "Marketo Integration", "AWS Migration", "AWS Infrastructure Management"]
     return render(request, 'case-study.html', context)
 
@@ -70,5 +72,6 @@ def casestudy_sa(request, context={}):
     context['banner_subtitle'] = "Class Registration System"
     context['intro_text'] = "<p><span class=\"cs-intro--emphasis\">Saturday Academy</span> strives to engage all motivated young people in hands-on, in-depth learning by connecting them to community experts as educators and mentors by offering over 850 STEAM-curriculum classes per year. But registration was cumbersome for parents and data collection was poor and incomplete.</p><p>  OMBU conducted an organization-wide survey of processes, workflows and technology usage and designed and built a nonprofit Salesforce CRM and integrated website that enables families to register to classes and engage with mentors, funneling data in real time into Salesforce for instant reporting and analysis. This IT revision transformed how Saturday Academy engages with its customers.</p>"
     context['testimonial_image'] = "website/images/case-studies/sa/testimonial-logo.png"
+    context['contribution_video'] = 'website/videos/sample.mp4'
     context['contribution_skills'] = ["Technology Strategy", "User Experience Design", "Visual Design", "Salesforce CRM Development", "Drupal Application Development", "AWS Design & Implementation"]
     return render(request, 'case-study.html', context)
