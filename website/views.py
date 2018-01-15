@@ -1,11 +1,11 @@
 from django.shortcuts import render
 
 def home(request, context={}):
-    context['title'] = "OMBU Website homepage"
+    context['title'] = "Web solutions for CMS, applications, infrastructure, and tech strategy"
     return render(request, 'home.html', context)
 
 def about(request, context={}):
-    context['title'] = "About OMBU Website homepage"
+    context['title'] = "The web technology agency for visionaries"
     return render(request, 'about.html', context)
 
 def kitchensink(request, context={}):
@@ -13,7 +13,7 @@ def kitchensink(request, context={}):
     return render(request, 'kitchen_sink.html', context)
 
 def work(request, context={}):
-    context['title'] = "Work"
+    context['title'] = "Case studies and project profiles for our web technology solutions"
     return render(request, 'work.html', context)
 
 def project(request, context={}):
@@ -21,7 +21,7 @@ def project(request, context={}):
     return render(request, 'project.html', context)
 
 def services(request, context={}):
-    context['title'] = "Services"
+    context['title'] = "Enterprise CMS, business applications, infrastructure, and technology strategy"
     return render(request, 'services.html', context)
 
 def casestudy_nwpp(request, context={}):
@@ -43,9 +43,9 @@ def casestudy_sa(request, context={}):
     return render(request, 'work/case-studies/sa.html', context)
 
 def contact(request, context={}):
-    context['title'] = "Contact"
+    context['title'] = "Contact OMBU for web technology solutions, consultations, and RFPs"
     return render(request, 'contact.html', context)
 
 def careers(request, context={}):
-    context['title'] = "Careers"
+    context['title'] = "Web design and development careers in Portland, Oregon"
     return render(request, 'careers.html', context)
