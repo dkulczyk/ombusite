@@ -63,6 +63,38 @@ def casestudy_nwpp(request, context={}):
     context['solution_stat_number'] = "≥1200"
     context['solution_stat_label'] = "Utility<br>Operators<br>Served"
     context['solution_stat_summary'] = "Why utility operators are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar alchemy."
+    context['innovations'] = [
+        {
+            'title': 'Drag & Drop Course Builder',
+            'background': 'website/images/ic_slide-0.png',
+            'text': 'NWPP can drag-and-drop any assortment of videos, documentation, and quizzes together to quickly and easily create courses for utility workers to take.',
+            'action_text': 'Watch Demo',
+        },
+        {
+            'title': 'Powerful Digital Asset Management',
+            'background': '',
+            'text': 'All media assets, such as videos, documents, and images are stored in a central asset library.<br><br>Videos integrate directly into the design and aesthetic of the site, a collaboration between NWPP’s production team and OMBU.',
+            'action_text': 'Watch Demo',
+        },
+        {
+            'title': 'High-Availability Infrastructure',
+            'background': '',
+            'text': 'Because the LMS is a business critical application, it needed to be online at all times. To accomplish this, we designed a high-availability hosting system that keeps copies of the application in two datacenters. The system monitors for connectivity problems and automatically redirects traffic to the healthier data center.',
+            'action_text': '',
+        },
+        {
+            'title': 'Self-Service Team Management Panel',
+            'background': '',
+            'text': 'To ensure strong adoption, we designed a system that decentralizes the task of managing utility teams and their training. NWPP can designate training coordinators at their member utilities, who then have tools to invite and monitor a handful to hundreds of individual operators as they progress through their training.<br><br>A convenient dashboard gives the training coordinators an overview of their team’s status, and they can then dig in to any operator’s individual progress.',
+            'action_text': '',
+        },
+        {
+            'title': 'xAPI Integration',
+            'background': '',
+            'text': 'We built one of the first learning management systems featuring native real-time integration with a learning record store (LRS) using the emerging open standard experience API (xAPI, also called Tin Can), the modern replacement for the legacy SCORM protocol.<br><br>With the LRS data, NWPP can track every member’s progress, test results, and completion data, as well as see trends across all learners or insights about individual lessons.',
+            'action_text': '',
+        },
+    ]
     context['outcomes'] = [
         { 'title': '0.84s', 'summary': 'Page loads' },
         { 'title': '99<sup>%</sup>', 'summary': 'Training completion' },
@@ -88,6 +120,38 @@ def casestudy_navex(request, context={}):
     context['visionary_body'] = "<p>Facing explosive growth and with a clientele featuring most Fortune 500 companies in more than 200 countries, NAVEX Global needed rock solid, cutting-edge web marketing technology capable of supporting smooth collaboration among distributed teams and rapidly changing business.</p>"
     context['visionary_video'] = "website/videos/sample.mp4"
     context['solution_body'] = "<p>OMBU designed and launched an enterprise content management system (CMS) that empowers NAVEX Global to personally engage customers across their global markets.  Marketing teams are able to launch a rich custom landing page for new products and campaigns in minutes, with no IT involvement, allowing them to iterate, test and optimize at breakthrough speeds.</p><p>The website features a rich resource center that asserts NAVEX Global’s leadership in the field and is a key conversion point for new business. To further project NAVEX Global’s thought leadership, OMBU transformed an existing blog into a multi-channel publication that quickly became an industry must-read.</p><p>To allow NAVEX Global to personally reach their global markets, we built a localization framework that empowers marketing teams launch locales as the company grows and tailor content and offerings specific market conditions.</p>"
+    context['innovations'] = [
+        {
+            'title': 'Drag & Drop Course Builder',
+            'background': '',
+            'text': 'The page builder feature enables marketers to create landing pages for new products and campaigns without coding or technical help. The page builder offers blocks, such as tailored lead-capture, video and other rich media that can be arranged and resized on-page to achieve the best layout for every situation and enable iterative optimization. Marketers can granularly customize the search engine optimization (SEO) at every content level to drive traffic into the sales funnel.',
+            'action_text': '',
+        },
+        {
+            'title': 'Localization',
+            'background': '',
+            'text': 'NAVEX Global has customers in over 200 countries, so we built powerful localization functionality into their new site. NAVEX Global can easily customize products and messaging for individual geographies, launching with US, UK, and French content.<br><br>Each locale features fully customizable navigation and content, and the marketing team can quickly clone and adapt pages from one locale to another (e.g. clone a US page to the UK locale then tailor it for that geography).<br><br>For visitors, the experience is seamless, as the site automatically detects the user’s location and presents the appropriate targeted content.',
+            'action_text': '',
+        },
+        {
+            'title': 'Robust, Filterable Resource Center',
+            'background': '',
+            'text': 'Potential customers are more likely to convert when they can see the expertise of a vendor, and so we built NAVEX Global a robust resource center to highlight their insights and demonstrate their thought leadership.<br><br>With robust resource media types, such as white paper PDFs, webinar videos, case studies, and blog posts, NAVEX Global’s team can reach prospects in a variety of forms.<br><br>Individual expert faces provide a personal connection with the content, and show the team behind the software connected directly with their thoughts.<br><br>NAVEX Global can offer premium content behind lead capture gating forms, customized for individual resources, and using progressive enhancement to intelligently and automatically grow lead profiles.',
+            'action_text': '',
+        },
+        {
+            'title': 'Marketo Marketing Automation',
+            'background': '',
+            'text': 'We built custom integration with the Marketo marketing automation platform throughout NAVEX Global’s new site, to enable their marketing team to better capture new leads, gather insights about visitors, track customer value, and target content.<br><br>Potential customers gain access to key resources through Marketo-integrated gating forms, which we also connected with Marketo’s progressive form features, meaning that NAVEX Global can gather new information from visitors as they interact with the site.<br><br>Additionally, marketers can embed custom Marketo-integrated forms anywhere on the site, without any code. Building a custom lead-generation landing page takes a matter of minutes.',
+            'action_text': '',
+        },
+        {
+            'title': 'Scalable Application and Content Infrastructure',
+            'background': '',
+            'text': 'To reach NAVEX Global’s worldwide audience quickly and reliably, we built a scalable AWS cloud infrastructure for the website application and content.<br><br>Dynamic computation is distributed across an auto-scaling fleet of application servers, with traffic managed by a load balancer. The infrastructure has full duplication between two data centers, with all resources ready fail-over to the backup in case of a data center outage.<br><br>Resources and assets, such as images, documents, and stylesheets, are served from a content delivery network, with leaf nodes close to users, for the fastest experience around the world.',
+            'action_text': '',
+        },
+    ]
     context['outcomes'] = [
         { 'title': '< 4 min', 'summary': 'Landing page launch' },
         { 'title': '224', 'summary': 'White papers, eBooks, webinars' },
@@ -120,6 +184,32 @@ def casestudy_sa(request, context={}):
     context['solution_stat_number'] = "$70k+"
     context['solution_stat_label'] = "Financial Aid<br>Automatically<br>Granted per Year"
     context['solution_stat_summary'] = "Why this metric is important and how Saturday Academy benefits directly or indirectly from it motes of rock and gas the ash of cosmic extraterrestrial alchemy bearable only through love."
+    context['innovations'] = [
+        {
+            'title': 'Real-Time Class Registration System',
+            'background': '',
+            'text': 'A live class catalog syncs between the website and the Salesforce datastore, meaning parents and students can see what classes Saturday Academy offers and, in real-time, seating availability.<br><br>Parents can manage their family’s information through a self-service household dashboard, and can even grant registration access to other household parents or guardians.<br><br>When it’s time to register, a parent can apply for and instantly receive financial aid, calculated based on their adjusted gross income (AGI) using a formula Saturday Academy can adjust over time.<br><br>Payment is processed immediately through Stripe’s API and is recorded within Salesforce, or, in the case of wait-list registrations, can be deferred and automatically charged if the student gets in.',
+            'action_text': '',
+        },
+        {
+            'title': 'Salesforce Business Datastore and Intelligence',
+            'background': '',
+            'text': 'Since all registrations and interactions on the Saturday Academy speak to Salesforce in real-time via REST API, this means both systems are always in sync.<br><br>Real-time data, with customized data structures optimized for their business, means that Saturday Academy can run reports in real-time and gain insights in areas such as financials, demographics, and success metrics.',
+            'action_text': '',
+        },
+        {
+            'title': 'Data Migration',
+            'background': '',
+            'text': 'Saturday Academy had over a decade of records of classes, students, and registrations stored in a number of homegrown Access databases and spreadsheets prior to launching the new system, so for archival and reporting purposes we built an automated migration system to bring the old records into the new system.<br><br>We also migrated donors and organizations from disparate, critical data for a nonprofit.<br><br>The migration meant that on launch day, we were able to automatically enable 10,592 website accounts for households, meaning those parents could log in on day 1 with their information and history already in place.',
+            'action_text': '',
+        },
+        {
+            'title': 'Enterprise CMS',
+            'background': '',
+            'text': 'Since Saturday Academy is an organization that works with creative and inquisitive families, we designed and built a website that communicates that quirky, intelligent brand while maintaining a simple, easy-to-use interface for actions.<br><br>A mobile-responsive design means parents and students can learn about Saturday Academy’s offerings and register on any device.<br><br>A powerful enterprise CMS gives Saturday Academy’s marketing team the ability to quickly customize layouts with new page elements as their content needs change and the organization grows.',
+            'action_text': '',
+        },
+    ]
     context['outcomes'] = [
         { 'title': 'Live', 'summary': 'Operational data for the first time' },
         { 'title': '0', 'summary': 'Registrations printed on paper' },
