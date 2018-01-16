@@ -20,22 +20,7 @@
     <section class="cs-innovations">
       {% include 'features/_innovation-carousel.html' %}
     </section>
-    <section class="cs-outcomes">
-      <div class="container">
-        <div class="row">
-          <div class="cs-outcomes--content">
-            <h2 class="cs-outcomes--title">Project Outcomes</h2>
-            <div class="cs-outcomes--body">
-              <p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>
-            </div>
-            {% include 'features/_rings.html' with verticalMobile=True delayed=True rings=outcomes %}
-            <div class="cs-outcomes--actions">
-              <a href="#" class="cs-outcomes--cta">Download & Share{% include 'svg/arrow-right-long.svg.html' %}</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    {% include 'features/case-study/_outcomes.html' %}
     <section class="cs-cta">
       <div class="container">
         <div class="cs-cta--content">We helped Northwest PowerPool<br>modernize their power utility training.<br><strong>What can we modernize for you?</strong></div>

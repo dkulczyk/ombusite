@@ -69,6 +69,7 @@ def casestudy_nwpp(request, context={}):
         { 'title': '23', 'summary': 'Fewer accidents per year' },
         { 'title': '4 min', 'summary': 'New client onboarding' },
     ]
+    context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
     return render(request, 'case-study.html', context)
 
 def casestudy_navex(request, context={}):
@@ -94,6 +95,7 @@ def casestudy_navex(request, context={}):
         { 'title': '$4.6M', 'summary': 'Projected increase in pipeline due to launch' },
         { 'title': '$1.4M', 'summary': 'Projected increase in closed won business duet to launch' },
     ]
+    context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
     return render(request, 'case-study.html', context)
 
 def casestudy_sa(request, context={}):
@@ -123,4 +125,5 @@ def casestudy_sa(request, context={}):
         { 'title': '23<sup>%<sup>', 'summary': 'Increased engagement on mobile' },
         { 'title': '3,184', 'summary': 'Brand new registrants' },
     ]
+    context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
     return render(request, 'case-study.html', context)
