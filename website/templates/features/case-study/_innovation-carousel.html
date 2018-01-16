@@ -6,90 +6,32 @@
     <div class="ic--pager-group container">
       <div class="row">
         <div class="ic--pager">
-          <a href="#ic-slide-0" class="ic--pager-item">Drag & Drop Course Builder</a>
-          <a href="#ic-slide-1" class="ic--pager-item">Powerful Digital Asset Management</a>
-          <a href="#ic-slide-2" class="ic--pager-item">High-Availability Infrastructure</a>
-          <a href="#ic-slide-3" class="ic--pager-item">Self-Service Team Management Panel</a>
-          <a href="#ic-slide-4" class="ic--pager-item">xAPI Integration</a>
+        {% for innovation in innovations %}
+          <a href="#ic-slide-{{forloop.counter}}" class="ic--pager-item">{{innovation.title}}</a>
+        {% endfor %}
         </div>
       </div>
     </div>
     <div class="ic--slides">
-      <div class="ic--slide" id="ic-slide-0" style="background-image: url('{% static 'website/images/ic_slide-0.png' %}');">
+    {% for innovation in innovations %}
+      <div class="ic--slide" id="ic-slide-{{forloop.counter}}" style="background-image: url('{% static innovation.background %}');">
         <div class="container">
           <div class="row">
             <div class="ic--slide-contents">
               <div class="ic--slide-title-group">
-                <span class="ic--slide-title">Drag & Drop Course Builder</span>
+                <span class="ic--slide-title">{{innovation.title}}</span>
               </div>
-              <div class="ic--slide-text"><span>NWPP can drag-and-drop any assortment of videos, documentation, and quizzes together to quickly and easily create courses for utility workers to take.<span></div>
+              <div class="ic--slide-text"><span>{% autoescape off %}{{innovation.text}}{% endautoescape %}<span></div>
+              {% if innovation.action_text %}
               <div class="ic--slide-actions">
-                <a href="#" class="ic--slide-action"><span>Watch Demo</span></a>
+                <a href="#" class="ic--slide-action"><span>{{innovation.action_text}}</span></a>
               </div>
+              {% endif %}
             </div>
           </div>
         </div>
       </div>
-      <div class="ic--slide" id="ic-slide-1" style="background-image: url('{% static 'website/images/cs_banner.png' %}');">
-        <div class="container">
-          <div class="row">
-            <div class="ic--slide-contents">
-              <div class="ic--slide-title-group">
-                <span class="ic--slide-title">Powerful Digital Asset Management</span>
-              </div>
-              <div class="ic--slide-text"><span>NWPP can drag-and-drop any assortment of videos, documentation, and quizzes together to quickly and easily create courses for utility workers to take.<span></div>
-              <div class="ic--slide-actions">
-                <a href="#" class="ic--slide-action"><span>Watch Demo</span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ic--slide" id="ic-slide-2" style="background-image: url('{% static 'website/images/ic_slide-0.png' %}');">
-        <div class="container">
-          <div class="row">
-            <div class="ic--slide-contents">
-              <div class="ic--slide-title-group">
-                <span class="ic--slide-title">High-Availability Infrastructure</span>
-              </div>
-              <div class="ic--slide-text"><span>NWPP can drag-and-drop any assortment of videos, documentation, and quizzes together to quickly and easily create courses for utility workers to take.<span></div>
-              <div class="ic--slide-actions">
-                <a href="#" class="ic--slide-action"><span>Watch Demo</span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ic--slide" id="ic-slide-3" style="background-image: url('{% static 'website/images/ic_slide-0.png' %}');">
-        <div class="container">
-          <div class="row">
-            <div class="ic--slide-contents">
-              <div class="ic--slide-title-group">
-                <span class="ic--slide-title">Self-Service Team Management Panel</span>
-              </div>
-              <div class="ic--slide-text"><span>NWPP can drag-and-drop any assortment of videos, documentation, and quizzes together to quickly and easily create courses for utility workers to take.<span></div>
-              <div class="ic--slide-actions">
-                <a href="#" class="ic--slide-action"><span>Watch Demo</span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ic--slide" id="ic-slide-4" style="background-image: url('{% static 'website/images/ic_slide-0.png' %}');">
-        <div class="container">
-          <div class="row">
-            <div class="ic--slide-contents">
-              <div class="ic--slide-title-group">
-                <span class="ic--slide-title">xAPI Integration</span>
-              </div>
-              <div class="ic--slide-text"><span>NWPP can drag-and-drop any assortment of videos, documentation, and quizzes together to quickly and easily create courses for utility workers to take.<span></div>
-              <div class="ic--slide-actions">
-                <a href="#" class="ic--slide-action"><span>Watch Demo</span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    {% endfor %}
     </div>
   </div>
 </section>
