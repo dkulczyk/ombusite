@@ -9,9 +9,11 @@
         <div class="page-title--subtitle page-title--subtitle--banner">{{banner_subtitle}}</div>
         {% endif %}
       </div>
+      {% if pdf_download %}
       <div class="page-title--banner-secondary">
-        <a href="#" class="page-title--action page-title--action--banner">Download &amp; Share{% include 'svg/arrow-right-long.svg.html' %}</a>
+        <a href="{{ pdf_download }}" class="page-title--action page-title--action--banner">Download &amp; Share{% include 'svg/arrow-right-long.svg.html' %}</a>
       </div>
+      {% endif %}
     </div>
   </div>
 </section>

@@ -5,9 +5,11 @@
         <h2 class="cs-outcomes--title">Project Outcomes</h2>
         <div class="cs-outcomes--body">{% autoescape off %}{{outcome_conclusion}}{% endautoescape %}</div>
         {% include 'features/_rings.html' with verticalMobile=True delayed=True rings=outcomes %}
+        {% if pdf_download %}
         <div class="cs-outcomes--actions">
-          <a href="#" class="cs-outcomes--cta">Download & Share{% include 'svg/arrow-right-long.svg.html' %}</a>
+          <a href="{{ pdf_download }}" class="cs-outcomes--cta">Download &amp; Share{% include 'svg/arrow-right-long.svg.html' %}</a>
         </div>
+        {% endif %}
       </div>
     </div>
   </div>
