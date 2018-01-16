@@ -22,6 +22,11 @@ def project(request, context={}):
 
 def services(request, context={}):
     context['title'] = "Enterprise CMS, business applications, infrastructure, and technology strategy"
+    context['services'] = [
+        { 'title': 'Enterprise CMS', 'summary': 'We make content<br>manageable' },
+        { 'title': 'Business Applications', 'summary': 'We make business<br>profitable' },
+        { 'title': 'Infrastructure', 'summary': 'We make systems<br>reliable' },
+    ]
     return render(request, 'services.html', context)
 
 def contact(request, context={}):
@@ -59,10 +64,10 @@ def casestudy_nwpp(request, context={}):
     context['solution_stat_label'] = "Utility<br>Operators<br>Served"
     context['solution_stat_summary'] = "Why utility operators are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar alchemy."
     context['outcomes'] = [
-        { 'figure': '0.84s', 'caption': 'Page loads' },
-        { 'figure': '99<sup>%</sup>', 'caption': 'Training completion' },
-        { 'figure': '23', 'caption': 'Fewer accidents per year' },
-        { 'figure': '4 min', 'caption': 'New client onboarding' },
+        { 'title': '0.84s', 'summary': 'Page loads' },
+        { 'title': '99<sup>%</sup>', 'summary': 'Training completion' },
+        { 'title': '23', 'summary': 'Fewer accidents per year' },
+        { 'title': '4 min', 'summary': 'New client onboarding' },
     ]
     return render(request, 'case-study.html', context)
 
@@ -82,12 +87,12 @@ def casestudy_navex(request, context={}):
     context['visionary_video'] = "website/videos/sample.mp4"
     context['solution_body'] = "<p>OMBU designed and launched an enterprise content management system (CMS) that empowers NAVEX Global to personally engage customers across their global markets.  Marketing teams are able to launch a rich custom landing page for new products and campaigns in minutes, with no IT involvement, allowing them to iterate, test and optimize at breakthrough speeds.</p><p>The website features a rich resource center that asserts NAVEX Global’s leadership in the field and is a key conversion point for new business. To further project NAVEX Global’s thought leadership, OMBU transformed an existing blog into a multi-channel publication that quickly became an industry must-read.</p><p>To allow NAVEX Global to personally reach their global markets, we built a localization framework that empowers marketing teams launch locales as the company grows and tailor content and offerings specific market conditions.</p>"
     context['outcomes'] = [
-        { 'figure': '< 4 min', 'caption': 'Landing page launch' },
-        { 'figure': '224', 'caption': 'White papers, eBooks, webinars' },
-        { 'figure': '448', 'caption': 'Expert blog posts' },
-        { 'figure': '2', 'caption': 'Top competitors acquired' },
-        { 'figure': '$4.6M', 'caption': 'Projected increase in pipeline due to launch' },
-        { 'figure': '$1.4M', 'caption': 'Projected increase in closed won business duet to launch' },
+        { 'title': '< 4 min', 'summary': 'Landing page launch' },
+        { 'title': '224', 'summary': 'White papers, eBooks, webinars' },
+        { 'title': '448', 'summary': 'Expert blog posts' },
+        { 'title': '2', 'summary': 'Top competitors acquired' },
+        { 'title': '$4.6M', 'summary': 'Projected increase in pipeline due to launch' },
+        { 'title': '$1.4M', 'summary': 'Projected increase in closed won business duet to launch' },
     ]
     return render(request, 'case-study.html', context)
 
@@ -112,10 +117,10 @@ def casestudy_sa(request, context={}):
     context['solution_stat_label'] = "Financial Aid<br>Automatically<br>Granted per Year"
     context['solution_stat_summary'] = "Why this metric is important and how Saturday Academy benefits directly or indirectly from it motes of rock and gas the ash of cosmic extraterrestrial alchemy bearable only through love."
     context['outcomes'] = [
-        { 'figure': 'Live', 'caption': 'Operational data for the first time' },
-        { 'figure': '0', 'caption': 'Registrations printed on paper' },
-        { 'figure': 'Realtime', 'caption': 'Class registration with instant financial aid calculation' },
-        { 'figure': '23<sup>%<sup>', 'caption': 'Increased engagement on mobile' },
-        { 'figure': '3,184', 'caption': 'Brand new registrants' },
+        { 'title': 'Live', 'summary': 'Operational data for the first time' },
+        { 'title': '0', 'summary': 'Registrations printed on paper' },
+        { 'title': 'Realtime', 'summary': 'Class registration with instant financial aid calculation' },
+        { 'title': '23<sup>%<sup>', 'summary': 'Increased engagement on mobile' },
+        { 'title': '3,184', 'summary': 'Brand new registrants' },
     ]
     return render(request, 'case-study.html', context)
