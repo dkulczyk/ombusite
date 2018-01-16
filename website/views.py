@@ -102,6 +102,7 @@ def casestudy_nwpp(request, context={}):
         { 'title': '4 min', 'summary': 'New client onboarding' },
     ]
     context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
+    context['cta_text'] = 'We helped Northwest PowerPool<br>modernize their power utility training.<br><strong>What can we modernize for you?</strong>'
     context['pdf_download'] = '/static/website/documents/case-studies/phytolacca-dioica.pdf'
     return render(request, 'case-study.html', context)
 
@@ -161,6 +162,7 @@ def casestudy_navex(request, context={}):
         { 'title': '$1.4M', 'summary': 'Projected increase in closed won business duet to launch' },
     ]
     context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
+    context['cta_text'] = 'We helped NAVEX Global<br>modernize their website content.<br><strong>What can we modernize for you?</strong>'
     context['pdf_download'] = '/static/website/documents/case-studies/phytolacca-dioica.pdf'
     return render(request, 'case-study.html', context)
 
@@ -218,5 +220,6 @@ def casestudy_sa(request, context={}):
         { 'title': '3,184', 'summary': 'Brand new registrants' },
     ]
     context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
+    context['cta_text'] = 'We helped Saturday Academy<br>modernize their class registration system.<br><strong>What can we modernize for you?</strong>'
     context['pdf_download'] = '/static/website/documents/case-studies/phytolacca-dioica.pdf'
     return render(request, 'case-study.html', context)
