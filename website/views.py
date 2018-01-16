@@ -58,6 +58,12 @@ def casestudy_nwpp(request, context={}):
     context['solution_stat_number'] = "≥1200"
     context['solution_stat_label'] = "Utility<br>Operators<br>Served"
     context['solution_stat_summary'] = "Why utility operators are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar alchemy."
+    context['outcomes'] = [
+        { 'figure': '0.84s', 'caption': 'Page loads' },
+        { 'figure': '99<sup>%</sup>', 'caption': 'Training completion' },
+        { 'figure': '23', 'caption': 'Fewer accidents per year' },
+        { 'figure': '4 min', 'caption': 'New client onboarding' },
+    ]
     return render(request, 'case-study.html', context)
 
 def casestudy_navex(request, context={}):
@@ -75,6 +81,14 @@ def casestudy_navex(request, context={}):
     context['visionary_body'] = "<p>Facing explosive growth and with a clientele featuring most Fortune 500 companies in more than 200 countries, NAVEX Global needed rock solid, cutting-edge web marketing technology capable of supporting smooth collaboration among distributed teams and rapidly changing business.</p>"
     context['visionary_video'] = "website/videos/sample.mp4"
     context['solution_body'] = "<p>OMBU designed and launched an enterprise content management system (CMS) that empowers NAVEX Global to personally engage customers across their global markets.  Marketing teams are able to launch a rich custom landing page for new products and campaigns in minutes, with no IT involvement, allowing them to iterate, test and optimize at breakthrough speeds.</p><p>The website features a rich resource center that asserts NAVEX Global’s leadership in the field and is a key conversion point for new business. To further project NAVEX Global’s thought leadership, OMBU transformed an existing blog into a multi-channel publication that quickly became an industry must-read.</p><p>To allow NAVEX Global to personally reach their global markets, we built a localization framework that empowers marketing teams launch locales as the company grows and tailor content and offerings specific market conditions.</p>"
+    context['outcomes'] = [
+        { 'figure': '< 4 min', 'caption': 'Landing page launch' },
+        { 'figure': '224', 'caption': 'White papers, eBooks, webinars' },
+        { 'figure': '448', 'caption': 'Expert blog posts' },
+        { 'figure': '2', 'caption': 'Top competitors acquired' },
+        { 'figure': '$4.6M', 'caption': 'Projected increase in pipeline due to launch' },
+        { 'figure': '$1.4M', 'caption': 'Projected increase in closed won business duet to launch' },
+    ]
     return render(request, 'case-study.html', context)
 
 def casestudy_sa(request, context={}):
@@ -97,4 +111,11 @@ def casestudy_sa(request, context={}):
     context['solution_stat_number'] = "$70k+"
     context['solution_stat_label'] = "Financial Aid<br>Automatically<br>Granted per Year"
     context['solution_stat_summary'] = "Why this metric is important and how Saturday Academy benefits directly or indirectly from it motes of rock and gas the ash of cosmic extraterrestrial alchemy bearable only through love."
+    context['outcomes'] = [
+        { 'figure': 'Live', 'caption': 'Operational data for the first time' },
+        { 'figure': '0', 'caption': 'Registrations printed on paper' },
+        { 'figure': 'Realtime', 'caption': 'Class registration with instant financial aid calculation' },
+        { 'figure': '23<sup>%<sup>', 'caption': 'Increased engagement on mobile' },
+        { 'figure': '3,184', 'caption': 'Brand new registrants' },
+    ]
     return render(request, 'case-study.html', context)

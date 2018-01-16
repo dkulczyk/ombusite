@@ -45,7 +45,30 @@
       </div>
       <aside class="cs-main--secondary cs-sidebar">
         <h2 class="cs-sidebar--title">Outcomes</h2>
-        {% include 'features/_rings.html' with ringTotal=4 vertical=True delayed=True %}
+        <div class="rings rings--vertical rings--delayed">
+          {% include 'svg/ring-gradient.svg.html' %}
+          <div class="rings--group">
+            <div class="rings--inner">
+            {% for outcome in outcomes %}
+              <div class="rings--item">
+                <div class="rings--item-inner">
+                  {% if forloop.counter is outcomes|length %}
+                    {% include 'svg/ring-last.svg.html' %}
+                  {% elif forloop.counter is 1 %}
+                    {% include 'svg/ring-first.svg.html' %}
+                  {% else %}
+                    {% include 'svg/ring-middle.svg.html' %}
+                  {% endif %}
+                  <div class="rings--content">
+                    <div class="rings--title-group"><h2 class="rings--title">{% autoescape off %}{{ outcome.figure }}{% endautoescape %}</h2></div>
+                    <div class="rings--summary">{{ outcome.caption }}</div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+            </div>
+          </div>
+        </div>
       </aside>
     </div>
   </div>
