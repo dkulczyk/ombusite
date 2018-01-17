@@ -1,6 +1,8 @@
 {% extends 'theme_base.html' %}
 {% load static %}
 
+{% block title %}{{title}}{% endblock title %}
+
 {% block header_attributes %}class="header--project"{% endblock %}
 
 {% block header_bottom %}
@@ -45,7 +47,7 @@
           <section class="page-title project-section">
             <div class="project-section--main">
               <div class="project-title--cta"><a href="{{visit_url}}" class="project-title--cta-link">{{visit_text}} {% include 'svg/website.svg.html' %}</a></div>
-              <h1 class="page-title--title page-title--title--project">Oregon Convention Center</h1>
+              <h1 class="page-title--title page-title--title--project">{{client}}</h1>
               <div class="rte project-intro--body">
                 <h6>Making the world’s most useful convention center website</h6>
                 <p>The Oregon Convention Center is a prominent institution of the West Coast, one of only two LEED Platinum certified convention centers in the US. When the OCC approached OMBU, however, their website had two major failings: it looked woefully outdated and cheap, and the site’s navigation and content were messy and confusing.</p>

@@ -37,7 +37,8 @@ def careers(request, context={}):
 # ##############################################################################
 
 def project_occ(request, context={}):
-    context['title'] = "Oregon Convention Center"
+    context['client'] = "Oregon Convention Center"
+    context['title'] = "Project profile for Oregon Convention Center’s website redesign"
     context['visit_url'] = 'https://www.oregoncc.org/'
     context['visit_text'] = 'Visit Website'
     return render(request, 'project.html', context)
