@@ -38,6 +38,8 @@ def careers(request, context={}):
 
 def project_occ(request, context={}):
     context['title'] = "Oregon Convention Center"
+    context['visit_url'] = 'https://www.oregoncc.org/'
+    context['visit_text'] = 'Visit Website'
     return render(request, 'project.html', context)
 
 # Work / Case Studies
