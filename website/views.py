@@ -130,19 +130,19 @@ def casestudy_navex(request, context={}):
         },
         {
             'title': 'Localization',
-            'background': '',
+            'background': 'website/images/case-studies/navex/navex-french-locale.png',
             'text': 'NAVEX Global has customers in over 200 countries, so we built powerful localization functionality into their new site. NAVEX Global can easily customize products and messaging for individual geographies, launching with US, UK, and French content.<br><br>Each locale features fully customizable navigation and content, and the marketing team can quickly clone and adapt pages from one locale to another (e.g. clone a US page to the UK locale then tailor it for that geography).<br><br>For visitors, the experience is seamless, as the site automatically detects the user’s location and presents the appropriate targeted content.',
             'action_text': '',
         },
         {
             'title': 'Robust, Filterable Resource Center',
-            'background': '',
+            'background': 'website/images/case-studies/navex/navex-resource-center.png',
             'text': 'Potential customers are more likely to convert when they can see the expertise of a vendor, and so we built NAVEX Global a robust resource center to highlight their insights and demonstrate their thought leadership.<br><br>With robust resource media types, such as white paper PDFs, webinar videos, case studies, and blog posts, NAVEX Global’s team can reach prospects in a variety of forms.<br><br>Individual expert faces provide a personal connection with the content, and show the team behind the software connected directly with their thoughts.<br><br>NAVEX Global can offer premium content behind lead capture gating forms, customized for individual resources, and using progressive enhancement to intelligently and automatically grow lead profiles.',
             'action_text': '',
         },
         {
             'title': 'Marketo Marketing Automation',
-            'background': '',
+            'background': 'website/images/case-studies/navex/navex-gated-resource.png',
             'text': 'We built custom integration with the Marketo marketing automation platform throughout NAVEX Global’s new site, to enable their marketing team to better capture new leads, gather insights about visitors, track customer value, and target content.<br><br>Potential customers gain access to key resources through Marketo-integrated gating forms, which we also connected with Marketo’s progressive form features, meaning that NAVEX Global can gather new information from visitors as they interact with the site.<br><br>Additionally, marketers can embed custom Marketo-integrated forms anywhere on the site, without any code. Building a custom lead-generation landing page takes a matter of minutes.',
             'action_text': '',
         },
@@ -189,7 +189,7 @@ def casestudy_sa(request, context={}):
     context['innovations'] = [
         {
             'title': 'Real-Time Class Registration System',
-            'background': '',
+            'background': 'website/images/case-studies/sa/class-catalog-map.png',
             'text': 'A live class catalog syncs between the website and the Salesforce datastore, meaning parents and students can see what classes Saturday Academy offers and, in real-time, seating availability.<br><br>Parents can manage their family’s information through a self-service household dashboard, and can even grant registration access to other household parents or guardians.<br><br>When it’s time to register, a parent can apply for and instantly receive financial aid, calculated based on their adjusted gross income (AGI) using a formula Saturday Academy can adjust over time.<br><br>Payment is processed immediately through Stripe’s API and is recorded within Salesforce, or, in the case of wait-list registrations, can be deferred and automatically charged if the student gets in.',
             'action_text': '',
         },
