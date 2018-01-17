@@ -24,10 +24,14 @@ urlpatterns = [
     url(r'^about$', website.views.about, name='about'),
     url(r'^kitchen-sink$', website.views.kitchensink),
     url(r'^work$', website.views.work, name='work'),
-    url(r'^project$', website.views.project, name='project'),
     url(r'^services$', website.views.services, name='services'),
     url(r'^contact$', website.views.contact, name='contact'),
     url(r'^careers$', website.views.careers, name='careers'),
+
+    # Projects
+    url(r'^work/occ$', website.views.project_occ, name='project-occ'),
+
+    # Case Studies
     url(r'^work/nwpp$', website.views.casestudy_nwpp, name='case-study-nwpp'),
     url(r'^work/navex-global$', website.views.casestudy_navex, name='case-study-navex'),
     url(r'^work/saturday-academy$', website.views.casestudy_sa, name='case-study-sa'),

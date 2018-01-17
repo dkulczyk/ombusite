@@ -16,10 +16,6 @@ def work(request, context={}):
     context['title'] = "Case studies and project profiles for our web technology solutions"
     return render(request, 'work.html', context)
 
-def project(request, context={}):
-    context['title'] = "Oregon Convention Center"
-    return render(request, 'project.html', context)
-
 def services(request, context={}):
     context['title'] = "Enterprise CMS, business applications, infrastructure, and technology strategy"
     context['services'] = [
@@ -36,6 +32,13 @@ def contact(request, context={}):
 def careers(request, context={}):
     context['title'] = "Web design and development careers in Portland, Oregon"
     return render(request, 'careers.html', context)
+
+# Work / Projects
+# ##############################################################################
+
+def project_occ(request, context={}):
+    context['title'] = "Oregon Convention Center"
+    return render(request, 'project.html', context)
 
 # Work / Case Studies
 # ##############################################################################
