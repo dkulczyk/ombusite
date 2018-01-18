@@ -6,37 +6,15 @@
 {% block header_attributes %}class="header--project"{% endblock %}
 
 {% block header_bottom %}
+  {% if hero_carousel_content_template %}
   <div class="project-slider animation-target">
     <div class="container">
       <div class="row">
-        <div class="slider">
-          <div class="slider--slide slider--slide--has-shadow">
-            <img src="{% static 'website/images/slider/slider-1.png' %}" title="">
-          </div>
-          <div class="slider--slide slider--slide--has-text">
-            <div class="slide--text">
-              <span class="slide--text-prominent">92%</span>
-              <span class="slide--text-default">of Event Organizers Described the<br>New Site as “Good” or “Excellent”</span>
-            </div>
-          </div>
-          <div class="slider--slide slider--slide--has-two-images">
-            <div class="slider--slide-image">
-              <img src="{% static 'website/images/slider/slider-2.png' %}" title="">
-            </div>
-            <div class="slider--slide-image">
-              <a href="#image-overlay-modal" class="image-overlay--link image-overlay--link--gallery"><img src="{% static 'website/images/slider/slider-3.png' %}" title=""><span class="image-overlay--prompt-wrapper"><span class="image-overlay--prompt">{% include 'svg/expand.svg.html' %}<span>View</span></span></span></a>
-            </div>
-          </div>
-          <div class="slider--slide slider--slide--has-shadow">
-            <img src="{% static 'website/images/slider/slider-4.png' %}" title="">
-          </div>
-          <div class="slider--slide">
-            <img src="{% static 'website/images/slider/slider-5.png' %}" title="">
-          </div>
-        </div>
+        {% include hero_carousel_content_template %}
       </div>
     </div>
   </div>
+  {% endif %}
 {% endblock header_bottom %}
 
 {% block content %}

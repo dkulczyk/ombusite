@@ -40,6 +40,7 @@ def project_occ(request, context={}):
     context['client'] = "Oregon Convention Center"
     context['title'] = "Project profile for Oregon Convention Center’s website redesign"
     context['visit_url'] = 'https://www.oregoncc.org/'
+    context['hero_carousel_content_template'] = 'content/project/hero-carousels/_occ.html'
     context['visit_text'] = 'Visit Website'
     context['intro'] = '<h6>Making the world’s most useful convention center website</h6><p>The Oregon Convention Center is a prominent institution of the West Coast, one of only two LEED Platinum certified convention centers in the US. When the OCC approached OMBU, however, their website had two major failings: it looked woefully outdated and cheap, and the site’s navigation and content were messy and confusing.</p><p>The OCC engaged OMBU in a guided Discovery phase, to figure out how to organize, design, and build a web presence that communicated the OCC’s prestigious yet friendly brand and guide audiences to the information they need. </p><p>OMBU then took the information from Discovery and designed and built a sleek, modern, mobile-friendly and easy-to-navigate website that highlights the </p>'
     context['services'] = [ 'Technology Strategy', 'User Experience Design', 'Systems Integration', 'Development', 'Infrastructure' ]
