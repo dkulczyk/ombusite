@@ -3,7 +3,7 @@
     <div class="row">
       <div class="cs-outcomes--content">
         <h2 class="cs-outcomes--title">Project Outcomes</h2>
-        <div class="cs-outcomes--body">{% autoescape off %}{{outcome_conclusion}}{% endautoescape %}</div>
+        <div class="cs-outcomes--body">{{outcome_conclusion|safe}}</div>
         {% include 'features/_rings.html' with verticalMobile=True delayed=True rings=outcomes %}
         {% if pdf_download %}
         <div class="cs-outcomes--actions">

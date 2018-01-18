@@ -1,5 +1,5 @@
 <section class="cs-cta">
   <div class="container">
-    <div class="cs-cta--content">{% autoescape off %}{{cta_text}}{% endautoescape %}</div>
+    <div class="cs-cta--content">{{cta_text|safe}}</div>
   </div>
 </section>

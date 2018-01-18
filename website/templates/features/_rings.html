@@ -13,8 +13,8 @@
             {% include 'svg/ring-middle.svg.html' %}
           {% endif %}
           <div class="rings--content">
-            <div class="rings--title-group"><h2 class="rings--title">{% autoescape off %}{{ ring.title }}{% endautoescape %}</h2></div>
-            <div class="rings--summary">{% autoescape off %}{{ ring.summary }}{% endautoescape %}</div>
+            <div class="rings--title-group"><h2 class="rings--title">{{ ring.title|safe }}</h2></div>
+            <div class="rings--summary">{{ ring.summary|safe }}</div>
           </div>
         </div>
       </div>

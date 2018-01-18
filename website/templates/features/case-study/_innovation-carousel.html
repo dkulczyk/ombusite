@@ -21,7 +21,7 @@
               <div class="ic--slide-title-group">
                 <span class="ic--slide-title">{{innovation.title}}</span>
               </div>
-              <div class="ic--slide-text"><span>{% autoescape off %}{{innovation.text}}{% endautoescape %}<span></div>
+              <div class="ic--slide-text"><span>{{innovation.text|safe}}<span></div>
               {% if innovation.action_text %}
               <div class="ic--slide-actions">
                 <a href="#" class="ic--slide-action"><span>{{innovation.action_text}}</span></a>

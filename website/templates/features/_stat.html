@@ -1,7 +1,7 @@
 <div class="stat{% if borderBottom %} stat--subtle{% endif %}">
   <div class="stat--primary">
     <div class="stat--number">{{stat_number}}</div>
-    <div class="stat--label">{% autoescape off %}{{stat_label}}{% endautoescape %}</div>
+    <div class="stat--label">{{stat_label|safe}}</div>
   </div>
   <div class="stat--secondary">
     <div class="stat--summary">{{stat_summary}}</div>

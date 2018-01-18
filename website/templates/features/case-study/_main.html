@@ -6,7 +6,7 @@
       <div class="cs-main--primary">
         <div class="cs-main--body-section">
           <h2 class="cs-subheading">The Visionary</h2>
-          <div class="cs-main--body-text rte">{% autoescape off %}{{visionary_body}}{% endautoescape %}</div>
+          <div class="cs-main--body-text rte">{{visionary_body|safe}}</div>
         </div>
         {% if visionary_stat_number %}
         <div class="cs-main--stat">
@@ -25,7 +25,7 @@
         {% endif %}
         <div class="cs-main--body-section">
           <h2 class="cs-subheading">The Solution</h2>
-          <div class="cs-main--body-text rte">{% autoescape off %}{{solution_body}}{% endautoescape %}</div>
+          <div class="cs-main--body-text rte">{{solution_body|safe}}</div>
         </div>
         {% if solution_stat_number %}
         <div class="cs-main--stat cs-main--stat--solution">
