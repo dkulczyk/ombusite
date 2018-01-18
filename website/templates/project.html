@@ -87,17 +87,17 @@
             <div class="project-section--pager">
               <ul class="project-pager">
                 <li>
-                  <a href="#" class="project-pager--link">
-                    <div class="project-pager--label">Case Study:</div>
-                    <h2 class="project-pager--title">Car Talk</h2>
-                    <span class="project-pager--cta">Don't Drive Like My Brother</span>
+                  <a href="{{project_prev.url}}" class="project-pager--link">
+                    <div class="project-pager--label">Project profile:</div>
+                    <h2 class="project-pager--title">{{project_prev.name}}</h2>
+                    <span class="project-pager--cta">{{project_prev.cta}}</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="project-pager--link">
+                  <a href="{{project_next.url}}" class="project-pager--link">
                     <div class="project-pager--label">Case Study:</div>
-                    <h2 class="project-pager--title">Paramount Pictures</h2>
-                    <span class="project-pager--cta">Now Playing</span>
+                    <h2 class="project-pager--title">{{project_next.name}}</h2>
+                    <span class="project-pager--cta">{{project_next.cta}}</span>
                   </a>
                 </li>
               </ul>
