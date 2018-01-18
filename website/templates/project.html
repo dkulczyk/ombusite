@@ -56,11 +56,9 @@
                 <div class="menu-list">
                   <h2 class="menu-list--title">Services</h2>
                   <ul class="menu-list--list">
-                    <li class="menu-list--item"><a href="#" class="menu-list--link">Technology Strategy</a></li>
-                    <li class="menu-list--item"><a href="#" class="menu-list--link">User Experience Design</a></li>
-                    <li class="menu-list--item"><a href="#" class="menu-list--link">Systems Integration</a></li>
-                    <li class="menu-list--item"><a href="#" class="menu-list--link">Development</a></li>
-                    <li class="menu-list--item"><a href="#" class="menu-list--link">Infrastructure</a></li>
+                  {% for service in services %}
+                    <li class="menu-list--item"><a href="#" class="menu-list--link">{{service}}</a></li>
+                  {% endfor %}
                   </ul>
                 </div>
               </div>
