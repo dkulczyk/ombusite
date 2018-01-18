@@ -43,6 +43,9 @@ def project_occ(request, context={}):
     context['visit_text'] = 'Visit Website'
     context['intro'] = '<h6>Making the world’s most useful convention center website</h6><p>The Oregon Convention Center is a prominent institution of the West Coast, one of only two LEED Platinum certified convention centers in the US. When the OCC approached OMBU, however, their website had two major failings: it looked woefully outdated and cheap, and the site’s navigation and content were messy and confusing.</p><p>The OCC engaged OMBU in a guided Discovery phase, to figure out how to organize, design, and build a web presence that communicated the OCC’s prestigious yet friendly brand and guide audiences to the information they need. </p><p>OMBU then took the information from Discovery and designed and built a sleek, modern, mobile-friendly and easy-to-navigate website that highlights the </p>'
     context['services'] = [ 'Technology Strategy', 'User Experience Design', 'Systems Integration', 'Development', 'Infrastructure' ]
+    context['testimonial_image'] = "website/images/project_occ_image-3.png"
+    context['testimonial_quote'] = "The OCC website is our front door and delivers exactly what we are – a place where things happen, modern, exciting, sustainable and service oriented.  OMBU created a very successful site for us on time and on budget"
+    context['testimonial_attribution'] = "Matt Pizzuti, Interim Executive Director"
     return render(request, 'project.html', context)
 
 # Work / Case Studies
