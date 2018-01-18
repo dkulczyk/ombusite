@@ -52,6 +52,17 @@ def project_occ(request, context={}):
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
     return render(request, 'project.html', context)
 
+def project_kaufmanhall(request, context={}):
+    context['client'] = "Kaufman Hall"
+    context['title'] = "Project profile for Kaufman Hall’s website redesign"
+    context['visit_url'] = 'https://www.kaufmanhall.com/'
+    context['visit_text'] = 'Visit Website'
+    context['intro'] = '<h6>Powering the Enterprise</h6><p>Kaufman Hall is a management consulting and enterprise software company with clients around the globe. After expanding their business by acquiring the leading software provider in their field, Kaufman Hall needed a unified web presence with an enterprise content management system (CMS) to support their growth and thought leadership.</p><p>OMBU designed and built an enterprise CMS website featuring a modern design and powerful marketing tools. The site features a filterable resource center for white papers, case studies, webinars, and more, to prove Kaufman Hall’s thought leadership. Flexible layout tools mean the marketing team can spin up new landing pages, complete with lead capture, in minutes instead of weeks. Rich integration with Marketo and Salesforce allows the sales team to prospect and funnel attractive leads into their sales pipeline.</p>'
+    context['services'] = [ 'User Experience Design', 'Visual Design', 'Drupal Enterprise CMS Development', 'Data Migration' ]
+    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
+    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    return render(request, 'project.html', context)
+
 # Work / Case Studies
 # ##############################################################################
 
