@@ -91,13 +91,9 @@
                 <div class="menu-list">
                   <h2 class="menu-list--title">Technologies & Innovations</h2>
                   <ul class="menu-list--list">
-                    <li class="menu-list--item"><a href="#" class="menu-list--link">OMBU Core Drupal CMS</a></li>
-                    <li class="menu-list--item"><a href="#" class="menu-list--link">Responsive design</a></li>
-                    <li class="menu-list--item"><a href="#" class="menu-list--link">60fps UI animations</a></li>
-                    <li class="menu-list--item"><a href="#" class="menu-list--link">Integration with EBMS event system</a></li>
-                    <li class="menu-list--item"><a href="#" class="menu-list--link">Apache Solr faceted search</a></li>
-                    <li class="menu-list--item"><a href="#" class="menu-list--link">Live chat</a></li>
-                    <li class="menu-list--item"><a href="#" class="menu-list--link">High-availability managed infrastructure</a></li>
+                  {% for technology in technologies %}
+                    <li class="menu-list--item"><a href="#" class="menu-list--link">{{technology}}</a></li>
+                  {% endfor %}
                   </ul>
                 </div>
               </div>

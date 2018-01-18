@@ -46,6 +46,7 @@ def project_occ(request, context={}):
     context['testimonial_image'] = "website/images/project_occ_image-3.png"
     context['testimonial_quote'] = "The OCC website is our front door and delivers exactly what we are – a place where things happen, modern, exciting, sustainable and service oriented.  OMBU created a very successful site for us on time and on budget"
     context['testimonial_attribution'] = "Matt Pizzuti, Interim Executive Director"
+    context['technologies'] = [ 'OMBU Core Drupal CMS', 'Responsive design', '60fps UI animations', 'Integration with EBMS event system', 'Apache Solr faceted search', 'Live chat', 'High-availability managed infrastructure' ]
     return render(request, 'project.html', context)
 
 # Work / Case Studies
