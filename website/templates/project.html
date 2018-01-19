@@ -24,13 +24,17 @@
         <div class="project--content">
           <section class="page-title project-section">
             <div class="project-section--main">
+              {% if visit_url %}
               <div class="project-title--cta"><a href="{{visit_url}}" class="project-title--cta-link">{{visit_text}} {% include 'svg/website.svg.html' %}</a></div>
+              {% endif %}
               <h1 class="page-title--title page-title--title--project">{{client}}</h1>
               <div class="rte project-intro--body">{{intro|safe}}</div>
             </div>
             <aside class="project-section--supplementary">
               <div class="project-section--supplementary-content">
+                {% if visit_url %}
                 <a href="{{visit_url}}" class="project-section--cta">{{visit_text}} {% include 'svg/website.svg.html' %}</a>
+                {% endif %}
                 <div class="menu-list">
                   <h2 class="menu-list--title">Services</h2>
                   <ul class="menu-list--list">
