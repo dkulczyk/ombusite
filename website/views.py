@@ -111,6 +111,17 @@ def project_compliancenext(request, context={}):
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
     return render(request, 'project.html', context)
 
+def project_metropcmt(request, context={}):
+    context['client'] = "Oregon Metro Public Comment Map App"
+    context['title'] = "Project profile for Oregon Metro PCMT’s web application design"
+    context['intro'] = '<h6>Engaging the Public with Interactive Maps</h6><p>Metro engaged OMBU to design and implement a map-based public comment tool. Metro uses this tool to engage with the community on large transit planning projects, such as the Southwest Corridor and the Powell-Division Transit and Development Project.</p><p>OMBU’s web application allows Metro staff to design project plans and comment points on a modern mapping platform, and request comments from the public on routes and points through comment forms and rich media.</p>'
+    # context['visit_url'] = 'http://oregonmetro.gov/swcorridormap'
+    # context['visit_text'] = 'Visit Website'
+    context['services'] = [ 'User Experience Design', 'Visual Design', 'Drupal Application Development', 'Interactive Map Application Development' ]
+    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
+    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    return render(request, 'project.html', context)
+
 # Work / Case Studies
 # ##############################################################################
 
