@@ -65,6 +65,16 @@ def project_kaufmanhall(request, context={}):
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
     return render(request, 'project.html', context)
 
+def project_stand(request, context={}):
+    context['client'] = "Stand for Children"
+    context['title'] = "Project profile for Stand for Children’s organizer app"
+    context['intro'] = '<h6>Empowering Community Organizers to Effect Change for Students</h6><p>Stand for Children reached out to OMBU to develop an iPad app with an ambitious goal: to transform the way Stand’s field organizers reach, manage, and activate their volunteer base across the nation.</p><p>OMBU’s Discovery determined that, rather than building an iPad-only app that would restrict the audience to these tablets, Stand would be better off with a mobile web app that would work on any device and platform. This early decision meant that, when Stand later switched it’s tablets from Apple to Microsoft, the app we built worked out- of-the-box and didn’t require additional investment.</p><p>The app integrates in real-time with Stand’s Salesforce CRM, which means that app data is always in sync with gift, membership development, and contact data that are critical for Stand’s daily operations.</p><p>The app was rolled out nationally and has become a critical tool for Stand’s efforts to drive parent engagement and improve outcomes for kids.</p>'
+    context['services'] = [ 'Technology Strategy', 'Table Application Design', 'Application Development' ]
+    context['technologies'] = [ 'Angular JavaScript Application', 'Real-time Salesforce Integration', 'Touch-centric UI' ]
+    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
+    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    return render(request, 'project.html', context)
+
 # Work / Case Studies
 # ##############################################################################
 
