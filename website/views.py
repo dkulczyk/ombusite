@@ -99,6 +99,18 @@ def project_nwcouncilrtf(request, context={}):
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
     return render(request, 'project.html', context)
 
+def project_compliancenext(request, context={}):
+    context['client'] = "NAVEX Global Compliance Next"
+    context['title'] = "Project profile for Compliance Next’s website design"
+    context['intro'] = '<h6>A Community Platform for a Burgeoning New Industry</h6><p>OMBU built the world’s first community-driven compliance think tank for NAVEX Global. Compliance is an emerging and rapidly growing career field with limited resources for members. To help our client seize the opportunity,  OMBU launched Compliance Next in 5-months. The website features learning tracks and resources and is quickly evolving with features that allow peer-to-peer networking.</p>'
+    context['visit_url'] = 'https://www.navexglobal.com/compliancenext/'
+    context['visit_text'] = 'Visit Website'
+    context['services'] = [ 'Services', 'Technology Strategy', 'Application Architecture', 'Application Development', 'Systems Integration' ]
+    context['technologies'] = [ 'Django Community Application Platform' ]
+    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
+    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    return render(request, 'project.html', context)
+
 # Work / Case Studies
 # ##############################################################################
 
