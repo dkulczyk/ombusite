@@ -75,7 +75,6 @@ def project_stand(request, context={}):
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
     return render(request, 'project.html', context)
 
-
 def project_smithsonian(request, context={}):
     context['client'] = "Smithsonian Institute Lemelson Center"
     context['title'] = "Project profile for Smithsonian Institute Lemelson Center’s website design"
@@ -84,6 +83,18 @@ def project_smithsonian(request, context={}):
     context['visit_text'] = 'Visit Website'
     context['services'] = [ 'Technology Strategy', 'Enterprise CMS Architecture', 'Enterprise CMS Implementation', 'Archive Records Migration', 'Government Systems Integration', 'Training and Rollout' ]
     context['technologies'] = [ 'Enterprise Drupal CMS', 'Custom Video and Audio Players', 'Migration of 1700+ Archive Records', 'Apache Solr Faceted Search', 'Interactive Canvas Drawing Functionality', '“Surprise Me” Exploration Feature' ]
+    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
+    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    return render(request, 'project.html', context)
+
+def project_nwcouncilrtf(request, context={}):
+    context['client'] = "NW Council Regional Technical Forum"
+    context['title'] = "Project profile for NW Council RTF’s website redesign"
+    context['intro'] = '<h6>Modernizing Interaction with Energy Efficiency Program Development</h6><p>OMBU designed and built the new Regional Technical Forum website for NWPCC. The new website serves a technical audience with a modern and task-oriented visual design, and supports content providers with enterprise CMS functions and integrations behind the scenes. For example, content editors can use assets stored in Box as if they were native files in the CMS.</p><p>NWPCC’s mission required transparency and public input. OMBU conceived and built a discussion component that can be placed anywhere on the new website to engage the public. OMBU is currently working with NWPCC to redesign their main council website.</p>'
+    context['visit_url'] = 'https://rtf.nwcouncil.org/'
+    context['visit_text'] = 'Visit Website'
+    context['services'] = [ 'Technology Strategy', 'User Experience Design', 'Visual Design', 'Enterprise Drupal CMS', 'Accessibility Compliance Audit', 'Migration of Measures', 'Training' ]
+    context['technologies'] = [ 'Enterprise Drupal CMS', 'Box Integration for CMS Asset Library', 'Searchable Measure List with Update History', 'Automated Content Migration Script' ]
     context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
     return render(request, 'project.html', context)
