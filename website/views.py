@@ -75,6 +75,19 @@ def project_stand(request, context={}):
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
     return render(request, 'project.html', context)
 
+
+def project_smithsonian(request, context={}):
+    context['client'] = "Smithsonian Institute Lemelson Center"
+    context['title'] = "Project profile for Smithsonian Institute Lemelson Center’s website design"
+    context['intro'] = '<h6>An Innovative Website for the Museum of Innovation</h6><p>The Smithsonian Institute needed a website unique and advanced enough to represent their Lemelson Center for Invention and Innovation, and OMBU were thrilled to be tasked with this challenge. In addition to a quirky design that showcases the center’s bold, forward-thinking identity, the powerful Drupal website boasts features such as real-time faceted search, branded audio and video players, and fun on-page interactive elements to increase visitor engagement.</p><p>The Lemelson site integrates with other Smithsonian systems, such as an institution-wide calendaring solution, email marketing tools, and even an in-museum exhibit. These integrations make the site a  rst-class citizen in the Smithsonian ecosystem, and keep rich data  owing without staff intervention.</p>'
+    context['visit_url'] = 'http://invention.si.edu/'
+    context['visit_text'] = 'Visit Website'
+    context['services'] = [ 'Technology Strategy', 'Enterprise CMS Architecture', 'Enterprise CMS Implementation', 'Archive Records Migration', 'Government Systems Integration', 'Training and Rollout' ]
+    context['technologies'] = [ 'Enterprise Drupal CMS', 'Custom Video and Audio Players', 'Migration of 1700+ Archive Records', 'Apache Solr Faceted Search', 'Interactive Canvas Drawing Functionality', '“Surprise Me” Exploration Feature' ]
+    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
+    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    return render(request, 'project.html', context)
+
 # Work / Case Studies
 # ##############################################################################
 

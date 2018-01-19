@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^work/occ$', website.views.project_occ, name='project-occ'),
     url(r'^work/kaufman-hall$', website.views.project_kaufmanhall, name='project-kaufmanhall'),
     url(r'^work/stand-for-children$', website.views.project_stand, name='project-stand'),
+    url(r'^work/smithsonian$', website.views.project_smithsonian, name='project-smithsonian'),
 
     # Case Studies
     url(r'^work/nwpp$', website.views.casestudy_nwpp, name='case-study-nwpp'),
