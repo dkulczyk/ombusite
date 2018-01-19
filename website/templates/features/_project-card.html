@@ -1,7 +1,7 @@
 {% load static %}
 
 {% if stand %}
-  <a href="#" class="project-card">
+  <a href="{% url 'project-stand' %}" class="project-card">
     <div class="project-card--media">
       <img src="{% static 'website/images/project-cards/project-card_stand-for-children.png' %}" alt="Stand For Children">
     </div>
