@@ -111,6 +111,18 @@ def project_compliancenext(request, context={}):
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
     return render(request, 'project.html', context)
 
+def project_metro(request, context={}):
+    context['client'] = "Oregon Metro"
+    context['title'] = "Project profile for Oregon Metro’s website redesign"
+    context['intro'] = '<h6>Connecting Millions with Their Regional Government</h6><p>OMBU built a powerful and scalable enterprise Drupal platform for Metro to communicate its mission and services, and to provide online resources to its constituents such as the Find a Recycler search application. Using our rich and intuitive publishing tools, over 150 Metro staff from across the agency can draft, moderate, translate and approve content according to customizable permissions. Thanks to an agile process with predictable iterations, oregonmetro.gov launched on time, smoothly and has scaled gracefully .</p><p>Since launch, Metro has engaged OMBU for several follow-up projects, including a major new constituent engagement application, a map tool to solicit public comments on Metro projects, and enhancements to their news section.</p>'
+    context['visit_url'] = 'https://www.oregonmetro.gov/'
+    context['visit_text'] = 'Visit Website'
+    context['services'] = [ 'Technology Strategy', 'Enterprise CMS Architecture', 'Drupal CMS Development', 'Government Systems Integration', 'Training & Rollout' ]
+    context['technologies'] = [ 'Enterprise Drupal CMS', 'Publishing Moderation System', 'Translation/Localization for 13 Languages', 'Responsive Design', 'Rich Interactive Maps', 'Integration with Government Systems', 'Apache Solr Faceted Search', 'Searchable PDF Documents' ]
+    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
+    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    return render(request, 'project.html', context)
+
 def project_metropcmt(request, context={}):
     context['client'] = "Oregon Metro Public Comment Map App"
     context['title'] = "Project profile for Oregon Metro PCMT’s web application design"
