@@ -90,6 +90,7 @@ def project_smithsonian(request, context={}):
 def project_nwcouncilrtf(request, context={}):
     context['client'] = "NW Council Regional Technical Forum"
     context['title'] = "Project profile for NW Council RTF’s website redesign"
+    context['hero_carousel_content_template'] = 'content/project/hero-carousels/_nw-council-rtf.html'
     context['intro'] = '<h6>Modernizing Interaction with Energy Efficiency Program Development</h6><p>OMBU designed and built the new Regional Technical Forum website for NWPCC. The new website serves a technical audience with a modern and task-oriented visual design, and supports content providers with enterprise CMS functions and integrations behind the scenes. For example, content editors can use assets stored in Box as if they were native files in the CMS.</p><p>NWPCC’s mission required transparency and public input. OMBU conceived and built a discussion component that can be placed anywhere on the new website to engage the public. OMBU is currently working with NWPCC to redesign their main council website.</p>'
     context['visit_url'] = 'https://rtf.nwcouncil.org/'
     context['visit_text'] = 'Visit Website'
