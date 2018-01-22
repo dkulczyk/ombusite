@@ -80,7 +80,9 @@
 
 {% elif metro %}
   <a href="{% url 'project-metro' %}" class="project-card">
-    <div class="project-card--media"></div>
+    <div class="project-card--media">
+      <img src="{% static 'website/images/project-cards/project-card_metro@2x.png' %}" alt="Metro">
+    </div>
     <h3 class="project-card--title">Oregon Metro</h3>
     <div class="project-card--body">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
   </a>
