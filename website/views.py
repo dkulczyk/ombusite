@@ -127,6 +127,7 @@ def project_metro(request, context={}):
 def project_metropcmt(request, context={}):
     context['client'] = "Oregon Metro Public Comment Map App"
     context['title'] = "Project profile for Oregon Metro PCMT’s web application design"
+    context['hero_carousel_content_template'] = 'content/project/hero-carousels/_metro-pcmt.html'
     context['intro'] = '<h6>Engaging the Public with Interactive Maps</h6><p>Metro engaged OMBU to design and implement a map-based public comment tool. Metro uses this tool to engage with the community on large transit planning projects, such as the Southwest Corridor and the Powell-Division Transit and Development Project.</p><p>OMBU’s web application allows Metro staff to design project plans and comment points on a modern mapping platform, and request comments from the public on routes and points through comment forms and rich media.</p>'
     # context['visit_url'] = 'http://oregonmetro.gov/swcorridormap'
     # context['visit_text'] = 'Visit Website'
