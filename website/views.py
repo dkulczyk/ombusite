@@ -114,6 +114,7 @@ def project_compliancenext(request, context={}):
 def project_metro(request, context={}):
     context['client'] = "Oregon Metro"
     context['title'] = "Project profile for Oregon Metro’s website redesign"
+    context['hero_carousel_content_template'] = 'content/project/hero-carousels/_metro.html'
     context['intro'] = '<h6>Connecting Millions with Their Regional Government</h6><p>OMBU built a powerful and scalable enterprise Drupal platform for Metro to communicate its mission and services, and to provide online resources to its constituents such as the Find a Recycler search application. Using our rich and intuitive publishing tools, over 150 Metro staff from across the agency can draft, moderate, translate and approve content according to customizable permissions. Thanks to an agile process with predictable iterations, oregonmetro.gov launched on time, smoothly and has scaled gracefully .</p><p>Since launch, Metro has engaged OMBU for several follow-up projects, including a major new constituent engagement application, a map tool to solicit public comments on Metro projects, and enhancements to their news section.</p>'
     context['visit_url'] = 'https://www.oregonmetro.gov/'
     context['visit_text'] = 'Visit Website'
