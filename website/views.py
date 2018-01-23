@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def home(request, context={}):
-    context['title'] = "Web solutions for CMS, applications, infrastructure, and tech strategy"
+    context['title'] = "Web solutions for CMS, applications, and infrastructure"
     return render(request, 'home.html', context)
 
 def about(request, context={}):
@@ -17,7 +17,7 @@ def work(request, context={}):
     return render(request, 'work.html', context)
 
 def services(request, context={}):
-    context['title'] = "Enterprise CMS, business applications, infrastructure, and technology strategy"
+    context['title'] = "Enterprise CMS, business applications, and infrastructure"
     context['services'] = [
         { 'title': 'Enterprise CMS', 'summary': 'We make content<br>manageable' },
         { 'title': 'Business Applications', 'summary': 'We make business<br>profitable' },
