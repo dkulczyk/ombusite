@@ -203,7 +203,7 @@ def casestudy_nwpp(request, context={}):
     ]
     context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
     context['cta_text'] = 'We helped Northwest PowerPool<br>modernize their power utility training.<br><strong>What can we modernize for you?</strong>'
-    context['pdf_download'] = '/static/website/documents/case-studies/phytolacca-dioica.pdf'
+    # context['pdf_download'] = '/static/website/documents/case-studies/phytolacca-dioica.pdf'
     return render(request, 'case-study.html', context)
 
 def casestudy_navex(request, context={}):
@@ -263,7 +263,7 @@ def casestudy_navex(request, context={}):
     ]
     context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
     context['cta_text'] = 'We helped NAVEX Global<br>modernize their website content.<br><strong>What can we modernize for you?</strong>'
-    context['pdf_download'] = '/static/website/documents/case-studies/phytolacca-dioica.pdf'
+    # context['pdf_download'] = '/static/website/documents/case-studies/phytolacca-dioica.pdf'
     return render(request, 'case-study.html', context)
 
 def casestudy_sa(request, context={}):
@@ -321,5 +321,5 @@ def casestudy_sa(request, context={}):
     ]
     context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
     context['cta_text'] = 'We helped Saturday Academy<br>modernize their class registration system.<br><strong>What can we modernize for you?</strong>'
-    context['pdf_download'] = '/static/website/documents/case-studies/phytolacca-dioica.pdf'
+    # context['pdf_download'] = '/static/website/documents/case-studies/phytolacca-dioica.pdf'
     return render(request, 'case-study.html', context)
