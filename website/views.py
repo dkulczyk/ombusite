@@ -229,7 +229,7 @@ def casestudy_navex(request, context={}):
     context['contributions'] = {
         'image': {
             'src' : 'website/images/case-studies/navex/intro@2x.png',
-            'alt': 'A screenshot of the NAVEX Global blog',
+            'alt': 'A screenshot of the NAVEX Global home page',
         },
         'skills': ["Technology Strategy", "Enterprise CMS", "Drupal CMS Development", "Marketo Integration", "AWS Migration", "AWS Infrastructure Management"],
     }
@@ -237,7 +237,7 @@ def casestudy_navex(request, context={}):
         'body': '<p>Facing explosive growth and with a clientele featuring most Fortune 500 companies in more than 200 countries, NAVEX Global needed rock solid, cutting-edge web marketing technology capable of supporting smooth collaboration among distributed teams and rapidly changing business.</p>',
         'image': {
             'src' : 'website/images/case-studies/navex/visionary@2x.png',
-            'alt': 'A screenshot of the NAVEX Global home page',
+            'alt': 'A screenshot of the NAVEX Global blog',
         },
     }
     context['solution'] = {
