@@ -227,45 +227,50 @@ def casestudy_navex(request, context={}):
     context['intro_testimonial_attribution_name'] = "Hillary Ervin"
     context['intro_testimonial_attribution_title'] = "Senior Director, Demand Generation & Sales Development Team"
     context['contributions'] = {
-        'video': 'website/videos/sample.mp4',
+        'image': {
+            'src' : 'website/images/case-studies/navex/intro@2x.png',
+            'alt': 'A screenshot of the NAVEX Global blog',
+        },
         'skills': ["Technology Strategy", "Enterprise CMS", "Drupal CMS Development", "Marketo Integration", "AWS Migration", "AWS Infrastructure Management"],
     }
     context['visionary'] = {
         'body': '<p>Facing explosive growth and with a clientele featuring most Fortune 500 companies in more than 200 countries, NAVEX Global needed rock solid, cutting-edge web marketing technology capable of supporting smooth collaboration among distributed teams and rapidly changing business.</p>',
-        'video': 'website/videos/sample.mp4',
+        'image': {
+            'src' : 'website/images/case-studies/navex/visionary@2x.png',
+            'alt': 'A screenshot of the NAVEX Global home page',
+        },
     }
     context['solution'] = {
         'body': '<p>OMBU designed and launched an enterprise content management system (CMS) that empowers NAVEX Global to personally engage customers across their global markets.  Marketing teams are able to launch a rich custom landing page for new products and campaigns in minutes, with no IT involvement, allowing them to iterate, test and optimize at breakthrough speeds.</p><p>The website features a rich resource center that asserts NAVEX Global’s leadership in the field and is a key conversion point for new business. To further project NAVEX Global’s thought leadership, OMBU transformed an existing blog into a multi-channel publication that quickly became an industry must-read.</p><p>To allow NAVEX Global to personally reach their global markets, we built a localization framework that empowers marketing teams launch locales as the company grows and tailor content and offerings specific market conditions.</p>',
-        'video': 'website/videos/sample.mp4',
     }
     context['innovations'] = [
         {
             'title': 'Drag & Drop Course Builder',
-            'background': '',
+            'background': 'website/images/case-studies/navex/innov-slide-01@2x.png',
             'text': 'The page builder feature enables marketers to create landing pages for new products and campaigns without coding or technical help. The page builder offers blocks, such as tailored lead-capture, video and other rich media that can be arranged and resized on-page to achieve the best layout for every situation and enable iterative optimization. Marketers can granularly customize the search engine optimization (SEO) at every content level to drive traffic into the sales funnel.',
             'action_text': '',
         },
         {
             'title': 'Localization',
-            'background': 'website/images/case-studies/navex/navex-french-locale.png',
+            'background': 'website/images/case-studies/navex/innov-slide-02@2x.png',
             'text': 'NAVEX Global has customers in over 200 countries, so we built powerful localization functionality into their new site. NAVEX Global can easily customize products and messaging for individual geographies, launching with US, UK, and French content.<br><br>Each locale features fully customizable navigation and content, and the marketing team can quickly clone and adapt pages from one locale to another (e.g. clone a US page to the UK locale then tailor it for that geography).<br><br>For visitors, the experience is seamless, as the site automatically detects the user’s location and presents the appropriate targeted content.',
             'action_text': '',
         },
         {
             'title': 'Robust, Filterable Resource Center',
-            'background': 'website/images/case-studies/navex/navex-resource-center.png',
+            'background': 'website/images/case-studies/navex/innov-slide-03@2x.png',
             'text': 'Potential customers are more likely to convert when they can see the expertise of a vendor, and so we built NAVEX Global a robust resource center to highlight their insights and demonstrate their thought leadership.<br><br>With robust resource media types, such as white paper PDFs, webinar videos, case studies, and blog posts, NAVEX Global’s team can reach prospects in a variety of forms.<br><br>Individual expert faces provide a personal connection with the content, and show the team behind the software connected directly with their thoughts.<br><br>NAVEX Global can offer premium content behind lead capture gating forms, customized for individual resources, and using progressive enhancement to intelligently and automatically grow lead profiles.',
             'action_text': '',
         },
         {
             'title': 'Marketo Marketing Automation',
-            'background': 'website/images/case-studies/navex/navex-gated-resource.png',
+            'background': 'website/images/case-studies/navex/innov-slide-04@2x.png',
             'text': 'We built custom integration with the Marketo marketing automation platform throughout NAVEX Global’s new site, to enable their marketing team to better capture new leads, gather insights about visitors, track customer value, and target content.<br><br>Potential customers gain access to key resources through Marketo-integrated gating forms, which we also connected with Marketo’s progressive form features, meaning that NAVEX Global can gather new information from visitors as they interact with the site.<br><br>Additionally, marketers can embed custom Marketo-integrated forms anywhere on the site, without any code. Building a custom lead-generation landing page takes a matter of minutes.',
             'action_text': '',
         },
         {
             'title': 'Scalable Application and Content Infrastructure',
-            'background': '',
+            'background': 'website/images/case-studies/navex/innov-slide-05@2x.png',
             'text': 'To reach NAVEX Global’s worldwide audience quickly and reliably, we built a scalable AWS cloud infrastructure for the website application and content.<br><br>Dynamic computation is distributed across an auto-scaling fleet of application servers, with traffic managed by a load balancer. The infrastructure has full duplication between two data centers, with all resources ready fail-over to the backup in case of a data center outage.<br><br>Resources and assets, such as images, documents, and stylesheets, are served from a content delivery network, with leaf nodes close to users, for the fastest experience around the world.',
             'action_text': '',
         },
