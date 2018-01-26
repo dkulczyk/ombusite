@@ -3,17 +3,23 @@
 <section class="cs-contributions">
   <div class="container">
     <div class="row cs-contributions--content">
+      {% if contributions.video %}
       <div class="cs-contributions--media">
         <a href="#video-overlay-modal" class="video-overlay--link">
           <video muted autoplay>
-            <source src="{% static contribution_video %}" type="video/mp4">
+            <source src="{% static contributions.video %}" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </a>
       </div>
+      {% elif contributions.image %}
+      <div class="cs-contributions--media">
+        <img src="{% static contributions.image.src %}" alt="{{contributions.image.alt}}" />
+      </div>
+      {% endif %}
       <aside class="cs-contributions--contributions cs-sidebar">
         <h2 class="cs-sidebar--title cs-sidebar--title--contributions">Contributions</h2>
-        {% include 'features/_skills-grid.html' with skills=contribution_skills %}
+        {% include 'features/_skills-grid.html' with skills=contributions.skills %}
       </aside>
     </div>
   </div>
