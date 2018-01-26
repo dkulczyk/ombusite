@@ -151,18 +151,28 @@ def casestudy_nwpp(request, context={}):
     context['testimonial_quote'] = "“Partnering with OMBU on this evolution of our platform was one of the best decisions I’ve ever made.”"
     context['testimonial_attribution_name'] = "David Pennington"
     context['testimonial_attribution_title'] = "Curriculum Developer, NWPP"
-    context['contribution_video'] = 'website/videos/sample.mp4'
-    context['contribution_skills'] = ["User Experience Design", "Python Application Development", "AWS Infrastructure", "Product Roadmap Planning"]
-    context['visionary_body'] = "<p>NWPP came to us with a simple vision: <strong>Make federally-mandated power safety training easy and fun via an engaging video learning platform</strong>, so that employees of their member utilities would complete more trainings, engage more with the training material for better results, and ultimately create a safer and more productive world of power.</p><p>NWPP has trainers and video production talent in-house, so they wanted a technology partner who could come up with a learning system that would be a great platform for their training.</p>"
-    context['visionary_video'] = "website/videos/sample.mp4"
-    context['visionary_stat_number'] = "32"
-    context['visionary_stat_label'] = "Member<br>Utilities"
-    context['visionary_stat_summary'] = "Why member utilities are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar extraterrestrial alchemy."
-    context['solution_body'] = "<p>We built a modern, fun training platform targeted specifically for training utility workers, with integrated videos and interactive quizzes.</p><p>Powering this platform, we built a powerful yet easy-to-use Learning Management System (LMS) that lets the NWPP content team quickly put together new courses for their members in minutes.</p><p>Things like 3D models, skilled trainers, and fun easter eggs like blooper reels and jokes make the whole experience engaging</p><p>This platform integrates directly with industry-standard data systems, like the LRS/XAPI datastore and exports for federal compliance systems.</p><p>Ultimately, the most important feature is the fun and informative training materials that mean our client can increase education in an industry where knowledge and safety are critical.</p>"
-    context['solution_video'] = "website/videos/sample.mp4"
-    context['solution_stat_number'] = "≥1200"
-    context['solution_stat_label'] = "Utility<br>Operators<br>Served"
-    context['solution_stat_summary'] = "Why utility operators are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar alchemy."
+    context['contributions'] = {
+        'video': 'website/videos/sample.mp4',
+        'skills': ["User Experience Design", "Python Application Development", "AWS Infrastructure", "Product Roadmap Planning"],
+    }
+    context['visionary'] = {
+        'body': '<p>NWPP came to us with a simple vision: <strong>Make federally-mandated power safety training easy and fun via an engaging video learning platform</strong>, so that employees of their member utilities would complete more trainings, engage more with the training material for better results, and ultimately create a safer and more productive world of power.</p><p>NWPP has trainers and video production talent in-house, so they wanted a technology partner who could come up with a learning system that would be a great platform for their training.</p>',
+        'video': 'website/videos/sample.mp4',
+        'stat': {
+            'number': '32',
+            'label': 'Member<br>Utilities',
+            'summary': 'Why member utilities are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar extraterrestrial alchemy.',
+        },
+    }
+    context['solution'] = {
+        'body': '<p>We built a modern, fun training platform targeted specifically for training utility workers, with integrated videos and interactive quizzes.</p><p>Powering this platform, we built a powerful yet easy-to-use Learning Management System (LMS) that lets the NWPP content team quickly put together new courses for their members in minutes.</p><p>Things like 3D models, skilled trainers, and fun easter eggs like blooper reels and jokes make the whole experience engaging</p><p>This platform integrates directly with industry-standard data systems, like the LRS/XAPI datastore and exports for federal compliance systems.</p><p>Ultimately, the most important feature is the fun and informative training materials that mean our client can increase education in an industry where knowledge and safety are critical.</p>',
+        'video': 'website/videos/sample.mp4',
+        'stat': {
+            'number': '≥1200',
+            'label': 'Utility<br>Operators<br>Served',
+            'summary': 'Why utility operators are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar alchemy.',
+        }
+    }
     context['innovations'] = [
         {
             'title': 'Drag & Drop Course Builder',
