@@ -143,7 +143,7 @@ def project_metropcmt(request, context={}):
 def casestudy_nwpp(request, context={}):
     context['client'] = "Northwest PowerPool"
     context['title'] = "Case study for Northwest Power Pool’s learning management system"
-    context['banner_image'] = "website/images/case-studies/nwpp/banner.png"
+    context['banner_image'] = "website/images/case-studies/nwpp/hero-tinted@2x.png"
     context['banner_title'] = "Modernized Power Utility Training"
     context['banner_subtitle']  = "Learning Management System"
     context['intro_text'] = "<p><span class=\"cs-intro--emphasis\">Northwest PowerPool (NWPP)</span> brings together 32 power utilities in eight US states and two Canadian provinces. OMBU designed a powerful centralized training platform so NWPP could help its member utilities keep up-to-date on mandated certifications and the latest trends, meaning greater safety, more engagement, and more benefit to the whole membership base and their customers.</p>"
