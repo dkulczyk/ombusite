@@ -228,7 +228,7 @@ def casestudy_nwpp(request, context={}):
 def casestudy_navex(request, context={}):
     context['client'] = "NAVEX Global"
     context['title'] = "Case study for NAVEX Global’s enterprise CMS"
-    context['banner_image'] = "website/images/case-studies/navex/banner.png"
+    context['banner_image'] = "website/images/case-studies/navex/hero-tinted@2x.png"
     context['banner_title'] = "Enterprise CMS for the Global Ethics Leader"
     context['intro_text'] = "<p><span class=\"cs-intro--emphasis\">NAVEX Global</span> was formed in 2012 to become the leader in the emerging field of Ethics & Compliance. They engaged OMBU with the mission to design and launch technology capable of not just keeping up, but accelerating, their meteoric rise.</p>"
     context['testimonial_image'] = "website/images/case-studies/navex/testimonial-logo.png"
