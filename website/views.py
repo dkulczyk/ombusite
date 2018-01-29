@@ -150,6 +150,18 @@ def project_seri(request, context={}):
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
     return render(request, 'project.html', context)
 
+def project_autodesk(request, context={}):
+    context['client'] = "Autodesk ReCap"
+    context['title'] = "Project profile for Autodesk ReCap’s website design"
+    # context['intro'] = ''
+    # context['visit_url'] = ''
+    # context['visit_text'] = ''
+    # context['services'] = [ ]
+    # context['technologies'] = [ ]
+    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
+    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    return render(request, 'project.html', context)
+
 # Work / Case Studies
 # ##############################################################################
 
