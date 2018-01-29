@@ -162,6 +162,18 @@ def project_autodesk(request, context={}):
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
     return render(request, 'project.html', context)
 
+def project_uo(request, context={}):
+    context['client'] = "University of Oregon Lundquist College of Business"
+    context['title'] = "Project profile for University of Oregon Lundquist College of Business’s website design"
+    # context['intro'] = ''
+    context['visit_url'] = 'https://business.uoregon.edu/'
+    context['visit_text'] = 'Visit Website'
+    # context['services'] = [ ]
+    # context['technologies'] = [ ]
+    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
+    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    return render(request, 'project.html', context)
+
 # Work / Case Studies
 # ##############################################################################
 

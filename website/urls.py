@@ -39,6 +39,7 @@ urlpatterns = [
     url(r'^work/metro-pcmt$', website.views.project_metropcmt, name='project-metropcmt'),
     url(r'^work/seri$', website.views.project_seri, name='project-seri'),
     url(r'^work/autodesk$', website.views.project_autodesk, name='project-autodesk'),
+    url(r'^work/uo$', website.views.project_uo, name='project-uo'),
 
     # Case Studies
     url(r'^work/nwpp$', website.views.casestudy_nwpp, name='case-study-nwpp'),
