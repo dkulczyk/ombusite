@@ -79,7 +79,9 @@
 
 {% elif smithsonian %}
   <a href="{% url 'project-smithsonian' %}" class="project-card">
-    <div class="project-card--media"></div>
+    <div class="project-card--media">
+      <img src="{% static 'website/images/project-cards/project-card_lemelson@2x.png' %}" alt="Smithsonian Lemelson Center for the Study of Invention and Innovation">
+    </div>
     <h3 class="project-card--title">Smithsonian Lemelson Center for the Study of Invention and Innovation</h3>
     <div class="project-card--body">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
   </a>
