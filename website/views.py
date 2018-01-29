@@ -78,6 +78,7 @@ def project_stand(request, context={}):
 def project_smithsonian(request, context={}):
     context['client'] = "Smithsonian Institute Lemelson Center"
     context['title'] = "Project profile for Smithsonian Institute Lemelson Center’s website design"
+    context['hero_carousel_content_template'] = 'content/project/hero-carousels/_smithsonian.html'
     context['intro'] = '<h6>An Innovative Website for the Museum of Innovation</h6><p>The Smithsonian Institute needed a website unique and advanced enough to represent their Lemelson Center for Invention and Innovation, and OMBU were thrilled to be tasked with this challenge. In addition to a quirky design that showcases the center’s bold, forward-thinking identity, the powerful Drupal website boasts features such as real-time faceted search, branded audio and video players, and fun on-page interactive elements to increase visitor engagement.</p><p>The Lemelson site integrates with other Smithsonian systems, such as an institution-wide calendaring solution, email marketing tools, and even an in-museum exhibit. These integrations make the site a  rst-class citizen in the Smithsonian ecosystem, and keep rich data  owing without staff intervention.</p>'
     context['visit_url'] = 'http://invention.si.edu/'
     context['visit_text'] = 'Visit Website'
@@ -133,6 +134,18 @@ def project_metropcmt(request, context={}):
     # context['visit_url'] = 'http://oregonmetro.gov/swcorridormap'
     # context['visit_text'] = 'Visit Website'
     context['services'] = [ 'User Experience Design', 'Visual Design', 'Drupal Application Development', 'Interactive Map Application Development' ]
+    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
+    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    return render(request, 'project.html', context)
+
+def project_seri(request, context={}):
+    context['client'] = "Sustainable Electronics Recycling International"
+    context['title'] = "Project profile for Sustainable Electronics Recycling International’s website redesign"
+    # context['intro'] = ''
+    context['visit_url'] = 'https://sustainableelectronics.org/'
+    context['visit_text'] = 'Visit Website'
+    # context['services'] = [ ]
+    # context['technologies'] = [ ]
     context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
     return render(request, 'project.html', context)
