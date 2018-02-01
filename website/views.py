@@ -155,6 +155,7 @@ def project_seri(request, context={}):
 def project_autodesk(request, context={}):
     context['client'] = "Autodesk ReCap"
     context['title'] = "Project profile for Autodesk ReCap’s website design"
+    context['hero_carousel_content_template'] = 'content/project/hero-carousels/_autodesk.html'
     # context['intro'] = ''
     # context['visit_url'] = ''
     # context['visit_text'] = ''
