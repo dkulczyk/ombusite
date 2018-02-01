@@ -169,6 +169,7 @@ def project_autodesk(request, context={}):
 def project_uo(request, context={}):
     context['client'] = "University of Oregon Lundquist College of Business"
     context['title'] = "Project profile for University of Oregon Lundquist College of Business’s website design"
+    context['hero_carousel_content_template'] = 'content/project/hero-carousels/_uo.html'
     # context['intro'] = ''
     context['visit_url'] = 'https://business.uoregon.edu/'
     context['visit_text'] = 'Visit Website'
