@@ -51,7 +51,7 @@
             </aside>
           </section>
           {% if testimonial_quote %}
-          <blockquote class="blockquote--has-image"><aside class="blockquote--image"><img src="{% static testimonial_image %}"></aside><div class="blockquote--content">{{testimonial_quote}}<cite>{{testimonial_attribution}}</cite><div></blockquote>
+          <blockquote class="blockquote--has-image"><aside class="blockquote--image"><img src="{% static testimonial_image %}" width="260"></aside><div class="blockquote--content">{{testimonial_quote}}<cite>{{testimonial_attribution}}</cite><div></blockquote>
           {% endif %}
           <section class="project-section">
             {% if insights_content_template %}
