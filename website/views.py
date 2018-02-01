@@ -143,6 +143,7 @@ def project_metropcmt(request, context={}):
 def project_seri(request, context={}):
     context['client'] = "Sustainable Electronics Recycling International"
     context['title'] = "Project profile for Sustainable Electronics Recycling International’s website redesign"
+    context['hero_carousel_content_template'] = 'content/project/hero-carousels/_seri.html'
     # context['intro'] = ''
     context['visit_url'] = 'https://sustainableelectronics.org/'
     context['visit_text'] = 'Visit Website'
