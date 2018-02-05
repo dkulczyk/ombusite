@@ -4166,13 +4166,17 @@ blockquote.testimonial--quote {
 @media (min-width: 992px) {
   .stat--primary {
     border-right: 1px solid rgba(67, 94, 116, 0.4);
-    flex: 1 1 0;
+    flex: 1 0 auto;
     padding-right: calc(65 / 18 * 1rem);
     padding-top: calc(60 / 18 * 1rem);
-    width: 30%; }
+    min-width: 30%; }
     .stat--subtle .stat--primary {
       padding-bottom: calc(60 / 18 * 1rem);
       padding-top: 0; } }
+
+@media (min-width: 992px) {
+  .stat--secondary {
+    flex: 1 1 auto; } }
 
 .stat--number {
   font-family: "halis_rmedium", "Helvetica", sans-serif;
@@ -5062,7 +5066,8 @@ blockquote.testimonial--quote {
       float: left;
       width: 66.66667%; } }
   .cs-main--primary > div {
-    flex: 0 0 auto; }
+    flex: 0 0 auto;
+    max-width: 100%; }
 
 .cs-main--secondary {
   position: relative;

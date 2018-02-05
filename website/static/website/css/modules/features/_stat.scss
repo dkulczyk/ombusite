@@ -39,10 +39,10 @@
 .stat--primary {
   @media (min-width: $breakpoint-notebook) {
     border-right: 1px solid $color-rule-light;
-    flex: 1 1 0;
+    flex: 1 0 auto;
     padding-right: calc(65 / 18 * 1rem);
     padding-top: calc(60 / 18 * 1rem);
-    width: 30%;
+    min-width: 30%;
 
     .stat--subtle & {
       padding-bottom: calc(60 / 18 * 1rem); 
@@ -52,7 +52,9 @@
 }
 
 .stat--secondary {
-
+  @media (min-width: $breakpoint-notebook) {
+    flex: 1 1 auto;
+  }
 }
 
 .stat--number {
