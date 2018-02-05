@@ -12,7 +12,9 @@
     {% include 'features/case-study/_banner.html' %}
     {% include 'features/case-study/_intro.html' %}
     {% if intro_testimonial_quote %}
-      {% include 'features/_testimonial.html' with testimonial_image="" testimonial_quote=intro_testimonial_quote testimonial_attribution_name=intro_testimonial_attribution_name testimonial_attribution_title=intro_testimonial_attribution_title %}
+      <div class="container">
+        {% include 'features/_testimonial.html' with testimonial_image="" testimonial_quote=intro_testimonial_quote testimonial_attribution_name=intro_testimonial_attribution_name testimonial_attribution_title=intro_testimonial_attribution_title %}
+      </div>
     {% endif %}
     {% include 'features/case-study/_contributions.html' %}
     {% include 'features/case-study/_main.html' %}

@@ -8,17 +8,17 @@
 blockquote.testimonial--quote {
   background: none;
   border: none;
-  font-family: $font-halisr-regular;
-  font-size: calc(22 / 16 * 1em);
-  line-height: calc(30 / 22 * 1em);
+  font-family: $font-tisapro-italic;
+  font-size: calc(18 / 16 * 1em);
+  line-height: calc(30 / 18 * 1em);
   margin: calc(34 / 18 * 1rem) 0 0;
   padding-left: 0;
   padding-top: 0;
   padding-bottom: 0;
 
   @media (min-width: $breakpoint-notebook) {  
-    font-size: calc(22 / 18 * 1em);
-    line-height: calc(30 / 22 * 1em);
+    font-size: calc(32 / 18 * 1em);
+    line-height: calc(45 / 32 * 1em);
     margin: calc(34 / 18 * 1rem) 0 0;
     padding-left: 0;
   }
@@ -28,11 +28,13 @@ blockquote.testimonial--quote {
   font-family: $font-halisr-bold;
   font-size: calc(14 / 16 * 1em);
   line-height: calc(20 / 14 * 1em);
+  margin-top: calc(25 / 18  * 1rem);
   text-transform: uppercase;
 
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(14 / 18 * 1em);
     line-height: calc(20 / 14 * 1em);    
+    margin-top: calc(21 / 18  * 1rem);
   }
 }
 
