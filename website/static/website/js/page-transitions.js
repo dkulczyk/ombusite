@@ -8,12 +8,19 @@ $(function() {
       setTimeout(function() {
         location.href = href;
       }, 1000);
+      setTimeout(function() {
+        $('body').removeClass('border-animate-out');
+      }, 1500);      
     }
   }
 
   $('a:not(.header--menu-toggle):not(.video-overlay--link):not(.image-overlay--link):not(.ic--pager-item)').on('click', function(e) {
-    e.preventDefault();
-    expTransitionCallback($(this));
+    if (e.shiftKey || e.ctrlKey || e.metaKey) {
+      return;
+    } else {
+      e.preventDefault();
+      expTransitionCallback($(this));
+    }
   });
 
   $( document ).ready(function() {
