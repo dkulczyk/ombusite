@@ -14,7 +14,7 @@ $(function() {
     }
   }
 
-  $('a:not(.header--menu-toggle):not(.video-overlay--link):not(.image-overlay--link):not(.ic--pager-item)').on('click', function(e) {
+  $('a:not(.header--menu-toggle):not(.video-overlay--link):not(.image-overlay--link):not(.link-disable-animation').on('click', function(e) {
     if (e.shiftKey || e.ctrlKey || e.metaKey) {
       return;
     } else {
