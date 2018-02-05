@@ -98,8 +98,46 @@
   }
 }
 
+.modal-content {
+  #image-overlay-modal & {
+    border-radius: 0;
+  }
+}
+
 .modal-body {
   #image-overlay-modal & {
+    border-radius: 0;
+    padding: 30px;
     text-align: center;
+  }
+}
+
+.modal-close {
+  #image-overlay-modal & {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    height: 30px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+
+    span {
+      font-size: 30px;
+      left: 50%;
+      line-height: 30px;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:focus {
+      outline: 1px dotted #212121;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
   }
 }

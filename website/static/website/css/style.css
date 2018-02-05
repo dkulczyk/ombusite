@@ -3362,8 +3362,36 @@ body.navigation--active {
   display: inline-block;
   width: auto; }
 
+#image-overlay-modal .modal-content {
+  border-radius: 0; }
+
 #image-overlay-modal .modal-body {
+  border-radius: 0;
+  padding: 30px;
   text-align: center; }
+
+#image-overlay-modal .modal-close {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  height: 30px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px; }
+  #image-overlay-modal .modal-close span {
+    font-size: 30px;
+    left: 50%;
+    line-height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  #image-overlay-modal .modal-close:focus {
+    outline: 1px dotted #212121;
+    outline: 5px auto -webkit-focus-ring-color; }
 
 .cta-card {
   margin-bottom: calc(10 / 18 * 1rem); }
