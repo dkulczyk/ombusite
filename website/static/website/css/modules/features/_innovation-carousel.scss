@@ -63,8 +63,6 @@
 .ic--slide-inner {
   background-size: cover;
   background-position: center center;
-  background-color: $color-tertiary;
-  background-blend-mode: multiply;
 
   @media (max-width: $breakpoint-tablet - 1px) {
     max-height: 0;

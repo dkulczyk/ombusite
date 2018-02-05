@@ -4263,9 +4263,7 @@ blockquote.testimonial--quote {
 
 .ic--slide-inner {
   background-size: cover;
-  background-position: center center;
-  background-color: #435e74;
-  background-blend-mode: multiply; }
+  background-position: center center; }
   @media (max-width: 767px) {
     .ic--slide-inner {
       max-height: 0;
