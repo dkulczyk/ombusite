@@ -3165,9 +3165,6 @@ body.navigation--active {
   padding: 0; }
 
 .menu-list--item {
-  display: block; }
-
-.menu-list--link {
   display: block;
   font-family: "halis_rbook", "Helvetica", sans-serif;
   font-size: calc(12 / 16 * 1em);
