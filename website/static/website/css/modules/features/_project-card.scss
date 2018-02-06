@@ -4,6 +4,7 @@
   display: block;
   margin-bottom: 3.75rem;
   text-decoration: none;
+  @include default-link-off();
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: calc(94 / 18 * 1rem);
@@ -56,7 +57,10 @@
   .project-card:focus &,
   .project-card:active & {
     color: $color-primary;
-    text-decoration: underline;
+    
+    > span {
+      background-image: linear-gradient(to top, transparent 0, transparent 2px, $color-primary 2px, transparent 3px, transparent 100%);
+    }
   }  
 }
 

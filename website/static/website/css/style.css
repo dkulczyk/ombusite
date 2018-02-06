@@ -1137,6 +1137,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "halis_rmedium", "Helvetica", sans-serif;
+  font-weight: normal;
   margin-top: 1em;
   margin-bottom: 1em; }
 
@@ -3047,6 +3048,8 @@ body.navigation--active {
   display: block;
   margin-bottom: 3.75rem;
   text-decoration: none; }
+  .project-card, .project-card:hover, .project-card:focus {
+    background-image: none; }
   @media (min-width: 768px) {
     .project-card {
       margin-bottom: calc(94 / 18 * 1rem); } }
@@ -3086,8 +3089,11 @@ body.navigation--active {
   .project-card:hover .project-card--title,
   .project-card:focus .project-card--title,
   .project-card:active .project-card--title {
-    color: #6dc5d4;
-    text-decoration: underline; }
+    color: #6dc5d4; }
+    .project-card:hover .project-card--title > span,
+    .project-card:focus .project-card--title > span,
+    .project-card:active .project-card--title > span {
+      background-image: linear-gradient(to top, transparent 0, transparent 2px, #6dc5d4 2px, transparent 3px, transparent 100%); }
 
 .project-card--body {
   color: #435e74;
