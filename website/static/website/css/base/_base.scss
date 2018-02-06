@@ -159,13 +159,15 @@ ul,ol {
 
 a {
   color: $color-body;
-  text-decoration: underline;
+  text-decoration: none;
   transition: all $transition-duration-default ease;
+  @include default-link();
 
   &:hover,
   &:focus,
   &:active {
     color: $color-primary;
+    text-decoration: none;
   }
 }
 

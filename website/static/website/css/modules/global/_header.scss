@@ -58,8 +58,10 @@
 }
 
 .header--logo {
+  background-image: none;
   display: block;
   flex: 0 0 auto;
+  @include default-link-off();  
 
   svg {
     height: 30px;
@@ -73,6 +75,7 @@
 
 .header--menu-toggle {
   flex: 0 0 auto;
+  @include default-link-off();
 
   span {
     @include element-invisible;

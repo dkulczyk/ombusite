@@ -55,7 +55,7 @@
 }
 
 .page-nav--link {
-  text-decoration: none;
+  @include default-link-off();
 
   @media (max-width: $breakpoint-notebook - 1px) {
     &:hover,

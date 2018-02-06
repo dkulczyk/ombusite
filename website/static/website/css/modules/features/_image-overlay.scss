@@ -4,6 +4,7 @@
   display: block;
   position: relative;
   text-decoration: none;
+  @include default-link-off();
 
   &:hover,
   &:focus,

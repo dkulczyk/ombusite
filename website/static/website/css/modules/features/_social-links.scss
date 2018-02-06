@@ -44,6 +44,8 @@
 }
 
 .social-links--link {
+  @include default-link-off();
+  
   svg {
     height: 39px;
     width: 39px;

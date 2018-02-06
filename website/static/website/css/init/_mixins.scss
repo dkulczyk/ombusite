@@ -24,6 +24,23 @@
   overflow: auto;
 }
 
+@mixin default-link() {
+  background-image: linear-gradient(to top, transparent 0, transparent 2px, $color-body 2px, transparent 3px, transparent 100%);
+
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(to top, transparent 0, transparent 2px, $color-primary 2px, transparent 3px, transparent 100%);
+  }
+}
+
+@mixin default-link-off() {
+  &,
+  &:hover,
+  &:focus {  
+    background-image: none;
+  }
+}
+
 // Helper function for arrow svg
 @mixin arrow-right-long($color: $color-primary) {
   padding-right: 33px;
@@ -85,6 +102,7 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  @include default-link-off();  
 
   &:hover,
   &:focus {
@@ -121,7 +139,7 @@
   color: $color-primary;
   display: inline-block;
   font-family: $font-halisr-regular;
-  text-decoration: none;  
+  @include default-link-off();
 
   &:hover,
   &:focus,

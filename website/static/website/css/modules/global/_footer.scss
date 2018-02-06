@@ -152,13 +152,21 @@
   padding-top: 1em;
   padding-bottom: 1em;
   text-decoration: none;
+  @include default-link-off();
 
   &:hover,
   &:focus,
   &:active {
     color: $color-white;
-    text-decoration: underline;
+    text-decoration: none;
   }
+
+  > span {
+    &:hover,
+    &:focus {
+      background-image: linear-gradient(to top, transparent 0, transparent 2px, $color-white 2px, transparent 3px, transparent 100%);
+    }
+  }  
 
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(16 / 18 * 1em);

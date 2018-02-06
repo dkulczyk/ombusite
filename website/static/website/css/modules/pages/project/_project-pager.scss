@@ -22,8 +22,8 @@
 
 .project-pager--link {
   display: block;
-  text-decoration: none;
-
+  @include default-link-off();
+  
   &:hover,
   &:active,
   &:focus {

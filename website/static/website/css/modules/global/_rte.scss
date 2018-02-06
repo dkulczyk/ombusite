@@ -32,6 +32,15 @@
     }
   }
 
+  a {
+    background-image: linear-gradient(to top, transparent 0, transparent 0px, $color-body 0px, $color-body 0.5px, transparent 0.5px, transparent 100%);
+
+    &:hover,
+    &:focus {
+      background-image: linear-gradient(to top, transparent 0, transparent 0px, $color-primary 0px, $color-primary 0.5px, transparent 0.5px, transparent 100%);
+    }    
+  }
+
   strong {
     font-family: $font-tisapro-bold;
     font-weight: normal !important;

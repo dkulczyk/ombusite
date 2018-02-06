@@ -68,6 +68,7 @@ body.navigation--active {
 
 .header--menu-close {
   display: block;
+  @include default-link-off();  
 
   svg {
     height: 30px;
@@ -123,6 +124,7 @@ body.navigation--active {
   font-family: $font-halisr-regular;
   font-size: calc(28 / 16 * 1em);
   line-height: calc(36 / 28);
+  @include default-link-off();
 
   @media (max-width: $breakpoint-notebook - 1px) {
     border-top: 1px solid $color-gray-medium;    
@@ -143,8 +145,13 @@ body.navigation--active {
   @media (min-width: $breakpoint-notebook) {
     flex: 0 0 auto;
     font-size: calc(26 / 18 * 1em);
-    line-height: calc(38 / 26 * 1em);
+    line-height: calc(34 / 26 * 1em);
     width: 20%;
+    
+    > span {
+      display: inline-block;
+      @include default-link();
+    }    
   }
 }
 
@@ -184,14 +191,28 @@ body.navigation--active {
     display: block;
     font-family: $font-halisr-regular;
     margin-bottom: calc(8 / 18 * 1em);
+    @include default-link-off();
+
+    > span {
+      display: inline-block;
+      @include default-link();
+    }
   }  
 }
 
 .navigation--secondary-link.navigation--secondary-link--cta {
   @include btn-tertiary();
+
+  > span {
+    @include default-link-off();
+  }
 }
 
 .navigation--background {
+  @media (max-width: $breakpoint-notebook - 1px) {
+    display: none;
+  }
+
   @media (min-width: $breakpoint-notebook) {
     bottom: 0;
     height: 805px;
