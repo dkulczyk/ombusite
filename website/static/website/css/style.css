@@ -2468,8 +2468,9 @@ body.navigation--active {
   .navigation--background {
     bottom: 0;
     height: 805px;
-    right: 60%;
-    position: absolute;
+    left: 0;
+    position: fixed;
+    transform: translateX(-47%);
     width: 1075px;
     z-index: -1; }
     .navigation--background svg {

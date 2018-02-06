@@ -24,7 +24,7 @@
             </div>
           </div>
           <nav role="navigation" class="navigation" id="menu">
-            <div class="container">
+            <div class="container navigation--container">
               <div class="navigation--contents">
                 <h2 class="navigation--label">Menu</h2>
                 <div class="navigation--actions">
@@ -65,8 +65,8 @@
                     {% include 'features/_social-links.html' %}
                   </li>
                 </ul>
-                <span class="navigation--background" role="presentation">{% include 'svg/tree.svg.html' %}</span>
-              </li>
+              </div>
+              <span class="navigation--background" role="presentation">{% include 'svg/tree.svg.html' %}</span>
             </div>
           </nav>
           {% block header_bottom %}{% endblock header_bottom %}
