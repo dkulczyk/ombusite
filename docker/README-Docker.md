@@ -7,8 +7,7 @@ Build your images:
    
 Run the container:
 
-    docker run \
-    -v /Users/axolx/docker-volumes/ombusite:/var/www/ombusite.local \
+    docker run -d -v $PWD:/var/www/ombusite.local \
     -p 80:8000 --name ombusite ombu/website:devel
 
 This will run a simple webserver on the `output` directory, so you should be
@@ -26,7 +25,7 @@ AWS_SECRET_ACCESS_KEY and AWS_DEFAULT_REGION variables to the environment for
  a user with sufficient access in AWS.
 
     docker run \
-    -v /Users/axolx/docker-volumes/ombusite:/var/www/ombusite.local \
+    -v $PWD:/var/www/ombusite.local \
     -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_DEFAULT_REGION \
     ombu/website:devel \
     fab deploy 
