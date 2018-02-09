@@ -19,7 +19,6 @@ $(function() {
         var index = flkty.selectedIndex + 1;
         $('.ic:not(.off) .ic--pager-item').removeClass('active');
         $('.ic:not(.off) #ic-pager-item-' + index).addClass('active');
-        console.log(index);
       });
 
       $('.ic:not(.off) .ic--pager').on( 'click', '.ic--pager-item', function(e) {

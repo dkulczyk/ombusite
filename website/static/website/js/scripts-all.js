@@ -458,13 +458,17 @@ $(function() {
   $('.rings:not(.rings--delayed)').addClass('animation-triggered');
 
   $('.rings.rings--delayed').each(function( index, element ) {
-    var ringsDelayedWapoint = new Waypoint({
+    var waypoint = new Waypoint({
       element: $(this),
       handler: function(direction) {
         $(this.element).addClass('animation-triggered')
       },
       offset: 400
     });
+  });
+
+  $( document ).ready(function() {
+    Waypoint.refreshAll();
   });
 });
 // Page transitions js
@@ -521,7 +525,6 @@ $(function() {
         var index = flkty.selectedIndex + 1;
         $('.ic:not(.off) .ic--pager-item').removeClass('active');
         $('.ic:not(.off) #ic-pager-item-' + index).addClass('active');
-        console.log(index);
       });
 
       $('.ic:not(.off) .ic--pager').on( 'click', '.ic--pager-item', function(e) {
