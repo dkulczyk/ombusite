@@ -4662,6 +4662,8 @@ blockquote.testimonial--quote {
 
 .video-overlay--link {
   display: block; }
+  .video-overlay--link, .video-overlay--link:hover, .video-overlay--link:focus {
+    background-image: none; }
 
 .contact {
   padding: calc(40 / 18 * 1rem) 0; }

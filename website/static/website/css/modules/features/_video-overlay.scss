@@ -1,5 +1,6 @@
 // Video overlay
 
 .video-overlay--link {
+  @include default-link-off();
   display: block;
 }
