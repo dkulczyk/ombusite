@@ -5071,7 +5071,8 @@ blockquote.testimonial--quote {
   .services--rings {
     margin-top: calc(46 / 18 * 1rem); } }
 
-.cs-intro--lead {
+.cs-intro--lead,
+.cs-testimonial--content {
   position: relative;
   float: left;
   width: 100%;
@@ -5091,19 +5092,23 @@ blockquote.testimonial--quote {
   padding-left: 15px;
   padding-right: 15px; }
   @media (min-width: 768px) {
-    .cs-intro--lead {
+    .cs-intro--lead,
+    .cs-testimonial--content {
       float: left;
       width: 100%; } }
   @media (min-width: 992px) {
-    .cs-intro--lead {
+    .cs-intro--lead,
+    .cs-testimonial--content {
       float: left;
       width: 66.66667%; } }
   @media (min-width: 1200px) {
-    .cs-intro--lead {
+    .cs-intro--lead,
+    .cs-testimonial--content {
       float: left;
       width: 50%; } }
   @media (min-width: 1200px) {
-    .cs-intro--lead {
+    .cs-intro--lead,
+    .cs-testimonial--content {
       margin-left: 8.33333%; } }
 
 .cs-intro--testimonial {
