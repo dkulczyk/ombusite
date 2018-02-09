@@ -59,28 +59,31 @@
 }
 
 .cs-contributions--content {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
+
+  @media (max-width: $breakpoint-tablet -1px) {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .cs-contributions--media {
-  flex: 0 0 auto;
 
   video,img {
     width: 100%;
   }
 
-  @media (max-width: $breakpoint-tablet) {
+  @media (max-width: $breakpoint-tablet -1px) {
+    flex: 0 0 auto;
     order: 2;
     width: 100%;
   }
 }
 
 .cs-contributions--contributions {
-  flex: 0 0 auto;
 
-  @media (max-width: $breakpoint-tablet) {
+  @media (max-width: $breakpoint-tablet - 1px) {
+    flex: 0 0 auto;    
     margin-bottom: calc(170 / 18 * 1rem);
     width: 100%;
   }

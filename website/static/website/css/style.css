@@ -5368,26 +5368,26 @@ blockquote.testimonial--quote {
     .cs-contributions {
       margin-bottom: calc(83 / 18 * 1rem); } }
 
-.cs-contributions--content {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap; }
+@media (max-width: 768px -1px) {
+  .cs-contributions--content {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap; } }
 
-.cs-contributions--media {
-  flex: 0 0 auto; }
-  .cs-contributions--media video, .cs-contributions--media img {
-    width: 100%; }
-  @media (max-width: 768px) {
-    .cs-contributions--media {
-      order: 2;
-      width: 100%; } }
+.cs-contributions--media video, .cs-contributions--media img {
+  width: 100%; }
 
-.cs-contributions--contributions {
-  flex: 0 0 auto; }
-  @media (max-width: 768px) {
-    .cs-contributions--contributions {
-      margin-bottom: calc(170 / 18 * 1rem);
-      width: 100%; } }
+@media (max-width: 768px -1px) {
+  .cs-contributions--media {
+    flex: 0 0 auto;
+    order: 2;
+    width: 100%; } }
+
+@media (max-width: 767px) {
+  .cs-contributions--contributions {
+    flex: 0 0 auto;
+    margin-bottom: calc(170 / 18 * 1rem);
+    width: 100%; } }
 
 .cs-main {
   margin-bottom: calc(80 / 18 * 1rem); }
