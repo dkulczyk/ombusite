@@ -3375,7 +3375,7 @@ body.navigation--active {
   display: block;
   position: relative;
   text-decoration: none; }
-  .image-overlay--link, .image-overlay--link:hover, .image-overlay--link:focus {
+  .image-overlay--link, .image-overlay--link:hover, .image-overlay--link:focus, .rte .image-overlay--link, .rte .image-overlay--link:hover, .rte .image-overlay--link:focus {
     background-image: none; }
   .image-overlay--link:hover, .image-overlay--link:focus, .image-overlay--link:active {
     color: #435e74; }
@@ -3402,14 +3402,6 @@ body.navigation--active {
       font-size: calc(18 / 18 * 1em); } }
   .image-overlay--link--gallery.image-overlay--link .image-overlay--prompt {
     margin-top: 0; }
-  .image-overlay--link:hover .image-overlay--prompt span,
-  .image-overlay--link:focus .image-overlay--prompt span,
-  .image-overlay--link:active .image-overlay--prompt span {
-    text-decoration: underline; }
-  .image-overlay--link--gallery.image-overlay--link:hover .image-overlay--prompt span,
-  .image-overlay--link--gallery.image-overlay--link:focus .image-overlay--prompt span,
-  .image-overlay--link--gallery.image-overlay--link:active .image-overlay--prompt span {
-    text-decoration: none; }
 
 .image-overlay--prompt-wrapper {
   align-items: center;

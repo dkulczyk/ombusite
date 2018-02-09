@@ -4,7 +4,10 @@
   display: block;
   position: relative;
   text-decoration: none;
-  @include default-link-off();
+
+  &, .rte & {
+    @include default-link-off();
+  }
 
   &:hover,
   &:focus,
@@ -41,23 +44,7 @@
 
   .image-overlay--link--gallery.image-overlay--link & {
     margin-top: 0;
-  }
-
-  .image-overlay--link:hover &,
-  .image-overlay--link:focus &,
-  .image-overlay--link:active & {
-    span {
-      text-decoration: underline;
-    }
-  }
-
-  .image-overlay--link--gallery.image-overlay--link:hover &,
-  .image-overlay--link--gallery.image-overlay--link:focus &,
-  .image-overlay--link--gallery.image-overlay--link:active & {
-    span {
-      text-decoration: none;
-    }
-  }  
+  } 
 }
 
 // Gallery modifiers
