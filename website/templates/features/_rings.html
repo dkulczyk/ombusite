@@ -1,4 +1,4 @@
-<div class="rings{% if vertical %} rings--vertical{% elif verticalMobile %} rings--vertical--mobile{% endif %}{% if delayed %}  rings--delayed{% endif %}">
+<div class="rings{% if vertical %} rings--vertical{% elif verticalMobile %} rings--vertical--mobile{% endif %}{% if delayed %}  rings--delayed{% endif %}{% if services %} rings--services{% endif %}">
   {% include 'svg/ring-gradient.svg.html' %}
   <div class="rings--group">
     <div class="rings--inner">
@@ -13,7 +13,7 @@
             {% include 'svg/ring-middle.svg.html' %}
           {% endif %}
           <div class="rings--content">
-            <div class="rings--title-group"><h2 class="rings--title">{{ ring.title|safe }}</h2></div>
+            <div class="rings--title-group"><h2 class="rings--title{{ ring.titleclass }}">{{ ring.title|safe }}</h2></div>
             <div class="rings--summary">{{ ring.summary|safe }}</div>
           </div>
         </div>
