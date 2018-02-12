@@ -6,10 +6,6 @@
   border-bottom: 1px solid $color-rule-light;
   text-align: center;
 
-  .flickity-slider { 
-    transform: none !important; 
-  }
-
   @media (max-width: $breakpoint-notebook - 1px) {
     display: flex;
     flex-wrap: wrap;
@@ -50,13 +46,7 @@
   }
 
   @media (min-width: $breakpoint-tablet) {
-    left: 0 !important;
-    opacity: 0;
-    transition: opacity $transition-duration-slow ease !important;
-
-    &.is-selected {
-      opacity: 1;
-    }     
+    height: 100%;
   }
 }
 
@@ -74,6 +64,10 @@
       transition: max-height $transition-duration-default cubic-bezier(1,0,1,0) 0s;
     }    
   }
+
+  @media (min-width: $breakpoint-tablet) {
+    height: 100%;
+  }  
 }
 
 .ic--slide-contents {

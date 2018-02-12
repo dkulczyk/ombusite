@@ -10,12 +10,12 @@
 .slider {
   .project-slider & {
     @include make-xs-column(12);
-    @include make-md-column(11);
+    @include make-md-column(10);
     @include make-md-column-push(1);
   }
 }
 
-.flickity-viewport {
+.owl-stage-outer {
   .project-slider & {
     @media (min-width: $breakpoint-tablet) {
       overflow: visible;
@@ -23,16 +23,32 @@
   }
 }
 
-.flickity-page-dots {
+.owl-dots {
   .project-slider & {
     bottom: -34px;
-
-    .dot {
-      background: $color-body;
-    }
+    position: absolute;
+    text-align: center;
+    width: 100%;
 
     @media (min-width: $breakpoint-tablet) {
       bottom: -44px;
+    }
+  }
+}
+
+.owl-dot {
+  .project-slider & {
+    background: $color-body;
+    border-radius: 100%;
+    display: inline-block;
+    height: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    opacity: 0.3;
+    width: 10px;
+
+    &.active {
+      opacity: 1;
     }
   }
 }

@@ -6,7 +6,7 @@ var livereload = require('gulp-livereload');
 
 var bootstrapDir = './node_modules/bootstrap-sass/assets';
 var bootstrapJsDir = bootstrapDir + '/javascripts/bootstrap';
-var flickityDir = './node_modules/flickity/dist';
+var owlDir = './node_modules/owl.carousel/dist';
 var jqueryDir = './node_modules/jquery/dist';
 var waypointsDir = './node_modules/waypoints/lib';
 
@@ -15,7 +15,7 @@ gulp.task('sass', function() {
             .pipe(sass({
               includePaths: [
                 bootstrapDir + '/stylesheets',
-                flickityDir
+                owlDir + '/assets'
               ]
             }).on('error', sass.logError))
             .pipe(gulp.dest('./css/'))
@@ -29,7 +29,7 @@ gulp.task('templates', function() {
 var bootstrapJsDir = bootstrapDir + '/javascripts/bootstrap';
 var jsFiles = [
   jqueryDir + '/jquery.slim.min.js',
-  flickityDir + '/flickity.pkgd.min.js',
+  owlDir + '/owl.carousel.min.js',
   waypointsDir + '/jquery.waypoints.min.js',
   bootstrapJsDir + '/modal.js',
   './js/navigation.js',

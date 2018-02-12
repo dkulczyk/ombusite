@@ -2,37 +2,41 @@
 
 $(function() {
 
+  var $icCarousel;
+
   function galleryOn() {
 
     $('.ic--slides').each(function() {
-      var $icCarousel = $(this).flickity({
+      $icCarousel = $(this).owlCarousel({
         // options
-        cellAlign: 'center',
-        contain: true,
-        prevNextButtons: false,
-        pageDots: false
+        center: true,
+        dots: false,
+        nav: false,
+        items: 1,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        mouseDrag: false
       });
 
-      var flkty = $icCarousel.data('flickity');
-
-      $icCarousel.on( 'select.flickity', function() {
-        var index = flkty.selectedIndex + 1;
-        $('.ic:not(.off) .ic--pager-item').removeClass('active');
-        $('.ic:not(.off) #ic-pager-item-' + index).addClass('active');
+      $icCarousel.on( 'changed.owl.carousel', function(e) {
+          var index = e.item.index + 1; 
+          $('.ic:not(.off) .ic--pager-item').removeClass('active');
+          $('.ic:not(.off) #ic-pager-item-' + index).addClass('active');
       });
 
       $('.ic:not(.off) .ic--pager').on( 'click', '.ic--pager-item', function(e) {
         e.preventDefault();
         var index = $(this).index();
-        $(this).closest('.ic').find('.ic--slides').flickity( 'select', index );
+        $icCarousel.trigger( 'to.owl.carousel', index );
       });      
+
+      $(this).addClass('owl-carousel');
     });
   }
 
   function galleryOff() {
-    if ($('.ic--slides').data('flickity')) {
-      $('.ic--slides').flickity('destroy');
-    }
+    $icCarousel.trigger('destroy.owl.carousel');
+    $('.ic--slides').removeClass('owl-carousel');
   }
 
   // Initialize owl carousel if at tablet breakpoint or below
@@ -49,14 +53,14 @@ $(function() {
   $(window).resize(function() {
     if ( $(window).width() > 767 ) {
       if ( $('.ic--slides').closest('.ic').hasClass('off') ) {
+        $('.ic--slides').closest('.ic').removeClass('off');        
         galleryOn();
-        $('.ic--slides').closest('.ic').removeClass('off');
       }
     }
     else {
       if ( !$('.ic--slides').closest('.ic').hasClass('off') ) {
+        $('.ic--slides').closest('.ic').addClass('off');        
         galleryOff();
-        $('.ic--slides').closest('.ic').addClass('off');
       }
     }
   });  

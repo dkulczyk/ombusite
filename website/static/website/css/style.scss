@@ -10,8 +10,8 @@
 @import 'base/base';
 
 // Plugins
-@import 'flickity.min';
-@import "bootstrap/modals";
+@import 'owl.carousel.min';
+@import 'bootstrap/modals';
 
 // Layouts
 @import 'layout/layout';
@@ -59,3 +59,5 @@
 @import 'modules/pages/services';
 @import 'modules/pages/case-study/cs-layout';
 @import 'modules/pages/case-study/cs-contents';
+
+@import 'modules/misc/owl-carousel-helpers';
