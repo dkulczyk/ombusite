@@ -15,4 +15,13 @@ $(function() {
   $( document ).ready(function() {
     Waypoint.refreshAll();
   });
+
+  // Add description subtle class if text is greater than 30 characters
+  $('.rings--summary').each(function( index, element ) {
+    var char = $(this).text().length;
+
+    if (char > 30) {
+      $(this).addClass('rings---summary--subtle');
+    }
+  });
 });

@@ -4081,10 +4081,15 @@ body.navigation--active {
   text-align: center;
   word-spacing: -0.15em;
   width: 100%; }
-  .rings--title abbr {
+  .rings--title abbr,
+  .rings--title sup {
     font-size: calc(48 / 60 * 1em);
     line-height: 1em;
     vertical-align: baseline; }
+  .rings--title sup {
+    position: relative;
+    top: 0;
+    vertical-align: top; }
   .rings--services .rings--title {
     font-family: "halis_rmedium", "Helvetica", sans-serif;
     font-size: calc(17 / 16 * 1em);
@@ -4094,6 +4099,9 @@ body.navigation--active {
     margin-bottom: 5px; }
     .rings--title.rings--title--subtle abbr {
       font-size: calc(32 / 48 * 1em); }
+  @media (min-width: 768px) {
+    .rings--title {
+      font-size: calc(48 / 18 * 1em); } }
   @media (min-width: 992px) {
     .rings--title {
       font-size: calc(60 / 18 * 1em); }
@@ -4107,6 +4115,8 @@ body.navigation--active {
   font-family: "halis_rbook", "Helvetica", sans-serif;
   font-size: calc(18 / 18 * 1em);
   line-height: 1.4;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   text-transform: uppercase; }
   .rings--services .rings--summary {
     font-size: calc(12 / 18 * 1em);
@@ -4117,8 +4127,11 @@ body.navigation--active {
       .rings--services .rings--summary {
         display: none;
         min-height: 0; } }
-  .rings---summary--subtle .rings--summary {
+  .rings--summary.rings---summary--subtle {
     font-size: calc(14 / 18 * 1em); }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .rings--summary {
+      font-size: calc(16 / 18 * 1em); } }
 
 .page-border {
   position: fixed;

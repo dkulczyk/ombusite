@@ -292,10 +292,17 @@
   word-spacing: -0.15em;
   width: 100%;
 
-  abbr {
+  abbr,
+  sup {
     font-size: calc(48 / 60 * 1em);
     line-height: 1em;
     vertical-align: baseline;
+  }
+
+  sup {
+    position: relative;
+    top: 0;
+    vertical-align: top;
   }
 
   .rings--services & {
@@ -311,6 +318,10 @@
     abbr {
       font-size: calc(32 / 48 * 1em);
     }    
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: calc(48 / 18 * 1em);
   }
 
   @media (min-width: $breakpoint-notebook) {
@@ -331,6 +342,8 @@
   font-family: $font-halisr-book;
   font-size: calc(18 / 18 * 1em);
   line-height: 1.4;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   text-transform: uppercase;
 
   .rings--services & {
@@ -345,7 +358,11 @@
     } 
   }
 
-  .rings---summary--subtle & {
+  &.rings---summary--subtle {
     font-size: calc(14 / 18 * 1em);
   } 
+
+  @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-notebook) {
+    font-size: calc(16 / 18 * 1em);
+  }  
 }
