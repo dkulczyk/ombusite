@@ -105,6 +105,7 @@
 
 .callout--cta {
   @include btn-tertiary;
+  margin-top: calc(30 / 18 * 1rem);
 }
 
 .callout--media {

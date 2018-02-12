@@ -2862,7 +2862,8 @@ body.navigation--active {
   position: relative;
   color: #6dc5d4;
   display: inline-block;
-  font-family: "halis_rregular", "Helvetica", sans-serif; }
+  font-family: "halis_rregular", "Helvetica", sans-serif;
+  margin-top: calc(30 / 18 * 1rem); }
   .callout--cta:after {
     background-color: #6dc5d4;
     content: "";
