@@ -14,7 +14,14 @@
       </div>
       {% elif contributions.image %}
       <div class="cs-contributions--media">
+        {% if contributions.image.browser %}
+          <div class="cs-contributions--media-browser">
+          {% include 'svg/browser.svg.html' with url=contributions.image.browser.url %}
+        {% endif %}
         <img src="{% static contributions.image.src %}" alt="{{contributions.image.alt}}" />
+        {% if contributions.image.browser %}
+          </div>
+        {% endif %}        
       </div>
       {% endif %}
       <aside class="cs-contributions--contributions cs-sidebar">

@@ -24,7 +24,14 @@
         </div>
         {% elif visionary.image %}
         <div class="cs-main--media cs-main--media--visionary">
+          {% if visionary.image.browser %}
+            <div class="cs-main--media--visionary-browser">
+            {% include 'svg/browser.svg.html' with url=contributions.image.browser.url %}
+          {% endif %}
           <img src="{% static visionary.image.src %}" alt="{{visionary.image.alt}}" />
+          {% if visionary.image.browser %}
+            </div>
+          {% endif %}          
         </div>
         {% endif %}
         <div class="cs-main--body-section">
@@ -47,7 +54,14 @@
         </div>
         {% elif solution.image %}
         <div class="cs-main--media cs-main--media--solution">
+          {% if solution.image.browser %}
+            <div class="cs-main--media--solution-browser">
+            {% include 'svg/browser.svg.html' with url=contributions.image.browser.url %}
+          {% endif %}          
           <img src="{% static solution.image.src %}" alt="{{solution.image.alt}}" />
+          {% if solution.image.browser %}
+            </div>
+          {% endif %}             
         </div>
         {% endif %}
       </div>

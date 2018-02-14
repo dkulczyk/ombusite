@@ -351,6 +351,9 @@ def casestudy_sa(request, context={}):
         'image': {
             'src' : 'website/images/case-studies/sa/intro@2x.png',
             'alt': 'A screenshot of a Saturday Academy course detail page',
+            'browser' : {
+                'url' : 'saturdayacademy.org',
+            },
         },
         'skills': ["Technology Strategy", "User Experience Design", "Visual Design", "Salesforce CRM Development", "Drupal Application Development", "AWS Design & Implementation"],
     }
@@ -359,6 +362,9 @@ def casestudy_sa(request, context={}):
         'image': {
             'src' : 'website/images/case-studies/sa/visionary@2x.png',
             'alt': 'A screenshot of a Saturday Academy class registration page',
+            'browser' : {
+                'url' : 'saturdayacademy.org',
+            },            
         },
         'stat': {
             'number': '5200+',
@@ -371,6 +377,9 @@ def casestudy_sa(request, context={}):
         'image': {
             'src' : 'website/images/case-studies/sa/solution@2x.png',
             'alt': 'A screenshot of a Saturday Academy application review page',
+            'browser' : {
+                'url' : 'saturdayacademy.org',
+            },            
         },
         'stat' : {
             'number': '$70k+',

@@ -182,3 +182,55 @@
   border-top: 1px solid $color-section-border;
   border-bottom: 1px solid $color-section-border;
 }
+
+// Browser chrome
+$browser-chrome-position-top: 6px;
+$browser-chrome-height: 17px;
+$browser-chrome-border-color: rgb(206, 206, 206);
+
+@mixin browser-chrome() {
+  border: 1px solid $browser-chrome-border-color;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+  overflow: hidden;
+  padding-top: 29px;
+  position: relative;
+
+  &:after {
+    border: 1px solid $browser-chrome-border-color;
+    border-radius: 2px;
+    content: "";
+    display: block;
+    height: $browser-chrome-height;
+    left: 52px;
+    position: absolute;
+    top: $browser-chrome-position-top;
+    width: calc(100% - 62px;)
+  }
+
+  svg {
+    height: $browser-chrome-height;
+    left: 12px;
+    position: absolute;
+    top: $browser-chrome-position-top;
+  } 
+
+  img {
+    border-top: 1px solid $browser-chrome-border-color;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+// To be used in conjunction with browser-chrome()
+@mixin browser-chrome-mobile() {
+  &:after {
+    left: 10px;
+    width: calc(100% - 20px);
+  }
+
+  svg {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}

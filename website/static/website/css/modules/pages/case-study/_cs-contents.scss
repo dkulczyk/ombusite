@@ -80,6 +80,11 @@
   }
 }
 
+
+.cs-contributions--media-browser {
+  @include browser-chrome();
+}
+
 .cs-contributions--contributions {
 
   @media (max-width: $breakpoint-tablet - 1px) {
@@ -119,6 +124,10 @@
   }
 }
 
+.cs-main--media--visionary-browser {
+  @include browser-chrome();
+}
+
 .cs-main--media--solution {
 
   video,img {
@@ -128,6 +137,10 @@
   @media (max-width: $breakpoint-notebook - 1px) {
     margin-top: calc(30 / 18 * 1rem);
   }
+}
+
+.cs-main--media--solution-browser {
+  @include browser-chrome();
 }
 
 .cs-main--stat--solution {

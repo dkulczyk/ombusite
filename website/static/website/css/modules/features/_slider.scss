@@ -40,6 +40,14 @@ $slider-height-mobile: 190px;
     padding: $gutter-side-tile;
   }
 
+  &.slider--slide--browser {
+    @include browser-chrome();
+  }
+
+  &.slider--slide--browser-mobile {
+    @include browser-chrome-mobile();
+  }
+
   &.slider--slide--has-two-images {
     .slider--slide-image {
       height: calc(#{$slider-height-mobile} / 2);
