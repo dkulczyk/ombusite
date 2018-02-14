@@ -4984,6 +4984,8 @@ blockquote.testimonial--quote {
   @media (min-width: 992px) {
     .project-section--supplementary {
       bottom: 0;
+      float: right;
+      margin-bottom: 1.5rem;
       position: sticky;
       top: 1rem; } }
 

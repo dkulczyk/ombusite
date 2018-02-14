@@ -71,6 +71,8 @@
 
   @media (min-width: $breakpoint-notebook) {
     bottom: 0;
+    float: right;
+    margin-bottom: 1.5rem;
     position: sticky;
     top: 1rem;
   }
