@@ -1,7 +1,9 @@
 // Owl carousel fix
 .owl-stage {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: box;
+  .slider & {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+  }
 }

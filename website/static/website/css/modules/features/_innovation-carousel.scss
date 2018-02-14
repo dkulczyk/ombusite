@@ -6,7 +6,7 @@
   border-bottom: 1px solid $color-rule-light;
   text-align: center;
 
-  @media (max-width: $breakpoint-notebook - 1px) {
+  @media (max-width: $breakpoint-tablet - 1px) {
     display: flex;
     flex-wrap: wrap;
 
@@ -15,7 +15,7 @@
     }
   }
 
-  @media (min-width: $breakpoint-notebook) {
+  @media (min-width: $breakpoint-tablet) {
     border-bottom: none;
   }
 }
@@ -26,7 +26,7 @@
   margin-top: calc(50 / 32 * 1em);
   margin-bottom: calc(50 / 32 * 1em);
 
-  @media (min-width: $breakpoint-notebook) {
+  @media (min-width: $breakpoint-tablet) {
     font-size: calc(38 / 16 * 1em);
     line-height: calc(50 / 38 * 1em); 
   }
@@ -81,12 +81,12 @@
   padding-bottom: calc(20 / 18 * 1rem);  
   z-index: 2; 
 
-  @media (max-width: $breakpoint-notebook - 1px) {
+  @media (max-width: $breakpoint-tablet - 1px) {
     display: flex;
     flex-direction: column;
   } 
 
-  @media (min-width: $breakpoint-notebook) {
+  @media (min-width: $breakpoint-tablet) {
     display: flex;
     flex-direction: column;
     min-height: calc(710 / 18 * 1rem);
@@ -98,7 +98,7 @@
 .ic--slide-title-group {
   text-align: center;
 
-  @media (min-width: $breakpoint-notebook) {
+  @media (min-width: $breakpoint-tablet) {
     display: none;
   }
 }
@@ -161,7 +161,7 @@
   font-size: calc(17 / 16 * 1em);
   line-height: calc(30 / 17 * 1em);
 
-  @media (min-width: $breakpoint-notebook) {
+  @media (min-width: $breakpoint-tablet) {
     font-size: calc(36 / 18 * 1em);
     line-height: calc(50 / 36 * 1em);  
   }
@@ -172,7 +172,7 @@
   margin-top: calc(50 / 18 * 1rem);
   text-align: center;
 
-  @media (min-width: $breakpoint-notebook) {
+  @media (min-width: $breakpoint-tablet) {
     margin-top: calc(130 / 18 * 1rem);
   }
 }
@@ -215,11 +215,11 @@
   @include make-lg-column(10);  
   @include make-lg-column-offset(1);  
 
-  @media (max-width: $breakpoint-notebook - 1px) {
+  @media (max-width: $breakpoint-tablet - 1px) {
     margin-top: calc(20 / 18 * 1rem);
   }  
 
-  @media (min-width: $breakpoint-notebook) {
+  @media (min-width: $breakpoint-tablet) {
     margin-bottom: calc(20 / 18 * 1rem);
   }
 }
@@ -243,7 +243,7 @@
     }
   }
 
-  @media (min-width: $breakpoint-notebook) {
+  @media (min-width: $breakpoint-tablet) {
     margin-left: calc(5 / 18 * 1rem);
     margin-bottom: calc(10 / 18 * 1rem);
   }
