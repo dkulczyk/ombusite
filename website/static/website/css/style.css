@@ -5511,9 +5511,8 @@ blockquote.testimonial--quote {
       line-height: calc(50 / 24 * 1em);
       margin-bottom: calc(90 / 18 * 1rem); } }
 
-@media (min-width: 992px) {
-  .cs-intro--emphasis {
-    font-family: "halis_rregular", "Helvetica", sans-serif; } }
+.cs-intro--emphasis {
+  font-family: "tisaproitalicbold", "Georgia", serif; }
 
 .cs-contributions {
   margin-bottom: calc(46 / 18 * 1rem); }
