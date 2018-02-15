@@ -5696,7 +5696,9 @@ blockquote.testimonial--quote {
 .cs-outcomes--actions {
   margin-bottom: calc(70 / 18 * 1rem);
   margin-top: -3rem;
-  text-align: center; }
+  position: relative;
+  text-align: center;
+  z-index: 2; }
   @media (min-width: 992px) {
     .cs-outcomes--actions {
       display: none; } }
@@ -5748,6 +5750,8 @@ blockquote.testimonial--quote {
   .cs-outcomes--cta:hover, .cs-outcomes--cta:focus {
     color: #46b5c8;
     border-color: #46b5c8; }
+    .cs-outcomes--cta:hover svg *, .cs-outcomes--cta:focus svg * {
+      stroke: #46b5c8; }
 
 .cs-cta {
   background: linear-gradient(to right, #6dc5d4, #f3a7ad); }

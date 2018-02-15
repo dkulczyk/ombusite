@@ -200,7 +200,9 @@
 .cs-outcomes--actions {
   margin-bottom: calc(70 / 18 * 1rem);
   margin-top: -3rem;
+  position: relative;
   text-align: center;
+  z-index: 2;
 
   @media (min-width: $breakpoint-notebook) {
     display: none;
@@ -222,6 +224,12 @@
   &:focus {
     color: darken($color-primary, 10%);
     border-color: darken($color-primary, 10%);
+
+    svg {
+      * {
+        stroke: darken($color-primary, 10%);
+      }
+    }    
   } 
 }
 
