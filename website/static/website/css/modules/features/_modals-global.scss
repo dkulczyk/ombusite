@@ -1,0 +1,58 @@
+// Modals global
+
+.modal {
+  text-align: center;
+}
+
+.modal-dialog {
+  display: inline-block;
+  width: auto;
+}
+
+.modal-content {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.modal-body {
+  border-radius: 0;
+  padding: $modal-padding;
+  text-align: center;
+}
+
+.modal-close {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  height: 30px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+
+  span {
+    font-size: 30px;
+    left: 50%;
+    line-height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:focus {
+    outline: 1px dotted #212121;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+}
+
+.modal-backdrop {
+background-color: $color-white;
+
+  &.in {
+    opacity: 0.9;
+  }
+}
