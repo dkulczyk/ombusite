@@ -5743,6 +5743,8 @@ blockquote.testimonial--quote {
     color: #435e74; }
     .cs-outcomes--cta:hover svg *, .cs-outcomes--cta:focus svg *, .cs-outcomes--cta:active svg * {
       stroke: #435e74; }
+  .cs-outcomes--cta svg * {
+    stroke: #6dc5d4; }
   .cs-outcomes--cta:hover, .cs-outcomes--cta:focus {
     color: #46b5c8;
     border-color: #46b5c8; }

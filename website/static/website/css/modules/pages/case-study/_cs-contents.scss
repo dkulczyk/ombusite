@@ -212,11 +212,17 @@
   color: $color-primary;
   border-color: $color-primary;
 
+  svg {
+    * {
+      stroke: $color-primary;
+    }
+  }
+
   &:hover,
   &:focus {
     color: darken($color-primary, 10%);
     border-color: darken($color-primary, 10%);
-  }  
+  } 
 }
 
 // CTA
