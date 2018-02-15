@@ -48,36 +48,30 @@ $slider-height-mobile: 190px;
     @include browser-chrome-mobile();
   }
 
-  &.slider--slide--has-two-images {
-    .slider--slide-image {
-      height: calc(#{$slider-height-mobile} / 2);
-
-      &:first-child {
-        margin-bottom: $gutter-side-tile;
-      }      
-    }
+  @media (max-width: $breakpoint-tablet - 1px) {
 
     img {
-      height: calc(#{$slider-height-mobile} / 2);
       object-fit: cover;
     }
-  }
 
-  @media (max-width: $breakpoint-tablet - 1px) {
     &.slider--slide--has-two-images {
+
       .slider--slide-image {
+        height: calc(#{$slider-height-mobile} / 2) !important;
+
         &:first-child {
           float: left;
-          margin-bottom: 0;
-          width: calc(50% + 0.5px);
+          width: 50%;
         }
 
         &:last-child {
           float: right;
-          width: calc(50% + 0.5px);
+          width: calc(50% + 0.1px);
         }
 
         img {
+          height: calc(#{$slider-height-mobile} / 2) !important;
+          object-fit: cover;
           width: 100%;
         }
       }
@@ -110,12 +104,28 @@ $slider-height-mobile: 190px;
     }   
 
     &.slider--slide--has-two-images {
+      height: $slider-height-desktop - $gutter-side-tile;
+      width: auto;
+
       .slider--slide-image {
-        height: calc(#{$slider-height-desktop} / 2 - (#{$gutter-side-tile} / 2));
+        height: auto;
+        width: auto;
+
+        &:last-child {
+          position: relative;
+          top: $gutter-side-tile;
+        }
+      }
+
+      .image-overlay--link {
+        height: 100%;
+        width: 100%;
       }
 
       img {
-        height: calc(#{$slider-height-desktop} / 2 - (#{$gutter-side-tile} / 2));
+         height: 100%;
+         width: auto;
+         vertical-align: middle;
       }
     }
   } 

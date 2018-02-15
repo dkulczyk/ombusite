@@ -3244,23 +3244,21 @@ body.navigation--active {
     left: 0;
     right: 0;
     width: 100%; }
-  .slider--slide.slider--slide--has-two-images .slider--slide-image {
-    height: calc(190px / 2); }
-    .slider--slide.slider--slide--has-two-images .slider--slide-image:first-child {
-      margin-bottom: 20px; }
-  .slider--slide.slider--slide--has-two-images img {
-    height: calc(190px / 2);
-    object-fit: cover; }
   @media (max-width: 767px) {
-    .slider--slide.slider--slide--has-two-images .slider--slide-image:first-child {
-      float: left;
-      margin-bottom: 0;
-      width: calc(50% + 0.5px); }
-    .slider--slide.slider--slide--has-two-images .slider--slide-image:last-child {
-      float: right;
-      width: calc(50% + 0.5px); }
-    .slider--slide.slider--slide--has-two-images .slider--slide-image img {
-      width: 100%; } }
+    .slider--slide img {
+      object-fit: cover; }
+    .slider--slide.slider--slide--has-two-images .slider--slide-image {
+      height: calc(190px / 2) !important; }
+      .slider--slide.slider--slide--has-two-images .slider--slide-image:first-child {
+        float: left;
+        width: 50%; }
+      .slider--slide.slider--slide--has-two-images .slider--slide-image:last-child {
+        float: right;
+        width: calc(50% + 0.1px); }
+      .slider--slide.slider--slide--has-two-images .slider--slide-image img {
+        height: calc(190px / 2) !important;
+        object-fit: cover;
+        width: 100%; } }
   @media (min-width: 768px) {
     .slider--slide {
       height: 360px;
@@ -3278,10 +3276,22 @@ body.navigation--active {
       .slider--slide.slider--slide--has-text {
         padding: 40px;
         width: 300px; }
-      .slider--slide.slider--slide--has-two-images .slider--slide-image {
-        height: calc(360px / 2 - (20px / 2)); }
-      .slider--slide.slider--slide--has-two-images img {
-        height: calc(360px / 2 - (20px / 2)); } }
+      .slider--slide.slider--slide--has-two-images {
+        height: 340px;
+        width: auto; }
+        .slider--slide.slider--slide--has-two-images .slider--slide-image {
+          height: auto;
+          width: auto; }
+          .slider--slide.slider--slide--has-two-images .slider--slide-image:last-child {
+            position: relative;
+            top: 20px; }
+        .slider--slide.slider--slide--has-two-images .image-overlay--link {
+          height: 100%;
+          width: 100%; }
+        .slider--slide.slider--slide--has-two-images img {
+          height: 100%;
+          width: auto;
+          vertical-align: middle; } }
 
 .slide--text {
   color: white;
