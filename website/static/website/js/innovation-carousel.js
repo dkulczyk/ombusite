@@ -80,4 +80,12 @@ $(function() {
 
   $('.ic--pager').find('.ic--pager-item:first').addClass('active');
   $('.ic.off .ic--slide:first .ic--slide-title').click();
+
+  // Watch Demo (Action) link
+  $('.ic--slide-action').on('click', function(e) {
+    e.preventDefault();
+    var videoSource = $(this).data('src');
+    $('#video-overlay-modal').find('.video-overlay').attr('src', videoSource);
+    $('#video-overlay-modal').modal();
+  });
 });

@@ -26,7 +26,7 @@
                 <div class="ic--slide-text"><span>{{innovation.text|safe}}<span></div>
                 {% if innovation.action_text %}
                 <div class="ic--slide-actions">
-                  <a href="#" class="ic--slide-action"><span>{{innovation.action_text}}</span></a>
+                  <a href="#video-overlay-modal" class="ic--slide-action" data-src="{% static innovation.action_video %}"><span>{{innovation.action_text}}</span></a>
                 </div>
                 {% endif %}
               </div>

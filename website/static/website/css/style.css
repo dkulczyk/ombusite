@@ -4609,12 +4609,14 @@ blockquote.testimonial--quote {
   margin: 0 auto;
   padding: 0.5rem;
   width: 100px;
-  text-decoration: none;
   text-transform: uppercase; }
+  .ic--slide-action, .ic--slide-action:hover, .ic--slide-action:focus {
+    background-image: none; }
   .ic--slide-action:hover, .ic--slide-action:focus {
     border-color: white;
-    color: white;
-    text-decoration: none; }
+    color: white; }
+    .ic--slide-action:hover, .ic--slide-action:hover:hover, .ic--slide-action:hover:focus, .ic--slide-action:focus, .ic--slide-action:focus:hover, .ic--slide-action:focus:focus {
+      background-image: none; }
 
 @media (max-width: 767px) {
   .ic--pager-group {

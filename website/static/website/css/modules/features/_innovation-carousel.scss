@@ -191,14 +191,14 @@
   margin: 0 auto;
   padding: 0.5rem;
   width: 100px;
-  text-decoration: none;
+  @include default-link-off();
   text-transform: uppercase;
 
   &:hover,
   &:focus {
     border-color: $color-white;
     color: $color-white;
-    text-decoration: none;
+    @include default-link-off();
   }
 }
 
