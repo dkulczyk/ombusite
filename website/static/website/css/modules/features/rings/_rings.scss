@@ -130,7 +130,83 @@
     .rings--content {
       transition-delay: ($transition-duration * $transition-stagger-factor) * 5;
     }
-  }        
+  }  
+
+  &.rings--item--filled {
+
+    // When filled item is first
+    &:first-child {
+      .ring--svg--white {
+        path {
+          transition-delay: ($transition-duration * $transition-stagger-factor) * 1;
+        }
+      }
+    } 
+
+    // When filled item is not first
+    &:nth-child(2) {    
+      .ring--svg--last,
+      .ring--svg--middle {
+        transition-delay: ($transition-duration * $transition-stagger-factor) * 1;    
+
+        .ring--svg--white:last-child path {
+          transition-delay: ($transition-duration * $transition-stagger-factor) * 2;
+        } 
+      }  
+    } 
+    &:nth-child(3) {    
+      .ring--svg--last,
+      .ring--svg--middle {
+        transition-delay: ($transition-duration * $transition-stagger-factor) * 2;
+
+        .ring--svg--white path {
+          transition-delay: ($transition-duration * $transition-stagger-factor) * 1;
+        }            
+
+        .ring--svg--white:last-child path {
+          transition-delay: ($transition-duration * $transition-stagger-factor) * 3;
+        }         
+      }  
+    } 
+    &:nth-child(4) {    
+      .ring--svg--last,
+      .ring--svg--middle {      
+        transition-delay: ($transition-duration * $transition-stagger-factor) * 3;
+
+        .ring--svg--white path {
+          transition-delay: ($transition-duration * $transition-stagger-factor) * 2;
+        }  
+
+        .ring--svg--white:last-child path {
+          transition-delay: ($transition-duration * $transition-stagger-factor) * 4;
+        }                   
+      }  
+    } 
+    &:nth-child(5) {    
+      .ring--svg--last,
+      .ring--svg--middle {
+        transition-delay: ($transition-duration * $transition-stagger-factor) * 4;
+
+        .ring--svg--white path {
+          transition-delay: ($transition-duration * $transition-stagger-factor) * 3;
+        } 
+
+        .ring--svg--white:last-child path {
+          transition-delay: ($transition-duration * $transition-stagger-factor) * 5;
+        }         
+      }  
+    } 
+    &:nth-child(6) {    
+      .ring--svg--last,
+      .ring--svg--middle {      
+        transition-delay: ($transition-duration * $transition-stagger-factor) * 5;
+
+        .ring--svg--white path {
+          transition-delay: ($transition-duration * $transition-stagger-factor) * 4;
+        }            
+      }  
+    }                           
+  }
 
    /* one item */
   &:first-child:nth-last-child(1) {
@@ -226,7 +302,7 @@
     .rings--vertical--mobile & {
       @include rings--item--vertical;
     }
-  }  
+  }
 }
 
 .rings--item-inner {
@@ -248,6 +324,7 @@
   transform: translate(-50%, -50%);
   visibility: hidden;
   width: 100%;
+  z-index: 4;
 
   .animation-triggered & {
     opacity: 1;
@@ -256,6 +333,10 @@
 
   .rings--services & {
     height: auto;
+  }
+
+  .rings--item--filled & {
+    color: $color-white;
   }
 }
 

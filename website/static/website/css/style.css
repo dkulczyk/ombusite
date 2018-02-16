@@ -3641,6 +3641,35 @@ body.navigation--active {
     stroke: url(#exp-ombu-gradient-01);
     stroke-linecap: round;
     transition: all 0s ease; }
+  .ring--svg.ring--svg--filled {
+    background-image: url("../images/ring-filled.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 94% 94%;
+    border-radius: 100%;
+    z-index: 3;
+    opacity: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease; }
+    .ring--svg.ring--svg--filled .ring--svg--white {
+      height: 100%;
+      top: 50%;
+      position: absolute;
+      left: 80%;
+      transform: translateY(-50%);
+      width: 100%; }
+      .ring--svg.ring--svg--filled .ring--svg--white path {
+        stroke: white; }
+    .ring--svg.ring--svg--filled.ring--svg--last .ring--svg--white {
+      left: auto;
+      right: 80%; }
+    .ring--svg.ring--svg--filled.ring--svg--middle .ring--svg--white:first-child {
+      left: auto;
+      right: 80%; }
+    .animation-triggered .ring--svg.ring--svg--filled {
+      opacity: 1; }
   .ring--svg.ring--svg--first path,
   .ring--svg.ring--svg--last path {
     stroke-dashoffset: 761.34912109375;
@@ -3709,6 +3738,47 @@ body.navigation--active {
   .rings--item:nth-child(6) .ring--svg path,
   .rings--item:nth-child(6) .rings--content {
     transition-delay: 1.875s; }
+  .rings--item.rings--item--filled:first-child .ring--svg--white path {
+    transition-delay: 0.375s; }
+  .rings--item.rings--item--filled:nth-child(2) .ring--svg--last,
+  .rings--item.rings--item--filled:nth-child(2) .ring--svg--middle {
+    transition-delay: 0.375s; }
+    .rings--item.rings--item--filled:nth-child(2) .ring--svg--last .ring--svg--white:last-child path,
+    .rings--item.rings--item--filled:nth-child(2) .ring--svg--middle .ring--svg--white:last-child path {
+      transition-delay: 0.75s; }
+  .rings--item.rings--item--filled:nth-child(3) .ring--svg--last,
+  .rings--item.rings--item--filled:nth-child(3) .ring--svg--middle {
+    transition-delay: 0.75s; }
+    .rings--item.rings--item--filled:nth-child(3) .ring--svg--last .ring--svg--white path,
+    .rings--item.rings--item--filled:nth-child(3) .ring--svg--middle .ring--svg--white path {
+      transition-delay: 0.375s; }
+    .rings--item.rings--item--filled:nth-child(3) .ring--svg--last .ring--svg--white:last-child path,
+    .rings--item.rings--item--filled:nth-child(3) .ring--svg--middle .ring--svg--white:last-child path {
+      transition-delay: 1.125s; }
+  .rings--item.rings--item--filled:nth-child(4) .ring--svg--last,
+  .rings--item.rings--item--filled:nth-child(4) .ring--svg--middle {
+    transition-delay: 1.125s; }
+    .rings--item.rings--item--filled:nth-child(4) .ring--svg--last .ring--svg--white path,
+    .rings--item.rings--item--filled:nth-child(4) .ring--svg--middle .ring--svg--white path {
+      transition-delay: 0.75s; }
+    .rings--item.rings--item--filled:nth-child(4) .ring--svg--last .ring--svg--white:last-child path,
+    .rings--item.rings--item--filled:nth-child(4) .ring--svg--middle .ring--svg--white:last-child path {
+      transition-delay: 1.5s; }
+  .rings--item.rings--item--filled:nth-child(5) .ring--svg--last,
+  .rings--item.rings--item--filled:nth-child(5) .ring--svg--middle {
+    transition-delay: 1.5s; }
+    .rings--item.rings--item--filled:nth-child(5) .ring--svg--last .ring--svg--white path,
+    .rings--item.rings--item--filled:nth-child(5) .ring--svg--middle .ring--svg--white path {
+      transition-delay: 1.125s; }
+    .rings--item.rings--item--filled:nth-child(5) .ring--svg--last .ring--svg--white:last-child path,
+    .rings--item.rings--item--filled:nth-child(5) .ring--svg--middle .ring--svg--white:last-child path {
+      transition-delay: 1.875s; }
+  .rings--item.rings--item--filled:nth-child(6) .ring--svg--last,
+  .rings--item.rings--item--filled:nth-child(6) .ring--svg--middle {
+    transition-delay: 1.875s; }
+    .rings--item.rings--item--filled:nth-child(6) .ring--svg--last .ring--svg--white path,
+    .rings--item.rings--item--filled:nth-child(6) .ring--svg--middle .ring--svg--white path {
+      transition-delay: 1.5s; }
   .rings--item:first-child:nth-last-child(1) {
     max-width: 100%; }
   .rings--item:first-child:nth-last-child(2),
@@ -4052,12 +4122,15 @@ body.navigation--active {
   transition: opacity 0.75s ease, visibility 0.75s ease;
   transform: translate(-50%, -50%);
   visibility: hidden;
-  width: 100%; }
+  width: 100%;
+  z-index: 4; }
   .animation-triggered .rings--content {
     opacity: 1;
     visibility: visible; }
   .rings--services .rings--content {
     height: auto; }
+  .rings--item--filled .rings--content {
+    color: white; }
 
 .rings--title-group {
   align-items: flex-end;

@@ -3,14 +3,27 @@
   <div class="rings--group">
     <div class="rings--inner">
     {% for ring in rings %}
-      <div class="rings--item">
+      <div class="rings--item{% if ring.filled %} rings--item--filled{% endif %}">
         <div class="rings--item-inner">
           {% if forloop.counter is rings|length %}
-            {% include 'svg/ring-last.svg.html' %}
+            {% if ring.filled %} 
+              <div id="ring--svg--last--filled" class="ring--svg ring--svg--last ring--svg--filled">{% include 'svg/ring-white.svg.html' %}</div>
+              
+            {% else %}          
+              {% include 'svg/ring-last.svg.html' %}
+            {% endif %}
           {% elif forloop.counter is 1 %}
-            {% include 'svg/ring-first.svg.html' %}
+            {% if ring.filled %} 
+              <div id="ring--svg--first--filled" class="ring--svg ring--svg--first ring--svg--filled">{% include 'svg/ring-white.svg.html' %}</div>
+            {% else %}
+              {% include 'svg/ring-first.svg.html' %}
+            {% endif %}
           {% else %}
-            {% include 'svg/ring-middle.svg.html' %}
+            {% if ring.filled %} 
+              <div id="ring--svg--middle--filled" class="ring--svg ring--svg--middle ring--svg--filled">{% include 'svg/ring-white.svg.html' %}{% include 'svg/ring-white.svg.html' %}</div>
+            {% else %}          
+              {% include 'svg/ring-middle.svg.html' %}
+            {% endif %}              
           {% endif %}
           <div class="rings--content">
             <div class="rings--title-group"><h2 class="rings--title{{ ring.titleclass }}">{{ ring.title|safe }}</h2></div>

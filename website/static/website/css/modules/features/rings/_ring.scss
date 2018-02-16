@@ -13,6 +13,49 @@
     transition: all 0s ease;
   }
 
+  &.ring--svg--filled {
+    background-image: url('../images/ring-filled.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 94% 94%;
+    border-radius: 100%;
+    z-index: 3;
+    opacity: 0;  
+    overflow: hidden; 
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease;
+
+    .ring--svg--white {
+      height: 100%;
+      top: 50%;
+      position: absolute;
+      left:  80%;
+      transform: translateY(-50%);
+      width: 100%;
+
+      path {
+        stroke: $color-white;
+      }
+    }
+
+    &.ring--svg--last .ring--svg--white {
+      left: auto;
+      right: 80%;
+    }
+
+    &.ring--svg--middle .ring--svg--white {
+      &:first-child {
+        left: auto;
+        right: 80%;
+      }
+    }
+
+    .animation-triggered & {
+      opacity: 1;
+    }
+  }
+
   &.ring--svg--first path,
   &.ring--svg--last path {
     // document.querySelector('#ring--svg--first path').getTotalLength();

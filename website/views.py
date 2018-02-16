@@ -259,7 +259,7 @@ def casestudy_nwpp(request, context={}):
     context['outcomes'] = [
         { 'title': '0.84s', 'summary': 'Page loads' },
         { 'title': '99<sup>%</sup>', 'summary': 'Training completion' },
-        { 'title': '23', 'summary': 'Fewer accidents per year' },
+        { 'title': '23', 'summary': 'Fewer accidents per year'},
         { 'title': '4 min', 'summary': 'New client onboarding' },
     ]
     context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
@@ -327,7 +327,7 @@ def casestudy_navex(request, context={}):
         },
     ]
     context['outcomes'] = [
-        { 'title': '< 4 min', 'summary': 'Landing page launch' },
+        { 'title': '< 4 min', 'summary': 'Landing page launch', 'filled': 'true' },
         { 'title': '224', 'summary': 'White papers, eBooks, webinars' },
         { 'title': '448', 'summary': 'Expert blog posts' },
         { 'title': '2', 'summary': 'Top competitors acquired' },
