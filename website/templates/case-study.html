@@ -5,7 +5,7 @@
 
 {% block header_attributes %}class="header--with-supplement"{% endblock %}
 
-{% block header_title_supplement %}<div class="header--title-supplement">+ {{client}}</div>{% endblock %}
+{% block header_title_supplement %}<div class="header--title-supplement">+ {{client|safe}}</div>{% endblock %}
 
 {% block content %}
   <main>
