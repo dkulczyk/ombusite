@@ -21,7 +21,7 @@ body.navigation--active {
   top: 0;
   transition: all $transition-duration-default ease;
   visibility: hidden;
-  z-index: 3;
+  z-index: 5;
 
   &:after {
     background-image: linear-gradient(to right, $color-primary, $color-secondary);

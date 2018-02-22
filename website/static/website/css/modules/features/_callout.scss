@@ -1,13 +1,15 @@
 .callout {
   display: flex;
   flex-wrap: wrap;
-  margin-top: $block-margin-mobile;
+  margin-top: calc(#{$block-margin-mobile} - #{$border-width-resting});
   margin-bottom: $block-margin-mobile;
+  padding-top: $border-width-resting;
 
   @media (min-width: $breakpoint-tablet) {
     align-items: center;
-    margin-top: $block-margin-desktop;
+    margin-top: calc(#{$block-margin-desktop} - #{$border-width-resting-desktop});
     margin-bottom: $block-margin-desktop;
+    padding-top: $border-width-resting-desktop;
     justify-content: space-between;
   }
 }

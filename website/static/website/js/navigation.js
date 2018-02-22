@@ -11,4 +11,11 @@ $(function() {
     $('body').removeClass('navigation--active');
     $('#menu').removeClass('navigation--active');    
   });
+
+  $('.navigation--secondary-link').on('click', function(e) {
+    setTimeout(function(){  
+      $('body').removeClass('navigation--active');
+      $('#menu').removeClass('navigation--active');
+    }, 1000);
+  });
 });
