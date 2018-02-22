@@ -119,6 +119,21 @@ body.navigation--active {
   }
 }
 
+.navigation--primary-link-wrapper {
+  border-top: 1px solid $color-gray-medium; 
+  display: block;
+
+  .navigation--primary-group:first-child & {
+    border-top: none;
+  }  
+
+  @media (min-width: $breakpoint-notebook) {
+    border-top: none;
+    flex: 0 0 auto;
+    width: 20%;  
+  }
+}
+
 .navigation--primary-link {
   display: block;
   font-family: $font-halisr-regular;
@@ -126,8 +141,7 @@ body.navigation--active {
   line-height: calc(36 / 28);
   @include default-link-off();
 
-  @media (max-width: $breakpoint-notebook - 1px) {
-    border-top: 1px solid $color-gray-medium;    
+  @media (max-width: $breakpoint-notebook - 1px) { 
     padding-bottom: calc(16 / 28 * 1em);
     padding-top: calc(16 / 28 * 1em);    
     text-decoration: none;
@@ -136,17 +150,13 @@ body.navigation--active {
     &:focus,
     &:active {
       text-decoration: none;
-    }
-    .navigation--primary-group:first-child & {
-      border-top: none;
-    }    
+    } 
   }
 
   @media (min-width: $breakpoint-notebook) {
-    flex: 0 0 auto;
+    display: inline-block;    
     font-size: calc(26 / 18 * 1em);
     line-height: calc(34 / 26 * 1em);
-    width: 20%;
     
     > span {
       display: inline-block;
@@ -186,9 +196,13 @@ body.navigation--active {
   }
 }
 
+.navigation--secondary-link-wrapper.navigation--secondary-link-wrapper--cta {
+  text-align: right;
+}
+
 .navigation--secondary-link {
   @media (min-width: $breakpoint-notebook) {
-    display: block;
+    display: inline-block;
     font-family: $font-halisr-regular;
     margin-bottom: calc(8 / 18 * 1em);
     @include default-link-off();
@@ -202,6 +216,10 @@ body.navigation--active {
 
 .navigation--secondary-link.navigation--secondary-link--cta {
   @include btn-tertiary();
+
+  &:after {
+    top: 6px;
+  }
 
   > span {
     @include default-link-off();
