@@ -1798,6 +1798,7 @@ input[type="submit"] {
   @media (min-width: 992px) {
     .page-title--title.page-title--title--project {
       font-size: calc(46 / 18 * 1em);
+      line-height: 1.2;
       margin-bottom: calc(30 / 50 * 1em);
       text-align: left; } }
 

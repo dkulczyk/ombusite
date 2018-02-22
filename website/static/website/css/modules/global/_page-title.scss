@@ -60,6 +60,7 @@
 
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(46 / 18 * 1em);
+    line-height: 1.2;
     margin-bottom: calc(30 / 50 * 1em);
     text-align: left;
   }
