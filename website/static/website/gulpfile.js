@@ -28,7 +28,7 @@ gulp.task('templates', function() {
 
 var bootstrapJsDir = bootstrapDir + '/javascripts/bootstrap';
 var jsFiles = [
-  jqueryDir + '/jquery.slim.min.js',
+  jqueryDir + '/jquery.min.js',
   owlDir + '/owl.carousel.min.js',
   waypointsDir + '/jquery.waypoints.min.js',
   bootstrapJsDir + '/modal.js',

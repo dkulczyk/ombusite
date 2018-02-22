@@ -28,6 +28,7 @@ $(function() {
         e.preventDefault();
         var index = $(this).index();
         $icCarousel.trigger( 'to.owl.carousel', index );
+        $("html, body").animate({ scrollTop: $('#ic--pager').offset().top - 30 }, 1000);
       });      
 
       $(this).addClass('owl-carousel');
