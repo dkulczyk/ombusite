@@ -152,10 +152,28 @@ $slider-height-mobile: 190px;
 .slide--text-default {
   display: block;
   font-family: $font-halisr-book;
+  font-size: calc(18 / 16 * 1em);  
+  line-height: calc(24 / 18 * 1em);
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: calc(18 / 18 * 1em);
+  }
+}
+
+.slide--text-default.slide--text-default--subtle {
   font-size: calc(12 / 16 * 1em);  
   line-height: calc(18 / 12 * 1em);
 
   @media (min-width: $breakpoint-tablet) {
     font-size: calc(12 / 18 * 1em);
-  }
+  }  
+}
+
+.slide--text-default.slide--text-default--prominent {
+  font-size: calc(24 / 16 * 1em);  
+  line-height: calc(32/ 24 * 1em);
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: calc(24 / 18 * 1em);
+  }  
 }

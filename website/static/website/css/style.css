@@ -3314,11 +3314,25 @@ body.navigation--active {
 .slide--text-default {
   display: block;
   font-family: "halis_rbook", "Helvetica", sans-serif;
+  font-size: calc(18 / 16 * 1em);
+  line-height: calc(24 / 18 * 1em); }
+  @media (min-width: 768px) {
+    .slide--text-default {
+      font-size: calc(18 / 18 * 1em); } }
+
+.slide--text-default.slide--text-default--subtle {
   font-size: calc(12 / 16 * 1em);
   line-height: calc(18 / 12 * 1em); }
   @media (min-width: 768px) {
-    .slide--text-default {
+    .slide--text-default.slide--text-default--subtle {
       font-size: calc(12 / 18 * 1em); } }
+
+.slide--text-default.slide--text-default--prominent {
+  font-size: calc(24 / 16 * 1em);
+  line-height: calc(32/ 24 * 1em); }
+  @media (min-width: 768px) {
+    .slide--text-default.slide--text-default--prominent {
+      font-size: calc(24 / 18 * 1em); } }
 
 @media (max-width: 992px) {
   .menu-list {
