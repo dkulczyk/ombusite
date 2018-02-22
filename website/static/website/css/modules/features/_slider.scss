@@ -21,6 +21,10 @@ $slider-height-mobile: 190px;
     width: auto;
   }
 
+  .owl-carousel .owl-item & img {
+    width: auto;
+  }
+
   &.slider--slide--has-shadow {
     overflow: hidden;
     padding: 4px;
@@ -35,7 +39,7 @@ $slider-height-mobile: 190px;
     align-items: center;
     background-color: $color-secondary-dark;    
     display: flex;
-    height: 100%;
+    height: $slider-height-desktop;
     justify-content: space-around;
     padding: $gutter-side-tile;
   }
@@ -52,6 +56,10 @@ $slider-height-mobile: 190px;
 
     img {
       object-fit: cover;
+    }
+
+    &.slider--slide--has-text {
+      height: $slider-height-mobile;
     }
 
     &.slider--slide--has-two-images {
