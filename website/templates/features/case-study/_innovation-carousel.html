@@ -4,14 +4,12 @@
   <div class="ic">
     <div class="ic--title-group container"><h2 class="ic--title">Our Technology Innovations</h2></div>
     <div class="ic--main">
-      <div class="ic--pager-group container">
-        <div class="row">
-          <div class="ic--pager" id="ic--pager">
-          {% for innovation in innovations %}
-            <a id="ic-pager-item-{{forloop.counter}}" href="#ic-slide-{{forloop.counter}}" class="ic--pager-item link-disable-animation">{{innovation.title}}</a>
-          {% endfor %}
-          </div>
-        </div>  
+      <div class="ic--pager-group">
+        <div class="ic--pager" id="ic--pager">
+        {% for innovation in innovations %}
+          <a id="ic-pager-item-{{forloop.counter}}" href="#ic-slide-{{forloop.counter}}" class="ic--pager-item link-disable-animation">{{innovation.title}}</a>
+        {% endfor %}
+        </div>
       </div>  
       <div class="ic--slides">
       {% for innovation in innovations %}

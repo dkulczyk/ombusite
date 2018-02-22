@@ -4711,39 +4711,8 @@ blockquote.testimonial--quote {
       display: none; } }
 
 .ic--pager {
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px; }
-  @media (min-width: 768px) {
-    .ic--pager {
-      float: left;
-      width: 100%; } }
-  @media (min-width: 992px) {
-    .ic--pager {
-      float: left;
-      width: 100%; } }
-  @media (min-width: 1200px) {
-    .ic--pager {
-      float: left;
-      width: 83.33333%; } }
-  @media (min-width: 1200px) {
-    .ic--pager {
-      margin-left: 8.33333%; } }
+  padding-left: calc(20px + (60px / 2));
+  padding-right: calc(20px + (60px / 2)); }
   @media (max-width: 767px) {
     .ic--pager {
       margin-top: calc(20 / 18 * 1rem); } }
