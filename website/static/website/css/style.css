@@ -2010,7 +2010,7 @@ input[type="submit"] {
       display: none; } }
 
 .page-title.page-title--banner {
-  background-position: center bottom;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: calc(40 / 18 * 1rem);

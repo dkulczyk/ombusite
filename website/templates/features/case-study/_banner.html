@@ -1,6 +1,6 @@
 {% load static %}
 
-<section class="page-title page-title--banner" style="background-image: url('{% static banner_image %}');">
+<section class="page-title page-title--banner" style="background-image: url('{% static banner_image %}');{% if banner_position %} background-position: {{ banner_position }};{% endif %}">
   <div class="container">
     <div class="page-title--banner-main">
       <div class="page-title--banner-primary">
