@@ -5136,7 +5136,7 @@ blockquote.testimonial--quote {
       float: right;
       margin-bottom: 1.5rem;
       position: sticky;
-      top: 1rem; } }
+      top: calc(1rem + (60px / 2)); } }
 
 @media (min-width: 1200px) {
   .project-section--supplementary-content {

@@ -74,7 +74,7 @@
     float: right;
     margin-bottom: 1.5rem;
     position: sticky;
-    top: 1rem;
+    top: calc(1rem + (#{$border-width-resting-desktop} / 2));
   }
 }
 
