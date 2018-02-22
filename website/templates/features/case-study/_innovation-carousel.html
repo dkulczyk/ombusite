@@ -3,38 +3,40 @@
 <section class="cs-innovations">
   <div class="ic">
     <div class="ic--title-group container"><h2 class="ic--title">Our Technology Innovations</h2></div>
-    <div class="ic--pager-group container">
-      <div class="row">
-        <div class="ic--pager">
-        {% for innovation in innovations %}
-          <a id="ic-pager-item-{{forloop.counter}}" href="#ic-slide-{{forloop.counter}}" class="ic--pager-item link-disable-animation">{{innovation.title}}</a>
-        {% endfor %}
-        </div>
-      </div>
-    </div>
-    <div class="ic--slides">
-    {% for innovation in innovations %}
-      <div id="ic-slide-{{forloop.counter}}" class="ic--slide">
-        <a href="#ic-slide-{{forloop.counter}}" class="ic--slide-title link-disable-animation">{{innovation.title}}</a>
-        <div class="ic--slide-inner" style="background-image: url('{% static innovation.background %}');">
-          <div class="container">
-            <div class="row">
-              <div class="ic--slide-contents">
-                <div class="ic--slide-inner-title-mobile-group">
-                  <a href="#close" class="ic--slide-inner-title-mobile link-disable-animation">{{innovation.title}}</a>
+    <div class="ic--main">
+      <div class="ic--pager-group container">
+        <div class="row">
+          <div class="ic--pager" id="ic--pager">
+          {% for innovation in innovations %}
+            <a id="ic-pager-item-{{forloop.counter}}" href="#ic-slide-{{forloop.counter}}" class="ic--pager-item link-disable-animation">{{innovation.title}}</a>
+          {% endfor %}
+          </div>
+        </div>  
+      </div>  
+      <div class="ic--slides">
+      {% for innovation in innovations %}
+        <div id="ic-slide-{{forloop.counter}}" class="ic--slide">
+          <a href="#ic-slide-{{forloop.counter}}" class="ic--slide-title link-disable-animation">{{innovation.title}}</a>
+          <div class="ic--slide-inner" style="background-image: url('{% static innovation.background %}');">
+            <div class="container">
+              <div class="row">
+                <div class="ic--slide-contents">
+                  <div class="ic--slide-inner-title-mobile-group">
+                    <a href="#close" class="ic--slide-inner-title-mobile link-disable-animation">{{innovation.title}}</a>
+                  </div>
+                  <div class="ic--slide-text"><span>{{innovation.text|safe}}<span></div>
+                  {% if innovation.action_text %}
+                  <div class="ic--slide-actions">
+                    <a href="#video-overlay-modal" class="ic--slide-action" data-src="{% static innovation.action_video %}"><span>{{innovation.action_text}}</span></a>
+                  </div>
+                  {% endif %}
                 </div>
-                <div class="ic--slide-text"><span>{{innovation.text|safe}}<span></div>
-                {% if innovation.action_text %}
-                <div class="ic--slide-actions">
-                  <a href="#video-overlay-modal" class="ic--slide-action" data-src="{% static innovation.action_video %}"><span>{{innovation.action_text}}</span></a>
-                </div>
-                {% endif %}
               </div>
             </div>
           </div>
         </div>
+      {% endfor %}
       </div>
-    {% endfor %}
     </div>
   </div>
 </section>

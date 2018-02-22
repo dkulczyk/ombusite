@@ -4446,12 +4446,6 @@ blockquote.testimonial--quote {
   border-top: 1px solid rgba(67, 94, 116, 0.4);
   border-bottom: 1px solid rgba(67, 94, 116, 0.4);
   text-align: center; }
-  @media (max-width: 767px) {
-    .ic {
-      display: flex;
-      flex-wrap: wrap; }
-      .ic > div {
-        flex: 0 0 100%; } }
   @media (min-width: 768px) {
     .ic {
       border-bottom: none; } }
@@ -4464,11 +4458,29 @@ blockquote.testimonial--quote {
   @media (min-width: 768px) {
     .ic--title {
       font-size: calc(38 / 16 * 1em);
-      line-height: calc(50 / 38 * 1em); } }
+      line-height: calc(50 / 38 * 1em);
+      margin-bottom: calc(46.8 / 38 * 1em); } }
+
+@media (max-width: 767px) {
+  .ic--main {
+    display: flex;
+    flex-wrap: wrap; }
+    .ic--main > div {
+      flex: 0 0 100%; } }
+
+@media (min-width: 768px) {
+  .ic--main {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px); } }
 
 @media (max-width: 767px) {
   .ic--slides {
     max-width: 100%; } }
+
+@media (min-width: 768px) {
+  .ic--slides {
+    height: 100%; } }
 
 .ic--slide {
   width: 100%; }
@@ -4540,7 +4552,7 @@ blockquote.testimonial--quote {
     .ic--slide-contents {
       display: flex;
       flex-direction: column;
-      min-height: calc(710 / 18 * 1rem);
+      height: 100%;
       padding-top: calc(40 / 18 * 1rem);
       padding-bottom: calc(40 / 18 * 1rem); } }
 
@@ -4691,9 +4703,11 @@ blockquote.testimonial--quote {
     .ic--slide-action:hover, .ic--slide-action:hover:hover, .ic--slide-action:hover:focus, .ic--slide-action:focus, .ic--slide-action:focus:hover, .ic--slide-action:focus:focus {
       background-image: none; }
 
-@media (max-width: 767px) {
-  .ic--pager-group {
-    display: none; } }
+.ic--pager-group {
+  flex: 0 0 auto; }
+  @media (max-width: 767px) {
+    .ic--pager-group {
+      display: none; } }
 
 .ic--pager {
   position: relative;
@@ -4734,7 +4748,9 @@ blockquote.testimonial--quote {
       margin-top: calc(20 / 18 * 1rem); } }
   @media (min-width: 768px) {
     .ic--pager {
-      margin-bottom: calc(20 / 18 * 1rem); } }
+      flex: 1 1 auto;
+      padding-bottom: calc(20 / 18 * 1rem);
+      padding-top: calc(20 / 18 * 1rem); } }
 
 .ic--pager-item {
   background-color: transparent;
@@ -4783,6 +4799,11 @@ blockquote.testimonial--quote {
     .ic--pager-item {
       margin-left: calc(5 / 18 * 1rem);
       margin-bottom: calc(10 / 18 * 1rem); } }
+
+.ic .owl-stage-outer, .ic
+.owl-stage, .ic
+.owl-item {
+  height: 100%; }
 
 .modal {
   text-align: center; }

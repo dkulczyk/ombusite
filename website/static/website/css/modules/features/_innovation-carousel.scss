@@ -6,15 +6,6 @@
   border-bottom: 1px solid $color-rule-light;
   text-align: center;
 
-  @media (max-width: $breakpoint-tablet - 1px) {
-    display: flex;
-    flex-wrap: wrap;
-
-    > div {
-      flex: 0 0 100%;
-    }
-  }
-
   @media (min-width: $breakpoint-tablet) {
     border-bottom: none;
   }
@@ -28,13 +19,35 @@
 
   @media (min-width: $breakpoint-tablet) {
     font-size: calc(38 / 16 * 1em);
-    line-height: calc(50 / 38 * 1em); 
+    line-height: calc(50 / 38 * 1em);
+    margin-bottom: calc(46.8 / 38 * 1em);
+  }
+}
+
+.ic--main {
+  @media (max-width: $breakpoint-tablet - 1px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      flex: 0 0 100%;
+    }
+  }
+    
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - #{$border-width-resting-desktop});
   }
 }
 
 .ic--slides {
   @media (max-width: $breakpoint-tablet - 1px) {
     max-width: 100%;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    height: 100%;
   }
 }
 
@@ -89,7 +102,8 @@
   @media (min-width: $breakpoint-tablet) {
     display: flex;
     flex-direction: column;
-    min-height: calc(710 / 18 * 1rem);
+    //min-height: calc(710 / 18 * 1rem);
+    height: 100%;
     padding-top: calc(40 / 18 * 1rem);
     padding-bottom: calc(40 / 18 * 1rem);    
   }    
@@ -203,9 +217,11 @@
 }
 
 .ic--pager-group {
+  flex: 0 0 auto;
+
   @media (max-width: $breakpoint-tablet - 1px) {
     display: none;
-  }  
+  }
 }
 
 .ic--pager {
@@ -220,7 +236,9 @@
   }  
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: calc(20 / 18 * 1rem);
+    flex: 1 1 auto;
+    padding-bottom: calc(20 / 18 * 1rem);
+    padding-top: calc(20 / 18 * 1rem);
   }
 }
 
@@ -246,5 +264,15 @@
   @media (min-width: $breakpoint-tablet) {
     margin-left: calc(5 / 18 * 1rem);
     margin-bottom: calc(10 / 18 * 1rem);
+  }
+}
+
+// Set 100% height on owl items to achieve full viewport effect on tablet and above
+
+.owl-stage-outer,
+.owl-stage,
+.owl-item {
+  .ic & {
+    height: 100%;
   }
 }
