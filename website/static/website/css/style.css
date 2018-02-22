@@ -2579,9 +2579,9 @@ body.navigation--active {
   .navigation--secondary-link.navigation--secondary-link--cta > span, .navigation--secondary-link.navigation--secondary-link--cta > span:hover, .navigation--secondary-link.navigation--secondary-link--cta > span:focus {
     background-image: none; }
 
-.navigation--secondary-tel-link {
+.navigation--secondary-contact-link {
   background-image: none; }
-  .navigation--secondary-tel-link:hover, .navigation--secondary-tel-link:focus {
+  .navigation--secondary-contact-link:hover, .navigation--secondary-contact-link:focus {
     background-image: none; }
 
 @media (max-width: 991px) {
