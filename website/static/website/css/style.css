@@ -2579,6 +2579,11 @@ body.navigation--active {
   .navigation--secondary-link.navigation--secondary-link--cta > span, .navigation--secondary-link.navigation--secondary-link--cta > span:hover, .navigation--secondary-link.navigation--secondary-link--cta > span:focus {
     background-image: none; }
 
+.navigation--secondary-tel-link {
+  background-image: none; }
+  .navigation--secondary-tel-link:hover, .navigation--secondary-tel-link:focus {
+    background-image: none; }
+
 @media (max-width: 991px) {
   .navigation--background {
     display: none; } }

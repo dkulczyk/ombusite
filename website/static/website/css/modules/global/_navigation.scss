@@ -226,6 +226,15 @@ body.navigation--active {
   }
 }
 
+.navigation--secondary-tel-link {
+  background-image: none;
+
+  &:hover,
+  &:focus {
+    background-image: none;
+  }
+}
+
 .navigation--background {
   @media (max-width: $breakpoint-notebook - 1px) {
     display: none;
