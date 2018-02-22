@@ -6,14 +6,17 @@ $(function() {
       handler: function(direction) {
         $(this.element).closest('.callout--fullwidth').toggleClass('callout--fullwidth--active')
       },
-      offset: 'bottom-in-view'
+      offset: function () {
+        return this.context.innerHeight() - this.adapter.outerHeight() + 100
+      }
     });
 
     var calloutTopWaypoint = new Waypoint({
       element: $(this).find('.callout--media img'),
       handler: function(direction) {
         $(this.element).closest('.callout--fullwidth').toggleClass('callout--fullwidth--active')
-      }
+      },
+      offset: -400
     });
   });
 });
