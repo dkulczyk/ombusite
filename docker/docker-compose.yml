@@ -1,21 +1,18 @@
-version: '2'
+version: '3'
 services:
   db:
-    image: mysql:5.7
+    image: postgres:9.6
     environment:
-      MYSQL_ROOT_PASSWORD: secret
-      MYSQL_DATABASE: ombusite
-    expose:
-      - "3306"
-    ports:
-      - "3306:3306"
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: ombusite
+      POSTGRES_USER: root
   web:
     build:
       context: ./..
       dockerfile: docker/Dockerfile.devel
     ports:
       - "80:8000"
-    links:
+    depends_on:
       - db
     volumes:
       - ./..:/var/www/ombusite.local
