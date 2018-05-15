@@ -257,10 +257,10 @@ def casestudy_nwpp(request, context={}):
         },
     ]
     context['outcomes'] = [
-        { 'title': '0.84s', 'summary': 'Page loads' },
+        { 'title': '0.84<abbr title="seconds">s</abbr>', 'summary': 'Page loads' },
         { 'title': '99<sup>%</sup>', 'summary': 'Training completion' },
         { 'title': '23', 'summary': 'Fewer accidents per year'},
-        { 'title': '4 min', 'summary': 'New client onboarding' },
+        { 'title': '4 <abbr title="minutes">min</abbr>', 'summary': 'New client onboarding' },
     ]
     context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
     context['cta_text'] = 'We helped Northwest PowerPool<br>modernize their power utility training.<br><strong>What can we modernize for you?</strong>'
@@ -327,7 +327,7 @@ def casestudy_navex(request, context={}):
         },
     ]
     context['outcomes'] = [
-        { 'title': '< 4 min', 'summary': 'Landing page launch', 'filled': 'true' },
+        { 'title': '< 4 <abbr title="minutes">min</abbr>', 'summary': 'Landing page launch', 'filled': 'true' },
         { 'title': '224', 'summary': 'White papers, eBooks, webinars' },
         { 'title': '448', 'summary': 'Expert blog posts' },
         { 'title': '2', 'summary': 'Top competitors acquired' },
@@ -364,7 +364,7 @@ def casestudy_sa(request, context={}):
             'alt': 'A screenshot of a Saturday Academy class registration page',
             'browser' : {
                 'url' : 'saturdayacademy.org',
-            },            
+            },
         },
         'stat': {
             'number': '5200+',
@@ -379,7 +379,7 @@ def casestudy_sa(request, context={}):
             'alt': 'A screenshot of a Saturday Academy application review page',
             'browser' : {
                 'url' : 'saturdayacademy.org',
-            },            
+            },
         },
         'stat' : {
             'number': '$70k+',
@@ -416,7 +416,7 @@ def casestudy_sa(request, context={}):
     context['outcomes'] = [
         { 'title': 'Live', 'summary': 'Operational data for the first time' },
         { 'title': '0', 'summary': 'Registrations printed on paper' },
-        { 'title': 'Realtime', 'summary': 'Class registration with instant financial aid calculation' },
+        { 'title': 'Realtime', 'summary': 'Class registration with instant financial aid calculation', 'titleclass': ' rings--title--subtle' },
         { 'title': '23<sup>%<sup>', 'summary': 'Increased engagement on mobile' },
         { 'title': '3,184', 'summary': 'Brand new registrants' },
     ]
