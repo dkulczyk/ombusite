@@ -197,6 +197,9 @@ def casestudy_nwpp(request, context={}):
         'image': {
             'src' : 'website/images/case-studies/nwpp/intro@2x.png',
             'alt': 'A screenshot of a source.training course video activity page',
+            'browser' : {
+                'url' : 'source.training',
+            },
         },
         'skills': ["User Experience Design", "Python Application Development", "AWS Infrastructure", "Product Roadmap Planning"],
     }
@@ -205,6 +208,9 @@ def casestudy_nwpp(request, context={}):
         'image': {
             'src' : 'website/images/case-studies/nwpp/visionary@2x.png',
             'alt': 'A screenshot of the source.training course library page',
+            'browser' : {
+                'url' : 'source.training',
+            },
         },
         'stat': {
             'number': '32',
@@ -217,6 +223,9 @@ def casestudy_nwpp(request, context={}):
         'image': {
             'src' : 'website/images/case-studies/nwpp/solution@2x.png',
             'alt': 'A screenshot of a source.training course challenge question page',
+            'browser' : {
+                'url' : 'source.training',
+            },
         },
         'stat': {
             'number': '≥1200',
@@ -281,6 +290,9 @@ def casestudy_navex(request, context={}):
         'image': {
             'src' : 'website/images/case-studies/navex/intro@2x.png',
             'alt': 'A screenshot of the NAVEX Global home page',
+            'browser' : {
+                'url' : 'navexglobal.com',
+            },
         },
         'skills': ["Technology Strategy", "Enterprise CMS", "Drupal CMS Development", "Marketo Integration", "AWS Migration", "AWS Infrastructure Management"],
     }
@@ -289,6 +301,9 @@ def casestudy_navex(request, context={}):
         'image': {
             'src' : 'website/images/case-studies/navex/visionary@2x.png',
             'alt': 'A screenshot of the NAVEX Global blog',
+            'browser' : {
+                'url' : 'navexglobal.com/blog',
+            },
         },
     }
     context['solution'] = {
