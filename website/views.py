@@ -188,6 +188,7 @@ def casestudy_nwpp(request, context={}):
     context['banner_image'] = "website/images/case-studies/nwpp/hero-tinted@2x.png"
     context['banner_title'] = "Modernized Power Utility Training"
     context['banner_subtitle']  = "Learning Management System"
+    context['banner_position'] = '20% 40%'
     context['intro_text'] = "<p><span class=\"cs-intro--emphasis\">Northwest PowerPool (NWPP)</span> brings together 32 power utilities in eight US states and two Canadian provinces. OMBU designed a powerful centralized training platform so NWPP could help its member utilities keep up-to-date on mandated certifications and the latest trends, meaning greater safety, more engagement, and more benefit to the whole membership base and their customers.</p>"
     context['testimonial_image'] = "website/images/case-studies/nwpp/testimonial-logo.png"
     context['testimonial_quote'] = "“Partnering with OMBU on this evolution of our platform was one of the best decisions I’ve ever made.”"
@@ -281,6 +282,7 @@ def casestudy_navex(request, context={}):
     context['title'] = "Case study for NAVEX Global’s enterprise CMS"
     context['banner_image'] = "website/images/case-studies/navex/hero-tinted@2x.png"
     context['banner_title'] = "Enterprise CMS for the Global Ethics Leader"
+    context['banner_position'] = '85% 40%'
     context['intro_text'] = "<p><span class=\"cs-intro--emphasis\">NAVEX Global</span> was formed in 2012 to become the leader in the emerging field of Ethics & Compliance. They engaged OMBU with the mission to design and launch technology capable of not just keeping up, but accelerating, their meteoric rise.</p>"
     context['testimonial_image'] = "website/images/case-studies/navex/testimonial-logo.png"
     context['intro_testimonial_quote'] = "“Based on projects, the current uplift in high-value forms from the new pages will result in $4.6M in pipe and $1.4M in closed won business in the next 12 months!”"
@@ -360,6 +362,7 @@ def casestudy_sa(request, context={}):
     context['banner_image'] = "website/images/case-studies/sa/hero-tinted@2x.png"
     context['banner_title'] = "Engaging the Next Generation of Scientists, Engineers, and Artists"
     context['banner_subtitle'] = "Class Registration System"
+    context['banner_position'] = '50% 30%'
     context['intro_text'] = "<p><span class=\"cs-intro--emphasis\">Saturday Academy</span> strives to engage all motivated young people in hands-on, in-depth learning by connecting them to community experts as educators and mentors by offering over 850 STEAM-curriculum classes per year. But registration was cumbersome for parents and data collection was poor and incomplete.</p><p>OMBU conducted an organization-wide survey of processes, workflows and technology usage and designed and built a nonprofit Salesforce CRM and integrated website that enables families to register to classes and engage with mentors, funneling data in real time into Salesforce for instant reporting and analysis. This IT revision transformed how Saturday Academy engages with its customers.</p>"
     context['testimonial_image'] = "website/images/case-studies/sa/testimonial-logo.png"
     context['contributions'] = {
