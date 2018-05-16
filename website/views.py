@@ -344,7 +344,7 @@ def casestudy_navex(request, context={}):
         },
     ]
     context['outcomes'] = [
-        { 'title': '< 4 <abbr title="minutes">min</abbr>', 'summary': 'Landing page launch', 'filled': 'true' },
+        { 'title': '< 4 <abbr title="minutes">min</abbr>', 'summary': 'Landing page launch' },
         { 'title': '224', 'summary': 'White papers, eBooks, webinars' },
         { 'title': '448', 'summary': 'Expert blog posts' },
         { 'title': '2', 'summary': 'Top competitors acquired' },
