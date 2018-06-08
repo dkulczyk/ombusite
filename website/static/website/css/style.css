@@ -3333,7 +3333,7 @@ body.navigation--active {
   left: 10px;
   width: calc(100% - 20px); }
 
-.slider--slide--browser-mobile svg {
+.slider--slide--browser-mobile > svg {
   left: 0;
   right: 0;
   width: 100%; }
