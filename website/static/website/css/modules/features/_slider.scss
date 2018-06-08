@@ -84,6 +84,42 @@ $slider-height-mobile: 190px;
         }
       }
     }
+
+    &.slider--slide--browser,
+    &.slider--slide--browser-mobile {
+      display: inline-block;
+      width: auto;
+    }
+
+
+    &.slider--slide--browser {
+      box-shadow: none;
+    }
+
+    &.slider--slide--browser-mobile {
+      box-shadow: none;
+    }    
+  }
+
+  @media (min-width: $breakpoint-smartphone-landscape) and (max-width: $breakpoint-tablet - 1px) {
+    &.slider--slide--has-two-images { 
+      .slider--slide-image {
+        height: $slider-height-mobile !important;
+
+        &:first-child,
+        &:last-child {
+          width: calc(50% - 0.5rem);
+        }
+        
+        .image-overlay--link {
+          height: 100%;
+        }
+
+        img {
+          height: 100% !important;
+        }
+      }
+    }
   }
 
   @media (min-width: $breakpoint-tablet) {
