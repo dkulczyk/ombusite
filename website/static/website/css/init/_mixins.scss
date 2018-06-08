@@ -208,7 +208,7 @@ $browser-chrome-border-color: rgb(206, 206, 206);
     width: calc(100% - 62px;)
   }
 
-  svg {
+  > svg {
     height: $browser-chrome-height;
     left: 12px;
     position: absolute;

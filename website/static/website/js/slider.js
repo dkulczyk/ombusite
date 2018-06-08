@@ -24,12 +24,14 @@ $(function() {
     responsive : {
       // breakpoint from 0 up
       0 : {
-        items: 1
+        items: 1,
+        margin: 20
       },
       // breakpoint from 768 up
       768 : {
         autoWidth:true,
-        items: 4
+        items: 4,
+        margin: 0
       }
     } 
   });    

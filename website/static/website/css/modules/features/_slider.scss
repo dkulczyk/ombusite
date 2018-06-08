@@ -5,6 +5,17 @@ $slider-height-mobile: 190px;
 .slider {
   height: $slider-height-mobile;
 
+  // Override for owl carousel bug that disables dots
+  .owl-dots.disabled {
+    display: block;
+  }
+
+  @media (max-width: $breakpoint-tablet - 1px) {
+    .owl-item {
+      text-align: center;
+    }
+  }
+
   @media (min-width: $breakpoint-tablet) {
     height: $slider-height-desktop;
   }
@@ -44,15 +55,7 @@ $slider-height-mobile: 190px;
     padding: $gutter-side-tile;
   }
 
-  &.slider--slide--browser {
-    @include browser-chrome();
-  }
-
-  &.slider--slide--browser-mobile {
-    @include browser-chrome-mobile();
-  }
-
-  @media (max-width: $breakpoint-tablet - 1px) {
+  @media (max-width: $breakpoint-tablet - 1px) { 
 
     img {
       object-fit: cover;
@@ -85,20 +88,10 @@ $slider-height-mobile: 190px;
       }
     }
 
-    &.slider--slide--browser,
-    &.slider--slide--browser-mobile {
+    .image-overlay--link {
       display: inline-block;
       width: auto;
     }
-
-
-    &.slider--slide--browser {
-      box-shadow: none;
-    }
-
-    &.slider--slide--browser-mobile {
-      box-shadow: none;
-    }    
   }
 
   @media (min-width: $breakpoint-smartphone-landscape) and (max-width: $breakpoint-tablet - 1px) {
@@ -173,6 +166,28 @@ $slider-height-mobile: 190px;
       }
     }
   } 
+}
+
+.slider--slide--browser {
+  @include browser-chrome();
+}
+
+.slider--slide--browser-mobile {
+  @include browser-chrome-mobile();
+}
+
+.slider--slide--browser,
+.slider--slide--browser-mobile {
+  height: $slider-height-mobile;
+
+  @media (max-width: $breakpoint-tablet - 1px) {
+    display: inline-block;
+    width: auto;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    height: $slider-height-desktop;
+  }
 }
 
 .slide--text {

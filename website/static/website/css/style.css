@@ -3208,6 +3208,11 @@ body.navigation--active {
 
 .slider {
   height: 190px; }
+  .slider .owl-dots.disabled {
+    display: block; }
+  @media (max-width: 767px) {
+    .slider .owl-item {
+      text-align: center; } }
   @media (min-width: 768px) {
     .slider {
       height: 360px; } }
@@ -3235,38 +3240,6 @@ body.navigation--active {
     height: 360px;
     justify-content: space-around;
     padding: 20px; }
-  .slider--slide.slider--slide--browser {
-    border: 1px solid #cecece;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-    padding-top: 29px;
-    position: relative; }
-    .slider--slide.slider--slide--browser:after {
-      border: 1px solid #cecece;
-      border-radius: 2px;
-      content: "";
-      display: block;
-      height: 17px;
-      left: 52px;
-      position: absolute;
-      top: 6px;
-      width: calc(100% - 62px); }
-    .slider--slide.slider--slide--browser svg {
-      height: 17px;
-      left: 12px;
-      position: absolute;
-      top: 6px; }
-    .slider--slide.slider--slide--browser img {
-      border-top: 1px solid #cecece;
-      border-radius: 0 0 4px 4px; }
-  .slider--slide.slider--slide--browser-mobile:after {
-    left: 10px;
-    width: calc(100% - 20px); }
-  .slider--slide.slider--slide--browser-mobile svg {
-    left: 0;
-    right: 0;
-    width: 100%; }
   @media (max-width: 767px) {
     .slider--slide img {
       object-fit: cover; }
@@ -3284,13 +3257,9 @@ body.navigation--active {
         height: calc(190px / 2) !important;
         object-fit: cover;
         width: 100%; }
-    .slider--slide.slider--slide--browser, .slider--slide.slider--slide--browser-mobile {
+    .slider--slide .image-overlay--link {
       display: inline-block;
-      width: auto; }
-    .slider--slide.slider--slide--browser {
-      box-shadow: none; }
-    .slider--slide.slider--slide--browser-mobile {
-      box-shadow: none; } }
+      width: auto; } }
   @media (min-width: 400px) and (max-width: 767px) {
     .slider--slide.slider--slide--has-two-images .slider--slide-image {
       height: 190px !important; }
@@ -3333,6 +3302,54 @@ body.navigation--active {
           height: 100%;
           width: auto;
           vertical-align: middle; } }
+
+.slider--slide--browser {
+  border: 1px solid #cecece;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  padding-top: 29px;
+  position: relative; }
+  .slider--slide--browser:after {
+    border: 1px solid #cecece;
+    border-radius: 2px;
+    content: "";
+    display: block;
+    height: 17px;
+    left: 52px;
+    position: absolute;
+    top: 6px;
+    width: calc(100% - 62px); }
+  .slider--slide--browser > svg {
+    height: 17px;
+    left: 12px;
+    position: absolute;
+    top: 6px; }
+  .slider--slide--browser img {
+    border-top: 1px solid #cecece;
+    border-radius: 0 0 4px 4px; }
+
+.slider--slide--browser-mobile:after {
+  left: 10px;
+  width: calc(100% - 20px); }
+
+.slider--slide--browser-mobile svg {
+  left: 0;
+  right: 0;
+  width: 100%; }
+
+.slider--slide--browser,
+.slider--slide--browser-mobile {
+  height: 190px; }
+  @media (max-width: 767px) {
+    .slider--slide--browser,
+    .slider--slide--browser-mobile {
+      display: inline-block;
+      width: auto; } }
+  @media (min-width: 768px) {
+    .slider--slide--browser,
+    .slider--slide--browser-mobile {
+      height: 360px; } }
 
 .slide--text {
   color: white;
@@ -4920,7 +4937,8 @@ blockquote.testimonial--quote {
   text-align: center;
   top: 0;
   transition: all 0.2s ease;
-  visibility: hidden; }
+  visibility: hidden;
+  z-index: 3; }
   .image-overlay--link.image-overlay--link--gallery:hover .image-overlay--prompt-wrapper,
   .image-overlay--link.image-overlay--link--gallery:focus .image-overlay--prompt-wrapper,
   .image-overlay--link.image-overlay--link--gallery:active .image-overlay--prompt-wrapper {
@@ -5687,7 +5705,7 @@ blockquote.testimonial--quote {
     position: absolute;
     top: 6px;
     width: calc(100% - 62px); }
-  .cs-contributions--media-browser svg {
+  .cs-contributions--media-browser > svg {
     height: 17px;
     left: 12px;
     position: absolute;
@@ -5740,7 +5758,7 @@ blockquote.testimonial--quote {
     position: absolute;
     top: 6px;
     width: calc(100% - 62px); }
-  .cs-main--media--visionary-browser svg {
+  .cs-main--media--visionary-browser > svg {
     height: 17px;
     left: 12px;
     position: absolute;
@@ -5773,7 +5791,7 @@ blockquote.testimonial--quote {
     position: absolute;
     top: 6px;
     width: calc(100% - 62px); }
-  .cs-main--media--solution-browser svg {
+  .cs-main--media--solution-browser > svg {
     height: 17px;
     left: 12px;
     position: absolute;
