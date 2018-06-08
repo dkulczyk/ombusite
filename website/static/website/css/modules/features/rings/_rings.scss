@@ -375,8 +375,10 @@
 
   abbr,
   sup {
+    border: none;
     font-size: calc(48 / 60 * 1em);
     line-height: 1em;
+    text-decoration: none;
     vertical-align: baseline;
   }
 
