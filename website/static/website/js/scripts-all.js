@@ -489,7 +489,7 @@ $(function() {
 $(function() {
   $('.rings:not(.rings--delayed)').addClass('animation-triggered');
 
-  $('.rings.rings--delayed').each(function( index, element ) {
+  $('.rings.rings--delayed.rings--vertical').each(function( index, element ) {
     var waypoint = new Waypoint({
       element: $(this),
       handler: function(direction) {
@@ -498,6 +498,16 @@ $(function() {
       offset: 400
     });
   });
+
+  $('.rings.rings--delayed:not(.rings--vertical)').each(function( index, element ) {
+    var waypoint = new Waypoint({
+      element: $(this),
+      handler: function(direction) {
+        $(this.element).addClass('animation-triggered')
+      },
+      offset: 'bottom-in-view'
+    });
+  });  
 
   $( document ).ready(function() {
     Waypoint.refreshAll();
