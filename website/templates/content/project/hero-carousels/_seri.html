@@ -4,8 +4,14 @@
   <div class="slider--slide slider--slide--has-shadow">
     <a href="#image-overlay-modal" class="image-overlay--link image-overlay--link--gallery"><img src="{% static 'website/images/slider/seri/01@2x.png' %}" alt="Screenshot of SERI website"><span class="image-overlay--prompt-wrapper"><span class="image-overlay--prompt">{% include 'svg/expand.svg.html' %}<span>View</span></span></span></a>
   </div>
-  <div class="slider--slide slider--slide--has-shadow">
-    <a href="#image-overlay-modal" class="image-overlay--link image-overlay--link--gallery"><img src="{% static 'website/images/slider/seri/02@2x.png' %}" alt="Screenshot of SERI website"><span class="image-overlay--prompt-wrapper"><span class="image-overlay--prompt">{% include 'svg/expand.svg.html' %}<span>View</span></span></span></a>
+  <div class="slider--slide">
+    <a href="#image-overlay-modal" class="image-overlay--link image-overlay--link--gallery">
+      <div class="slider--slide--browser">
+        {% include 'svg/browser.svg.html' with url='sustainableelectronics.org' %}
+        <img src="{% static 'website/images/slider/seri/02@2x.png' %}" alt="Screenshot of SERI website">
+        <span class="image-overlay--prompt-wrapper"><span class="image-overlay--prompt">{% include 'svg/expand.svg.html' %}<span>View</span></span></span>
+      </div>
+    </a>
   </div>
   <div class="slider--slide slider--slide--has-two-images slider--slide--has-shadow">
     <div class="slider--slide-image">
