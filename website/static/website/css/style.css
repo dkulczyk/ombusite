@@ -2170,6 +2170,7 @@ input[type="submit"] {
   @media (min-width: 992px) {
     .page-title--secondary {
       flex: 0 0 auto;
+      margin-bottom: calc(110 / 18 * 1em);
       padding-left: calc(20 / 18 * 1em); } }
 
 .page-title--callout-description {

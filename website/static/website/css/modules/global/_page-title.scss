@@ -264,6 +264,7 @@
 
   @media (min-width: $breakpoint-notebook) {
     flex: 0 0 auto;
+    margin-bottom: calc(110 / 18 * 1em);
     padding-left: calc(20 / 18 * 1em);
   }  
 }
