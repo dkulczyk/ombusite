@@ -1,0 +1,117 @@
+.careers--openings {
+  @include section-bg();
+}
+
+.careers--openings-inner-wrapper {
+  @include make-row();
+}
+
+.careers--openings-inner {
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-md-column(12);
+  @include make-lg-column(10);
+  @include make-lg-column-offset(1);
+}
+
+.careers--openings-title {
+  margin-bottom: calc(46 / 30 * 1em);
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    padding-left: calc(15 / 18 * 1rem);
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(32 / 18 * 1em);
+    line-height: calc(44 / 32 * 1em);
+    margin-bottom: calc(66 / 32 * 1em);
+    margin-top: calc(80 / 32 * 1em);
+  }
+}
+
+.careers--openings-grid {
+  margin-bottom: calc(110 / 18 * 1rem);
+
+  @media (min-width: $breakpoint-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-left: calc(-25 / 18 * 1rem);
+    margin-right: calc(-25 / 18 * 1rem);
+    margin-bottom: calc(100 / 18 * 1rem);
+  }
+}
+
+.careers--opening {
+  margin-bottom: calc(40 / 16 * 1em);
+  
+  @media (min-width: $breakpoint-tablet) {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-bottom: calc(20 / 18 * 1em);
+    width: 33%;
+  }
+}
+
+.careers--opening.careers--opening--you {
+  padding: 2px;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;    
+  }
+
+  &:before {
+    background-image: linear-gradient(to left, $color-primary, $color-secondary);
+  }
+
+  &:after {
+    border: 2px dashed $color-gray-xtra-light;
+  }
+}
+
+.career--opening-inner {
+  background-color: $color-gray-xtra-light;
+  padding: calc(8 / 18 * 1rem) calc(13 / 18 * 1rem) calc(11 / 18 * 1rem);
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: $breakpoint-notebook) {
+    padding: calc(18 / 18 * 1rem) calc(23 / 18 * 1rem) calc(23 / 18 * 1rem);
+  }
+}
+
+.careers--opening-title {
+  font-size: calc(22 / 16 * 1em);
+  line-height: calc(33 / 22 * 1em);  
+  margin-bottom: calc(12 / 22 * 1em);
+  margin-top: 0;
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(22 / 18 * 1em);
+    margin-bottom: calc(17 / 22 * 1em);
+  }
+}
+
+.careers--opening-summary {
+  margin-bottom: 1em;
+
+  @media (min-width: $breakpoint-notebook) {
+    margin-bottom: calc(21 / 18 * 1em);
+  }
+}
+
+.careers--opening-cta {
+  @include btn-tertiary();
+}
