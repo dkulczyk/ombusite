@@ -33,6 +33,10 @@ def careers(request, context={}):
     context['title'] = "Web design and development careers in Portland, Oregon"
     return render(request, 'careers.html', context)
 
+def pagenotfound(request, context={}):
+    context['title'] = "Page not found"
+    return render(request, '404.html', context)    
+
 # Work / Projects
 # ##############################################################################
 

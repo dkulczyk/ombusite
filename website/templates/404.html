@@ -1,0 +1,28 @@
+{% extends 'theme_base.html' %}
+
+{% block title %}{{title}}{% endblock title %}
+
+{% block content %}
+  <main>
+    <div class="container">
+      <section class="page-title">
+        <h1 class="page-title--title page-title--title--contact">Page not found</h1>
+      </section>
+      <section class="error--section">
+        <div class="error--primary">
+          <div class="error--description">We apologize for this inconvenience.  Perhaps the content you were looking for can be found in one of the following areas?</div>
+          <ul class="error--menu">
+            <li><a class="error--link" href="/">Home</a></li>
+            <li><a class="error--link" href="{% url 'work' %}">Work</a></li>
+            <li><a class="error--link" href="{% url 'services' %}">Services</a></li>
+          </ul>
+        </div>
+        <div class="error--secondary">
+          <h3 class="error--secondary-title">We’re on the case</h3>
+          <div class="error--secondary-description">We’ve already been automatically notified of this error and appreciate your exposing it.  We’ll fix it.  Have questions in the meantime?  Please get in touch, coffee’s on us.</div>
+          <a href="mailto:business@ombuweb.com" class="error--secondary-link">Get in Touch</a>
+        </div>
+      </section>      
+    </div>
+  </main>
+{% endblock content %}

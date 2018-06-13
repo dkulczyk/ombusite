@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^services$', website.views.services, name='services'),
     url(r'^contact$', website.views.contact, name='contact'),
     url(r'^careers$', website.views.careers, name='careers'),
+    url(r'^404$', website.views.pagenotfound, name='404'),
 
     # Projects
     url(r'^work/occ$', website.views.project_occ, name='project-occ'),
