@@ -94,6 +94,17 @@
   }
 }
 
+.page-title--title.page-title--title--error {
+  margin-bottom: calc(46 / 36 * 1em);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(46 / 18 * 1em);
+    line-height: calc(60 / 46 * 1em);
+    margin-bottom: calc(32 / 26 * 1em);
+    text-align: left;
+  }
+}
+
 .page-title--subtitle {
   font-family: $font-halisr-medium;
   font-size: calc(19 / 16 * 1em);
