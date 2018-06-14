@@ -217,11 +217,11 @@ def casestudy_nwpp(request, context={}):
                 'url' : 'source.training',
             },
         },
-        'stat': {
-            'number': '32',
-            'label': 'Member<br>Utilities',
-            'summary': 'Why member utilities are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar extraterrestrial alchemy.',
-        },
+        # 'stat': {
+        #     'number': '32',
+        #     'label': 'Member<br>Utilities',
+        #     'summary': 'Why member utilities are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar extraterrestrial alchemy.',
+        # },
     }
     context['solution'] = {
         'body': '<p>We built a modern, fun training platform targeted specifically for training utility workers, with integrated videos and interactive quizzes.</p><p>Powering this platform, we built a powerful yet easy-to-use Learning Management System (LMS) that lets the NWPP content team quickly put together new courses for their members in minutes.</p><p>Things like 3D models, skilled trainers, and fun easter eggs like blooper reels and jokes make the whole experience engaging</p><p>This platform integrates directly with industry-standard data systems, like the LRS/XAPI datastore and exports for federal compliance systems.</p><p>Ultimately, the most important feature is the fun and informative training materials that mean our client can increase education in an industry where knowledge and safety are critical.</p>',
@@ -232,11 +232,11 @@ def casestudy_nwpp(request, context={}):
                 'url' : 'source.training',
             },
         },
-        'stat': {
-            'number': '≥1200',
-            'label': 'Utility<br>Operators<br>Served',
-            'summary': 'Why utility operators are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar alchemy.',
-        }
+        # 'stat': {
+        #     'number': '≥1200',
+        #     'label': 'Utility<br>Operators<br>Served',
+        #     'summary': 'Why utility operators are important and how they benefit directly or indirectly from modernized power utility training motes of rock and gas the ash of cosmic stellar alchemy.',
+        # }
     }
     context['innovations'] = [
         {
@@ -388,11 +388,11 @@ def casestudy_sa(request, context={}):
                 'url' : 'saturdayacademy.org',
             },
         },
-        'stat': {
-            'number': '5200+',
-            'label': 'Registrations<br>per Year',
-            'summary': 'Why this metric is important and how Saturday Academy benefits directly or indirectly from it motes of rock and gas the ash of cosmic extraterrestrial alchemy bearable only through love.',
-        },
+        # 'stat': {
+        #     'number': '5200+',
+        #     'label': 'Registrations<br>per Year',
+        #     'summary': 'Why this metric is important and how Saturday Academy benefits directly or indirectly from it motes of rock and gas the ash of cosmic extraterrestrial alchemy bearable only through love.',
+        # },
     }
     context['solution'] = {
         'body': '<p>OMBU implemented a rich CRM to serve as the canonical repository of data about families, classes, registrations, internships, and donors, built on Salesforce. By building on top of Salesforce, we were able to provide Saturday Academy with a leading CRM database platform, including using add-ons such as the Nonprofit Success Pack (NPSP) and data management tools. Additionally, Saturday Academy benefits from the knowledge and expertise of the huge number of other nonprofits who use Salesforce to run their organizations.</p><p>To reach parents, students, instructors, and mentors, we designed and built a fun, easy-to-use enterprise CMS website. Parents can set up their household information online, and register their children for any of Saturday Academy’s many classes quickly and easily, and even be granted auto-calculated financial aid to help make the classes accessible to all.</p><p>Saturday Academy’s unique internship program, Apprenticeships in Science and Engineering (ASE), pairs teens with industry mentors for a summer of on-the-job learning. Hundreds of motivated students apply for the program, so we designed a process that makes it easy to apply, as well as a portal for the mentors to rank applicants and a system for final approval and communication with selected interns.</p><p>While we’re proud of transforming Saturday Academy’s online presence and making everything smooth and easy for parents and students, the most transformative part of the solution we built for Saturday Academy is the real-time data flow and the accompanying reporting within the CRM. Leadership can now ask questions and gain insights instantly, such as seeing breakdown of financial aid relative to family demographics, intelligence that previously would either have days of data processing or have been entirely impossible.</p>',
@@ -403,11 +403,11 @@ def casestudy_sa(request, context={}):
                 'url' : 'saturdayacademy.org',
             },
         },
-        'stat' : {
-            'number': '$70k+',
-            'label': 'Financial Aid<br>Automatically<br>Granted per Year',
-            'summary': 'Why this metric is important and how Saturday Academy benefits directly or indirectly from it motes of rock and gas the ash of cosmic extraterrestrial alchemy bearable only through love.',
-        },
+        # 'stat' : {
+        #     'number': '$70k+',
+        #     'label': 'Financial Aid<br>Automatically<br>Granted per Year',
+        #     'summary': 'Why this metric is important and how Saturday Academy benefits directly or indirectly from it motes of rock and gas the ash of cosmic extraterrestrial alchemy bearable only through love.',
+        # },
     }
     context['innovations'] = [
         {
