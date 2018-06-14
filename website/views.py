@@ -35,7 +35,7 @@ def careers(request, context={}):
 
 def pagenotfound(request, context={}):
     context['title'] = "Page not found"
-    return render(request, '404.html', context)    
+    return render(request, '404.html', context)
 
 # Work / Projects
 # ##############################################################################
@@ -189,7 +189,7 @@ def project_uo(request, context={}):
 def casestudy_nwpp(request, context={}):
     context['client'] = "Northwest PowerPool"
     context['title'] = "Case study for Northwest Power Pool’s learning management system"
-    context['banner_image'] = "website/images/case-studies/nwpp/hero-tinted@2x.png"
+    context['banner_image'] = "website/images/case-studies/nwpp/hero-tinted@2x.jpg"
     context['banner_title'] = "Modernized Power Utility Training"
     context['banner_subtitle']  = "Learning Management System"
     context['banner_position'] = '20% 40%'
@@ -284,7 +284,7 @@ def casestudy_nwpp(request, context={}):
 def casestudy_navex(request, context={}):
     context['client'] = "NAVEX Global"
     context['title'] = "Case study for NAVEX Global’s enterprise CMS"
-    context['banner_image'] = "website/images/case-studies/navex/hero-tinted@2x.png"
+    context['banner_image'] = "website/images/case-studies/navex/hero-tinted@2x.jpg"
     context['banner_title'] = "Enterprise CMS for the Global Ethics Leader"
     context['banner_position'] = '85% 40%'
     context['intro_text'] = "<p><span class=\"cs-intro--emphasis\">NAVEX Global</span> was formed in 2012 to become the leader in the emerging field of Ethics & Compliance. They engaged OMBU with the mission to design and launch technology capable of not just keeping up, but accelerating, their meteoric rise.</p>"
@@ -363,7 +363,7 @@ def casestudy_navex(request, context={}):
 def casestudy_sa(request, context={}):
     context['client'] = "Saturday Academy"
     context['title'] = "Case study for Saturday Academy’s class registration system"
-    context['banner_image'] = "website/images/case-studies/sa/hero-tinted@2x.png"
+    context['banner_image'] = "website/images/case-studies/sa/hero-tinted@2x.jpg"
     context['banner_title'] = "Engaging the Next Generation of Scientists, Engineers, and Artists"
     context['banner_subtitle'] = "Class Registration System"
     context['banner_position'] = '50% 30%'
