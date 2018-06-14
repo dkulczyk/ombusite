@@ -1,0 +1,23 @@
+.contact-page--map-section {
+
+}
+
+.contact-page--map-link {
+  display: block;
+}
+
+.contact-page--map-image {
+
+}
+
+.contact-page--map-image.contact-page--map-image--desktop {
+  @media (max-width: $breakpoint-tablet - 1px) {
+    display: none;
+  }
+}
+
+.contact-page--map-image.contact-page--map-image--mobile {
+  @media (min-width: $breakpoint-tablet) {
+    display: none;
+  }
+}

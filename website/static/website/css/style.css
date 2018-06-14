@@ -5643,6 +5643,17 @@ blockquote.testimonial--quote {
     color: #3eb2c6;
     text-decoration: none; }
 
+.contact-page--map-link {
+  display: block; }
+
+@media (max-width: 767px) {
+  .contact-page--map-image.contact-page--map-image--desktop {
+    display: none; } }
+
+@media (min-width: 768px) {
+  .contact-page--map-image.contact-page--map-image--mobile {
+    display: none; } }
+
 .cs-intro--lead,
 .cs-testimonial--content {
   position: relative;
