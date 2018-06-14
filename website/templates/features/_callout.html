@@ -52,7 +52,10 @@
     {% if fullwidth %}
       <a href="{% url 'case-study-sa' %}"><img src="{% static 'website/images/case-studies/sa/hero@2x.jpg' %}" alt="Saturday Academy screenshot"></a>
     {% else %}
-      <img src="{% static 'website/images/callout/callout_sa-1.png' %}" alt="Saturday Academy screenshot">
+      <div class="slider--slide slider--slide--browser">
+        {% include 'svg/browser.svg.html' with url='saturdayacademy.org' %}
+        <img src="{% static 'website/images/case-studies/sa/callout@1x.jpg' %}" alt="Saturday Academy screenshot">
+      </div>
     {% endif %}
   </aside>
 </div>
