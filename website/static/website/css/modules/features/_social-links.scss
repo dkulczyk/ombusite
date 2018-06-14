@@ -22,6 +22,11 @@
       vertical-align: middle;
     }
   }
+
+  .contact-page--social & {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .social-links--item {
@@ -97,6 +102,25 @@
     &:active {
       svg * {
         fill: $color-white;
+      }
+    }
+  }
+
+  .contact-page--social & {
+    svg {
+      height: 42px;
+      width: 42px;
+      
+      * {
+        fill: $color-primary;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      svg * {
+        fill: darken($color-primary, 10%);
       }
     }
   }

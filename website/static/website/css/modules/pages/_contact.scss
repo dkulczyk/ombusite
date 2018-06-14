@@ -1,3 +1,64 @@
+.contact-page--info {
+  margin-bottom: calc(40 / 18 * 1rem);
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    text-align: center;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    display: flex;
+    margin-bottom: calc(112 / 18 * 1rem);
+  }
+}
+
+.contact-page--info-group-primary {
+
+  @media (max-width: $breakpoint-notebook - 1px) {
+    flex: 0 0 auto;
+    margin-bottom: calc(32 / 18 * 1rem);
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    order: 2;
+  }
+}
+
+.contact-page--contact-link {
+  color: $color-primary;
+  display: inline-block;
+  font-size: calc(20 / 16 * 1em);
+  line-height: 2em;
+  @include default-link-off();
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(28 / 18 * 1em);
+    line-height: calc(58 / 28 * 1em);    
+  }
+}
+
+.contact-page--social {
+  margin-top: calc(20 / 18 * 1rem);
+}
+
+.contact-page--info-group-secondary {
+  @include make-lg-column-offset(1);
+
+  @media (min-width: $breakpoint-notebook) {
+    flex: 0 0 auto;
+    width: calc(480 / 18 * 1rem);
+  }
+}
+
+.contact-page--address {
+  font-size: calc(20 / 16 * 1em);
+  line-height: 2em;
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(28 / 18 * 1em);
+    line-height: calc(58 / 28 * 1em);
+  }
+}
+
 .contact-page--map-section {
 
 }

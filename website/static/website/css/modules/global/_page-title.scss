@@ -105,6 +105,18 @@
   }
 }
 
+.page-title--title.page-title--title--contact {
+  margin-bottom: calc(40 / 36 * 1em);
+  @include make-lg-column-offset(1);
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(46 / 18 * 1em);
+    line-height: calc(69 / 46 * 1em);
+    margin-bottom: calc(18 / 46 * 1em);
+    text-align: left;
+  }
+}
+
 .page-title--subtitle {
   font-family: $font-halisr-medium;
   font-size: calc(19 / 16 * 1em);
