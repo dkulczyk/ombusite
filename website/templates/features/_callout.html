@@ -13,7 +13,10 @@
     {% if fullwidth %}
       <a href="{% url 'case-study-navex' %}"><img src="{% static 'website/images/case-studies/navex/hero@2x.jpg' %}" alt="NAVEX Global screenshot"></a>
     {% else %}
-      <img src="{% static 'website/images/callout/callout_navex-1.png' %}" alt="NAVEX Global screenshot">
+      <div class="slider--slide slider--slide--browser">
+        {% include 'svg/browser.svg.html' with url='navexglobal.com' %}
+        <img src="{% static 'website/images/case-studies/navex/callout@1x.jpg' %}" alt="NAVEX Global screenshot">
+      </div>
     {% endif %}
   </aside>
 </div>
