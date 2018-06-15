@@ -1125,6 +1125,12 @@ hr {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'source_code_proregular';
+  src: url("../fonts/sourcecodepro/sourcecodepro-regular-webfont.woff2") format("woff2"), url("../fonts/sourcecodepro/sourcecodepro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 * {
   box-sizing: border-box; }
 
@@ -5191,6 +5197,9 @@ blockquote.testimonial--quote {
   left: 0;
   right: 0;
   width: 100%; }
+
+.browser-chrome--text {
+  font-family: "source_code_proregular", monospace; }
 
 .work-projects {
   background-color: #f5f7f8;
