@@ -3288,16 +3288,13 @@ body.navigation--active {
   background-color: rgba(67, 94, 116, 0.2);
   height: 0;
   margin-bottom: calc(20 / 18 * 1rem);
-  padding-bottom: 46%;
+  padding-bottom: 62.5%;
   position: relative; }
   .project-card--media img {
     object-fit: cover;
     height: 100%;
     position: absolute;
     width: 100%; }
-  @media (min-width: 768px) {
-    .project-card--media {
-      padding-bottom: 66.666%; } }
 
 .project-card--title {
   color: #435e74;

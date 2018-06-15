@@ -22,7 +22,7 @@
   background-color: rgba($color-body, 0.2);
   height: 0;
   margin-bottom: calc(20 / 18 * 1rem);
-  padding-bottom: 46%;
+  padding-bottom: 62.5%;
   position: relative;
 
   img {
@@ -30,10 +30,6 @@
     height: 100%;
     position: absolute;
     width: 100%;
-  }
-
-  @media (min-width: $breakpoint-tablet) {
-    padding-bottom: 66.666%;
   }
 }
 
