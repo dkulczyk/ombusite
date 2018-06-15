@@ -13,7 +13,7 @@
     {% if fullwidth %}
       <a href="{% url 'case-study-navex' %}"><img src="{% static 'website/images/case-studies/navex/hero@2x.jpg' %}" alt="NAVEX Global screenshot"></a>
     {% else %}
-      <div class="slider--slide slider--slide--browser">
+      <div class="browser-chrome">
         {% include 'svg/browser.svg.html' with url='navexglobal.com' %}
         <img src="{% static 'website/images/case-studies/navex/callout@1x.jpg' %}" alt="NAVEX Global screenshot">
       </div>
@@ -52,7 +52,7 @@
     {% if fullwidth %}
       <a href="{% url 'case-study-sa' %}"><img src="{% static 'website/images/case-studies/sa/hero@2x.jpg' %}" alt="Saturday Academy screenshot"></a>
     {% else %}
-      <div class="slider--slide slider--slide--browser">
+      <div class="browser-chrome">
         {% include 'svg/browser.svg.html' with url='saturdayacademy.org' %}
         <img src="{% static 'website/images/case-studies/sa/callout@1x.jpg' %}" alt="Saturday Academy screenshot">
       </div>

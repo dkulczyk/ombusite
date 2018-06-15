@@ -1,0 +1,7 @@
+.browser-chrome {
+  @include browser-chrome();
+}
+
+.browser-chrome--mobile {
+  @include browser-chrome-mobile();
+}

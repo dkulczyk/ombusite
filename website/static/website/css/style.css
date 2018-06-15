@@ -5148,6 +5148,41 @@ blockquote.testimonial--quote {
 .widow-prevention {
   white-space: nowrap; }
 
+.browser-chrome {
+  border: 1px solid #cecece;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  padding-top: 29px;
+  position: relative; }
+  .browser-chrome:after {
+    border: 1px solid #cecece;
+    border-radius: 2px;
+    content: "";
+    display: block;
+    height: 17px;
+    left: 52px;
+    position: absolute;
+    top: 6px;
+    width: calc(100% - 62px); }
+  .browser-chrome > svg {
+    height: 17px;
+    left: 12px;
+    position: absolute;
+    top: 6px; }
+  .browser-chrome img {
+    border-top: 1px solid #cecece;
+    border-radius: 0 0 4px 4px; }
+
+.browser-chrome--mobile:after {
+  left: 10px;
+  width: calc(100% - 20px); }
+
+.browser-chrome--mobile > svg {
+  left: 0;
+  right: 0;
+  width: 100%; }
+
 .work-projects {
   background-color: #f5f7f8;
   border-top: 1px solid #d1d8dd;
