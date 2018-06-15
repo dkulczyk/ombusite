@@ -2509,8 +2509,8 @@ input[type="submit"] {
         fill-opacity: 0.05;
         stroke-width: 0px; } }
 
-body.navigation--active {
-  max-height: 100vh;
+html.navigation--active, html.navigation--active body {
+  max-height: 1px;
   overflow: hidden; }
 
 .navigation--label,

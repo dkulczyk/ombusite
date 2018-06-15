@@ -1,8 +1,10 @@
 // Navigation
 
-body.navigation--active {
-  max-height: 100vh;
-  overflow: hidden;
+html.navigation--active {
+  &,body {
+    max-height: 1px;
+    overflow: hidden;
+  }
 }
 
 .navigation--label,
