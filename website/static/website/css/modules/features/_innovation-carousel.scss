@@ -4,6 +4,7 @@
   background-color: $color-gray-xtra-light;
   border-top: 1px solid $color-rule-light;
   border-bottom: 1px solid $color-rule-light;
+  overflow: hidden;
   text-align: center;
 
   @media (min-width: $breakpoint-tablet) {
