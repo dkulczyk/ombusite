@@ -67,24 +67,55 @@ $slider-height-mobile: 190px;
     }
 
     &.slider--slide--has-two-images {
+      position: relative;
 
       .slider--slide-image {
-        height: calc(#{$slider-height-mobile} / 2) !important;
+        height: auto !important;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(50% - 8px);
 
         &:first-child {
-          float: left;
-          width: 50%;
+          left: 25%;
         }
 
         &:last-child {
-          float: right;
-          width: calc(50% + 0.1px);
+          left: 75%;
         }
 
         img {
-          height: calc(#{$slider-height-mobile} / 2) !important;
-          object-fit: cover;
+          height: auto !important;
+          object-fit: contain;
+          width: auto;
+        }
+      }
+
+      &.slider--slide--has-two-images-landscape {
+        .slider--slide-image {
+          height: calc(#{$slider-height-mobile} / 2 - 8px) !important;
           width: 100%;
+
+          &:first-child {
+            left: 50%;
+            top: 25%;
+          }
+
+          &:last-child {
+            left: 50%;
+            top: 75%;
+          }
+
+          img {
+            height: auto !important;
+            max-height: calc(#{$slider-height-mobile} / 2 - 8px);
+            object-fit: contain;
+          }
+
+          .image-overlay--link {
+            height: auto;
+            max-height: calc(#{$slider-height-mobile} / 2 - 8px);
+          }          
         }
       }
     }
@@ -92,27 +123,6 @@ $slider-height-mobile: 190px;
     .image-overlay--link {
       display: inline-block;
       width: auto;
-    }
-  }
-
-  @media (min-width: $breakpoint-smartphone-landscape) and (max-width: $breakpoint-tablet - 1px) {
-    &.slider--slide--has-two-images { 
-      .slider--slide-image {
-        height: $slider-height-mobile !important;
-
-        &:first-child,
-        &:last-child {
-          width: calc(50% - 0.5rem);
-        }
-        
-        .image-overlay--link {
-          height: 100%;
-        }
-
-        img {
-          height: 100% !important;
-        }
-      }
     }
   }
 
