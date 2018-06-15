@@ -3371,6 +3371,7 @@ body.navigation--active {
     max-width: 100%;
     width: auto; }
   .owl-carousel .owl-item .slider--slide img {
+    display: inline-block;
     width: auto; }
   .slider--slide.slider--slide--has-shadow {
     overflow: hidden;
@@ -5217,6 +5218,7 @@ blockquote.testimonial--quote {
 
 .project-slider .owl-dots {
   bottom: -34px;
+  left: 0;
   position: absolute;
   text-align: center;
   width: 100%; }
