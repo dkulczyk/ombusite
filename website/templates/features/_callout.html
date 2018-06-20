@@ -34,7 +34,14 @@
     {% if fullwidth %}
       <a href="{% url 'case-study-nwpp' %}"><img src="{% static 'website/images/case-studies/nwpp/hero@2x.jpg' %}" alt="NWPP screenshot"></a>
     {% else %}
-      <img src="{% static 'website/images/callout/callout_nwpp-1.png' %}" alt="NWPP screenshot">
+      <div class="colored-bg">
+        <div class="colored-bg--inner">
+          <div class="browser-chrome browser-chrome--mobile">
+            {% include 'svg/browser-mobile.svg.html' with url='http://nwpp.info/' %}
+            <img src="{% static 'website/images/callout/callout_nwpp-1.png' %}" alt="NWPP screenshot">
+          </div>
+        </div>
+      </div>
     {% endif %}
   </aside>
 </div>

@@ -3484,6 +3484,7 @@ html.navigation--active, html.navigation--active body {
           vertical-align: middle; } }
 
 .slider--slide--browser {
+  background-color: white;
   border: 1px solid #cecece;
   border-radius: 4px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
@@ -5181,6 +5182,7 @@ blockquote.testimonial--quote {
   white-space: nowrap; }
 
 .browser-chrome {
+  background-color: white;
   border: 1px solid #cecece;
   border-radius: 4px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
@@ -5217,6 +5219,27 @@ blockquote.testimonial--quote {
 
 .browser-chrome--text {
   font-family: "source_code_proregular", monospace; }
+
+.colored-bg {
+  height: 0;
+  padding-top: 100%;
+  position: relative; }
+
+.colored-bg--inner {
+  background-color: #6dc5d4;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 12% 29%;
+  right: 0;
+  bottom: 0;
+  text-align: center; }
+  .colored-bg--landscape .colored-bg--inner {
+    padding: 28% 10%; }
+  .colored-bg--inner img {
+    max-height: 100%;
+    width: auto; }
 
 .work-projects {
   background-color: #f5f7f8;
@@ -6216,6 +6239,7 @@ blockquote.testimonial--quote {
     width: 100%; } }
 
 .cs-contributions--media-browser {
+  background-color: white;
   border: 1px solid #cecece;
   border-radius: 4px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
@@ -6269,6 +6293,7 @@ blockquote.testimonial--quote {
       margin-bottom: calc(113 / 18 * 1rem); } }
 
 .cs-main--media--visionary-browser {
+  background-color: white;
   border: 1px solid #cecece;
   border-radius: 4px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
@@ -6302,6 +6327,7 @@ blockquote.testimonial--quote {
     margin-top: calc(30 / 18 * 1rem); } }
 
 .cs-main--media--solution-browser {
+  background-color: white;
   border: 1px solid #cecece;
   border-radius: 4px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
