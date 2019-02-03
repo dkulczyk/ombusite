@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def home(request, context={}):
-    context['title'] = "Web solutions for CMS, applications, and infrastructure"
+    context['title'] = "Web solutions for CMS, applications, and DevOps"
     return render(request, 'home.html', context)
 
 def about(request, context={}):
@@ -17,11 +17,11 @@ def work(request, context={}):
     return render(request, 'work.html', context)
 
 def services(request, context={}):
-    context['title'] = "Enterprise CMS, business applications, and infrastructure"
+    context['title'] = "Content Management, business applications, and DevOps"
     context['services'] = [
-        { 'title': 'Enterprise CMS', 'summary': 'We make content<br>manageable' },
+        { 'title': 'Content Management', 'summary': 'We make content<br>manageable' },
         { 'title': 'Business Applications', 'summary': 'We make business<br>profitable' },
-        { 'title': 'Infrastructure', 'summary': 'We make systems<br>reliable' },
+        { 'title': 'DevOps', 'summary': 'We make systems<br>reliable' },
     ]
     return render(request, 'services.html', context)
 
@@ -47,11 +47,11 @@ def project_occ(request, context={}):
     context['visit_text'] = 'Visit Website'
     context['hero_carousel_content_template'] = 'content/project/hero-carousels/_occ.html'
     context['intro'] = '<h6>Making the World’s Most Useful Convention Center Website</h6><p>The Oregon Convention Center is a prominent institution of the West Coast, one of only two LEED Platinum certified convention centers in the US. When the OCC approached OMBU, however, their website had two major failings: it looked woefully outdated and cheap, and the site’s navigation and content were messy and confusing.</p><p>The OCC engaged OMBU in a guided Discovery phase, to figure out how to organize, design, and build a web presence that communicated the OCC’s prestigious yet friendly brand and guide audiences to the information they need. </p><p>OMBU then took the information from Discovery and designed and built a sleek, modern, mobile-friendly and easy-to-navigate website that highlights the </p>'
-    context['services'] = [ 'Technology Strategy', 'User Experience Design', 'Systems Integration', 'Development', 'Infrastructure' ]
+    context['services'] = [ 'Technology Strategy', 'User Experience Design', 'Systems Integration', 'Development', 'DevOps' ]
     context['testimonial_image'] = 'website/images/project-images/occ/aerial-photo@2x.png'
     context['testimonial_quote'] = "The OCC website is our front door and delivers exactly what we are – a place where things happen, modern, exciting, sustainable and service oriented.  OMBU created a very successful site for us on time and on budget"
     context['testimonial_attribution'] = "Matt Pizzuti, Interim Executive Director"
-    context['technologies'] = [ 'OMBU Core Drupal CMS', 'Responsive design', '60fps UI animations', 'Integration with EBMS event system', 'Apache Solr faceted search', 'Live chat', 'High-availability managed infrastructure' ]
+    context['technologies'] = [ 'OMBU Core Drupal CMS', 'Responsive design', '60fps UI animations', 'Integration with EBMS event system', 'Apache Solr faceted search', 'Live chat', 'High-availability managed DevOps' ]
     context['insights_content_template'] = 'content/project/insights/_occ.html'
     context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
@@ -63,8 +63,8 @@ def project_kaufmanhall(request, context={}):
     context['visit_url'] = 'https://www.kaufmanhall.com/'
     context['visit_text'] = 'Visit Website'
     context['hero_carousel_content_template'] = 'content/project/hero-carousels/_kaufmanhall.html'
-    context['intro'] = '<h6>Powering the Enterprise</h6><p>Kaufman Hall is a management consulting and enterprise software company with clients around the globe. After expanding their business by acquiring the leading software provider in their field, Kaufman Hall needed a unified web presence with an enterprise content management system (CMS) to support their growth and thought leadership.</p><p>OMBU designed and built an enterprise CMS website featuring a modern design and powerful marketing tools. The site features a filterable resource center for white papers, case studies, webinars, and more, to prove Kaufman Hall’s thought leadership. Flexible layout tools mean the marketing team can spin up new landing pages, complete with lead capture, in minutes instead of weeks. Rich integration with Marketo and Salesforce allows the sales team to prospect and funnel attractive leads into their sales pipeline.</p>'
-    context['services'] = [ 'User Experience Design', 'Visual Design', 'Drupal Enterprise CMS Development', 'Data Migration' ]
+    context['intro'] = '<h6>Powering the Enterprise</h6><p>Kaufman Hall is a management consulting and enterprise software company with clients around the globe. After expanding their business by acquiring the leading software provider in their field, Kaufman Hall needed a unified web presence with an enterprise content management system (CMS) to support their growth and thought leadership.</p><p>OMBU designed and built an Content Management website featuring a modern design and powerful marketing tools. The site features a filterable resource center for white papers, case studies, webinars, and more, to prove Kaufman Hall’s thought leadership. Flexible layout tools mean the marketing team can spin up new landing pages, complete with lead capture, in minutes instead of weeks. Rich integration with Marketo and Salesforce allows the sales team to prospect and funnel attractive leads into their sales pipeline.</p>'
+    context['services'] = [ 'User Experience Design', 'Visual Design', 'Drupal Content Management Development', 'Data Migration' ]
     context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
     return render(request, 'project.html', context)
@@ -87,7 +87,7 @@ def project_smithsonian(request, context={}):
     context['intro'] = '<h6>An Innovative Website for the Museum of Innovation</h6><p>The Smithsonian Institute needed a website unique and advanced enough to represent their Lemelson Center for Invention and Innovation, and OMBU were thrilled to be tasked with this challenge. In addition to a quirky design that showcases the center’s bold, forward-thinking identity, the powerful Drupal website boasts features such as real-time faceted search, branded audio and video players, and fun on-page interactive elements to increase visitor engagement.</p><p>The Lemelson site integrates with other Smithsonian systems, such as an institution-wide calendaring solution, email marketing tools, and even an in-museum exhibit. These integrations make the site a  rst-class citizen in the Smithsonian ecosystem, and keep rich data  owing without staff intervention.</p>'
     context['visit_url'] = 'http://invention.si.edu/'
     context['visit_text'] = 'Visit Website'
-    context['services'] = [ 'Technology Strategy', 'Enterprise CMS Architecture', 'Enterprise CMS Implementation', 'Archive Records Migration', 'Government Systems Integration', 'Training and Rollout' ]
+    context['services'] = [ 'Technology Strategy', 'Content Management Architecture', 'Content Management Implementation', 'Archive Records Migration', 'Government Systems Integration', 'Training and Rollout' ]
     context['technologies'] = [ 'Enterprise Drupal CMS', 'Custom Video and Audio Players', 'Migration of 1700+ Archive Records', 'Apache Solr Faceted Search', 'Interactive Canvas Drawing Functionality', '“Surprise Me” Exploration Feature' ]
     context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
@@ -97,7 +97,7 @@ def project_nwcouncilrtf(request, context={}):
     context['client'] = "NW Council Regional Technical Forum"
     context['title'] = "Project profile for NW Council RTF’s website redesign"
     context['hero_carousel_content_template'] = 'content/project/hero-carousels/_nw-council-rtf.html'
-    context['intro'] = '<h6>Modernizing Interaction with Energy Efficiency Program Development</h6><p>OMBU designed and built the new Regional Technical Forum website for NWPCC. The new website serves a technical audience with a modern and task-oriented visual design, and supports content providers with enterprise CMS functions and integrations behind the scenes. For example, content editors can use assets stored in Box as if they were native files in the CMS.</p><p>NWPCC’s mission required transparency and public input. OMBU conceived and built a discussion component that can be placed anywhere on the new website to engage the public. OMBU is currently working with NWPCC to redesign their main council website.</p>'
+    context['intro'] = '<h6>Modernizing Interaction with Energy Efficiency Program Development</h6><p>OMBU designed and built the new Regional Technical Forum website for NWPCC. The new website serves a technical audience with a modern and task-oriented visual design, and supports content providers with Content Management functions and integrations behind the scenes. For example, content editors can use assets stored in Box as if they were native files in the CMS.</p><p>NWPCC’s mission required transparency and public input. OMBU conceived and built a discussion component that can be placed anywhere on the new website to engage the public. OMBU is currently working with NWPCC to redesign their main council website.</p>'
     context['visit_url'] = 'https://rtf.nwcouncil.org/'
     context['visit_text'] = 'Visit Website'
     context['services'] = [ 'Technology Strategy', 'User Experience Design', 'Visual Design', 'Enterprise Drupal CMS', 'Accessibility Compliance Audit', 'Migration of Measures', 'Training' ]
@@ -126,7 +126,7 @@ def project_metro(request, context={}):
     context['intro'] = '<h6>Connecting Millions with Their Regional Government</h6><p>OMBU built a powerful and scalable enterprise Drupal platform for Metro to communicate its mission and services, and to provide online resources to its constituents such as the Find a Recycler search application. Using our rich and intuitive publishing tools, over 150 Metro staff from across the agency can draft, moderate, translate and approve content according to customizable permissions. Thanks to an agile process with predictable iterations, oregonmetro.gov launched on time, smoothly and has scaled gracefully .</p><p>Since launch, Metro has engaged OMBU for several follow-up projects, including a major new constituent engagement application, a map tool to solicit public comments on Metro projects, and enhancements to their news section.</p>'
     context['visit_url'] = 'https://www.oregonmetro.gov/'
     context['visit_text'] = 'Visit Website'
-    context['services'] = [ 'Technology Strategy', 'Enterprise CMS Architecture', 'Drupal CMS Development', 'Government Systems Integration', 'Training & Rollout' ]
+    context['services'] = [ 'Technology Strategy', 'Content Management Architecture', 'Drupal CMS Development', 'Government Systems Integration', 'Training & Rollout' ]
     context['technologies'] = [ 'Enterprise Drupal CMS', 'Publishing Moderation System', 'Translation/Localization for 13 Languages', 'Responsive Design', 'Rich Interactive Maps', 'Integration with Government Systems', 'Apache Solr Faceted Search', 'Searchable PDF Documents' ]
     context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
     context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
@@ -196,8 +196,8 @@ def casestudy_nwpp(request, context={}):
     context['intro_text'] = "<p><span class=\"cs-intro--emphasis\">Northwest PowerPool (NWPP)</span> brings together 32 power utilities in eight US states and two Canadian provinces. OMBU designed a powerful centralized training platform so NWPP could help its member utilities keep up-to-date on mandated certifications and the latest trends, meaning greater safety, more engagement, and more benefit to the whole membership base and their customers.</p>"
     context['testimonial_image'] = "website/images/case-studies/nwpp/testimonial-logo.png"
     context['testimonial_quote'] = "“Partnering with OMBU on this evolution of our platform was one of the best decisions I’ve ever made.”"
-    context['testimonial_attribution_name'] = "David Pennington"
-    context['testimonial_attribution_title'] = "Curriculum Developer, NWPP"
+    context['testimonial_attribution_name'] = "David P."
+    context['testimonial_attribution_title'] = "Project Lead, NWPP"
     context['contributions'] = {
         'image': {
             'src' : 'website/images/case-studies/nwpp/intro@2x.png',
@@ -206,7 +206,7 @@ def casestudy_nwpp(request, context={}):
                 'url' : 'source.training',
             },
         },
-        'skills': ["User Experience Design", "Python Application Development", "AWS Infrastructure", "Product Roadmap Planning"],
+        'skills': ["User Experience Design", "Python Application Development", "AWS DevOps", "Product Roadmap Planning"],
     }
     context['visionary'] = {
         'body': '<p>NWPP came to us with a simple vision: <strong>Make federally-mandated power safety training easy and fun via an engaging video learning platform</strong>, so that employees of their member utilities would complete more trainings, engage more with the training material for better results, and ultimately create a safer and more productive world of power.</p><p>NWPP has trainers and video production talent in-house, so they wanted a technology partner who could come up with a learning system that would be a great platform for their training.</p>',
@@ -252,7 +252,7 @@ def casestudy_nwpp(request, context={}):
             'action_text': 'Watch Demo',
         },
         {
-            'title': 'High-Availability Infrastructure',
+            'title': 'High-Availability DevOps',
             'background': 'website/images/case-studies/nwpp/innov-slide-03@2x.png',
             'text': 'Because the LMS is a business critical application, it needed to be online at all times. To accomplish this, we designed a high-availability hosting system that keeps copies of the application in two datacenters. The system monitors for connectivity problems and automatically redirects traffic to the healthier data center.',
             'action_text': '',
@@ -283,15 +283,15 @@ def casestudy_nwpp(request, context={}):
 
 def casestudy_navex(request, context={}):
     context['client'] = "NAVEX Global"
-    context['title'] = "Case study for NAVEX Global’s enterprise CMS"
+    context['title'] = "Case study for NAVEX Global’s Content Management"
     context['banner_image'] = "website/images/case-studies/navex/hero-tinted@2x.jpg"
-    context['banner_title'] = "Enterprise CMS for the Global Ethics Leader"
+    context['banner_title'] = "Content Management for the Global Ethics Leader"
     context['banner_position'] = '85% 40%'
     context['intro_text'] = "<p><span class=\"cs-intro--emphasis\">NAVEX Global</span> was formed in 2012 to become the leader in the emerging field of Ethics & Compliance. They engaged OMBU with the mission to design and launch technology capable of not just keeping up, but accelerating, their meteoric rise.</p>"
     context['testimonial_image'] = "website/images/case-studies/navex/testimonial-logo.png"
     context['intro_testimonial_quote'] = "“Based on projects, the current uplift in high-value forms from the new pages will result in $4.6M in pipe and $1.4M in closed won business in the next 12 months!”"
-    context['intro_testimonial_attribution_name'] = "Hillary Ervin"
-    context['intro_testimonial_attribution_title'] = "Senior Director, Demand Generation & Sales Development Team"
+    context['intro_testimonial_attribution_name'] = "Hillary E."
+    context['intro_testimonial_attribution_title'] = "Demand Generation Manager, NAVEX Global"
     context['contributions'] = {
         'image': {
             'src' : 'website/images/case-studies/navex/intro@2x.png',
@@ -300,7 +300,7 @@ def casestudy_navex(request, context={}):
                 'url' : 'navexglobal.com',
             },
         },
-        'skills': ["Technology Strategy", "Enterprise CMS", "Drupal CMS Development", "Marketo Integration", "AWS Migration", "AWS Infrastructure Management"],
+        'skills': ["Technology Strategy", "Content Management", "Drupal CMS Development", "Marketo Integration", "AWS Migration", "AWS DevOps Management"],
     }
     context['visionary'] = {
         'body': '<p>Facing explosive growth and with a clientele featuring most Fortune 500 companies in more than 200 countries, NAVEX Global needed rock solid, cutting-edge web marketing technology capable of supporting smooth collaboration among distributed teams and rapidly changing business.</p>',
@@ -341,9 +341,9 @@ def casestudy_navex(request, context={}):
             'action_text': '',
         },
         {
-            'title': 'Scalable Application and Content Infrastructure',
+            'title': 'Scalable Application and Content DevOps',
             'background': 'website/images/case-studies/navex/innov-slide-05@2x.png',
-            'text': 'To reach NAVEX Global’s worldwide audience quickly and reliably, we built a scalable AWS cloud infrastructure for the website application and content.<br><br>Dynamic computation is distributed across an auto-scaling fleet of application servers, with traffic managed by a load balancer. The infrastructure has full duplication between two data centers, with all resources ready fail-over to the backup in case of a data center outage.<br><br>Resources and assets, such as images, documents, and stylesheets, are served from a content delivery network, with leaf nodes close to users, for the fastest experience around the world.',
+            'text': 'To reach NAVEX Global’s worldwide audience quickly and reliably, we built a scalable AWS cloud DevOps for the website application and content.<br><br>Dynamic computation is distributed across an auto-scaling fleet of application servers, with traffic managed by a load balancer. The DevOps has full duplication between two data centers, with all resources ready fail-over to the backup in case of a data center outage.<br><br>Resources and assets, such as images, documents, and stylesheets, are served from a content delivery network, with leaf nodes close to users, for the fastest experience around the world.',
             'action_text': '',
         },
     ]
@@ -395,7 +395,7 @@ def casestudy_sa(request, context={}):
         # },
     }
     context['solution'] = {
-        'body': '<p>OMBU implemented a rich CRM to serve as the canonical repository of data about families, classes, registrations, internships, and donors, built on Salesforce. By building on top of Salesforce, we were able to provide Saturday Academy with a leading CRM database platform, including using add-ons such as the Nonprofit Success Pack (NPSP) and data management tools. Additionally, Saturday Academy benefits from the knowledge and expertise of the huge number of other nonprofits who use Salesforce to run their organizations.</p><p>To reach parents, students, instructors, and mentors, we designed and built a fun, easy-to-use enterprise CMS website. Parents can set up their household information online, and register their children for any of Saturday Academy’s many classes quickly and easily, and even be granted auto-calculated financial aid to help make the classes accessible to all.</p><p>Saturday Academy’s unique internship program, Apprenticeships in Science and Engineering (ASE), pairs teens with industry mentors for a summer of on-the-job learning. Hundreds of motivated students apply for the program, so we designed a process that makes it easy to apply, as well as a portal for the mentors to rank applicants and a system for final approval and communication with selected interns.</p><p>While we’re proud of transforming Saturday Academy’s online presence and making everything smooth and easy for parents and students, the most transformative part of the solution we built for Saturday Academy is the real-time data flow and the accompanying reporting within the CRM. Leadership can now ask questions and gain insights instantly, such as seeing breakdown of financial aid relative to family demographics, intelligence that previously would either have days of data processing or have been entirely impossible.</p>',
+        'body': '<p>OMBU implemented a rich CRM to serve as the canonical repository of data about families, classes, registrations, internships, and donors, built on Salesforce. By building on top of Salesforce, we were able to provide Saturday Academy with a leading CRM database platform, including using add-ons such as the Nonprofit Success Pack (NPSP) and data management tools. Additionally, Saturday Academy benefits from the knowledge and expertise of the huge number of other nonprofits who use Salesforce to run their organizations.</p><p>To reach parents, students, instructors, and mentors, we designed and built a fun, easy-to-use Content Management website. Parents can set up their household information online, and register their children for any of Saturday Academy’s many classes quickly and easily, and even be granted auto-calculated financial aid to help make the classes accessible to all.</p><p>Saturday Academy’s unique internship program, Apprenticeships in Science and Engineering (ASE), pairs teens with industry mentors for a summer of on-the-job learning. Hundreds of motivated students apply for the program, so we designed a process that makes it easy to apply, as well as a portal for the mentors to rank applicants and a system for final approval and communication with selected interns.</p><p>While we’re proud of transforming Saturday Academy’s online presence and making everything smooth and easy for parents and students, the most transformative part of the solution we built for Saturday Academy is the real-time data flow and the accompanying reporting within the CRM. Leadership can now ask questions and gain insights instantly, such as seeing breakdown of financial aid relative to family demographics, intelligence that previously would either have days of data processing or have been entirely impossible.</p>',
         'image': {
             'src' : 'website/images/case-studies/sa/solution@2x.png',
             'alt': 'A screenshot of a Saturday Academy application review page',
@@ -429,9 +429,9 @@ def casestudy_sa(request, context={}):
             'action_text': '',
         },
         {
-            'title': 'Enterprise CMS',
+            'title': 'Content Management',
             'background': 'website/images/case-studies/sa/innov-slide-04@2x.png',
-            'text': 'Since Saturday Academy is an organization that works with creative and inquisitive families, we designed and built a website that communicates that quirky, intelligent brand while maintaining a simple, easy-to-use interface for actions.<br><br>A mobile-responsive design means parents and students can learn about Saturday Academy’s offerings and register on any device.<br><br>A powerful enterprise CMS gives Saturday Academy’s marketing team the ability to quickly customize layouts with new page elements as their content needs change and the organization grows.',
+            'text': 'Since Saturday Academy is an organization that works with creative and inquisitive families, we designed and built a website that communicates that quirky, intelligent brand while maintaining a simple, easy-to-use interface for actions.<br><br>A mobile-responsive design means parents and students can learn about Saturday Academy’s offerings and register on any device.<br><br>A powerful Content Management gives Saturday Academy’s marketing team the ability to quickly customize layouts with new page elements as their content needs change and the organization grows.',
             'action_text': '',
         },
     ]
