@@ -22,6 +22,8 @@ Run `manage.py` commands:
     docker-compose run web python manage.py migrate
     docker-compose run web python manage.py createsuperuser
 
+Visit `http://localhost/`
+
 To clean up (stop and remove containers, networks, images, and volumes):
 
         docker-compose down

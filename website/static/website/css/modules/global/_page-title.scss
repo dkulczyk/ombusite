@@ -228,7 +228,7 @@
 
   @media (min-width: $breakpoint-notebook) {
     margin-bottom: calc(90 / 18 * 1rem);
-    min-height: calc(500 / 18 * 1rem);
+    min-height: calc(250 / 18 * 1rem);
   }
 }
 
@@ -239,7 +239,7 @@
 }
 
 .page-title--banner-primary {
-  @media (min-width: $breakpoint-notebook) {
+  @media (min-width: $breakpoint-notebook / 2) {
     flex: 1 1 auto;
   }
 }
