@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+set -e
+
+tag=$1
+if [[ -z ${tag} ]]
+then
+    echo "No tag provided."
+    echo "Usage build-remote-images <tag>"
+    exit 1
+fi
+
+script_path="$(cd "$(dirname "$0")" && pwd)"
+source ${script_path}/_env
+
+printf "Determining AWS account id: "
+awsAccountId=`${aws} sts get-caller-identity --query Account --output text`
+printf "${awsAccountId}\n"
+
+echo "Building images..."
+TAG=${tag} AWS_ACCOUNT_ID=${awsAccountId} docker-compose -f infrastructure/docker-compose.yml build 1>/dev/null
+
+echo "Logging in to the remote image repository..."
+eval $(${aws} ecr get-login --no-include-email)
+
+echo "Pushing images..."
+TAG=${tag} AWS_ACCOUNT_ID=${awsAccountId} docker-compose -f infrastructure/docker-compose.yml push 1>/dev/null
+
+exit 0

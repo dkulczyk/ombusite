@@ -1,0 +1,7 @@
+version: '3'
+services:
+  web:
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/ombusite/web:${TAG}
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
