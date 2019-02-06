@@ -7,8 +7,6 @@
 
 {% block header_title_supplement %}<div class="header--title-supplement">+ {{client|safe}}</div>{% endblock %}
 
-{% block footer_cta_intro %}<div class="footer--cta-intro">{{cta_text|safe}}</div>{% endblock %}
-
 {% block content %}
   <main>
     {% include 'features/case-study/_banner.html' %}
@@ -28,6 +26,7 @@
     {% include 'features/case-study/_main.html' %}
     {% include 'features/case-study/_innovation-carousel.html' %}
     {% include 'features/case-study/_outcomes.html' %}
+    {% include 'features/case-study/_cta.html' %}
   </main>
 {% endblock content %}
 
