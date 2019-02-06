@@ -30,6 +30,16 @@
         </div>
       </div>
     </section>
+    <section class="about--team">
+      <div class="container">
+        <div class="about--team-inner">
+          <div class="about--team-content">
+            {% include 'features/_section-intro.html' with team=True %}
+            {% include 'features/_team.html' %}
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="about--clients">
       <div class="container">
         {% include 'features/_section-intro.html' with clients=True subtle=True %}
