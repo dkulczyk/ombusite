@@ -14,7 +14,26 @@
   @media (min-width: $breakpoint-notebook) {
     padding-bottom: 8.8rem;
     padding-top: 8.8rem;
-  }  
+  }
+}
+
+.footer--cta-intro {
+  color: $color-white;
+  font-family: $font-halisr-regular;
+  font-size: calc(24 / 16 * 1em);
+  line-height: calc(35 / 24 * 1em);
+  margin-bottom: calc(40 / 24 * 1em);
+  text-align: center;
+
+  strong {
+    font-family: $font-halisr-bold;
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(48 / 18 * 1em);
+    line-height: calc(55 / 48 * 1em);
+    margin-bottom: calc(65 / 48 * 1em);
+  }
 }
 
 .footer--primary {
@@ -71,7 +90,7 @@
     font-size: calc(32 / 18 * 1em);
     line-height: calc(44 / 32 * 1em);
     margin-top: calc(30 / 32 * 1em);
-    margin-bottom: calc(10 / 32 * 1em);    
+    margin-bottom: calc(10 / 32 * 1em);
   }
 }
 
@@ -140,7 +159,7 @@
   @media (min-width: $breakpoint-notebook) {
     display: inline-block;
     vertical-align: top;
-  }  
+  }
 }
 
 .footer--link {
@@ -166,18 +185,18 @@
     &:focus {
       background-image: linear-gradient(to top, transparent 0, transparent 2px, $color-white 2px, transparent 3px, transparent 100%);
     }
-  }  
+  }
 
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(16 / 18 * 1em);
     line-height: calc(28 / 16 * 1em);
     padding: 0 1.5em;
-  }  
+  }
 }
 
 .footer--social-links {
   margin-bottom: 0;
-  
+
   @media (min-width: $breakpoint-notebook) {
     display: inline-block;
     margin-bottom: 0;

@@ -34,6 +34,7 @@
           <div class="container">
             <div class="footer--contents">
               <span class="footer--background" role="presentation">{% include 'svg/tree.svg.html' %}</span>
+              {% block footer_cta_intro %}{% endblock %}
               <div class="footer--primary">
                 <div class="footer--primary-inner">
                   <div class="footer--cta-image"><img src="{% static 'website/images/telescope@4x.png' %}" alt="High five"></div>

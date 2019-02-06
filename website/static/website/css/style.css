@@ -2343,6 +2343,21 @@ input[type="submit"] {
       padding-bottom: 8.8rem;
       padding-top: 8.8rem; } }
 
+.footer--cta-intro {
+  color: white;
+  font-family: "halis_rregular", "Helvetica", sans-serif;
+  font-size: calc(24 / 16 * 1em);
+  line-height: calc(35 / 24 * 1em);
+  margin-bottom: calc(40 / 24 * 1em);
+  text-align: center; }
+  .footer--cta-intro strong {
+    font-family: "halis_rbold", "Helvetica", sans-serif; }
+  @media (min-width: 992px) {
+    .footer--cta-intro {
+      font-size: calc(48 / 18 * 1em);
+      line-height: calc(55 / 48 * 1em);
+      margin-bottom: calc(65 / 48 * 1em); } }
+
 .footer--primary {
   background-color: white;
   border: 1px solid #979797;
