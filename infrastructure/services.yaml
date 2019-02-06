@@ -1,0 +1,80 @@
+Description: OMBU Site / services
+
+Parameters:
+
+  InfrastructureStack:
+    Type: String
+    Description: |
+      The name of the CloudFormation stack that provides the underlying
+      resources for the application.
+
+  Version:
+    Type: String
+    Description: The version of the application.
+
+  Domain:
+    Type: String
+    Default: beta.ombuweb.com
+    Description: The domain for the webite
+
+Resources:
+
+  DefaultRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${AWS::StackName}-ECSDefaultService
+      Path: /
+      AssumeRolePolicyDocument: |
+        {
+            "Statement": [{
+                "Effect": "Allow",
+                "Principal": { "Service": [ "ecs.amazonaws.com" ]},
+                "Action": [ "sts:AssumeRole" ]
+            }]
+        }
+      Policies:
+      - PolicyName: !Sub ecs-service-${AWS::StackName}
+        PolicyDocument:
+          {
+            "Version": "2012-10-17",
+            "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:Describe*",
+                "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
+                "elasticloadbalancing:Describe*",
+                "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
+                "elasticloadbalancing:DeregisterTargets",
+                "elasticloadbalancing:DescribeTargetGroups",
+                "elasticloadbalancing:DescribeTargetHealth",
+                "elasticloadbalancing:RegisterTargets"
+              ],
+              "Resource": "*"
+            }
+            ]
+          }
+
+  Django:
+    DependsOn: DefaultRole
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: services/django.yaml
+      Parameters:
+        Cluster:
+          Fn::ImportValue:
+            !Sub "${InfrastructureStack}-Cluster"
+        Domain: !Ref Domain
+        Listener:
+          Fn::ImportValue:
+            !Sub "${InfrastructureStack}-Listener"
+        Memory: 256
+        Version: !Ref Version
+
+
+Outputs:
+
+  DjangoServiceName:
+    Description: The name the created Elasticsearch service
+    Value: !GetAtt Django.Outputs.ServiceName

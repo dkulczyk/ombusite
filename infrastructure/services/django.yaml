@@ -1,0 +1,140 @@
+Description: OMBU Site / services / django
+
+Parameters:
+
+  VPC:
+    Description: The VPC for the cluster
+    Type: AWS::EC2::VPC::Id
+
+  Cluster:
+    Description: The container cluster that runs the services
+    Type: String
+
+  Listener:
+    Description: The load balancer listener for the web service
+    Type: String
+
+  DesiredCount:
+    Type: Number
+    Default: 2
+
+  RoleArn:
+    Description: The ARN of an IAM role for the service
+    Type: String
+
+  AppVersion:
+    Description: The application version
+    Type: AWS::SSM::Parameter::Value<String>
+
+  Priority:
+    Description: The ELB priority order for this service
+    Type: Number
+
+  DatabaseHost:
+    Description: The database hostname
+    Type: String
+
+  DatabasePassword:
+    Description: The database user password
+    Type: String
+
+  EnvironmentType:
+    Description: Whether it's a qa, staging, or production envorinment
+    Type: String
+    AllowedValues:
+      - stage
+
+  Domain:
+    Type: String
+    Description: The domain for the webite
+
+Resources:
+
+  CloudWatchLogsGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Ref AWS::StackName
+      RetentionInDays: 60
+
+  TargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      VpcId: !Ref VPC
+      Port: 80
+      Protocol: HTTP
+      HealthCheckPath: /health-check/
+      Matcher:
+        # Allowing 301 because often the default target hosts
+        # the redirector service
+        HttpCode: 200-301
+      TargetGroupAttributes:
+        - Key: deregistration_delay.timeout_seconds
+          Value: 5
+
+  TaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub ombusite_django
+      ContainerDefinitions:
+        - Name: django
+          Essential: true
+          Image: !Sub ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/ombusite/web:${AppVersion}
+          MemoryReservation: 128
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref CloudWatchLogsGroup
+              awslogs-region: !Ref AWS::Region
+          PortMappings:
+            - ContainerPort: 5000
+          Links:
+            - expression
+          Environment:
+            - Name: APPLICATION_VERSION
+              Value: !Ref AppVersion
+            - Name: DATABASE_NAME
+              Value: ombusite
+            - Name: DATABASE_ENDPOINT
+              Value: !Ref DatabaseHost
+            - Name: DATABASE_USER
+              Value: ombusite
+            - Name: DATABASE_PASSWORD
+              Value: !Ref DatabasePassword
+            - Name: ENVIRONMENT_TYPE
+              Value: !Ref EnvironmentType
+
+  ListenerRule:
+    Type: AWS::ElasticLoadBalancingV2::ListenerRule
+    Properties:
+      ListenerArn: !Ref Listener
+      Priority: !Ref Priority
+      Conditions:
+        - Field: host-header
+          Values:
+            - !Ref Domain
+      Actions:
+        - TargetGroupArn: !Ref TargetGroup
+          Type: forward
+
+  Service:
+    Type: AWS::ECS::Service
+    DependsOn: ListenerRule
+    Properties:
+      Cluster: !Ref Cluster
+      Role: !Ref RoleArn
+      DesiredCount: !Ref DesiredCount
+      TaskDefinition: !Ref TaskDefinition
+      LoadBalancers:
+        - ContainerName: web
+          ContainerPort: 5000
+          TargetGroupArn: !Ref TargetGroup
+
+Outputs:
+
+  ServiceArn:
+    Description: The ARN the service created by this stack
+    Value: !Ref Service
+
+  ServiceName:
+    Description: The name the service created by this stack
+    Value: !GetAtt Service.Name

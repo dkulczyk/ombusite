@@ -1,3 +1,32 @@
 #!/usr/bin/env bash
 
+#############################
+# START OF USER CONFIGURATION
+#############################
+
+# Global
+ARCH_SLUG=ombusite
+
+# Environment specific variables
+INFRASTRUCTURE_STACK_stage=ombu-cluster-development-1806011101
+
+###########################
+# END OF USER CONFIGURATION
+###########################
+
 aws="docker run --rm -v ${PWD}:/tmp -w /tmp -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_DEFAULT_REGION ombu/docker-awscli aws"
+
+if [[ -z ${SKIP_ENVIRONMENT_CHECK} ]]
+then
+    appEnv=$1
+    if [[ "${appEnv}" != "stage" ]]
+    then
+        echo "Unknown environment ${appEnv}"
+        echo "The known environments are: stage"
+        exit 1
+    fi
+fi
+
+# Convenience variables for scripts that source this one
+_infrastructure_stack_name=INFRASTRUCTURE_STACK_${appEnv}
+infrastructure_stack_name=${!_infrastructure_stack_name}
