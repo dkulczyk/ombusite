@@ -29,10 +29,22 @@
     font-family: $font-halisr-bold;
   }
 
+  @media (min-width: $breakpoint-tablet) {
+    strong {
+      white-space: nowrap;
+    }
+  }
+
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(48 / 18 * 1em);
     line-height: calc(55 / 48 * 1em);
     margin-bottom: calc(65 / 48 * 1em);
+  }
+}
+
+.footer--cta-intro--phrase {
+  @media (min-width: $breakpoint-notebook) {
+    white-space: nowrap;
   }
 }
 

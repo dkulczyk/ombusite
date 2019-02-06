@@ -2352,11 +2352,18 @@ input[type="submit"] {
   text-align: center; }
   .footer--cta-intro strong {
     font-family: "halis_rbold", "Helvetica", sans-serif; }
+  @media (min-width: 768px) {
+    .footer--cta-intro strong {
+      white-space: nowrap; } }
   @media (min-width: 992px) {
     .footer--cta-intro {
       font-size: calc(48 / 18 * 1em);
       line-height: calc(55 / 48 * 1em);
       margin-bottom: calc(65 / 48 * 1em); } }
+
+@media (min-width: 992px) {
+  .footer--cta-intro--phrase {
+    white-space: nowrap; } }
 
 .footer--primary {
   background-color: white;
