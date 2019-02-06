@@ -20,7 +20,7 @@
 
   @media (min-width: $breakpoint-notebook) {
     margin-top: 0;
-    margin-bottom: calc(30 / 38 * 1em);    
+    margin-bottom: calc(30 / 38 * 1em);
   }
 }
 
@@ -50,7 +50,7 @@
 // Contributions
 .cs-contributions {
   margin-bottom: calc(46 / 18 * 1rem);
-  
+
   @media (min-width: $breakpoint-notebook) {
     margin-bottom: calc(83 / 18 * 1rem);
   }
@@ -86,7 +86,7 @@
 .cs-contributions--contributions {
 
   @media (max-width: $breakpoint-tablet - 1px) {
-    flex: 0 0 auto;    
+    flex: 0 0 auto;
     margin-bottom: calc(170 / 18 * 1rem);
     width: 100%;
   }
@@ -142,15 +142,15 @@
 }
 
 .cs-main--stat--solution {
-  @media (max-width: $breakpoint-notebook - 1px) { 
+  @media (max-width: $breakpoint-notebook - 1px) {
     order: 10;
   }
 }
 
 .cs-main--secondary {
-   @media (max-width: $breakpoint-notebook - 1px) { 
+   @media (max-width: $breakpoint-notebook - 1px) {
     @include element-invisible();
-  } 
+  }
 }
 
 // Outcomes
@@ -170,7 +170,7 @@
     font-size: calc(38 / 18 * 1em);
     line-height: calc(50 / 38 * 1em);
     margin-top: calc(90 / 38 * 1em);
-    margin-bottom: calc(50 / 38 * 1em);    
+    margin-bottom: calc(50 / 38 * 1em);
     text-align: center;
   }
 }
@@ -192,7 +192,7 @@
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(24 / 18 * 1em);
     line-height: calc(50 / 24 * 1em);
-    margin-bottom: calc(80 / 24 * 1em);    
+    margin-bottom: calc(80 / 24 * 1em);
     text-align: center;
   }
 }
@@ -229,8 +229,8 @@
       * {
         stroke: darken($color-primary, 10%);
       }
-    }    
-  } 
+    }
+  }
 }
 
 // CTA
@@ -250,10 +250,16 @@
     font-family: $font-halisr-bold;
   }
 
+  @media (min-width: $breakpoint-tablet) {
+    strong {
+      white-space: nowrap;
+    }
+  }
+
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(48 / 18 * 1em);
-    line-height: calc(55 / 48 * 1em);    
+    line-height: calc(55 / 48 * 1em);
     margin-top: calc(70 / 48 * 1em);
-    margin-bottom: calc(65 / 48 * 1em);    
+    margin-bottom: calc(65 / 48 * 1em);
   }
 }

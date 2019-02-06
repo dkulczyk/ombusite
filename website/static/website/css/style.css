@@ -6500,6 +6500,9 @@ blockquote.testimonial--quote {
   margin-bottom: calc(40 / 24 * 1em); }
   .cs-cta--content strong {
     font-family: "halis_rbold", "Helvetica", sans-serif; }
+  @media (min-width: 768px) {
+    .cs-cta--content strong {
+      white-space: nowrap; } }
   @media (min-width: 992px) {
     .cs-cta--content {
       font-size: calc(48 / 18 * 1em);
