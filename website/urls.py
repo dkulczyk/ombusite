@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^work$', website.views.work, name='work'),
     url(r'^services$', website.views.services, name='services'),
     url(r'^contact$', website.views.contact, name='contact'),
-    # url(r'^careers$', website.views.careers, name='careers'),
+    url(r'^careers$', website.views.careers, name='careers'),
     url(r'^404$', website.views.pagenotfound, name='404'),
 
     # Projects
