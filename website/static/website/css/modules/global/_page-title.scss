@@ -47,10 +47,10 @@
 
 .page-title--title.page-title--title--prominent {
   margin-top: 0;
-  
+
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(65 / 18 * 1em);
-    line-height: calc(80 / 65 * 1em);   
+    line-height: calc(80 / 65 * 1em);
     margin-top: 0.4em;
   }
 }
@@ -90,7 +90,7 @@
     font-size: calc(46 / 18 * 1em);
     line-height: calc(69 / 46 * 1em);
     margin-bottom: calc(18 / 46 * 1em);
-    text-align: left;    
+    text-align: left;
   }
 }
 
@@ -222,7 +222,7 @@
 .page-title.page-title--banner {
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;  
+  background-size: cover;
   margin-bottom: calc(40 / 18 * 1rem);
   min-height: calc(250 / 18 * 1rem);
 
@@ -235,7 +235,7 @@
 .page-title--banner-main {
   @media (min-width: $breakpoint-notebook) {
     display: flex;
-  }  
+  }
 }
 
 .page-title--banner-primary {
@@ -255,7 +255,7 @@
   @include btn-download();
 }
 
-// Callout 
+// Callout
 .page-title--callout {
   @include make-row();
 
@@ -274,14 +274,14 @@
   @media (min-width: $breakpoint-notebook) {
     flex: 0 0 auto;
     margin-top: calc(25 / 18 * 1em);
-  }  
+  }
 }
 
 .page-title--secondary {
   @include make-xs-column(12);
   @include make-sm-column(12);
   @include make-md-column(6);
-  @include make-lg-column(5);  
+  @include make-lg-column(5);
   margin-bottom: calc(50 / 16 * 1em);
   text-align: center;
 
@@ -289,7 +289,7 @@
     flex: 0 0 auto;
     margin-bottom: calc(110 / 18 * 1em);
     padding-left: calc(20 / 18 * 1em);
-  }  
+  }
 }
 
 .page-title--title--callout {
