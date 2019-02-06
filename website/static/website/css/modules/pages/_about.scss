@@ -1,6 +1,7 @@
 // About
 
-.about--story {
+.about--story,
+.about--clients {
   @include section-bg();
 }
 

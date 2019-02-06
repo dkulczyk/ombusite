@@ -5527,7 +5527,8 @@ blockquote.testimonial--quote {
     color: #3eb2c6;
     text-decoration: none; }
 
-.about--story {
+.about--story,
+.about--clients {
   background-color: #f5f7f8;
   border-top: 1px solid #d1d8dd;
   border-bottom: 1px solid #d1d8dd; }
