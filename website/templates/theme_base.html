@@ -50,6 +50,9 @@
                   <li class="footer--link-item"><a href="{% url 'about' %}" class="footer--link"><span>About</span></a></li>
                   <li class="footer--link-item"><a href="{% url 'careers' %}" class="footer--link"><span>Careers</span></a></li>
                 </ul>
+                <div class="footer--social-links social-links--light">
+                  {% include 'features/_social-links.html' %}
+                </div>
               </div>
             </div>
           </div>
@@ -93,6 +96,10 @@
             </li>
             <li class="navigation--primary-group navigation--primary-group--single-item">
               <div class="navigation--primary-link-wrapper"><a class="navigation--primary-link" href="{% url 'careers' %}"><span>Careers</span></a></div>
+            </li>
+            <li class="navigation--primary-group">
+              <span class="navigation--primary-group-label">Social Links</span>
+              {% include 'features/_social-links.html' %}
             </li>
           </ul>
         </div>
