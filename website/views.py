@@ -1,4 +1,5 @@
 from django.shortcuts import render, render_to_response
+from django.core import urlresolvers
 
 def home(request, context={}):
     context['title'] = "Web solutions for CMS, applications, and DevOps"
@@ -53,8 +54,16 @@ def project_occ(request, context={}):
     context['testimonial_attribution'] = "Matt Pizzuti, Interim Executive Director"
     context['technologies'] = [ 'OMBU Core Drupal CMS', 'Responsive design', '60fps UI animations', 'Integration with EBMS event system', 'Apache Solr faceted search', 'Live chat', 'High-availability managed DevOps' ]
     context['insights_content_template'] = 'content/project/insights/_occ.html'
-    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
-    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    context['project_prev'] = {
+        'url' : urlresolvers.reverse('project-smithsonian'),
+        'name' : 'Smithsonian Institute Lemelson Center',
+        'cta' : 'View project'
+    }
+    context['project_next'] = {
+        'url' : urlresolvers.reverse('project-kaufmanhall'),
+        'name' : 'Kaufman Hall',
+        'cta' : 'View project'
+    }
     return render(request, 'project.html', context)
 
 def project_kaufmanhall(request, context={}):
@@ -65,32 +74,16 @@ def project_kaufmanhall(request, context={}):
     context['hero_carousel_content_template'] = 'content/project/hero-carousels/_kaufmanhall.html'
     context['intro'] = '<h6>Powering the Enterprise</h6><p>Kaufman Hall is a management consulting and enterprise software company with clients around the globe. After expanding their business by acquiring the leading software provider in their field, Kaufman Hall needed a unified web presence with an enterprise content management system (CMS) to support their growth and thought leadership.</p><p>OMBU designed and built an Content Management website featuring a modern design and powerful marketing tools. The site features a filterable resource center for white papers, case studies, webinars, and more, to prove Kaufman Hall’s thought leadership. Flexible layout tools mean the marketing team can spin up new landing pages, complete with lead capture, in minutes instead of weeks. Rich integration with Marketo and Salesforce allows the sales team to prospect and funnel attractive leads into their sales pipeline.</p>'
     context['services'] = [ 'User Experience Design', 'Visual Design', 'Drupal Content Management Development', 'Data Migration' ]
-    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
-    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
-    return render(request, 'project.html', context)
-
-def project_stand(request, context={}):
-    context['client'] = "Stand for Children"
-    context['title'] = "Project profile for Stand for Children’s organizer app"
-    context['hero_carousel_content_template'] = 'content/project/hero-carousels/_stand.html'
-    context['intro'] = '<h6>Empowering Community Organizers to Effect Change for Students</h6><p>Stand for Children reached out to OMBU to develop an iPad app with an ambitious goal: to transform the way Stand’s field organizers reach, manage, and activate their volunteer base across the nation.</p><p>OMBU’s Discovery determined that, rather than building an iPad-only app that would restrict the audience to these tablets, Stand would be better off with a mobile web app that would work on any device and platform. This early decision meant that, when Stand later switched it’s tablets from Apple to Microsoft, the app we built worked out- of-the-box and didn’t require additional investment.</p><p>The app integrates in real-time with Stand’s Salesforce CRM, which means that app data is always in sync with gift, membership development, and contact data that are critical for Stand’s daily operations.</p><p>The app was rolled out nationally and has become a critical tool for Stand’s efforts to drive parent engagement and improve outcomes for kids.</p>'
-    context['services'] = [ 'Technology Strategy', 'Table Application Design', 'Application Development' ]
-    context['technologies'] = [ 'Angular JavaScript Application', 'Real-time Salesforce Integration', 'Touch-centric UI' ]
-    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
-    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
-    return render(request, 'project.html', context)
-
-def project_smithsonian(request, context={}):
-    context['client'] = "Smithsonian Institute Lemelson Center"
-    context['title'] = "Project profile for Smithsonian Institute Lemelson Center’s website design"
-    context['hero_carousel_content_template'] = 'content/project/hero-carousels/_smithsonian.html'
-    context['intro'] = '<h6>An Innovative Website for the Museum of Innovation</h6><p>The Smithsonian Institute needed a website unique and advanced enough to represent their Lemelson Center for Invention and Innovation, and OMBU were thrilled to be tasked with this challenge. In addition to a quirky design that showcases the center’s bold, forward-thinking identity, the powerful Drupal website boasts features such as real-time faceted search, branded audio and video players, and fun on-page interactive elements to increase visitor engagement.</p><p>The Lemelson site integrates with other Smithsonian systems, such as an institution-wide calendaring solution, email marketing tools, and even an in-museum exhibit. These integrations make the site a  rst-class citizen in the Smithsonian ecosystem, and keep rich data  owing without staff intervention.</p>'
-    context['visit_url'] = 'http://invention.si.edu/'
-    context['visit_text'] = 'Visit Website'
-    context['services'] = [ 'Technology Strategy', 'Content Management Architecture', 'Content Management Implementation', 'Archive Records Migration', 'Government Systems Integration', 'Training and Rollout' ]
-    context['technologies'] = [ 'Enterprise Drupal CMS', 'Custom Video and Audio Players', 'Migration of 1700+ Archive Records', 'Apache Solr Faceted Search', 'Interactive Canvas Drawing Functionality', '“Surprise Me” Exploration Feature' ]
-    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
-    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    context['project_prev'] = {
+        'url' : urlresolvers.reverse('project-occ'),
+        'name' : 'Oregon Convention Center',
+        'cta' : 'View project'
+    }
+    context['project_next'] = {
+        'url' : urlresolvers.reverse('project-nwcouncilrtf'),
+        'name' : 'NW Council Regional Technical Forum',
+        'cta' : 'View project'
+    }
     return render(request, 'project.html', context)
 
 def project_nwcouncilrtf(request, context={}):
@@ -102,21 +95,16 @@ def project_nwcouncilrtf(request, context={}):
     context['visit_text'] = 'Visit Website'
     context['services'] = [ 'Technology Strategy', 'User Experience Design', 'Visual Design', 'Enterprise Drupal CMS', 'Accessibility Compliance Audit', 'Migration of Measures', 'Training' ]
     context['technologies'] = [ 'Enterprise Drupal CMS', 'Box Integration for CMS Asset Library', 'Searchable Measure List with Update History', 'Automated Content Migration Script' ]
-    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
-    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
-    return render(request, 'project.html', context)
-
-def project_compliancenext(request, context={}):
-    context['client'] = 'NAVEX Global <span class="widow-prevention">Compliance Next</span>'
-    context['title'] = "Project profile for Compliance Next’s website design"
-    context['hero_carousel_content_template'] = 'content/project/hero-carousels/_compliance-next.html'
-    context['intro'] = '<h6>A Community Platform for a Burgeoning New Industry</h6><p>OMBU built the world’s first community-driven compliance think tank for NAVEX Global. Compliance is an emerging and rapidly growing career field with limited resources for members. To help our client seize the opportunity,  OMBU launched Compliance Next in 5-months. The website features learning tracks and resources and is quickly evolving with features that allow peer-to-peer networking.</p>'
-    context['visit_url'] = 'https://www.navexglobal.com/compliancenext/'
-    context['visit_text'] = 'Visit Website'
-    context['services'] = [ 'Services', 'Technology Strategy', 'Application Architecture', 'Application Development', 'Systems Integration' ]
-    context['technologies'] = [ 'Django Community Application Platform' ]
-    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
-    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    context['project_prev'] = {
+        'url' : urlresolvers.reverse('project-kaufmanhall'),
+        'name' : 'Kaufman Hall',
+        'cta' : 'View project'
+    }
+    context['project_next'] = {
+        'url' : urlresolvers.reverse('project-metro'),
+        'name' : 'Oregon Metro',
+        'cta' : 'View project'
+    }
     return render(request, 'project.html', context)
 
 def project_metro(request, context={}):
@@ -128,8 +116,16 @@ def project_metro(request, context={}):
     context['visit_text'] = 'Visit Website'
     context['services'] = [ 'Technology Strategy', 'Content Management Architecture', 'Drupal CMS Development', 'Government Systems Integration', 'Training & Rollout' ]
     context['technologies'] = [ 'Enterprise Drupal CMS', 'Publishing Moderation System', 'Translation/Localization for 13 Languages', 'Responsive Design', 'Rich Interactive Maps', 'Integration with Government Systems', 'Apache Solr Faceted Search', 'Searchable PDF Documents' ]
-    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
-    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    context['project_prev'] = {
+        'url' : urlresolvers.reverse('project-nwcouncilrtf'),
+        'name' : 'NW Council Regional Technical Forum',
+        'cta' : 'View project'
+    }
+    context['project_next'] = {
+        'url' : urlresolvers.reverse('project-metropcmt'),
+        'name' : 'Oregon Metro Public Comment Map App',
+        'cta' : 'View project'
+    }
     return render(request, 'project.html', context)
 
 def project_metropcmt(request, context={}):
@@ -140,8 +136,78 @@ def project_metropcmt(request, context={}):
     # context['visit_url'] = 'http://oregonmetro.gov/swcorridormap'
     # context['visit_text'] = 'Visit Website'
     context['services'] = [ 'User Experience Design', 'Visual Design', 'Drupal Application Development', 'Interactive Map Application Development' ]
-    context['project_prev'] = { 'url': '#', 'name': 'Car Talk', 'cta': 'Don’t Drive Like My Brother' }
-    context['project_next'] = { 'url': '#', 'name': 'Paramount Pictures', 'cta': 'Now Playing' }
+    context['project_prev'] = {
+        'url' : urlresolvers.reverse('project-metro'),
+        'name' : 'Oregon Metro',
+        'cta' : 'View project'
+    }
+    context['project_next'] = {
+        'url' : urlresolvers.reverse('project-stand'),
+        'name' : 'Stand for Children',
+        'cta' : 'View project'
+    }
+    return render(request, 'project.html', context)
+
+def project_stand(request, context={}):
+    context['client'] = "Stand for Children"
+    context['title'] = "Project profile for Stand for Children’s organizer app"
+    context['hero_carousel_content_template'] = 'content/project/hero-carousels/_stand.html'
+    context['intro'] = '<h6>Empowering Community Organizers to Effect Change for Students</h6><p>Stand for Children reached out to OMBU to develop an iPad app with an ambitious goal: to transform the way Stand’s field organizers reach, manage, and activate their volunteer base across the nation.</p><p>OMBU’s Discovery determined that, rather than building an iPad-only app that would restrict the audience to these tablets, Stand would be better off with a mobile web app that would work on any device and platform. This early decision meant that, when Stand later switched it’s tablets from Apple to Microsoft, the app we built worked out- of-the-box and didn’t require additional investment.</p><p>The app integrates in real-time with Stand’s Salesforce CRM, which means that app data is always in sync with gift, membership development, and contact data that are critical for Stand’s daily operations.</p><p>The app was rolled out nationally and has become a critical tool for Stand’s efforts to drive parent engagement and improve outcomes for kids.</p>'
+    context['services'] = [ 'Technology Strategy', 'Table Application Design', 'Application Development' ]
+    context['technologies'] = [ 'Angular JavaScript Application', 'Real-time Salesforce Integration', 'Touch-centric UI' ]
+    context['project_prev'] = {
+        'url' : urlresolvers.reverse('project-metropcmt'),
+        'name' : 'Oregon Metro Public Comment Map App',
+        'cta' : 'View project'
+    }
+    context['project_next'] = {
+        'url' : urlresolvers.reverse('project-compliancenext'),
+        'name' : 'NAVEX Global Compliance Next',
+        'cta' : 'View project'
+    }
+    return render(request, 'project.html', context)
+
+def project_compliancenext(request, context={}):
+    context['client'] = 'NAVEX Global <span class="widow-prevention">Compliance Next</span>'
+    context['title'] = "Project profile for Compliance Next’s website design"
+    context['hero_carousel_content_template'] = 'content/project/hero-carousels/_compliance-next.html'
+    context['intro'] = '<h6>A Community Platform for a Burgeoning New Industry</h6><p>OMBU built the world’s first community-driven compliance think tank for NAVEX Global. Compliance is an emerging and rapidly growing career field with limited resources for members. To help our client seize the opportunity,  OMBU launched Compliance Next in 5-months. The website features learning tracks and resources and is quickly evolving with features that allow peer-to-peer networking.</p>'
+    context['visit_url'] = 'https://www.navexglobal.com/compliancenext/'
+    context['visit_text'] = 'Visit Website'
+    context['services'] = [ 'Services', 'Technology Strategy', 'Application Architecture', 'Application Development', 'Systems Integration' ]
+    context['technologies'] = [ 'Django Community Application Platform' ]
+    context['project_prev'] = {
+        'url' : urlresolvers.reverse('project-stand'),
+        'name' : 'Stand for Children',
+        'cta' : 'View project'
+    }
+    context['project_next'] = {
+        'url' : urlresolvers.reverse('project-smithsonian'),
+        'name' : 'Smithsonian Institute Lemelson Center',
+        'cta' : 'View project'
+    }
+    return render(request, 'project.html', context)
+
+def project_smithsonian(request, context={}):
+    context['client'] = "Smithsonian Institute Lemelson Center"
+    context['title'] = "Project profile for Smithsonian Institute Lemelson Center’s website design"
+    context['hero_carousel_content_template'] = 'content/project/hero-carousels/_smithsonian.html'
+    context['intro'] = '<h6>An Innovative Website for the Museum of Innovation</h6><p>The Smithsonian Institute needed a website unique and advanced enough to represent their Lemelson Center for Invention and Innovation, and OMBU were thrilled to be tasked with this challenge. In addition to a quirky design that showcases the center’s bold, forward-thinking identity, the powerful Drupal website boasts features such as real-time faceted search, branded audio and video players, and fun on-page interactive elements to increase visitor engagement.</p><p>The Lemelson site integrates with other Smithsonian systems, such as an institution-wide calendaring solution, email marketing tools, and even an in-museum exhibit. These integrations make the site a  rst-class citizen in the Smithsonian ecosystem, and keep rich data  owing without staff intervention.</p>'
+    context['visit_url'] = 'http://invention.si.edu/'
+    context['visit_text'] = 'Visit Website'
+    context['services'] = [ 'Technology Strategy', 'Content Management Architecture', 'Content Management Implementation', 'Archive Records Migration', 'Government Systems Integration', 'Training and Rollout' ]
+    context['technologies'] = [ 'Enterprise Drupal CMS', 'Custom Video and Audio Players', 'Migration of 1700+ Archive Records', 'Apache Solr Faceted Search', 'Interactive Canvas Drawing Functionality', '“Surprise Me” Exploration Feature' ]
+    context['project_prev'] = {
+        'url' : urlresolvers.reverse('project-compliancenext'),
+        'name' : 'NAVEX Global Compliance Next',
+        'cta' : 'View project'
+    }
+    context['project_next'] = {
+        'url' : urlresolvers.reverse('project-occ'),
+        'name' : 'Oregon Convention Center',
+        'cta' : 'View project'
+    }
+
     return render(request, 'project.html', context)
 
 def project_seri(request, context={}):
