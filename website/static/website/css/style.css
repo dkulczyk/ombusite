@@ -4950,13 +4950,17 @@ blockquote.testimonial--quote {
   color: white;
   display: flex;
   flex: 1 1 auto;
-  font-family: "tisaproitalicbold", "Georgia", serif;
+  font-family: "tisaproregular", "Georgia", serif;
   font-size: calc(17 / 16 * 1em);
   line-height: calc(30 / 17 * 1em); }
   @media (min-width: 768px) {
     .ic--slide-text {
-      font-size: calc(36 / 18 * 1em);
-      line-height: calc(50 / 36 * 1em); } }
+      font-size: calc(26 / 18 * 1em);
+      line-height: calc(32 / 26 * 1em); } }
+  @media (min-width: 992px) {
+    .ic--slide-text {
+      font-size: calc(32 / 18 * 1em);
+      line-height: calc(38 / 32 * 1em); } }
 
 .ic--slide-actions {
   margin-bottom: calc(30 / 18 * 1rem);

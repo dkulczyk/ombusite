@@ -172,13 +172,18 @@
   color: $color-white;
   display: flex;
   flex: 1 1 auto;
-  font-family: $font-tisapro-bold-italic;
+  font-family: $font-tisapro-regular;
   font-size: calc(17 / 16 * 1em);
   line-height: calc(30 / 17 * 1em);
 
   @media (min-width: $breakpoint-tablet) {
-    font-size: calc(36 / 18 * 1em);
-    line-height: calc(50 / 36 * 1em);
+    font-size: calc(26 / 18 * 1em);
+    line-height: calc(32 / 26 * 1em);
+  }
+
+  @media (min-width: $breakpoint-notebook) {
+    font-size: calc(32 / 18 * 1em);
+    line-height: calc(38 / 32 * 1em);
   }
 }
 
