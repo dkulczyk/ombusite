@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 
 def home(request, context={}):
     context['title'] = "Web solutions for CMS, applications, and DevOps"
@@ -446,3 +446,8 @@ def casestudy_sa(request, context={}):
     context['cta_text'] = '<span class=\"footer--cta-intro--phrase\">We helped Saturday Academy</span> <span class=\"footer--cta-intro--phrase\">modernize their class registration system.</span> <strong>What can we modernize for&nbsp;you?</strong>'
     # context['pdf_download'] = '/static/website/documents/case-studies/phytolacca-dioica.pdf'
     return render(request, 'case-study.html', context)
+
+def browserconfig(request):
+    response = render_to_response('browserconfig.xml')
+    response['Content-Type'] = 'application/xml;'
+    return response

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+{% load static %}
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square70x70logo src="{% static 'website/images/favicon/favicon-20190206-076.png' %}" />
+            <square150x150logo src="{% static 'website/images/favicon/favicon-20190206-228.png' %}" />
+            <TileColor>#ffffff</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>

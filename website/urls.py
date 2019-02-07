@@ -46,4 +46,7 @@ urlpatterns = [
     url(r'^work/nwpp$', website.views.casestudy_nwpp, name='case-study-nwpp'),
     url(r'^work/navex-global$', website.views.casestudy_navex, name='case-study-navex'),
     url(r'^work/saturday-academy$', website.views.casestudy_sa, name='case-study-sa'),
+
+    # browserconfig.xml for Microsoft browsers & devices
+    url(r'^browserconfig.xml$', website.views.browserconfig, name='browserconfig'),
 ]
