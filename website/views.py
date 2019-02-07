@@ -309,13 +309,13 @@ def casestudy_nwpp(request, context={}):
             'title': 'Drag & Drop Course Builder',
             'background': 'website/images/case-studies/nwpp/innov-slide-01@2x.png',
             'text': 'NWPP can drag-and-drop any assortment of videos, documentation, and quizzes together to quickly and easily create courses for utility workers to take.',
-            'action_text': 'Watch Demo',
+            'action_text': '',
         },
         {
             'title': 'Powerful Digital Asset Management',
             'background': 'website/images/case-studies/nwpp/innov-slide-02@2x.png',
             'text': 'All media assets, such as videos, documents, and images are stored in a central asset library.<br><br>Videos integrate directly into the design and aesthetic of the site, a collaboration between NWPP’s production team and OMBU.',
-            'action_text': 'Watch Demo',
+            'action_text': '',
         },
         {
             'title': 'High-Availability DevOps',
