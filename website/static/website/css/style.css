@@ -4758,7 +4758,7 @@ blockquote.testimonial--quote {
   .ic--main {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 20px); } }
+    height: calc(100vh - 20px * 2); } }
 
 @media (max-width: 767px) {
   .ic--slides {
