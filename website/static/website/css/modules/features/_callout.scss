@@ -29,7 +29,7 @@
 
 .callout--content {
   flex: 0 0 auto;
-  
+
   @media (max-width: $breakpoint-tablet - 1px) {
     order: 1;
     width: 100%;
@@ -47,7 +47,7 @@
     @media (min-width: $breakpoint-tablet) {
       width: calc(7 / 12 * 100%);
     }
-  }  
+  }
 }
 
 .callout--title {
@@ -91,7 +91,7 @@
     font-size: calc(18 / 26 * 1em);
     line-height: calc(30 / 18 * 1em);
     margin-bottom: 0;
-  }  
+  }
 }
 
 .callout--body {
@@ -113,6 +113,10 @@
 .callout--media {
   flex: 0 0 auto;
 
+  a {
+    display: block;
+  }
+
   @media (max-width: $breakpoint-tablet - 1px) {
     margin-bottom: calc(20 / 16 * 1rem);
     order: 0;
@@ -127,8 +131,8 @@
 
     .callout.callout--gap & {
       width: calc(50% - #{$callout-gap});
-    }    
-  }  
+    }
+  }
 
   &.callout--media--prominent {
     @media (min-width: $breakpoint-tablet) {
@@ -148,14 +152,14 @@
       background-color: #435E74;
       order: -1;
       margin-bottom: calc(60 / 18 * 1rem);
-      transition: all 0.5s ease;      
-      width: 100%;   
+      transition: all 0.5s ease;
+      width: 100%;
 
       img {
         filter: saturate(0);
         mix-blend-mode: screen;
         transition: all 1s ease;
-      }        
+      }
     }
   }
 
@@ -167,5 +171,5 @@
         filter: saturate(1);
       }
     }
-  }   
+  }
 }

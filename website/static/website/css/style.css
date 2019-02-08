@@ -3142,6 +3142,8 @@ html.navigation--active, html.navigation--active body {
 
 .callout--media {
   flex: 0 0 auto; }
+  .callout--media a {
+    display: block; }
   @media (max-width: 767px) {
     .callout--media {
       margin-bottom: calc(20 / 16 * 1rem);
