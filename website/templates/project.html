@@ -78,20 +78,24 @@
           <section class="project-section">
             <div class="project-section--pager">
               <ul class="project-pager">
+                {% if project_prev %}
                 <li>
                   <a href="{{project_prev.url}}" class="project-pager--link">
                     <div class="project-pager--label">Project profile:</div>
-                    <h2 class="project-pager--title">{{project_prev.name}}</h2>
-                    <span class="project-pager--cta">{{project_prev.cta}}</span>
+                    <h2 class="project-pager--title">{{project_prev.client|safe}}</h2>
+                    <span class="project-pager--cta">View project</span>
                   </a>
                 </li>
+                {% endif %}
+                {% if project_next %}
                 <li>
                   <a href="{{project_next.url}}" class="project-pager--link">
                     <div class="project-pager--label">Project profile:</div>
-                    <h2 class="project-pager--title">{{project_next.name}}</h2>
-                    <span class="project-pager--cta">{{project_next.cta}}</span>
+                    <h2 class="project-pager--title">{{project_next.client|safe}}</h2>
+                    <span class="project-pager--cta">View project</span>
                   </a>
                 </li>
+                {% endif %}
               </ul>
             </div>
           </section>
