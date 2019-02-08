@@ -308,31 +308,31 @@ def casestudy_nwpp(request, context={}):
         {
             'title': 'Drag & Drop Course Builder',
             'background': 'website/images/case-studies/nwpp/innov-slide-01@2x.png',
-            'text': 'NWPP can drag-and-drop any assortment of videos, documentation, and quizzes together to quickly and easily create courses for utility workers to take.',
+            'text': 'NWPP can drag-and-drop any assortment of videos, documentation, and quizzes together to quickly and easily create courses for utility workers to&nbsp;take.',
             'action_text': '',
         },
         {
             'title': 'Powerful Digital Asset Management',
             'background': 'website/images/case-studies/nwpp/innov-slide-02@2x.png',
-            'text': 'All media assets, such as videos, documents, and images are stored in a central asset library.<br><br>Videos integrate directly into the design and aesthetic of the site, a collaboration between NWPP’s production team and OMBU.',
+            'text': 'All media assets, such as videos, documents, and images are stored in a central asset library. Videos integrate directly into the design and aesthetic of the site, a collaboration between NWPP’s production team and&nbsp;OMBU.',
             'action_text': '',
         },
         {
             'title': 'High-Availability DevOps',
             'background': 'website/images/case-studies/nwpp/innov-slide-03@2x.png',
-            'text': 'Because the LMS is a business critical application, it needed to be online at all times. To accomplish this, we designed a high-availability hosting system that keeps copies of the application in two datacenters. The system monitors for connectivity problems and automatically redirects traffic to the healthier data center.',
+            'text': 'Because the LMS is a business critical application, it needed to be online at all times. To accomplish this, we designed a high-availability hosting system that keeps copies of the application in two datacenters. The system monitors for connectivity problems and automatically redirects traffic to the healthier data&nbsp;center.',
             'action_text': '',
         },
         {
             'title': 'Self-Service Team Management Panel',
             'background': 'website/images/case-studies/nwpp/innov-slide-04@2x.png',
-            'text': 'To ensure strong adoption, we designed a system that decentralizes the task of managing utility teams and their training. NWPP can designate training coordinators at their member utilities, who then have tools to invite and monitor a handful to hundreds of individual operators as they progress through their training.<br><br>A convenient dashboard gives the training coordinators an overview of their team’s status, and they can then dig in to any operator’s individual progress.',
+            'text': 'To ensure strong adoption, we designed a system that decentralizes the task of managing utility teams and their training. NWPP can designate training coordinators at their member utilities, who then have tools to invite and monitor a handful to hundreds of individual operators as they progress through their&nbsp;training.',
             'action_text': '',
         },
         {
             'title': 'xAPI Integration',
             'background': 'website/images/case-studies/nwpp/innov-slide-05@2x.png',
-            'text': 'We built one of the first learning management systems featuring native real-time integration with a learning record store (LRS) using the emerging open standard experience API (xAPI, also called Tin Can), the modern replacement for the legacy SCORM protocol.<br><br>With the LRS data, NWPP can track every member’s progress, test results, and completion data, as well as see trends across all learners or insights about individual lessons.',
+            'text': 'We built one of the first learning management systems featuring native real-time integration with a learning record store (LRS) using the emerging open standard experience API (xAPI, also called Tin Can). With the LRS data, NWPP can track every member’s progress, test results, and completion data, as well as see trends across all learners or insights about individual&nbsp;lessons.',
             'action_text': '',
         },
     ]
@@ -383,7 +383,7 @@ def casestudy_navex(request, context={}):
     }
     context['innovations'] = [
         {
-            'title': 'Drag & Drop Course Builder',
+            'title': 'Page Builder',
             'background': 'website/images/case-studies/navex/innov-slide-01@2x.png',
             'text': 'The page builder feature enables marketers to create landing pages for new products and campaigns without coding or technical help. The page builder offers blocks, such as tailored lead-capture, video and other rich media that can be arranged and resized on-page to achieve the best layout for every situation and enable iterative optimization. Marketers can granularly customize the search engine optimization (SEO) at every content level to drive traffic into the sales funnel.',
             'action_text': '',
@@ -391,25 +391,25 @@ def casestudy_navex(request, context={}):
         {
             'title': 'Localization',
             'background': 'website/images/case-studies/navex/innov-slide-02@2x.png',
-            'text': 'NAVEX Global has customers in over 200 countries, so we built powerful localization functionality into their new site. NAVEX Global can easily customize products and messaging for individual geographies, launching with US, UK, and French content.<br><br>Each locale features fully customizable navigation and content, and the marketing team can quickly clone and adapt pages from one locale to another (e.g. clone a US page to the UK locale then tailor it for that geography).<br><br>For visitors, the experience is seamless, as the site automatically detects the user’s location and presents the appropriate targeted content.',
+            'text': 'NAVEX Global has customers in over 200 countries, so we built powerful localization functionality into their new site.  Our solutiom enables the marketing team to quickly clone, translate, and adapt pages from one locale to another. For visitors, the experience is seamless, as the site automatically detects the user’s location and presents the appropriate targeted&nbsp;content.',
             'action_text': '',
         },
         {
             'title': 'Robust, Filterable Resource Center',
             'background': 'website/images/case-studies/navex/innov-slide-03@2x.png',
-            'text': 'Potential customers are more likely to convert when they can see the expertise of a vendor, and so we built NAVEX Global a robust resource center to highlight their insights and demonstrate their thought leadership.<br><br>With robust resource media types, such as white paper PDFs, webinar videos, case studies, and blog posts, NAVEX Global’s team can reach prospects in a variety of forms.<br><br>Individual expert faces provide a personal connection with the content, and show the team behind the software connected directly with their thoughts.<br><br>NAVEX Global can offer premium content behind lead capture gating forms, customized for individual resources, and using progressive enhancement to intelligently and automatically grow lead profiles.',
+            'text': 'Potential customers are more likely to convert when they can see the expertise of a vendor, and so we built NAVEX Global a robust resource center to demonstrate their thought leadership through white papers, webinar videos, case studies, and other content types. NAVEX Global can offer premium content behind lead capture gating forms, customized for individual resources, and using progressive enhancement to intelligently and automatically grow lead&nbsp;profiles.',
             'action_text': '',
         },
         {
             'title': 'Marketo Marketing Automation',
             'background': 'website/images/case-studies/navex/innov-slide-04@2x.png',
-            'text': 'We built custom integration with the Marketo marketing automation platform throughout NAVEX Global’s new site, to enable their marketing team to better capture new leads, gather insights about visitors, track customer value, and target content.<br><br>Potential customers gain access to key resources through Marketo-integrated gating forms, which we also connected with Marketo’s progressive form features, meaning that NAVEX Global can gather new information from visitors as they interact with the site.<br><br>Additionally, marketers can embed custom Marketo-integrated forms anywhere on the site, without any code. Building a custom lead-generation landing page takes a matter of minutes.',
+            'text': 'We built custom integration with the Marketo marketing automation platform throughout NAVEX Global’s new site, to enable their marketing team to better capture new leads, gather insights about visitors, track customer value, and target content.  Using our solution, marketers can embed custom Marketo-integrated forms anywhere on the site, without any code. Building a custom lead-generation landing page takes a matter of&nbsp;minutes.',
             'action_text': '',
         },
         {
             'title': 'Scalable Application and Content DevOps',
             'background': 'website/images/case-studies/navex/innov-slide-05@2x.png',
-            'text': 'To reach NAVEX Global’s worldwide audience quickly and reliably, we built a scalable AWS cloud DevOps for the website application and content.<br><br>Dynamic computation is distributed across an auto-scaling fleet of application servers, with traffic managed by a load balancer. The DevOps has full duplication between two data centers, with all resources ready fail-over to the backup in case of a data center outage.<br><br>Resources and assets, such as images, documents, and stylesheets, are served from a content delivery network, with leaf nodes close to users, for the fastest experience around the world.',
+            'text': 'To reach NAVEX Global’s worldwide audience quickly and reliably, we built a scalable AWS cloud DevOps solution. Dynamic computation is distributed across an auto-scaling fleet of application servers with full failover redudancy in case of a data center outage. Images, documents, and stylesheets, are served from a content delivery network, with leaf nodes close to users, for the fastest experience around the&nbsp;world.',
             'action_text': '',
         },
     ]
@@ -479,25 +479,25 @@ def casestudy_sa(request, context={}):
         {
             'title': 'Real-Time Class Registration System',
             'background': 'website/images/case-studies/sa/innov-slide-01@2x.png',
-            'text': 'A live class catalog syncs between the website and the Salesforce datastore, meaning parents and students can see what classes Saturday Academy offers and, in real-time, seating availability.<br><br>Parents can manage their family’s information through a self-service household dashboard, and can even grant registration access to other household parents or guardians.<br><br>When it’s time to register, a parent can apply for and instantly receive financial aid, calculated based on their adjusted gross income (AGI) using a formula Saturday Academy can adjust over time.<br><br>Payment is processed immediately through Stripe’s API and is recorded within Salesforce, or, in the case of wait-list registrations, can be deferred and automatically charged if the student gets in.',
+            'text': 'A live class catalog syncs between the website and the Salesforce datastore, so parents and students can see Saturday Academy’s classes and seating availability in real-time. When it’s time to register, a parent can apply for and instantly receive financial aid, calculated based on their adjusted gross income (AGI) using a formula Saturday Academy can adjust over time. Payment is processed immediately through Stripe’s API and is recorded within&nbsp;Salesforce.',
             'action_text': '',
         },
         {
             'title': 'Salesforce Business Datastore and Intelligence',
             'background': 'website/images/case-studies/sa/innov-slide-02@2x.png',
-            'text': 'Since all registrations and interactions on the Saturday Academy speak to Salesforce in real-time via REST API, this means both systems are always in sync.<br><br>Real-time data, with customized data structures optimized for their business, means that Saturday Academy can run reports in real-time and gain insights in areas such as financials, demographics, and success metrics.',
+            'text': 'Since all registrations and interactions on the Saturday Academy speak to Salesforce in real-time via REST API, this means both systems are always in sync. Real-time data, with customized data structures optimized for their business, means that Saturday Academy can run reports in real-time and gain insights in areas such as financials, demographics, and success&nbsp;metrics.',
             'action_text': '',
         },
         {
             'title': 'Data Migration',
             'background': 'website/images/case-studies/sa/innov-slide-03@2x.png',
-            'text': 'Saturday Academy had over a decade of records of classes, students, and registrations stored in a number of homegrown Access databases and spreadsheets prior to launching the new system, so for archival and reporting purposes we built an automated migration system to bring the old records into the new system.<br><br>We also migrated donors and organizations from disparate, critical data for a nonprofit.<br><br>The migration meant that on launch day, we were able to automatically enable 10,592 website accounts for households, meaning those parents could log in on day 1 with their information and history already in place.',
+            'text': 'Saturday Academy had over a decade of records stored in disparate homegrown Access databases and spreadsheets prior to launching the new system. For archival and reporting purposes we built an automated migration system to bring those old records into the new system. On launch day, we were able to automatically enable 10,592 household accounts, allowing existing parents and students to immediately log in and see their legacy&nbsp;information.',
             'action_text': '',
         },
         {
             'title': 'Content Management',
             'background': 'website/images/case-studies/sa/innov-slide-04@2x.png',
-            'text': 'Since Saturday Academy is an organization that works with creative and inquisitive families, we designed and built a website that communicates that quirky, intelligent brand while maintaining a simple, easy-to-use interface for actions.<br><br>A mobile-responsive design means parents and students can learn about Saturday Academy’s offerings and register on any device.<br><br>A powerful Content Management gives Saturday Academy’s marketing team the ability to quickly customize layouts with new page elements as their content needs change and the organization grows.',
+            'text': 'Saturday Academy works with creative and inquisitive families, so we designed and built a website that communicates that quirky, intelligent brand while maintaining an easy-to-use, mobile-responsive interface. Powerful content management gives Saturday Academy’s marketing team the ability to quickly customize layouts with new page elements as their content needs change and the organization&nbsp;grows.',
             'action_text': '',
         },
     ]
