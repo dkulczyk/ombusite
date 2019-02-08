@@ -16,7 +16,7 @@ $(function() {
       handler: function(direction) {
         $(this.element).closest('.callout--fullwidth').toggleClass('callout--fullwidth--active')
       },
-      offset: -400
+      offset: -150
     });
   });
 });
