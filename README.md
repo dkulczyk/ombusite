@@ -35,3 +35,33 @@ task. The `build` task is also available when updating or troubleshooting
 images:  
 
     docker-compose build web
+
+
+Remote environments
+-------------------
+
+The AWS resources that run the remote environments are provisioned by the 
+CloudFormation templates in this repository. 
+
+Export AWS credentials to the shell environment:
+
+        export AWS_ACCESS_KEY_ID=...
+        export AWS_SECRET_ACCESS_KEY=...
+        export AWS_DEFAULT_REGION=us-west-2
+
+Provide the database password SSM parameters:
+
+    aws ssm put-parameter \
+        --name /ombusite/<env>/database_password \
+        --type "String" \
+        --value "<password>"
+
+Launch a remote environment:
+
+    ./infrastructure/scripts/stack-launch <env> 
+
+Record the stack name in SERVICES_STACK_<env> in file `infrastructure/scripts/_env`.
+
+Update the application stack:
+
+    ./infrastructure/scripts/stack-update <env> 

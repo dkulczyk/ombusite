@@ -2,51 +2,58 @@ Description: OMBU Site / services / django
 
 Parameters:
 
-  VPC:
-    Description: The VPC for the cluster
-    Type: AWS::EC2::VPC::Id
+  AppVersion:
+    Description: The application version
+    Type: String
 
   Cluster:
     Description: The container cluster that runs the services
     Type: String
 
-  Listener:
-    Description: The load balancer listener for the web service
+  DatabaseHost:
+    Description: The database hostname
+    Type: String
+
+  DatabaseName:
+    Description: The database name
+    Type: String
+
+  DatabasePassword:
+    Description: The database user password
+    Type: AWS::SSM::Parameter::Value<String>
+    NoEcho: True
+
+  DatabaseUser:
+    Description: The database user
     Type: String
 
   DesiredCount:
     Type: Number
     Default: 2
 
-  RoleArn:
-    Description: The ARN of an IAM role for the service
+  Domain:
+    Type: String
+    Description: The domain for the webite
+
+  EnvironmentType:
+    Description: The application environment.
     Type: String
 
-  AppVersion:
-    Description: The application version
-    Type: AWS::SSM::Parameter::Value<String>
+  Listener:
+    Description: The load balancer listener for the web service
+    Type: String
 
   Priority:
     Description: The ELB priority order for this service
     Type: Number
 
-  DatabaseHost:
-    Description: The database hostname
+  RoleArn:
+    Description: The ARN of an IAM role for the service
     Type: String
 
-  DatabasePassword:
-    Description: The database user password
-    Type: String
-
-  EnvironmentType:
-    Description: Whether it's a qa, staging, or production envorinment
-    Type: String
-    AllowedValues:
-      - stage
-
-  Domain:
-    Type: String
-    Description: The domain for the webite
+  VPC:
+    Description: The VPC for the cluster
+    Type: AWS::EC2::VPC::Id
 
 Resources:
 
@@ -62,7 +69,8 @@ Resources:
       VpcId: !Ref VPC
       Port: 80
       Protocol: HTTP
-      HealthCheckPath: /health-check/
+      HealthCheckPath: /health-check
+      HealthyThresholdCount: 2
       Matcher:
         # Allowing 301 because often the default target hosts
         # the redirector service
@@ -70,15 +78,16 @@ Resources:
       TargetGroupAttributes:
         - Key: deregistration_delay.timeout_seconds
           Value: 5
+      UnhealthyThresholdCount: 2
 
   TaskDefinition:
     Type: AWS::ECS::TaskDefinition
     Properties:
-      Family: !Sub ombusite_django
+      Family: !Sub ombusite_${EnvironmentType}_django
       ContainerDefinitions:
         - Name: django
           Essential: true
-          Image: !Sub ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/ombusite/web:${AppVersion}
+          Image: !Sub ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/ombusite/django:${AppVersion}
           MemoryReservation: 128
           LogConfiguration:
             LogDriver: awslogs
@@ -87,8 +96,6 @@ Resources:
               awslogs-region: !Ref AWS::Region
           PortMappings:
             - ContainerPort: 5000
-          Links:
-            - expression
           Environment:
             - Name: APPLICATION_VERSION
               Value: !Ref AppVersion
@@ -98,10 +105,12 @@ Resources:
               Value: !Ref DatabaseHost
             - Name: DATABASE_USER
               Value: ombusite
-            - Name: DATABASE_PASSWORD
-              Value: !Ref DatabasePassword
+            - Name: DOMAIN
+              Value: !Ref Domain
             - Name: ENVIRONMENT_TYPE
               Value: !Ref EnvironmentType
+            - Name: DATABASE_PASSWORD
+              Value: !Ref DatabasePassword
 
   ListenerRule:
     Type: AWS::ElasticLoadBalancingV2::ListenerRule
@@ -125,7 +134,7 @@ Resources:
       DesiredCount: !Ref DesiredCount
       TaskDefinition: !Ref TaskDefinition
       LoadBalancers:
-        - ContainerName: web
+        - ContainerName: django
           ContainerPort: 5000
           TargetGroupArn: !Ref TargetGroup
 

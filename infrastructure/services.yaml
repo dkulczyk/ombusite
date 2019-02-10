@@ -8,14 +8,35 @@ Parameters:
       The name of the CloudFormation stack that provides the underlying
       resources for the application.
 
+  EnvironmentType:
+    Type: String
+    Description: The application environment.
+    AllowedValues:
+      - staging
+      - production
+
   Version:
     Type: String
+    Default: 0.1
     Description: The version of the application.
 
-  Domain:
-    Type: String
-    Default: beta.ombuweb.com
-    Description: The domain for the webite
+Mappings:
+
+  Environments:
+
+    production:
+      DatabaseHost: qa-db-2.cpuj5trym3at.us-west-2.rds.amazonaws.com
+      DatabaseName: ombusite_production
+      DatabaseUser: ombusite_production
+      Domain: beta.ombuweb.com
+      ListernerPriority: 100
+
+    staging:
+      DatabaseHost: qa-db-2.cpuj5trym3at.us-west-2.rds.amazonaws.com
+      DatabaseName: ombusite_staging
+      DatabaseUser: ombusite_staging
+      Domain: staging.ombuweb.com
+      ListernerPriority: 101
 
 Resources:
 
@@ -57,21 +78,28 @@ Resources:
           }
 
   Django:
-    DependsOn: DefaultRole
     Type: AWS::CloudFormation::Stack
     Properties:
       TemplateURL: services/django.yaml
       Parameters:
+        AppVersion: !Ref Version
         Cluster:
           Fn::ImportValue:
             !Sub "${InfrastructureStack}-Cluster"
-        Domain: !Ref Domain
+        DatabaseHost: !FindInMap [ Environments, !Ref EnvironmentType, DatabaseHost ]
+        DatabaseName: !FindInMap [ Environments, !Ref EnvironmentType, DatabaseName ]
+        DatabaseUser: !FindInMap [ Environments, !Ref EnvironmentType, DatabaseUser ]
+        DatabasePassword: !Sub /ombusite/${EnvironmentType}/database_password
+        Domain:  !FindInMap [ Environments, !Ref EnvironmentType, Domain ]
+        EnvironmentType: !Ref EnvironmentType
         Listener:
           Fn::ImportValue:
             !Sub "${InfrastructureStack}-Listener"
-        Memory: 256
-        Version: !Ref Version
-
+        Priority: !FindInMap [ Environments, !Ref EnvironmentType, ListernerPriority ]
+        RoleArn: !Ref DefaultRole
+        VPC:
+          Fn::ImportValue:
+            !Sub "${InfrastructureStack}-VPC"
 
 Outputs:
 

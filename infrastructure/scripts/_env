@@ -8,7 +8,10 @@
 ARCH_SLUG=ombusite
 
 # Environment specific variables
-INFRASTRUCTURE_STACK_stage=ombu-cluster-development-1806011101
+INFRASTRUCTURE_STACK_staging=ombu-services-development-1810311008
+INFRASTRUCTURE_STACK_production=ombu-services-development-1810311008
+SERVICES_STACK_staging=ombusite-staging-1902091650
+SERVICES_STACK_production=ombusite-production-1902091658
 
 ###########################
 # END OF USER CONFIGURATION
@@ -19,10 +22,10 @@ aws="docker run --rm -v ${PWD}:/tmp -w /tmp -e AWS_ACCESS_KEY_ID -e AWS_SECRET_A
 if [[ -z ${SKIP_ENVIRONMENT_CHECK} ]]
 then
     appEnv=$1
-    if [[ "${appEnv}" != "stage" ]]
+    if [[ "${appEnv}" != "staging" ]] && [[ "${appEnv}" != "production" ]]
     then
         echo "Unknown environment ${appEnv}"
-        echo "The known environments are: stage"
+        echo "The known environments are: staging, production"
         exit 1
     fi
 fi
@@ -30,3 +33,5 @@ fi
 # Convenience variables for scripts that source this one
 _infrastructure_stack_name=INFRASTRUCTURE_STACK_${appEnv}
 infrastructure_stack_name=${!_infrastructure_stack_name}
+_services_stack_name=SERVICES_STACK_${appEnv}
+services_stack_name=${!_services_stack_name}

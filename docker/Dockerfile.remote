@@ -1,0 +1,37 @@
+FROM python:3-slim
+
+MAINTAINER OMBU
+
+# Hack to make postgresql-client install work on slim
+RUN buildDeps="gcc" && \
+    mkdir -p /usr/share/man/man1 \
+    && mkdir -p /usr/share/man/man7 && \
+    apt-get update && apt-get install -y $buildDeps \
+    python \
+    postgresql-client \
+    libpq-dev \
+    libjpeg-dev
+
+WORKDIR /var/www
+
+ADD requirements/base.txt requirements/remote.txt requirements/
+
+RUN pip install -r requirements/remote.txt && \
+    apt-get purge -y --auto-remove $buildDeps && \
+    apt-get clean autoclean && apt-get autoremove && \
+    rm -rf /var/lib/{apt,dpkg,cache,log}/
+
+ADD . /var/www
+
+ENV DJANGO_SETTINGS_MODULE=website.settings.remote \
+    UWSGI_WSGI_FILE=website/wsgi.py UWSGI_HTTP=:5000 UWSGI_MASTER=1 \
+    UWSGI_WORKERS=2 UWSGI_THREADS=8 UWSGI_UID=www-data UWSGI_GID=www-data \
+    UWSGI_LAZY_APPS=1 UWSGI_WSGI_ENV_BEHAVIOR=holy
+
+
+RUN python manage.py collectstatic --noinput
+
+EXPOSE 5000
+
+CMD ["uwsgi", "--http-auto-chunked", "--http-keepalive","--static-map", \
+     "/static=/var/www/static","--static-map", "/media=/var/www/media"]

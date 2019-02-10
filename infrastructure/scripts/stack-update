@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -e
+
+script_path="$(cd "$(dirname "$0")" && pwd)"
+source ${script_path}/_env
+
+source ${script_path}/stack-package ${appEnv}
+
+echo "Updating stack: ${stack_name}"
+${aws} cloudformation update-stack \
+    --stack-name ${services_stack_name} \
+    --template-body file://build/packaged_${appEnv}.yaml \
+    --capabilities CAPABILITY_NAMED_IAM \
+    --parameters ParameterKey=EnvironmentType,ParameterValue=${appEnv} \
+                 ParameterKey=InfrastructureStack,ParameterValue=${infrastructure_stack_name}

@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.http import JsonResponse
 import website.views
 
 urlpatterns = [
+    url(r'^health-check$', lambda response: JsonResponse({"status":"ok"})),
     url(r'^$', website.views.home, name='home'),
     # url(r'^home$', website.views.home, name='home'),
     # url(r'^admin/', admin.site.urls),
