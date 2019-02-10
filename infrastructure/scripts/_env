@@ -10,8 +10,10 @@ ARCH_SLUG=ombusite
 # Environment specific variables
 INFRASTRUCTURE_STACK_staging=ombu-services-development-1810311008
 INFRASTRUCTURE_STACK_production=ombu-services-development-1810311008
-SERVICES_STACK_staging=ombusite-staging-1902091650
-SERVICES_STACK_production=ombusite-production-1902091658
+SERVICES_STACK_staging=ombusite-services-staging-1902101136
+SERVICES_STACK_production=
+PIPELINE_STACK_staging=ombusite-pipeline-staging-1902101201
+SERVICES_STACK_production=
 
 ###########################
 # END OF USER CONFIGURATION
@@ -30,8 +32,29 @@ then
     fi
 fi
 
+if [[ -n ${VALIDATE_COMPONENT} ]]
+then
+    component=$2
+    if [[ "${component}" != "services" ]] && [[ "${component}" != "pipeline" ]]
+    then
+        echo "Unknown stack component ${component}"
+        echo "The known components are: services, pipeline"
+        exit 1
+    fi
+fi
+
 # Convenience variables for scripts that source this one
 _infrastructure_stack_name=INFRASTRUCTURE_STACK_${appEnv}
 infrastructure_stack_name=${!_infrastructure_stack_name}
 _services_stack_name=SERVICES_STACK_${appEnv}
 services_stack_name=${!_services_stack_name}
+_pipeline_stack_name=PIPELINE_STACK_${appEnv}
+pipeline_stack_name=${!_pipeline_stack_name}
+
+parameters="ParameterKey=EnvironmentType,ParameterValue=${appEnv} ParameterKey=InfrastructureStack,ParameterValue=${infrastructure_stack_name}"
+
+#if [[ "$component" == 'services' ]] ; then
+#fi
+if [[ "$component" == 'pipeline' ]] ; then
+    parameters="$parameters ParameterKey=ApplicationStack,ParameterValue=${services_stack_name}"
+fi

@@ -106,3 +106,5 @@ Outputs:
   DjangoServiceName:
     Description: The name the created Elasticsearch service
     Value: !GetAtt Django.Outputs.ServiceName
+    Export:
+      Name: !Sub ${AWS::StackName}-DjangoServiceName

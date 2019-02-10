@@ -1,17 +1,21 @@
 #!/usr/bin/env bash
 set -e
 
-script_path="$(cd "$(dirname "$0")" && pwd)"
-source ${script_path}/_env
+VALIDATE_COMPONENT=1
+
+if [[ -z ${appEnv} ]]
+then
+    script_path="$(cd "$(dirname "$0")" && pwd)"
+    source ${script_path}/_env
+fi
 
 printf "Determining AWS account id: "
 awsAccountId=`${aws} sts get-caller-identity --query Account --output text`
 printf "${awsAccountId}\n"
 bucket=cloudformation-${ARCH_SLUG}-${awsAccountId}
-
 echo "Packaging stack to: s3://${bucket}/${appEnv}"
 ${aws} cloudformation package \
-    --template-file infrastructure/services.yaml \
+    --template-file infrastructure/${component}.yaml \
     --s3-bucket ${bucket} \
     --s3-prefix ${appEnv} \
-    --output-template-file build/packaged_${appEnv}.yaml > /dev/null
+    --output-template-file build/packaged_${component}_${appEnv}.yaml > /dev/null

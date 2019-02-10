@@ -1,18 +1,20 @@
 #!/usr/bin/env bash
 set -e
 
+VALIDATE_COMPONENT=1
+
 script_path="$(cd "$(dirname "$0")" && pwd)"
 source ${script_path}/_env
 
-stack_name=${ARCH_SLUG}-${appEnv}-`date '+%y%m%d%H%M'`
+stack_name=${ARCH_SLUG}-${component}-${appEnv}-`date '+%y%m%d%H%M'`
 
-source ${script_path}/stack-package ${appEnv}
+source ${script_path}/stack-package ${appEnv} ${component}
 
 echo "Launching stack: ${stack_name}"
 ${aws} cloudformation create-stack \
     --disable-rollback \
     --stack-name ${stack_name} \
-    --template-body file://build/packaged_${appEnv}.yaml \
+    --template-body file://build/packaged_${component}_${appEnv}.yaml \
     --capabilities CAPABILITY_NAMED_IAM \
-    --parameters ParameterKey=EnvironmentType,ParameterValue=${appEnv} \
-                 ParameterKey=InfrastructureStack,ParameterValue=${infrastructure_stack_name}
+     --parameters ${parameters}
+${aws} cloudformation wait stack-create-complete --stack-name ${stack_name}

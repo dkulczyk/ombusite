@@ -49,7 +49,12 @@ Export AWS credentials to the shell environment:
         export AWS_SECRET_ACCESS_KEY=...
         export AWS_DEFAULT_REGION=us-west-2
 
-Provide the database password SSM parameters:
+Provide required SSM parameters, global and for the desired `<env>`:
+
+- `/ombusite/github_access_token`
+- `/ombusite/<env>/database_password`
+
+For example:
 
     aws ssm put-parameter \
         --name /ombusite/<env>/database_password \

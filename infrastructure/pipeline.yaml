@@ -1,1 +1,394 @@
 Description: OMBU Site / pipeline
+
+Parameters:
+
+  EnvironmentType:
+    Type: String
+    Description: The application environment.
+    AllowedValues:
+      - staging
+      - production
+
+  InfrastructureStack:
+    Type: String
+    Description: The stack name that define the cluster for the application.
+
+  ApplicationStack:
+    Type: String
+    Description: The stack name that defines the application.
+
+  CodeBuildImage:
+    Type: String
+    Default: aws/codebuild/docker:18.09.0
+    Description: >
+      The stack name that defines the application. See
+      https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html
+
+  CodeBuildComputeType:
+    Type: String
+    Default: BUILD_GENERAL1_MEDIUM
+    Description: >
+      The compute environment for the build. See
+      https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html
+
+Mappings:
+
+  Environments:
+
+    staging:
+      GitHubRepo: ombusite
+      GitHubUser: ombu
+      Branch: 2/develop
+      NotificationsEmail: martin+ombusite@ombuweb.com
+
+    production:
+      GitHubRepo: ombusite
+      GitHubUser: ombu
+      Branch: pipeline_test
+      NotificationsEmail: martin+ombusite@ombuweb.com
+
+Resources:
+
+
+  ArtifactBucket:
+    Type: AWS::S3::Bucket
+    Description: The bucket to store pipeline artifacts
+    Properties:
+      LifecycleConfiguration:
+        Rules:
+          - Id: DeleteAfterOneMonth
+            Status: Enabled
+            ExpirationInDays: 30
+
+  CodeBuildServiceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: codebuild.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Resource: "*"
+                Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                  - ecr:GetAuthorizationToken
+                  - cloudformation:GetTemplate
+              - Resource: !Sub arn:aws:s3:::${ArtifactBucket}/*
+                Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:GetObjectVersion
+                  - s3:GetBucketVersioning
+              - Resource: !Sub arn:aws:ecr:${AWS::Region}:${AWS::AccountId}:repository/ombusite/*
+                Effect: Allow
+                Action:
+                  - ecr:GetDownloadUrlForLayer
+                  - ecr:BatchGetImage
+                  - ecr:BatchCheckLayerAvailability
+                  - ecr:PutImage
+                  - ecr:InitiateLayerUpload
+                  - ecr:UploadLayerPart
+                  - ecr:CompleteLayerUpload
+        - PolicyName: allow-vpc-network-interface-creation
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Resource: "*"
+                Effect: Allow
+                Action:
+                  - ec2:CreateNetworkInterface
+                  - ec2:DescribeDhcpOptions
+                  - ec2:DescribeNetworkInterfaces
+                  - ec2:DeleteNetworkInterface
+                  - ec2:DescribeSubnets
+                  - ec2:DescribeSecurityGroups
+                  - ec2:DescribeVpcs
+              - Resource: !Sub "arn:aws:ec2:${AWS::Region}:${AWS::AccountId}:network-interface/*"
+                Effect: Allow
+                Action:
+                  - ec2:CreateNetworkInterfacePermission
+                Condition:
+                  StringEquals:
+                    ec2:Subnet: !Sub "arn:aws:ec2:${AWS::Region}:${AWS::AccountId}:subnet/*"
+
+  CodePipelineServiceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: codepipeline.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Resource: "*"
+                Effect: Allow
+                Action:
+                  - codebuild:StartBuild
+                  - codebuild:BatchGetBuilds
+                  - iam:PassRole
+                  - cloudformation:Describe*
+                  - cloudformation:CreateStack
+                  - cloudformation:DeleteStack
+                  - cloudformation:DescribeStacks
+                  - cloudformation:UpdateStack
+                  - cloudformation:CreateChangeSet
+                  - cloudformation:DeleteChangeSet
+                  - cloudformation:DescribeChangeSet
+                  - cloudformation:ExecuteChangeSet
+                  - cloudformation:SetStackPolicy
+                  - cloudformation:ValidateTemplate
+                  - codecommit:GetBranch
+                  - codecommit:GetCommit
+                  - codecommit:UploadArchive
+                  - codecommit:GetUploadArchiveStatus
+                  - codecommit:CancelUploadArchive
+              - Resource:
+                  - !Sub arn:aws:s3:::${ArtifactBucket}
+                Effect: Allow
+                Action:
+                  - s3:GetBucketVersioning
+              - Resource:
+                  - !Sub arn:aws:s3:::${ArtifactBucket}/*
+                Effect: Allow
+                Action:
+                  - s3:PutObject
+                  - s3:GetObject
+                  - s3:GetObjectVersion
+              - Resource: arn:aws:s3:::codepipeline*
+                Effect: Allow
+                Action:
+                  - s3:PutObject
+
+  CloudFormationServiceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: cloudformation.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Resource: "*"
+                Effect: Allow
+                Action:
+                  - cloudformation:*
+                  - ec2:*
+                  - ecs:*
+                  - s3:GetObject
+#              - Resource: !Sub "arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:ombusite/*"
+              - Resource: "*"
+                Effect: Allow
+                Action:
+                  - ssm:GetParameters
+
+  CodeBuildSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupName: CodeBuild security group
+      GroupDescription: 'CodeBuild SecurityGroup'
+      VpcId:
+        Fn::ImportValue:
+          !Sub "${InfrastructureStack}-VPC"
+
+  CodeBuildProject:
+    Type: AWS::CodeBuild::Project
+    Properties:
+      Name: !Ref AWS::StackName
+      ServiceRole: !Ref CodeBuildServiceRole
+      TimeoutInMinutes: 5
+      Artifacts:
+        Type: CODEPIPELINE
+      Cache:
+        Type: S3
+        Location: !Sub ${ArtifactBucket}/CodeBuildCache
+      Source:
+        Type: CODEPIPELINE
+        BuildSpec: |
+          version: 0.2
+          phases:
+            pre_build:
+              commands:
+                - $(aws ecr get-login --no-include-email)
+                - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
+                - IMAGE_URI="${REPOSITORY_URI}:${TAG}"
+            build:
+              commands:
+                - docker build -f docker/Dockerfile.remote --tag "$IMAGE_URI" .
+            post_build:
+              commands:
+                - docker push "$IMAGE_URI"
+                - aws cloudformation get-template --stack-name $APPLICATION_STACK --template-stage Original --query 'TemplateBody' --output text > template.yaml
+                - printf '{"name":"%s","imageUri":"%s", "version":"%s"}' "$SERVICE_NAME" "$IMAGE_URI" "$TAG" > images.json
+          artifacts:
+            files:
+              - images.json
+              - template.yaml
+
+      Environment:
+        ComputeType: !Ref CodeBuildComputeType
+        Image: !Ref CodeBuildImage
+        Type: LINUX_CONTAINER
+        EnvironmentVariables:
+          - Name: AWS_DEFAULT_REGION
+            Value: !Ref AWS::Region
+          - Name: REPOSITORY_URI
+            Value: !Sub ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/ombusite/django
+          - Name: SERVICE_NAME
+            Value:
+              Fn::ImportValue:
+                !Sub "${ApplicationStack}-DjangoServiceName"
+          - Name: CLUSTER_STACK
+            Value: !Ref InfrastructureStack
+          - Name: APPLICATION_STACK
+            Value: !Ref ApplicationStack
+
+  Pipeline:
+    Type: AWS::CodePipeline::Pipeline
+    Properties:
+      RoleArn: !GetAtt [ CodePipelineServiceRole, Arn ]
+      ArtifactStore:
+        Type: S3
+        Location: !Ref ArtifactBucket
+      Stages:
+        - Name: Source
+          Actions:
+            - Name: Source
+              RunOrder: 1
+              ActionTypeId:
+                Category: Source
+                Owner: ThirdParty
+                Version: 1
+                Provider: GitHub
+              Configuration:
+                Owner: !FindInMap [ Environments, !Ref EnvironmentType, GitHubUser ]
+                Repo: !FindInMap [ Environments, !Ref EnvironmentType, GitHubRepo ]
+                Branch: !FindInMap [ Environments, !Ref EnvironmentType, Branch ]
+                OAuthToken: '{{resolve:ssm:/ombusite/github_access_token:1}}'
+              OutputArtifacts:
+                - Name: SourceOutput
+        - Name: Build
+          Actions:
+            - Name: Build
+              RunOrder: 1
+              ActionTypeId:
+                Category: Build
+                Owner: AWS
+                Version: 1
+                Provider: CodeBuild
+              Configuration:
+                ProjectName: !Ref CodeBuildProject
+              InputArtifacts:
+                - Name: SourceOutput
+              OutputArtifacts:
+                - Name: BuildOutput
+
+        - Name: Deploy
+          Actions:
+            - Name: UpdateTemplate
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Provider: CloudFormation
+                Version: '1'
+              Configuration:
+                ActionMode: CREATE_UPDATE
+                Capabilities: CAPABILITY_NAMED_IAM
+                RoleArn: !GetAtt [CloudFormationServiceRole, Arn]
+                StackName: !Ref ApplicationStack
+                TemplatePath: BuildOutput::template.yaml
+                ParameterOverrides: !Sub |
+                  {
+                    "EnvironmentType" : "${EnvironmentType}",
+                    "InfrastructureStack" : "${InfrastructureStack}",
+                    "Version" : { "Fn::GetParam" : ["BuildOutput", "images.json", "version"]}
+                  }
+              InputArtifacts:
+                - Name: BuildOutput
+
+  NotificationsTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      Subscription:
+        - Endpoint: !FindInMap [ Environments, !Ref EnvironmentType, NotificationsEmail ]
+          Protocol: email
+
+  NotificationsTopicPolicy:
+    Type: AWS::SNS::TopicPolicy
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - events.amazonaws.com
+            Action: sns:Publish
+            Resource: !Ref NotificationsTopic
+      Topics:
+        - !Ref NotificationsTopic
+
+  EventRule:
+    Type: "AWS::Events::Rule"
+    Properties:
+      Description: "EventRule"
+      EventPattern:
+        source:
+          - aws.codepipeline
+        detail-type:
+          - "CodePipeline Pipeline Execution State Change"
+        detail:
+          pipeline:
+            - !Ref Pipeline
+          state:
+            - STARTED
+            - SUCCEEDED
+            - RESUMED
+            - FAILED
+            - CANCELED
+            - SUPERSEDED
+      State: ENABLED
+      Targets:
+        - Arn: !Ref  NotificationsTopic
+          Id: !Sub "${AWS::StackName}"
+          InputTransformer:
+            InputTemplate: >
+              Change in pipeline statue"
+              - Pipeline: <pipeline>
+              - New state: <state>
+              - At: <at>
+            InputPathsMap:
+              pipeline: "$.detail.pipeline"
+              state: "$.detail.state"
+              at: "$.time"
+              account: "$.account"
+Outputs:
+
+  PipelineName:
+    Description: The continuous deployment pipeline in the AWS Management Console.
+    Value: !Ref Pipeline
