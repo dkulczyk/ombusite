@@ -38,13 +38,13 @@ Mappings:
     staging:
       GitHubRepo: ombusite
       GitHubUser: ombu
-      Branch: 2/develop
+      Branch: 2/staging
       NotificationsEmail: martin+ombusite@ombuweb.com
 
     production:
       GitHubRepo: ombusite
       GitHubUser: ombu
-      Branch: pipeline_test
+      Branch: 2/production
       NotificationsEmail: martin+ombusite@ombuweb.com
 
 Resources:
@@ -377,11 +377,11 @@ Resources:
         - Arn: !Ref  NotificationsTopic
           Id: !Sub "${AWS::StackName}"
           InputTransformer:
-            InputTemplate: >
-              Change in pipeline statue"
-              - Pipeline: <pipeline>
-              - New state: <state>
-              - At: <at>
+            InputTemplate: |
+              "Change in pipeline status"
+              "- Pipeline: <pipeline>"
+              "- New state: <state>"
+              "- At: <at>"
             InputPathsMap:
               pipeline: "$.detail.pipeline"
               state: "$.detail.state"

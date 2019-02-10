@@ -21,9 +21,9 @@ SERVICES_STACK_production=
 
 aws="docker run --rm -v ${PWD}:/tmp -w /tmp -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_DEFAULT_REGION ombu/docker-awscli aws"
 
+appEnv=$1
 if [[ -z ${SKIP_ENVIRONMENT_CHECK} ]]
 then
-    appEnv=$1
     if [[ "${appEnv}" != "staging" ]] && [[ "${appEnv}" != "production" ]]
     then
         echo "Unknown environment ${appEnv}"
@@ -32,9 +32,9 @@ then
     fi
 fi
 
+component=$2
 if [[ -n ${VALIDATE_COMPONENT} ]]
 then
-    component=$2
     if [[ "${component}" != "services" ]] && [[ "${component}" != "pipeline" ]]
     then
         echo "Unknown stack component ${component}"

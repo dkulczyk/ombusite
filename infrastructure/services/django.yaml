@@ -137,6 +137,10 @@ Resources:
         - ContainerName: django
           ContainerPort: 5000
           TargetGroupArn: !Ref TargetGroup
+      DeploymentConfiguration:
+        MaximumPercent: 200
+        MinimumHealthyPercent: 50
+
 
 Outputs:
 
