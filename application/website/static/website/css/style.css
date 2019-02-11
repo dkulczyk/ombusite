@@ -5320,7 +5320,7 @@ blockquote.testimonial--quote {
     .project-slider .owl-dots {
       bottom: -44px; } }
 
-.project-slider .owl-dot {
+.project-slider button.owl-dot {
   background: #435e74;
   border-radius: 100%;
   display: inline-block;
@@ -5329,7 +5329,7 @@ blockquote.testimonial--quote {
   margin-right: 10px;
   opacity: 0.3;
   width: 10px; }
-  .project-slider .owl-dot.active {
+  .project-slider button.owl-dot.active {
     opacity: 1; }
 
 .project-title--cta {

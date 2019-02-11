@@ -1,10 +1,10 @@
 .project-slider {
   overflow: hidden;
   padding-bottom: calc(44 / 18 * 1rem);
-  
+
   @media (min-width: $breakpoint-tablet) {
     padding-top: 4px;
-  }    
+  }
 }
 
 .slider {
@@ -37,7 +37,7 @@
   }
 }
 
-.owl-dot {
+button.owl-dot {
   .project-slider & {
     background: $color-body;
     border-radius: 100%;
