@@ -1141,8 +1141,7 @@ body {
   color: #435e74;
   font-family: "tisaproregular", "Georgia", serif;
   font-size: 18px;
-  line-height: calc(30 / 18 * 1em);
-  background-color: black; }
+  line-height: calc(30 / 18 * 1em); }
   @media (max-width: 991px) {
     body {
       font-size: calc(16 / 18 * 1em);
