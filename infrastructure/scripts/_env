@@ -53,8 +53,9 @@ pipeline_stack_name=${!_pipeline_stack_name}
 
 parameters="ParameterKey=EnvironmentType,ParameterValue=${appEnv} ParameterKey=InfrastructureStack,ParameterValue=${infrastructure_stack_name}"
 
-#if [[ "$component" == 'application' ]] ; then
-#fi
+if [[ "$component" == 'application' ]] ; then
+    parameters="$parameters ParameterKey=Version,ParameterValue=/ombusite/${appEnv}/version"
+fi
 if [[ "$component" == 'pipeline' ]] ; then
     parameters="$parameters ParameterKey=ApplicationStack,ParameterValue=${application_stack_name}"
 fi

@@ -101,6 +101,11 @@ Resources:
                   - ecr:InitiateLayerUpload
                   - ecr:UploadLayerPart
                   - ecr:CompleteLayerUpload
+              - Resource: !Sub arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/ombusite/${EnvironmentType}/*
+                Effect: Allow
+                Action:
+                  - ssm:PutParameter
+
         - PolicyName: allow-vpc-network-interface-creation
           PolicyDocument:
             Version: 2012-10-17
@@ -214,8 +219,9 @@ Resources:
             post_build:
               commands:
                 - docker push "$IMAGE_URI"
-                - aws cloudformation get-template --stack-name $APPLICATION_STACK --template-stage Original --query 'TemplateBody' --output text > template.yaml
-                - printf '{"name":"%s","imageUri":"%s", "version":"%s"}' "$SERVICE_NAME" "$IMAGE_URI" "$TAG" > images.json
+                - aws ssm put-parameter --overwrite --name "/ombusite/${ENVIRONMENT_TYPE}/version" --type "String" --value "${TAG}"
+                - aws cloudformation get-template --stack-name ${APPLICATION_STACK} --template-stage Original --query 'TemplateBody' --output text > template.yaml
+                - printf '{"name":"%s","imageUri":"%s", "version":"%s"}' "${SERVICE_NAME}" "${IMAGE_URI}" "${TAG}" > images.json
           artifacts:
             files:
               - images.json
@@ -226,18 +232,16 @@ Resources:
         Image: !Ref CodeBuildImage
         Type: LINUX_CONTAINER
         EnvironmentVariables:
-          - Name: AWS_DEFAULT_REGION
-            Value: !Ref AWS::Region
           - Name: REPOSITORY_URI
             Value: !Sub ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/ombusite/django
           - Name: SERVICE_NAME
             Value:
               Fn::ImportValue:
                 !Sub "${ApplicationStack}-DjangoServiceName"
-          - Name: INFRASTRUCTURE_STACK
-            Value: !Ref InfrastructureStack
           - Name: APPLICATION_STACK
             Value: !Ref ApplicationStack
+          - Name: ENVIRONMENT_TYPE
+            Value: !Ref EnvironmentType
 
   Pipeline:
     Type: AWS::CodePipeline::Pipeline
@@ -299,7 +303,7 @@ Resources:
                   {
                     "EnvironmentType" : "${EnvironmentType}",
                     "InfrastructureStack" : "${InfrastructureStack}",
-                    "Version" : { "Fn::GetParam" : ["BuildOutput", "images.json", "version"]}
+                    "Version" : "/ombusite/${EnvironmentType}/version"
                   }
               InputArtifacts:
                 - Name: BuildOutput

@@ -16,8 +16,7 @@ Parameters:
       - production
 
   Version:
-    Type: String
-    Default: 0.1
+    Type: AWS::SSM::Parameter::Value<String>
     Description: The version of the application.
 
 Mappings:
@@ -124,9 +123,9 @@ Resources:
                   - cloudformation:*
                   - ec2:*
                   - ecs:*
+                  - iam:*
                   - s3:GetObject
-              #- Resource: !Sub "arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:ombusite/*"
-              - Resource: "*"
+              - Resource: !Sub arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/ombusite/*
                 Effect: Allow
                 Action:
                   - ssm:GetParameters

@@ -53,6 +53,7 @@ Provide required SSM parameters, global and for the desired `<env>`:
 
 - `/ombusite/github_access_token`
 - `/ombusite/<env>/database_password`
+- `/ombusite/<env>/version`
 
 For example:
 
@@ -63,10 +64,17 @@ For example:
 
 Launch a remote environment:
 
-    ./infrastructure/scripts/stack-launch <env> 
+    ./infrastructure/scripts/stack-launch <env> <component>
+    
+Where component is one of `application` or `pipeline`:
 
-Record the stack name in SERVICES_STACK_<env> in file `infrastructure/scripts/_env`.
+- Application: Provide the application
+- Pipeline: Provides a continuous deployment pipeline
 
-Update the application stack:
+Record the names of the stacks created with stack-launch in the 
+`infrastructure/scripts/_env` files, under the variables:
+`APPLICATION_STACK_<env>` and `PIPELIME_STACK_<env>` 
 
-    ./infrastructure/scripts/stack-update <env> 
+Update the a stack:
+
+    ./infrastructure/scripts/stack-update <env> <component>
