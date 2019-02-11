@@ -9,6 +9,10 @@ then
     exit 1
 fi
 
+if [[ -n SKIP_PUSH ]]
+then
+    echo "SKIP_PUSH option detected. Will build images but skip pushing to remote repositories."
+fi
 
 tag=$1
 if [[ -z ${tag} ]]
@@ -26,7 +30,11 @@ awsAccountId=`${aws} sts get-caller-identity --query Account --output text`
 printf "${awsAccountId}\n"
 
 TAG=${tag} AWS_ACCOUNT_ID=${awsAccountId} docker-compose -f infrastructure/docker-compose.yml build 1>/dev/null
-eval $(${aws} ecr get-login --no-include-email)
-TAG=${tag} AWS_ACCOUNT_ID=${awsAccountId} docker-compose -f infrastructure/docker-compose.yml push 1>/dev/null
+
+if [[ -z SKIP_PUSH ]]
+then
+    eval $(${aws} ecr get-login --no-include-email)
+    TAG=${tag} AWS_ACCOUNT_ID=${awsAccountId} docker-compose -f infrastructure/docker-compose.yml push 1>/dev/null
+fi
 
 exit 0

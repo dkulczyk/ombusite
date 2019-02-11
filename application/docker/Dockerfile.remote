@@ -2,9 +2,10 @@ FROM python:3-slim
 
 MAINTAINER OMBU
 
+ARG buildDeps="gcc git"
+
 # Hack to make postgresql-client install work on slim
-RUN buildDeps="gcc" && \
-    mkdir -p /usr/share/man/man1 \
+RUN mkdir -p /usr/share/man/man1 \
     && mkdir -p /usr/share/man/man7 && \
     apt-get update && apt-get install -y $buildDeps \
     python \
