@@ -215,7 +215,7 @@ Resources:
                 - IMAGE_URI="${REPOSITORY_URI}:${TAG}"
             build:
               commands:
-                - docker build -f docker/Dockerfile.remote --tag "$IMAGE_URI" .
+                - docker build -f application/docker/Dockerfile.remote --tag "$IMAGE_URI" application
             post_build:
               commands:
                 - docker push "$IMAGE_URI"
