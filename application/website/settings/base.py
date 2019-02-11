@@ -128,3 +128,6 @@ DATABASES = {
     }
 }
 
+BASICAUTH_USERS = {
+    "ombudev": "red-mic-lify",
+}

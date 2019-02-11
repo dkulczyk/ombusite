@@ -21,3 +21,6 @@ STATIC_ROOT = '/var/www/static/'
 STATIC_URL = '/static/'
 MEDIA_ROOT = '/var/www/media/'
 MEDIA_URL = '/media/'
+
+if os.getenv('ENVIRONMENT_TYPE', None) in ('qa', 'staging'):
+    MIDDLEWARE = ['basicauth.middleware.BasicAuthMiddleware',] + MIDDLEWARE
