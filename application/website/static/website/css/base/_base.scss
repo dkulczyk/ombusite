@@ -1,4 +1,4 @@
-// 
+//
 // Base
 //
 // Base styles
@@ -12,7 +12,7 @@ body {
   color: $color-body;
   font-family: $font-tisapro-regular;
   font-size: $base-font-size;
-  line-height: $base-line-height;  
+  line-height: $base-line-height;
 
   @media (max-width: $breakpoint-notebook - 1px) {
     font-size: calc(16 / 18 * 1em);
@@ -44,8 +44,8 @@ h2 {
 
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(38 / 18 * 1em);
-    line-height: calc(50 / 38 * 1em);    
-  }  
+    line-height: calc(50 / 38 * 1em);
+  }
 }
 
 h3 {
@@ -54,8 +54,8 @@ h3 {
 
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(32 / 18 * 1em);
-    line-height: calc(42 / 32 * 1em);    
-  }  
+    line-height: calc(42 / 32 * 1em);
+  }
 }
 
 h4 {
@@ -64,8 +64,8 @@ h4 {
 
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(26 / 18 * 1em);
-    line-height: calc(38 / 26 * 1em);    
-  }  
+    line-height: calc(38 / 26 * 1em);
+  }
 }
 
 h5 {
@@ -74,9 +74,9 @@ h5 {
 
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(19 / 18 * 1em);
-    line-height: calc(30 / 19 * 1em);    
-    text-align: center;    
-  }  
+    line-height: calc(30 / 19 * 1em);
+    text-align: center;
+  }
 }
 
 h6 {
@@ -85,8 +85,8 @@ h6 {
 
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(18 / 18 * 1em);
-    line-height: calc(30 / 18 * 1em);    
-  }  
+    line-height: calc(30 / 18 * 1em);
+  }
 }
 
 p {
@@ -100,15 +100,15 @@ blockquote {
   background-repeat: no-repeat;
   background-size: 24px 17px;
   border-top: 1px solid $color-gray-light;
-  border-bottom: 1px solid $color-gray-light;  
+  border-bottom: 1px solid $color-gray-light;
   font-family: $font-tisapro-italic;
   margin: calc(60 / 18 * 1rem) 0;
   padding-left: 34px;
   padding-top: 2em;
   padding-bottom: 2em;
 
-  @media (min-width: $breakpoint-notebook) {  
-    background-size: 31px 23px;    
+  @media (min-width: $breakpoint-notebook) {
+    background-size: 31px 23px;
     font-size: calc(28 / 18 * 1em);
     line-height: calc(40 / 28 * 1em);
     margin: calc(60 / 18 * 1rem) 0 calc(120 / 18 * 1rem);
@@ -193,13 +193,13 @@ input[type="password"] {
   border-radius: 0;
   box-shadow: none;
   font-size: calc(18 / 16 * 1em);
-  line-height: calc(30 / 18 * 1em);  
+  line-height: calc(30 / 18 * 1em);
   padding-bottom: calc(8 / 18 * 1em);
   width: 100%;
 
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(24 / 18 * 1em);
-    line-height: calc(24 / 24 * 1em);   
+    line-height: calc(24 / 24 * 1em);
     padding-bottom: calc(14 / 24 * 1em);
   }
 

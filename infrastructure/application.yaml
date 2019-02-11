@@ -1,4 +1,4 @@
-Description: OMBU Site / services
+Description: OMBU Site / application
 
 Parameters:
 
@@ -101,7 +101,43 @@ Resources:
           Fn::ImportValue:
             !Sub "${InfrastructureStack}-VPC"
 
+
+  CloudFormationServiceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: cloudformation.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Resource: "*"
+                Effect: Allow
+                Action:
+                  - cloudformation:*
+                  - ec2:*
+                  - ecs:*
+                  - s3:GetObject
+              #- Resource: !Sub "arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:ombusite/*"
+              - Resource: "*"
+                Effect: Allow
+                Action:
+                  - ssm:GetParameters
 Outputs:
+
+  CloudFormationServiceRoleArn:
+    Description: >
+      A service role other stacks (i.e. pipelines) may use to update this application.
+    Value: !GetAtt CloudFormationServiceRole.Arn
+    Export:
+      Name: !Sub ${AWS::StackName}-CloudFormationServiceRoleArn
 
   DjangoServiceName:
     Description: The name the created Elasticsearch service

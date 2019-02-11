@@ -10,10 +10,10 @@ ARCH_SLUG=ombusite
 # Environment specific variables
 INFRASTRUCTURE_STACK_staging=ombu-services-development-1810311008
 INFRASTRUCTURE_STACK_production=ombu-services-development-1810311008
-SERVICES_STACK_staging=ombusite-services-staging-1902101136
-SERVICES_STACK_production=
-PIPELINE_STACK_staging=ombusite-pipeline-staging-1902101201
-SERVICES_STACK_production=
+APPLICATION_STACK_staging=ombusite-application-staging-1902101607
+APPLICATION_STACK_production=
+PIPELINE_STACK_staging=ombusite-pipeline-staging-1902101609
+PIPELINE_STACK_production=
 
 ###########################
 # END OF USER CONFIGURATION
@@ -35,10 +35,10 @@ fi
 component=$2
 if [[ -n ${VALIDATE_COMPONENT} ]]
 then
-    if [[ "${component}" != "services" ]] && [[ "${component}" != "pipeline" ]]
+    if [[ "${component}" != "application" ]] && [[ "${component}" != "pipeline" ]]
     then
         echo "Unknown stack component ${component}"
-        echo "The known components are: services, pipeline"
+        echo "The known components are: application, pipeline"
         exit 1
     fi
 fi
@@ -46,15 +46,15 @@ fi
 # Convenience variables for scripts that source this one
 _infrastructure_stack_name=INFRASTRUCTURE_STACK_${appEnv}
 infrastructure_stack_name=${!_infrastructure_stack_name}
-_services_stack_name=SERVICES_STACK_${appEnv}
-services_stack_name=${!_services_stack_name}
+_application_stack_name=APPLICATION_STACK_${appEnv}
+application_stack_name=${!_application_stack_name}
 _pipeline_stack_name=PIPELINE_STACK_${appEnv}
 pipeline_stack_name=${!_pipeline_stack_name}
 
 parameters="ParameterKey=EnvironmentType,ParameterValue=${appEnv} ParameterKey=InfrastructureStack,ParameterValue=${infrastructure_stack_name}"
 
-#if [[ "$component" == 'services' ]] ; then
+#if [[ "$component" == 'application' ]] ; then
 #fi
 if [[ "$component" == 'pipeline' ]] ; then
-    parameters="$parameters ParameterKey=ApplicationStack,ParameterValue=${services_stack_name}"
+    parameters="$parameters ParameterKey=ApplicationStack,ParameterValue=${application_stack_name}"
 fi

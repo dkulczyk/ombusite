@@ -32,7 +32,7 @@ To clean up (stop and remove containers, networks, images, and volumes):
 
 Docker Compose will automatically build missing images when running the `up`
 task. The `build` task is also available when updating or troubleshooting
-images:  
+images:  w
 
     docker-compose build web
 

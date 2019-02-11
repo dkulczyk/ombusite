@@ -1,4 +1,4 @@
-Description: OMBU Site / services / django
+Description: OMBU Site / application / django
 
 Parameters:
 
@@ -7,7 +7,7 @@ Parameters:
     Type: String
 
   Cluster:
-    Description: The container cluster that runs the services
+    Description: The container cluster that runs the application services
     Type: String
 
   DatabaseHost:

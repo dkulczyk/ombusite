@@ -8,16 +8,16 @@ services:
       POSTGRES_USER: root
   web:
     build:
-      context: .
+      context: application
       dockerfile: docker/Dockerfile
     ports:
       - "80:8000"
     depends_on:
       - db
     volumes:
-      - .:/var/www/ombusite.local
+      - ./application:/var/www/ombusite.local
   gulp:
     image: node:4
     command: bash -c "cd /var/www/ombusite.local/website/static/website && npm install && npm start"
     volumes:
-      - ./website/static/website:/var/www/ombusite.local/website/static/website
+      - ./application/website/static/website:/var/www/ombusite.local/website/static/website

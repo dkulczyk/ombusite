@@ -1,5 +1,1 @@
-.idea
-.git
-build
 website/static/website/node_modules
-infrastructure

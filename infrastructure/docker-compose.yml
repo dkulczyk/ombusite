@@ -3,5 +3,5 @@ services:
   django:
     image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/ombusite/django:${TAG}
     build:
-      context: ..
+      context: ../application
       dockerfile: docker/Dockerfile.remote

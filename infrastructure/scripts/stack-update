@@ -4,8 +4,8 @@ set -e
 script_path="$(cd "$(dirname "$0")" && pwd)"
 source ${script_path}/_env
 
-if [[ "$component" == 'services' ]]; then
-    stack_name=${services_stack_name}
+if [[ "$component" == 'application' ]]; then
+    stack_name=${application_stack_name}
 elif [[ "$component" == 'pipeline' ]]; then
     stack_name=${pipeline_stack_name}
 fi

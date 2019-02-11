@@ -178,35 +178,6 @@ Resources:
                 Action:
                   - s3:PutObject
 
-  CloudFormationServiceRole:
-    Type: AWS::IAM::Role
-    Properties:
-      Path: /
-      AssumeRolePolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: cloudformation.amazonaws.com
-            Action: sts:AssumeRole
-      Policies:
-        - PolicyName: root
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Resource: "*"
-                Effect: Allow
-                Action:
-                  - cloudformation:*
-                  - ec2:*
-                  - ecs:*
-                  - s3:GetObject
-#              - Resource: !Sub "arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:ombusite/*"
-              - Resource: "*"
-                Effect: Allow
-                Action:
-                  - ssm:GetParameters
-
   CodeBuildSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
@@ -263,7 +234,7 @@ Resources:
             Value:
               Fn::ImportValue:
                 !Sub "${ApplicationStack}-DjangoServiceName"
-          - Name: CLUSTER_STACK
+          - Name: INFRASTRUCTURE_STACK
             Value: !Ref InfrastructureStack
           - Name: APPLICATION_STACK
             Value: !Ref ApplicationStack
@@ -319,7 +290,9 @@ Resources:
               Configuration:
                 ActionMode: CREATE_UPDATE
                 Capabilities: CAPABILITY_NAMED_IAM
-                RoleArn: !GetAtt [CloudFormationServiceRole, Arn]
+                RoleArn:
+                  Fn::ImportValue:
+                    !Sub "${ApplicationStack}-CloudFormationServiceRoleArn"
                 StackName: !Ref ApplicationStack
                 TemplatePath: BuildOutput::template.yaml
                 ParameterOverrides: !Sub |
