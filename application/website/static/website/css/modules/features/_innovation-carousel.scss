@@ -21,7 +21,8 @@
   @media (min-width: $breakpoint-tablet) {
     font-size: calc(38 / 16 * 1em);
     line-height: calc(50 / 38 * 1em);
-    margin-bottom: calc(46.8 / 38 * 1em);
+    margin-top: calc(20 / 32 * 1em);
+    margin-bottom: 0;
   }
 }
 
@@ -38,7 +39,7 @@
   @media (min-width: $breakpoint-tablet) {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - #{$border-width-resting-desktop} * 2);
+    height: calc(100vh - #{$border-width-resting-desktop} * 2 - 3em);
   }
 }
 

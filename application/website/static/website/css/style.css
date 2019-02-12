@@ -4756,7 +4756,8 @@ blockquote.testimonial--quote {
     .ic--title {
       font-size: calc(38 / 16 * 1em);
       line-height: calc(50 / 38 * 1em);
-      margin-bottom: calc(46.8 / 38 * 1em); } }
+      margin-top: calc(20 / 32 * 1em);
+      margin-bottom: 0; } }
 
 @media (max-width: 767px) {
   .ic--main {
@@ -4769,7 +4770,7 @@ blockquote.testimonial--quote {
   .ic--main {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 20px * 2); } }
+    height: calc(100vh - 20px * 2 - 3em); } }
 
 @media (max-width: 767px) {
   .ic--slides {
