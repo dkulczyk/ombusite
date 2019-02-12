@@ -21,7 +21,6 @@ import website.views
 urlpatterns = [
     url(r'^health-check$', lambda response: JsonResponse({"status":"ok"})),
     url(r'^$', website.views.home, name='home'),
-    # url(r'^home$', website.views.home, name='home'),
     # url(r'^admin/', admin.site.urls),
     url(r'^about$', website.views.about, name='about'),
     url(r'^kitchen-sink$', website.views.kitchensink),
