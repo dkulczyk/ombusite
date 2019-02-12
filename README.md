@@ -22,7 +22,7 @@ Run `manage.py` commands:
     docker-compose run web python manage.py migrate
     docker-compose run web python manage.py createsuperuser
 
-wVisit `http://localhost:8000`
+Visit `http://localhost:8000`
 
 To clean up (stop and remove containers, networks, images, and volumes):
 
@@ -39,6 +39,15 @@ images:  w
 
 Remote environments
 -------------------
+
+### Running the remote application locally for testing
+
+    docker build -t ombusite_remote -f application/docker/Dockerfile.remote application
+    docker run -e DOMAIN=localhost -p 5000:5000 ombusite_remote
+
+Visit `http://localhost:5000`
+
+### Launching remote environments
 
 The AWS resources that run the remote environments are provisioned by the 
 CloudFormation templates in this repository. 
