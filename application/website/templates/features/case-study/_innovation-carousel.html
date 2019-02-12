@@ -1,7 +1,7 @@
 {% load static %}
 
 <section class="cs-innovations">
-  <div class="ic">
+  <div class="ic" id="ic">
     <div class="ic--title-group container"><h2 class="ic--title">Our Technology Innovations</h2></div>
     <div class="ic--main">
       <div class="ic--pager-group">
@@ -10,7 +10,7 @@
           <a id="ic-pager-item-{{forloop.counter}}" href="#ic-slide-{{forloop.counter}}" class="ic--pager-item link-disable-animation">{{innovation.title}}</a>
         {% endfor %}
         </div>
-      </div>  
+      </div>
       <div class="ic--slides">
       {% for innovation in innovations %}
         <div id="ic-slide-{{forloop.counter}}" class="ic--slide">
