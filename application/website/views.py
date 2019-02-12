@@ -4,22 +4,27 @@ from website.models.project import *
 
 def home(request, context={}):
     context['title'] = "Web solutions for CMS, applications, and DevOps"
+    context['meta_description'] = 'OMBU designs and builds the web’s best technology. Our clients come to us for three solution areas: content management, business applications, and DevOps.'
     return render(request, 'home.html', context)
 
 def about(request, context={}):
     context['title'] = "The web technology agency for visionaries"
+    context['meta_description'] = 'OMBU designs and builds the web’s best technology. We believe that technology is changing the world, and our job is to help companies harness that power.'
     return render(request, 'about.html', context)
 
 def kitchensink(request, context={}):
     context['title'] = "Kitchen Sink"
+    context['meta_description'] = 'Design patterns for all rich text elements.'
     return render(request, 'kitchen_sink.html', context)
 
 def work(request, context={}):
     context['title'] = "Case studies and project profiles for our web technology solutions"
+    context['meta_description'] = 'OMBU’s portfolio of web technology case studies, project profiles, and clients.'
     return render(request, 'work.html', context)
 
 def services(request, context={}):
     context['title'] = "Content Management, business applications, and DevOps"
+    context['meta_description'] = 'OMBU designs and builds technology for visionaries.  We specialize in content management, business applications, and DevOps.'
     context['services'] = [
         { 'title': 'Content Management', 'summary': 'We make content<br>manageable' },
         { 'title': 'Business Applications', 'summary': 'We make business<br>profitable' },
@@ -29,14 +34,17 @@ def services(request, context={}):
 
 def contact(request, context={}):
     context['title'] = "Contact OMBU for web technology solutions, consultations, and RFPs"
+    context['meta_description'] = 'Get in touch with OMBU.'
     return render(request, 'contact.html', context)
 
 def careers(request, context={}):
     context['title'] = "Web design and development careers in Portland, Oregon"
+    context['meta_description'] = 'Come work with OMBU!  Become a part of a tight, functional team that consistently ships innovative products to a growing portfolio of happy clients.'
     return render(request, 'careers.html', context)
 
 def pagenotfound(request, context={}):
     context['title'] = "Page not found"
+    context['meta_description'] = 'Page not found.'
     return render(request, '404.html', context)
 
 # Work / Projects
@@ -90,17 +98,17 @@ def project_smithsonian(request, context={}):
     context['project_next'] = occ
     return render(request, 'project.html', context)
 
-def project_seri(request, context={}):
-    context.update(seri)
-    return render(request, 'project.html', context)
+# def project_seri(request, context={}):
+#     context.update(seri)
+#     return render(request, 'project.html', context)
 
-def project_autodesk(request, context={}):
-    context.update(autodesk)
-    return render(request, 'project.html', context)
+# def project_autodesk(request, context={}):
+#     context.update(autodesk)
+#     return render(request, 'project.html', context)
 
-def project_uo(request, context={}):
-    context.update(uo)
-    return render(request, 'project.html', context)
+# def project_uo(request, context={}):
+#     context.update(uo)
+#     return render(request, 'project.html', context)
 
 # Work / Case Studies
 # ##############################################################################
@@ -108,6 +116,7 @@ def project_uo(request, context={}):
 def casestudy_nwpp(request, context={}):
     context['client'] = "Northwest PowerPool"
     context['title'] = "Case study for Northwest Power Pool’s learning management system"
+    context['meta_description'] = 'NWPP came to OMBU with a simple vision: Make federally-mandated power safety training easy and fun via an engaging video learning platform.'
     context['banner_image'] = "website/images/case-studies/nwpp/hero-tinted@2x.jpg"
     context['banner_title'] = "Modernized Power Utility Training"
     context['banner_subtitle']  = "Learning Management System"
@@ -203,6 +212,7 @@ def casestudy_nwpp(request, context={}):
 def casestudy_navex(request, context={}):
     context['client'] = "NAVEX Global"
     context['title'] = "Case study for NAVEX Global’s Content Management"
+    context['meta_description'] = 'Facing explosive growth while servicing most Fortune 500 companies, NAVEX Global came to OMBU for rock solid, cutting-edge web marketing technology.'
     context['banner_image'] = "website/images/case-studies/navex/hero-tinted@2x.jpg"
     context['banner_title'] = "Content Management for the Global Ethics Leader"
     context['banner_position'] = '85% 40%'
@@ -282,6 +292,7 @@ def casestudy_navex(request, context={}):
 def casestudy_sa(request, context={}):
     context['client'] = "Saturday Academy"
     context['title'] = "Case study for Saturday Academy’s class registration system"
+    context['meta_description'] = 'OMBU implemented a rich CRM for Saturday Academy to serve as the repository of data about families, classes, registrations, and more, built on Salesforce.'
     context['banner_image'] = "website/images/case-studies/sa/hero-tinted@2x.jpg"
     context['banner_title'] = "Engaging the Next Generation of Scientists, Engineers, and Artists"
     context['banner_subtitle'] = "Class Registration System"

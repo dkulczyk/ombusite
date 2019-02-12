@@ -11,7 +11,8 @@ RUN mkdir -p /usr/share/man/man1 \
     python \
     postgresql-client \
     libpq-dev \
-    libjpeg-dev
+    libjpeg-dev \
+    libpcre3-dev
 
 WORKDIR /var/www
 
@@ -27,8 +28,8 @@ ADD . /var/www
 ENV DJANGO_SETTINGS_MODULE=website.settings.remote \
     UWSGI_WSGI_FILE=website/wsgi.py UWSGI_HTTP=:5000 UWSGI_MASTER=1 \
     UWSGI_WORKERS=2 UWSGI_THREADS=8 UWSGI_UID=www-data UWSGI_GID=www-data \
-    UWSGI_LAZY_APPS=1 UWSGI_WSGI_ENV_BEHAVIOR=holy
-
+    UWSGI_LAZY_APPS=1 UWSGI_WSGI_ENV_BEHAVIOR=holy \
+    UWSGI_STATIC_EXPIRES="/var/www/static/* 31536000"
 
 RUN python manage.py collectstatic --noinput
 

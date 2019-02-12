@@ -122,6 +122,7 @@ Resources:
                 Action:
                   - cloudformation:*
                   - ec2:*
+                  - elasticloadbalancing:*
                   - ecs:*
                   - iam:*
                   - s3:GetObject

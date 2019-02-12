@@ -55,6 +55,9 @@ Parameters:
     Description: The VPC for the cluster
     Type: AWS::EC2::VPC::Id
 
+Conditions:
+  IsProduction: !Equals [ !Ref EnvironmentType, production ]
+
 Resources:
 
   CloudWatchLogsGroup:
@@ -74,7 +77,7 @@ Resources:
       Matcher:
         # Allowing 301 because often the default target hosts
         # the redirector service
-        HttpCode: 200-301
+        HttpCode: !If [ IsProduction, 200-301, 200-401 ]
       TargetGroupAttributes:
         - Key: deregistration_delay.timeout_seconds
           Value: 5
