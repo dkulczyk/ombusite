@@ -42,7 +42,7 @@
     margin-left: $ring-chain-offset / ($item-count * $ring-width) * -100%;
   }
 
-  .rings--content { 
+  .rings--content {
     padding-left: $ring-chain-offset / ($item-count * $ring-width) * 300%;
     padding-right: $ring-chain-offset / ($item-count * $ring-width) * 300%;
   }
@@ -58,7 +58,7 @@
 
   &:nth-child(n+2) {
     margin-left: 0;
-  }  
+  }
 
   &:nth-child(2) {
     @include rings--offset--vertical($item-count, 2);
@@ -67,7 +67,7 @@
    &:nth-child(3) {
     @include rings--offset--vertical($item-count, 3);
   }
-  
+
   &:nth-child(4) {
     @include rings--offset--vertical($item-count, 4);
   }
@@ -78,12 +78,12 @@
 
   &:nth-child(6) {
     @include rings--offset--vertical($item-count, 6);
-  }       
+  }
 
-  .rings--content { 
+  .rings--content {
     padding-left: $ring-chain-offset / ($item-count * $ring-width) * 200%;
     padding-right: $ring-chain-offset / ($item-count * $ring-width) * 200%;
-  }   
+  }
 }
 
 @mixin rings--item--vertical {
@@ -109,18 +109,18 @@
     .rings--content {
       transition-delay: ($transition-duration * $transition-stagger-factor) * 2;
     }
-  } 
+  }
 
   &:nth-child(4) {
     .ring--svg path,
     .rings--content {
       transition-delay: ($transition-duration * $transition-stagger-factor) * 3;
     }
-  }  
+  }
 
   &:nth-child(5) {
     .ring--svg path,
-    .rings--content {    
+    .rings--content {
       transition-delay: ($transition-duration * $transition-stagger-factor) * 4;
     }
   }
@@ -130,7 +130,7 @@
     .rings--content {
       transition-delay: ($transition-duration * $transition-stagger-factor) * 5;
     }
-  }  
+  }
 
   &.rings--item--filled {
 
@@ -141,71 +141,71 @@
           transition-delay: ($transition-duration * $transition-stagger-factor) * 1;
         }
       }
-    } 
+    }
 
     // When filled item is not first
-    &:nth-child(2) {    
+    &:nth-child(2) {
       .ring--svg--last,
       .ring--svg--middle {
-        transition-delay: ($transition-duration * $transition-stagger-factor) * 1;    
+        transition-delay: ($transition-duration * $transition-stagger-factor) * 1;
 
         .ring--svg--white:last-child path {
           transition-delay: ($transition-duration * $transition-stagger-factor) * 2;
-        } 
-      }  
-    } 
-    &:nth-child(3) {    
+        }
+      }
+    }
+    &:nth-child(3) {
       .ring--svg--last,
       .ring--svg--middle {
         transition-delay: ($transition-duration * $transition-stagger-factor) * 2;
 
         .ring--svg--white path {
           transition-delay: ($transition-duration * $transition-stagger-factor) * 1;
-        }            
+        }
 
         .ring--svg--white:last-child path {
           transition-delay: ($transition-duration * $transition-stagger-factor) * 3;
-        }         
-      }  
-    } 
-    &:nth-child(4) {    
+        }
+      }
+    }
+    &:nth-child(4) {
       .ring--svg--last,
-      .ring--svg--middle {      
+      .ring--svg--middle {
         transition-delay: ($transition-duration * $transition-stagger-factor) * 3;
 
         .ring--svg--white path {
           transition-delay: ($transition-duration * $transition-stagger-factor) * 2;
-        }  
+        }
 
         .ring--svg--white:last-child path {
           transition-delay: ($transition-duration * $transition-stagger-factor) * 4;
-        }                   
-      }  
-    } 
-    &:nth-child(5) {    
+        }
+      }
+    }
+    &:nth-child(5) {
       .ring--svg--last,
       .ring--svg--middle {
         transition-delay: ($transition-duration * $transition-stagger-factor) * 4;
 
         .ring--svg--white path {
           transition-delay: ($transition-duration * $transition-stagger-factor) * 3;
-        } 
+        }
 
         .ring--svg--white:last-child path {
           transition-delay: ($transition-duration * $transition-stagger-factor) * 5;
-        }         
-      }  
-    } 
-    &:nth-child(6) {    
+        }
+      }
+    }
+    &:nth-child(6) {
       .ring--svg--last,
-      .ring--svg--middle {      
+      .ring--svg--middle {
         transition-delay: ($transition-duration * $transition-stagger-factor) * 5;
 
         .ring--svg--white path {
           transition-delay: ($transition-duration * $transition-stagger-factor) * 4;
-        }            
-      }  
-    }                           
+        }
+      }
+    }
   }
 
    /* one item */
@@ -227,7 +227,7 @@
       .rings--vertical--mobile & {
         @include rings--item-number--vertical(2);
       }
-    } 
+    }
   }
 
   /* three items */
@@ -243,7 +243,7 @@
       .rings--vertical--mobile & {
         @include rings--item-number--vertical(3);
       }
-    }    
+    }
   }
 
   /* four items */
@@ -259,8 +259,8 @@
       .rings--vertical--mobile & {
         @include rings--item-number--vertical(4);
       }
-    }        
-  } 
+    }
+  }
 
   /* five items */
   &:first-child:nth-last-child(5),
@@ -275,8 +275,8 @@
       .rings--vertical--mobile & {
         @include rings--item-number--vertical(5);
       }
-    }        
-  } 
+    }
+  }
 
   /* four items */
   &:first-child:nth-last-child(6),
@@ -291,8 +291,8 @@
       .rings--vertical--mobile & {
         @include rings--item-number--vertical(6);
       }
-    }        
-  }     
+    }
+  }
 
   .rings--vertical & {
     @include rings--item--vertical;
@@ -343,21 +343,21 @@
 .rings--title-group {
   align-items: flex-end;
   display: flex;
-  font-family: $font-halisr-medium; 
+  font-family: $font-halisr-medium;
   margin-bottom: 0.5rem;
   min-height: 50%;
   text-align: center;
 
   .rings--services & {
-    align-items: center;    
-    margin-bottom: 0; 
-    min-height: calc(60 / 18 * 1em);  
+    align-items: center;
+    margin-bottom: 0;
+    min-height: calc(60 / 18 * 1em);
 
     @media (max-width: $breakpoint-tablet - 1px) {
       min-height: 0;
     }
 
-    @media (min-width: $breakpoint-notebook) {  
+    @media (min-width: $breakpoint-notebook) {
       margin-bottom: 1rem;
     }
   }
@@ -391,7 +391,7 @@
   .rings--services & {
     font-family: $font-halisr-medium;
     font-size: calc(17 / 16 * 1em);
-    line-height: calc(30 / 19 * 1em);       
+    line-height: calc(30 / 19 * 1em);
   }
 
   &.rings--title--subtle {
@@ -400,7 +400,7 @@
 
     abbr {
       font-size: calc(32 / 48 * 1em);
-    }    
+    }
   }
 
   @media (min-width: $breakpoint-tablet) {
@@ -417,7 +417,7 @@
 
     &.rings--title--subtle {
       font-size: calc(48 / 18 * 1em);
-    } 
+    }
   }
 }
 
@@ -430,7 +430,7 @@
   text-transform: uppercase;
 
   .rings--services & {
-    font-size: calc(12 / 18 * 1em);
+    font-size: calc(14 / 18 * 1em);
     line-height: calc(18 / 12 * 1em);
     min-height: calc(18 / 12 * 2em);
     text-transform: none;
@@ -438,14 +438,14 @@
      @media (max-width: $breakpoint-tablet - 1px) {
       display: none;
       min-height: 0;
-    } 
+    }
   }
 
   &.rings---summary--subtle {
     font-size: calc(14 / 18 * 1em);
-  } 
+  }
 
   @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-notebook) {
     font-size: calc(16 / 18 * 1em);
-  }  
+  }
 }

@@ -4478,7 +4478,7 @@ html.navigation--active, html.navigation--active body {
   padding-right: 0.5rem;
   text-transform: uppercase; }
   .rings--services .rings--summary {
-    font-size: calc(12 / 18 * 1em);
+    font-size: calc(14 / 18 * 1em);
     line-height: calc(18 / 12 * 1em);
     min-height: calc(18 / 12 * 2em);
     text-transform: none; }
