@@ -26,9 +26,9 @@ def services(request, context={}):
     context['title'] = "Content Management, business applications, and DevOps"
     context['meta_description'] = 'OMBU designs and builds technology for visionaries.  We specialize in content management, business applications, and DevOps.'
     context['services'] = [
-        { 'title': 'Content Management', 'summary': 'We make content<br>manageable' },
-        { 'title': 'Business Applications', 'summary': 'We make business<br>profitable' },
-        { 'title': 'DevOps', 'summary': 'We make systems<br>reliable' },
+        { 'title': 'Content Management' },
+        { 'title': 'Business Applications' },
+        { 'title': 'Cloud Infrastructure' },
     ]
     return render(request, 'services.html', context)
 

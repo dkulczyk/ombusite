@@ -3,9 +3,9 @@
 {% if navex %}
 <div class="callout{% if fullwidth %} callout--fullwidth{% endif %}">
   <div class="callout--content">
-    <h2 class="callout--title"><span class="callout--title-prefix">NAVEX Global</span> Content Management for the Global Ethics&nbsp;Leader</h2>
+    <h2 class="callout--title"><span class="callout--title-prefix">NAVEX Global</span> Enterprise Content Management for a Global Ethics&nbsp;Leader</h2>
     <div class="callout--body rte">
-      <p>NAVEX Global, the largest consulting firm for ethics and compliance, needed a robust content management system to reach their global audiences. We designed and built a rich new website with powerful marketing tools and a filterable resource center to showcase NAVEX’s thought leadership in the&nbsp;industry.</p>
+      <p>NAVEX Global, the leading consulting firm for ethics and compliance, needed content management tools capable of keeping up with their rapid global expansion. We created a website with content marketing tools to help NAVEX establish their global leadership.</p>
     </div>
     <a href="{% url 'case-study-navex' %}" class="callout--cta">Read the Case Study</a>
   </div>
@@ -26,7 +26,7 @@
   <div class="callout--content">
     <h2 class="callout--title"><span class="callout--title-prefix">Northwest Power&nbsp;Pool</span> Modernizing Power Utility&nbsp;Training</h2>
     <div class="callout--body rte">
-      <p>OMBU designed a powerful centralized training platform so NWPP could help its member utilities keep up-to-date on mandated certifications and the latest trends, meaning greater safety, more engagement, and more benefit to the whole membership base and their&nbsp;customers.</p>
+      <p>OMBU created a cutting-edge training platform for power utilities, so power plant operators can keep up-to-date on mandated certifications and the latest trends.</p>
     </div>
     <a href="{% url 'case-study-nwpp' %}" class="callout--cta">Read the Case Study</a>
   </div>
@@ -49,9 +49,9 @@
 {% elif sa %}
 <div class="callout{% if fullwidth %} callout--fullwidth{% endif %}">
   <div class="callout--content">
-    <h2 class="callout--title"><span class="callout--title-prefix">Saturday Academy</span> Reaching the Next Generation of Scientists, Engineers, and&nbsp;Artists</h2>
+    <h2 class="callout--title"><span class="callout--title-prefix">Saturday Academy</span> Inspiring the Next Generation of Scientists, Engineers and&nbsp;Artists</h2>
     <div class="callout--body rte">
-      <p>Saturday Academy offers over 700 STEAM-curriculum classes per year, but registration was cumbersome for parents and data was a mess for staff. We designed and built a Salesforce CRM and integrated website that lets parents register their children while data flows in real-time for instant reporting and&nbsp;analysis.</p>
+      <p>Saturday Academy offers over 700 STEAM-curriculum classes per year, but registration was cumbersome for parents and data management was overwhelming for a small staff. OMBU implemented a Salesforce CRM deeply integrated with a custom website that allows parents register children for classes while data flows in real-time for instant reporting and&nbsp;analysis.</p>
     </div>
     <a href="{% url 'case-study-sa' %}" class="callout--cta">Read the Case Study</a>
   </div>
@@ -86,7 +86,16 @@
   <div class="callout--content">
     <h2 class="callout--title{% if titleProminent %} callout--title--prominent{% endif %}">Content Management</h2>
     <div class="callout--body rte">
-      <p>Successful organizations react quickly as the competitive landscape changes. Your website should never be in the way of fast&nbsp;action.</p><p>We design and build modern websites that run on a powerful, flexible content management system (CMS), so that our clients can reach more audiences and move more&nbsp;quickly.</p><ul><li>Faster time-to-market</li><li>Digital asset management</li><li>Support for global audiences, with translation and&nbsp;localization</li><li>Content creation, review, and approval&nbsp;workflows</li><li>Performant and scalable in cloud and on-premise&nbsp;deployments</li></ul>
+      <p>We design and build modern websites that run on enterprise-grade content management systems (CMS), so that our
+        clients have every tool they need to launch initiatives quickly as they grow.</p>
+      <ul>
+        <li>Content moderation and auditing&nbsp;workflows</li>
+        <li>Flexible page builders with custom forms</li>
+        <li>Integrations with other business services</li>
+        <li>Support for global audiences</li>
+        <li>Digital asset management</li>
+        <li>Secure and scalable cloud deployment</li>
+      </ul>
     </div>
   </div>
   <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
@@ -95,30 +104,52 @@
 </div>
 
 {% elif business %}
-<div id="business-applications" class="callout{% if fullwidth %} callout--fullwidth{% endif %}{% if subtleMargins %} callout--subtle{% endif %}{% if bigGap %} callout--gap{% endif %}">
-  <div class="callout--content">
-    <h2 class="callout--title{% if titleProminent %} callout--title--prominent{% endif %}">Business Applications</h2>
-    <div class="callout--body rte">
-      <p>We help companies and organizations achieve their goals by crafting custom business applications that target their specific processes and needs. We’ve created learning management systems, community organizing apps, training forums, and more. We’re able to build the application you&nbsp;need.</p><ul><li>Custom support platforms</li><li>Systems-integrated dashboards</li><li>Learning systems</li><li>Community organizing apps</li><li>Business applications</li></ul>
+  <div id="business-applications"
+       class="callout{% if fullwidth %} callout--fullwidth{% endif %}{% if subtleMargins %} callout--subtle{% endif %}{% if bigGap %} callout--gap{% endif %}">
+    <div class="callout--content">
+      <h2 class="callout--title{% if titleProminent %} callout--title--prominent{% endif %}">Business Applications</h2>
+      <div class="callout--body rte">
+        <p>We help companies and organizations achieve their goals by creating custom business applications that target
+          their specific processes and needs.</p>
+        <ul>
+          <li>Customer engagement platforms</li>
+          <li>Data dashboards</li>
+          <li>Learning systems</li>
+          <li>Community organizing apps</li>
+          <li>Planning and mapping tools</li>
+        </ul>
+      </div>
     </div>
+    <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
+      <img src="{% static 'website/images/callout/callout_business.png' %}" alt="Business Graphics">
+    </aside>
   </div>
-  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
-    <img src="{% static 'website/images/callout/callout_business.png' %}" alt="Business Graphics">
-  </aside>
-</div>
 
-{% elif DevOps %}
-<div id="DevOps" class="callout{% if fullwidth %} callout--fullwidth{% endif %}{% if subtleMargins %} callout--subtle{% endif %}{% if bigGap %} callout--gap{% endif %}">
-  <div class="callout--content">
-    <h2 class="callout--title{% if titleProminent %} callout--title--prominent{% endif %}">DevOps</h2>
-    <div class="callout--body rte">
-      <p>When our clients go viral, everyone is able to breathe easy, because we architect and manage advanced cloud DevOps that is geographically distributed and immediately scalable. As a certified Amazon Web Services partner, we help our clients deploy on AWS to increase uptime and lower hosting costs by as much as&nbsp;50%.</p><ul><li>High-availability (HA) redundant cloud&nbsp;DevOps</li><li>Automated backups</li><li>White-glove maintenance service</li><li>Powered by Amazon</li></ul>
+{% elif infrastructure %}
+  <div id="infrastructure"
+       class="callout{% if fullwidth %} callout--fullwidth{% endif %}{% if subtleMargins %} callout--subtle{% endif %}{% if bigGap %} callout--gap{% endif %}">
+    <div class="callout--content">
+      <h2 class="callout--title{% if titleProminent %} callout--title--prominent{% endif %}">Infrastructure</h2>
+      <div class="callout--body rte">
+        <p>
+          Cloud computing changed software development forever. OMBU's deep expertise with Amazon Web Services enables
+          us to build applications and hosting solutions for our clients with capabilities and cost efficiencies
+          previously accessible only to the largest enterprises.
+        </p>
+        <ul>
+          <li><a href="https://aws.amazon.com/partners/find/partnerdetails/?n=OMBU&id=001E000000Rp5YHIAZ">Amazon Web Services partners since 2012</a></li>
+          <li>Infrastructure design, consulting and implementation</li>
+          <li>High-availability (HA), auto scaling, and self healing solutions</li>
+          <li>Continuous delivery pipelines</li>
+          <li>Enterprise cloud migration</li>
+          <li>White-glove maintenance service</li>
+        </ul>
+      </div>
     </div>
+    <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
+      <img src="{% static 'website/images/callout/callout_infrastructure.png' %}" alt="Infrastructure Graphics">
+    </aside>
   </div>
-  <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
-    <img src="{% static 'website/images/callout/callout_infrastructure.png' %}" alt="Infrastructure Graphics">
-  </aside>
-</div>
 
 {% elif technology %}
 <div id="technology-strategy" class="callout{% if fullwidth %} callout--fullwidth{% endif %}{% if subtleMargins %} callout--subtle{% endif %}{% if bigGap %} callout--gap{% endif %}">
