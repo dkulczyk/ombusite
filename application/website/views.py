@@ -1,5 +1,4 @@
 from django.shortcuts import render, render_to_response
-from django.core import urlresolvers
 from website.models.project import *
 
 def home(request, context={}):
