@@ -1,33 +1,11 @@
 // Page transitions js
+
 $(function() {
-  function expTransitionCallback(link) {
+  setTimeout(function() {
+    document.documentElement.classList.add("border-animate-in");
+  }, 100);
 
-    href = link.attr('href');
-    if (href != '#') {
-      $('body').addClass('border-animate-out');
-      setTimeout(function() {
-        location.href = href;
-      }, 1000);
-      setTimeout(function() {
-        $('body').removeClass('border-animate-out');
-      }, 1500);      
-    }
-  }
-
-  $('a:not(.header--menu-toggle):not(.video-overlay--link):not(.image-overlay--link):not(.link-disable-animation):not(.ic--slide-action)').on('click', function(e) {
-    if (e.shiftKey || e.ctrlKey || e.metaKey || e.altKey) {
-      return;
-    } else {
-      e.preventDefault();
-      expTransitionCallback($(this));
-    }
-  });
-
-  $( document ).ready(function() {
-    document.documentElement.classList.remove("no-js");
-
-    setTimeout(function() {
-      document.documentElement.classList.add("border-animate-in");
-    }, 1);
+  $(window).on('beforeunload', function(e) {
+    $('body').addClass('border-animate-out');
   });
 });

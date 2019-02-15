@@ -392,10 +392,15 @@ $(function() {
   });
 
   $('.navigation--secondary-link').on('click', function(e) {
-    setTimeout(function(){  
+    if (isSamePageAnchor(e.currentTarget.href)) {
       $('html').removeClass('navigation--active');
       $('#menu').removeClass('navigation--active');
-    }, 1000);
+    }
+  });
+
+  $(window).on('beforeunload', function(e) {
+    $('html').removeClass('navigation--active');
+    $('#menu').removeClass('navigation--active');
   });
 
   function trapTabKey(e) {
@@ -418,6 +423,40 @@ $(function() {
       }
     }
   }
+
+  function isSamePageAnchor(href) {
+    var parsed = parseUrl(href);
+    if (parsed.hash) {
+      if (parsed.pathname == location.pathname) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function parseUrl(url) {
+      var m = url.match(/^(([^:\/?#]+:)?(?:\/\/((?:([^\/?#:]*):([^\/?#:]*)@)?([^\/?#:]*)(?::([^\/?#:]*))?)))?([^?#]*)(\?[^#]*)?(#.*)?$/),
+          r = {
+              hash: m[10] || "",                   // #asd
+              host: m[3] || "",                    // localhost:257
+              hostname: m[6] || "",                // localhost
+              href: m[0] || "",                    // http://username:password@localhost:257/deploy/?asd=asd#asd
+              origin: m[1] || "",                  // http://username:password@localhost:257
+              pathname: m[8] || (m[1] ? "/" : ""), // /deploy/
+              port: m[7] || "",                    // 257
+              protocol: m[2] || "",                // http:
+              search: m[9] || "",                  // ?asd=asd
+              username: m[4] || "",                // username
+              password: m[5] || ""                 // password
+          };
+      if (r.protocol.length == 2) {
+          r.protocol = "file:///" + r.protocol.toUpperCase();
+          r.origin = r.protocol + "//" + r.host;
+      }
+      r.href = r.origin + r.pathname + r.search + r.hash;
+      return m && r;
+  };
+
 });
 
 // Callout fullwidth
@@ -568,36 +607,14 @@ $(function() {
   });
 });
 // Page transitions js
+
 $(function() {
-  function expTransitionCallback(link) {
+  setTimeout(function() {
+    document.documentElement.classList.add("border-animate-in");
+  }, 100);
 
-    href = link.attr('href');
-    if (href != '#') {
-      $('body').addClass('border-animate-out');
-      setTimeout(function() {
-        location.href = href;
-      }, 1000);
-      setTimeout(function() {
-        $('body').removeClass('border-animate-out');
-      }, 1500);      
-    }
-  }
-
-  $('a:not(.header--menu-toggle):not(.video-overlay--link):not(.image-overlay--link):not(.link-disable-animation):not(.ic--slide-action)').on('click', function(e) {
-    if (e.shiftKey || e.ctrlKey || e.metaKey || e.altKey) {
-      return;
-    } else {
-      e.preventDefault();
-      expTransitionCallback($(this));
-    }
-  });
-
-  $( document ).ready(function() {
-    document.documentElement.classList.remove("no-js");
-
-    setTimeout(function() {
-      document.documentElement.classList.add("border-animate-in");
-    }, 1);
+  $(window).on('beforeunload', function(e) {
+    $('body').addClass('border-animate-out');
   });
 });
 
