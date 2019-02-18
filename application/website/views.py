@@ -1,5 +1,4 @@
 from django.shortcuts import render, render_to_response
-from django.core import urlresolvers
 from website.models.project import *
 
 def home(request, context={}):
@@ -115,15 +114,24 @@ def project_smithsonian(request, context={}):
 
 def casestudy_nwpp(request, context={}):
     context['client'] = "Northwest PowerPool"
-    context['title'] = "Case study for Northwest Power Pool’s learning management system"
-    context['meta_description'] = 'NWPP came to OMBU with a simple vision: Make federally-mandated power safety training easy and fun via an engaging video learning platform.'
+    context['title'] = "Learning management system (LMS) case study for Northwest Power Pool’s"
+    context['meta_description'] = "NWPP and OMBU created a modern learning management system (LMS) " \
+                                  "to transform energy utility online training."
     context['banner_image'] = "website/images/case-studies/nwpp/hero-tinted@2x.jpg"
     context['banner_title'] = "Modernized Power Utility Training"
-    context['banner_subtitle']  = "Learning Management System"
+    context['banner_subtitle']  = "Learning Management System (LMS)"
     context['banner_position'] = '20% 40%'
-    context['intro_text'] = "<p><span class=\"cs-intro--emphasis\">Northwest PowerPool (NWPP)</span> brings together 32 power utilities in eight US states and two Canadian provinces. OMBU designed a powerful centralized training platform so NWPP could help its member utilities keep up-to-date on mandated certifications and the latest trends, meaning greater safety, more engagement, and more benefit to the whole membership base and their customers.</p>"
+    context['intro_text'] = """
+    <p>
+        <span class="cs-intro--emphasis">Northwest PowerPool (NWPP)</span> partnered with us to design an implement
+        a learning platform that modernized electric utility training delivery. The new platform was so much easier to 
+        maintain. More importantly, it allowed NWPP to use modern learning tools which drastically improved 
+        trainee engagement and compliance with federally regulated training requirement.
+     </p>
+    """
     context['testimonial_image'] = "website/images/case-studies/nwpp/testimonial-logo.png"
-    context['testimonial_quote'] = "“Partnering with OMBU on this evolution of our platform was one of the best decisions I’ve ever made.”"
+    context['testimonial_quote'] = "“Partnering with OMBU on this evolution of our platform " \
+                                   "was one of the best decisions I’ve ever made.”"
     context['testimonial_attribution_name'] = "David P."
     context['testimonial_attribution_title'] = "Project Lead, NWPP"
     context['contributions'] = {
@@ -134,10 +142,32 @@ def casestudy_nwpp(request, context={}):
                 'url' : 'source.training',
             },
         },
-        'skills': ["User Experience Design", "Python Application Development", "AWS DevOps", "Product Roadmap Planning"],
+        'skills': [
+            "User Experience Design", "Python Application Development",
+            "AWS Infrastructure", "xAPI"
+        ],
     }
     context['visionary'] = {
-        'body': '<p>NWPP came to us with a simple vision: <strong>Make federally-mandated power safety training easy and fun via an engaging video learning platform</strong>, so that employees of their member utilities would complete more trainings, engage more with the training material for better results, and ultimately create a safer and more productive world of power.</p><p>NWPP has trainers and video production talent in-house, so they wanted a technology partner who could come up with a learning system that would be a great platform for their training.</p>',
+        'body': """
+        <p>           
+            Northwest PowerPool (NWPP)</span> brings together 32 power utilities in 
+            eight US states and two Canadian provinces. One of their missions is to deliver training to
+            electric power operators to increase power grid safety, help with new technology adoption, meet 
+            federally regulated training requirements.
+        </p> 
+        <p>
+            For years, NWPP suffered with an off-the-shelf LMS solution to deliver training that could not keep 
+            up with NWPP's pace of innovation. The platform was slow, tedious for learners and administrators, and 
+            could not support the modern training methods that NWPP was pioneering.
+        </p>
+        <p>
+            NWPP knew that, if they could could control the experience and functionality of a new platform, they would 
+            drastically improve quality of training, drive engagement and help member utilities compliant. So NWPP 
+            came to us with a simple vision: <strong>help us design, implement and rollout a learning management 
+            system that will transform how we work</strong>.
+        </p>
+        """,
+
         'image': {
             'src' : 'website/images/case-studies/nwpp/visionary@2x.png',
             'alt': 'A screenshot of the source.training course library page',
@@ -152,7 +182,25 @@ def casestudy_nwpp(request, context={}):
         # },
     }
     context['solution'] = {
-        'body': '<p>We built a modern, fun training platform targeted specifically for training utility workers, with integrated videos and interactive quizzes.</p><p>Powering this platform, we built a powerful yet easy-to-use Learning Management System (LMS) that lets the NWPP content team quickly put together new courses for their members in minutes.</p><p>Things like 3D models, skilled trainers, and fun easter eggs like blooper reels and jokes make the whole experience engaging</p><p>This platform integrates directly with industry-standard data systems, like the LRS/XAPI datastore and exports for federal compliance systems.</p><p>Ultimately, the most important feature is the fun and informative training materials that mean our client can increase education in an industry where knowledge and safety are critical.</p>',
+        'body': """
+            <p>
+                We built a modern and engaging training platform targeted specifically for training electric 
+                utility workers. The easy-to-use Learning Management System (LMS) allows content creators quickly 
+                put together new courses and activities, with video, interactive quizzes, scoring and reporting.
+            </p>
+            <p>
+                This platform integrates with modern providers of digital media, like YouTube, Vimeo, Soundcloud and 
+                Sketchfab, with a Department of Energy system for reporting, and with a Learning Record Store (LRS) 
+                through the Experience API (xAPI).
+            </p>
+            <p>
+                Ultimately, the key feature or OMBU's solution is the powerful and pleasant user experience  
+                that makes content creation and management tasks fun and easy, and stays out of the way during 
+                training, shifting all focus to the learning experience, driving high engagement in an industry 
+                where knowledge and safety are critical.
+            </p>
+        """,
+
         'image': {
             'src' : 'website/images/case-studies/nwpp/solution@2x.png',
             'alt': 'A screenshot of a source.training course challenge question page',
@@ -170,57 +218,81 @@ def casestudy_nwpp(request, context={}):
         {
             'title': 'Drag & Drop Course Builder',
             'background': 'website/images/case-studies/nwpp/innov-slide-01@2x.png',
-            'text': 'NWPP can drag-and-drop any assortment of videos, documentation, and quizzes together to quickly and easily create courses for utility workers to&nbsp;take.',
+            'text': 'Content creators can create courses easily using drag-and-drop to organize activity flow, '
+                    'upload videos and setup quizzes',
             'action_text': '',
         },
         {
-            'title': 'Powerful Digital Asset Management',
+            'title': 'Digital Asset Management',
             'background': 'website/images/case-studies/nwpp/innov-slide-02@2x.png',
-            'text': 'All media assets, such as videos, documents, and images are stored in a central asset library. Videos integrate directly into the design and aesthetic of the site, a collaboration between NWPP’s production team and&nbsp;OMBU.',
+            'text': "Media assets, like videos, documents and images are organized in central asset library, so "
+                    "content creators can easily find assets to use in their activities, and LMS administrators"
+                    "can track what's being used where",
             'action_text': '',
         },
         {
-            'title': 'High-Availability DevOps',
-            'background': 'website/images/case-studies/nwpp/innov-slide-03@2x.png',
-            'text': 'Because the LMS is a business critical application, it needed to be online at all times. To accomplish this, we designed a high-availability hosting system that keeps copies of the application in two datacenters. The system monitors for connectivity problems and automatically redirects traffic to the healthier data&nbsp;center.',
-            'action_text': '',
-        },
-        {
-            'title': 'Self-Service Team Management Panel',
+            'title': 'Self-Service Teams',
             'background': 'website/images/case-studies/nwpp/innov-slide-04@2x.png',
-            'text': 'To ensure strong adoption, we designed a system that decentralizes the task of managing utility teams and their training. NWPP can designate training coordinators at their member utilities, who then have tools to invite and monitor a handful to hundreds of individual operators as they progress through their&nbsp;training.',
+            'text': "Member organizations are teams in the LMS with self-management functions. This allows NWPP to "
+                    "securely delegate tasks like user invitations, status updates, role assignment, "
+                    "license management, etc",
             'action_text': '',
         },
         {
-            'title': 'xAPI Integration',
+            'title': 'High-Availability AWS infrastructure',
+            'background': 'website/images/case-studies/nwpp/innov-slide-03@2x.png',
+            'text': "The LMS is a business critical application used around the clock, so we implemented a "
+                    "multi data center hosting solution that is cost effective and scales during high usage periods.",
+            'action_text': '',
+        },
+        {
+            'title': 'xAPI / Tin Can',
             'background': 'website/images/case-studies/nwpp/innov-slide-05@2x.png',
-            'text': 'We built one of the first learning management systems featuring native real-time integration with a learning record store (LRS) using the emerging open standard experience API (xAPI, also called Tin Can). With the LRS data, NWPP can track every member’s progress, test results, and completion data, as well as see trends across all learners or insights about individual&nbsp;lessons.',
+            'text': "We built one of the first learning management systems with native real-time integration "
+                    "with a learning record store (LRS) that supports xAPI (also called Tin Can), so"
+                    "NWPP can follow member’s engagement and progress, and access live analytics that help "
+                    "them improve and evolve training.",
             'action_text': '',
         },
     ]
-    context['outcomes'] = [
-        { 'title': '0.84<abbr title="seconds">s</abbr>', 'summary': 'Page loads' },
-        { 'title': '99<sup>%</sup>', 'summary': 'Training completion' },
-        { 'title': '23', 'summary': 'Fewer accidents per year'},
-        { 'title': '4 <abbr title="minutes">min</abbr>', 'summary': 'New client onboarding' },
-    ]
-    context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
-    context['cta_text'] = '<span class=\"footer--cta-intro--phrase\">We helped Northwest PowerPool</span> <span class=\"footer--cta-intro--phrase\">modernize their power utility training.</span> <strong>What can we modernize for&nbsp;you?</strong>'
+    # context['outcomes'] = [
+    #     { 'title': '5<abbr title="seconds">x</abbr>', 'summary': 'Faster page loads' },
+    #     { 'title': '5 <abbr title="minutes">min</abbr>', 'summary': 'Client onboarding' },
+    #   { 'title': '32', 'summary': 'organizations on board' },
+    #
+    # ]
+    # context['outcome_conclusion'] = """
+    # <p>
+    #     Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we
+    #     spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.
+    #  </p>'
+    # """
+    context['cta_text'] = """
+        <span class="footer--cta-intro--phrase">We helped Northwest PowerPool</span> 
+        <span class="footer--cta-intro--phrase">modernize power utility training.</span>
+        <strong>What can we do for you?</strong>'
+    """
     # context['pdf_download'] = '/static/website/documents/case-studies/phytolacca-dioica.pdf'
     return render(request, 'case-study.html', context)
 
 def casestudy_navex(request, context={}):
     context['client'] = "NAVEX Global"
-    context['title'] = "Case study for NAVEX Global’s Content Management"
-    context['meta_description'] = 'Facing explosive growth while servicing most Fortune 500 companies, NAVEX Global came to OMBU for rock solid, cutting-edge web marketing technology.'
+    context['title'] = "CMS case study for NAVEX Global"
+    context['meta_description'] = 'Facing explosive growth, NAVEX Global hired OMBU implement the digital content management tools that would establish them as the industry leader.'
     context['banner_image'] = "website/images/case-studies/navex/hero-tinted@2x.jpg"
     context['banner_title'] = "Content Management for the Global Ethics Leader"
     context['banner_position'] = '85% 40%'
-    context['intro_text'] = "<p><span class=\"cs-intro--emphasis\">NAVEX Global</span> was formed in 2012 to become the leader in the emerging field of Ethics & Compliance. They engaged OMBU with the mission to design and launch technology capable of not just keeping up, but accelerating, their meteoric rise.</p>"
+    context['intro_text'] = '''
+    <p>
+        <span class="cs-intro--emphasis">NAVEX Global</span> was formed in 2012 to become the leader in the emerging 
+        field of Ethics & Compliance. They engaged OMBU to help implement content marketing tools that would support and 
+        accelerate their rapid growth and global expansion.
+    </p>
+    '''
     context['testimonial_image'] = "website/images/case-studies/navex/testimonial-logo.png"
-    context['intro_testimonial_quote'] = "“Based on projects, the current uplift in high-value forms from the new pages will result in $4.6M in pipe and $1.4M in closed won business in the next 12 months!”"
-    context['intro_testimonial_attribution_name'] = "Hillary E."
-    context['intro_testimonial_attribution_title'] = "Demand Generation Manager, NAVEX Global"
+    # context['intro_testimonial_quote'] = "“Based on projects, the current uplift in high-value forms from the new pages will result in $4.6M in pipe and $1.4M in closed won business in the next 12 months!”"
+    # context['intro_testimonial_attribution_name'] = "Hillary E."
+    # context['intro_testimonial_attribution_title'] = "Demand Generation Manager, NAVEX Global"
     context['contributions'] = {
         'image': {
             'src' : 'website/images/case-studies/navex/intro@2x.png',
@@ -229,10 +301,22 @@ def casestudy_navex(request, context={}):
                 'url' : 'navexglobal.com',
             },
         },
-        'skills': ["Technology Strategy", "Content Management", "Drupal CMS Development", "Marketo Integration", "AWS Migration", "AWS DevOps Management"],
+        'skills': [
+            "Technology Strategy", "Enterprise Content Management", "Drupal CMS Development", "Marketo Integration",
+            "AWS Migration", "Infrastructure Management"
+        ],
     }
     context['visionary'] = {
-        'body': '<p>Facing explosive growth and with a clientele featuring most Fortune 500 companies in more than 200 countries, NAVEX Global needed rock solid, cutting-edge web marketing technology capable of supporting smooth collaboration among distributed teams and rapidly changing business.</p>',
+        'body': '''
+            <p>
+                When NAVEX expansion efforts started to bear results, their website and content management system (CMS)
+                soon got in the way. The existing website and content management tools had not been designed to support 
+                change and growth. Creating pages and campaigns to support new initiative took too long and the site
+                lacked the integrations necessary to track engagement and success metrics. Additionally, the website
+                started feel slow and unreliable. The business teams had a vision for the tools they would need to 
+                engage with new customers today and tomorrow.
+            </p>
+        ''',
         'image': {
             'src' : 'website/images/case-studies/navex/visionary@2x.png',
             'alt': 'A screenshot of the NAVEX Global blog',
@@ -242,49 +326,88 @@ def casestudy_navex(request, context={}):
         },
     }
     context['solution'] = {
-        'body': '<p>OMBU designed and launched an enterprise content management system (CMS) that empowers NAVEX Global to personally engage customers across their global markets.  Marketing teams are able to launch a rich custom landing page for new products and campaigns in minutes, with no IT involvement, allowing them to iterate, test and optimize at breakthrough speeds.</p><p>The website features a rich resource center that asserts NAVEX Global’s leadership in the field and is a key conversion point for new business. To further project NAVEX Global’s thought leadership, OMBU transformed an existing blog into a multi-channel publication that quickly became an industry must-read.</p><p>To allow NAVEX Global to personally reach their global markets, we built a localization framework that empowers marketing teams launch locales as the company grows and tailor content and offerings specific market conditions.</p>',
+        'body': '''
+            <p>
+                OMBU designed and implemented a website backed by a enterprise content management system (CMS) that 
+                empowers NAVEX Global to 
+                personally engage customers across their global markets.  Marketing teams are able to launch a rich 
+                custom landing pages for new products and campaigns in minutes, with no IT involvement, allowing them to 
+                iterate, test and optimize at breakthrough speeds. The campaigns support system integrations that allow
+                marketing teams to track omni-channel campaign performance in Marketo and Salesforce. 
+            </p>
+            <p>
+                The website features a resource center designed to position NAVEX as the global thought leader in
+                ethics and compliance. The resource center publishes reports, guides, white papers, webinars and videos
+                and is a key conversion point for new business, deeply integrated with Marketo's progressive 
+                enhancement to intelligently and automatically grow lead&nbsp;profiles.
+            </p>
+            <p>
+                While building the new website NAVEX had ambitious plans to expand to international markets, so we built 
+                a backend with translation, URL and SEO functions to support any number of locales on day one. As NAVEX
+                started opening offices in new markets, the website was ready to keep up and empower the local teams
+                not only to translate content, but tailor the website experience and campaigns to local products and
+                market conditions.
+            </p>
+        ''',
     }
     context['innovations'] = [
         {
             'title': 'Page Builder',
             'background': 'website/images/case-studies/navex/innov-slide-01@2x.png',
-            'text': 'The page builder feature enables marketers to create landing pages for new products and campaigns without coding or technical help. The page builder offers blocks, such as tailored lead-capture, video and other rich media that can be arranged and resized on-page to achieve the best layout for every situation and enable iterative optimization. Marketers can granularly customize the search engine optimization (SEO) at every content level to drive traffic into the sales funnel.',
+            'text': '''
+                A page builder feature enables marketers to assemble custom landing pages for new products and campaigns 
+                without technical help. The page builder has blocks for text, callouts, media and custom campaign forms
+                that can be sized and arranged and for the best layout for every situation and enable iterative 
+                optimization.
+            ''',
             'action_text': '',
         },
         {
             'title': 'Localization',
             'background': 'website/images/case-studies/navex/innov-slide-02@2x.png',
-            'text': 'NAVEX Global has customers in over 200 countries, so we built powerful localization functionality into their new site.  Our solutiom enables the marketing team to quickly clone, translate, and adapt pages from one locale to another. For visitors, the experience is seamless, as the site automatically detects the user’s location and presents the appropriate targeted&nbsp;content.',
-            'action_text': '',
-        },
-        {
-            'title': 'Robust, Filterable Resource Center',
-            'background': 'website/images/case-studies/navex/innov-slide-03@2x.png',
-            'text': 'Potential customers are more likely to convert when they can see the expertise of a vendor, and so we built NAVEX Global a robust resource center to demonstrate their thought leadership through white papers, webinar videos, case studies, and other content types. NAVEX Global can offer premium content behind lead capture gating forms, customized for individual resources, and using progressive enhancement to intelligently and automatically grow lead&nbsp;profiles.',
+            'text': '''
+                NAVEX Global has customers in over 200 countries, so we built powerful localization into the core of
+                their content management system. NAVEX's  team can quickly launch locales, clone 
+                pages between locales and translate any site content. For visitors, the experience is seamless, as the 
+                site gently guides users to their relevant content.
+            ''',
+
             'action_text': '',
         },
         {
             'title': 'Marketo Marketing Automation',
             'background': 'website/images/case-studies/navex/innov-slide-04@2x.png',
-            'text': 'We built custom integration with the Marketo marketing automation platform throughout NAVEX Global’s new site, to enable their marketing team to better capture new leads, gather insights about visitors, track customer value, and target content.  Using our solution, marketers can embed custom Marketo-integrated forms anywhere on the site, without any code. Building a custom lead-generation landing page takes a matter of&nbsp;minutes.',
+            'text': '''
+                We built custom integration with the Marketo marketing automation platform at the core of NAVEX's
+                website to empower their marketing teams to reach new new leads, gather insights about visitors and
+                content performance, and run omni-channel campaigns. Using our solution, marketers can embed custom 
+                Marketo forms on landing pages, without technical help, allowing them to launch campaigns in minutes.'
+            ''',
+
             'action_text': '',
         },
         {
-            'title': 'Scalable Application and Content DevOps',
+            'title': 'AWS infrastructure',
             'background': 'website/images/case-studies/navex/innov-slide-05@2x.png',
-            'text': 'To reach NAVEX Global’s worldwide audience quickly and reliably, we built a scalable AWS cloud DevOps solution. Dynamic computation is distributed across an auto-scaling fleet of application servers with full failover redudancy in case of a data center outage. Images, documents, and stylesheets, are served from a content delivery network, with leaf nodes close to users, for the fastest experience around the&nbsp;world.',
+            'text': '''
+                NAVEX Global website get's global traffic at large scale. When NAVEX is in the news or one of their
+                resource center pieces goes viral, the site sees quick massive spikes in traffic. OMBU designed the
+                CMS to leverage the best cloud technology available, such as load-balancing, auto-scaling, cross-region
+                replication, and content delivery networks to make sure the site remains fast and available in under
+                any condition.
+            ''',
             'action_text': '',
         },
     ]
-    context['outcomes'] = [
-        { 'title': '< 4 <abbr title="minutes">min</abbr>', 'summary': 'Landing page launch' },
-        { 'title': '224', 'summary': 'White papers, eBooks, webinars' },
-        { 'title': '448', 'summary': 'Expert blog posts' },
-        { 'title': '2', 'summary': 'Top competitors acquired' },
-        { 'title': '$4.6M', 'summary': 'Projected increase in pipeline due to launch' },
-        { 'title': '$1.4M', 'summary': 'Projected increase in closed won business duet to launch' },
-    ]
-    context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
+    # context['outcomes'] = [
+    #     { 'title': '< 4 <abbr title="minutes">min</abbr>', 'summary': 'Landing page launch' },
+    #     { 'title': '224', 'summary': 'White papers, eBooks, webinars' },
+    #     { 'title': '448', 'summary': 'Expert blog posts' },
+    #     { 'title': '2', 'summary': 'Top competitors acquired' },
+    #     { 'title': '$4.6M', 'summary': 'Projected increase in pipeline due to launch' },
+    #     { 'title': '$1.4M', 'summary': 'Projected increase in closed won business duet to launch' },
+    # ]
+    # context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
     context['cta_text'] = '<span class=\"footer--cta-intro--phrase\">We helped NAVEX Global</span> <span class=\"footer--cta-intro--phrase\">modernize their website content.</span> <strong>What can we modernize for&nbsp;you?</strong>'
     # context['pdf_download'] = '/static/website/documents/case-studies/phytolacca-dioica.pdf'
     return render(request, 'case-study.html', context)

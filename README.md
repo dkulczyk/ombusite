@@ -32,7 +32,7 @@ To clean up (stop and remove containers, networks, images, and volumes):
 
 Docker Compose will automatically build missing images when running the `up`
 task. The `build` task is also available when updating or troubleshooting
-images:  w
+images:
 
     docker-compose build web
 
@@ -87,3 +87,34 @@ Record the names of the stacks created with stack-launch in the
 Update the a stack:
 
     ./infrastructure/scripts/stack-update <env> <component>
+
+
+## Static asset building with Gulp
+
+### Docker
+
+The `docker-compose.yml` file includes a container that runs node and does the
+Gulp compilation of front-end assets. If for some reason the container isn't
+building correctly, shut the container down and remove the `node_modules`
+directory and `package-lock.json` file (if it exists) and start the container
+again.
+
+    rm -rf application/website/static/website/node_modules
+    rm application/website/static/website/package-lock.json
+
+**Don't commit the `package-lock.json` file.** The contents of it can change
+depending on where `npm install` was run and can cause problems on other
+machines.
+
+### Local
+
+If you'd rather not run the asset compilaiton in a docker container you can
+run it locally as long as you have node >= 8 and npm >= 5.
+
+    cd application/website/static/website/
+    npm install
+    npm run start
+
+If you have trouble with the install or compilation, do the same as above and
+remove the `node_modules` directory and `package-lock.json` file and run
+`npm install` again. **Don't commit the `package-lock.json` file.**

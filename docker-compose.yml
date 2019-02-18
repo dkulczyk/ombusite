@@ -17,7 +17,7 @@ services:
     volumes:
       - ./application:/var/www/ombusite.local
   gulp:
-    image: node:4
+    image: node:8
     command: bash -c "cd /var/www/ombusite.local/website/static/website && npm install && npm start"
     volumes:
       - ./application/website/static/website:/var/www/ombusite.local/website/static/website
