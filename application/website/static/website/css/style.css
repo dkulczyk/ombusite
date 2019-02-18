@@ -2479,17 +2479,16 @@ input[type="submit"] {
 
 @media (max-width: 991px) {
   .footer--link-item {
-    flex: 0 0 auto; }
-    .footer--link-item:nth-child(2) {
-      min-width: 33%; }
-    .footer--link-item:nth-child(4), .footer--link-item:nth-child(5) {
-      flex-basis: 50%; } }
+    flex: 0 0 auto;
+    width: 50%; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .footer--link-item:nth-child(2) {
-    min-width: 0; }
-  .footer--link-item:nth-child(4), .footer--link-item:nth-child(5) {
-    flex-basis: auto; } }
+  .footer--link-item {
+    width: auto; }
+    .footer--link-item:nth-child(2) {
+      min-width: 0; }
+    .footer--link-item:nth-child(4), .footer--link-item:nth-child(5) {
+      flex-basis: auto; } }
 
 @media (min-width: 992px) {
   .footer--link-item {
