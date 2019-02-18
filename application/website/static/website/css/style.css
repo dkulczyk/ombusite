@@ -3217,7 +3217,8 @@ html.navigation--active, html.navigation--active body {
   white-space: nowrap;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none; }
+  -ms-user-select: none;
+  font-size: 1.5rem; }
   .cta-subtle--item, .cta-subtle--item:hover, .cta-subtle--item:focus {
     background-image: none; }
   .cta-subtle--item:hover, .cta-subtle--item:focus {
