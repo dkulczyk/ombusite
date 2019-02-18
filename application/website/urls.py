@@ -53,8 +53,9 @@ content_sitemap = UrlPatternsSitemap(content_urlpatterns)
 urlpatterns = content_urlpatterns + [
     url(r'^health-check$', lambda response: JsonResponse({"status":"ok"})),
     url(r'^404$', website.views.pagenotfound, name='404'),
-    url(r'^sitemap.xml$', sitemap, {'sitemaps': {'content': content_sitemap}}, name='django.contrib.sitemaps.views.sitemap'),
+    url(r'^sitemap.xml$', sitemap, {'sitemaps': {'content': content_sitemap}}, name='sitemap'),
     url(r'^kitchen-sink$', website.views.kitchensink),
+    url(r'^robots.txt$', website.views.robots, name='robots'),
 
     # browserconfig.xml for Microsoft browsers & devices
     url(r'^browserconfig.xml$', website.views.browserconfig, name='browserconfig'),
