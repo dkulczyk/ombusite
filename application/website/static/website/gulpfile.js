@@ -32,6 +32,7 @@ var jsFiles = [
   owlDir + '/owl.carousel.min.js',
   waypointsDir + '/jquery.waypoints.min.js',
   bootstrapJsDir + '/modal.js',
+  './js/utils.js',
   './js/navigation.js',
   './js/callout-fullwidth.js',
   './js/slider.js',
