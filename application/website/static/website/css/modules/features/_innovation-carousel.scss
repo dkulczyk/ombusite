@@ -142,7 +142,7 @@
     border-width: 0;
     max-height: 0;
     padding: 0;
-    transition: all $transition-duration-default cubic-bezier(0,1,0,1) 0s
+    transition: all $transition-duration-default cubic-bezier(0,1,0,1) 0s,
                 padding $transition-duration-default ease,
                 border-width $transition-duration-default ease;
   }
@@ -156,6 +156,8 @@
   @include btn-primary();
   font-size: calc(14 / 16 * 1em);
   margin-bottom: 2.2rem;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   padding-top: calc(13 / 18 * 1em);
   padding-bottom: calc(13 / 18 * 1em);
   position: relative;
