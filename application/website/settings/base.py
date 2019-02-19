@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'website',
 ]
 
+# Redefined in remote.py
 MIDDLEWARE = [
     'django.middleware.gzip.GZipMiddleware',
     'htmlmin.middleware.HtmlMinifyMiddleware',
