@@ -23,6 +23,7 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesSto
 MEDIA_ROOT = '/var/www/media/'
 MEDIA_URL = '/media/'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_HSTS_SECONDS = 3600 # Trigger Strict-Transport-Security header.
 
 MIDDLEWARE = [
     'django.middleware.cache.UpdateCacheMiddleware', # View caching.
