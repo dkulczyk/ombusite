@@ -24,6 +24,7 @@ MEDIA_ROOT = '/var/www/media/'
 MEDIA_URL = '/media/'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_HSTS_SECONDS = 3600 # Trigger Strict-Transport-Security header.
+SECURE_CONTENT_TYPE_NOSNIFF = True
 
 MIDDLEWARE = [
     'django.middleware.cache.UpdateCacheMiddleware', # View caching.
