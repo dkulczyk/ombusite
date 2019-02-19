@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var concat = require('gulp-concat');
 var livereload = require('gulp-livereload');
+var strip = require('gulp-strip-comments');
 
 var bootstrapDir = './node_modules/bootstrap-sass/assets';
 var bootstrapJsDir = bootstrapDir + '/javascripts/bootstrap';
@@ -44,6 +45,7 @@ var jsFiles = [
 ];
 gulp.task('js', function() {
   return gulp.src(jsFiles)
+          .pipe(strip())
           .pipe(concat('scripts-all.js'))
           .pipe(gulp.dest('./js/'))
           .pipe(livereload());
