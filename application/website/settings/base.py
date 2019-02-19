@@ -63,6 +63,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'website.context_processors.website_context_processor',
             ],
         },
     },
@@ -131,3 +132,5 @@ DATABASES = {
 BASICAUTH_USERS = {
     "ombudev": "red-mic-lify",
 }
+
+GOOGLE_ANALYTICS_ID = None
