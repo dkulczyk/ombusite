@@ -146,18 +146,11 @@
 .footer--link-item {
   @media (max-width: $breakpoint-notebook - 1px) {
     flex: 0 0 auto;
-
-    &:nth-child(2) {
-      min-width: 33%;
-    }
-
-    &:nth-child(4),
-    &:nth-child(5) {
-      flex-basis: 50%;
-    }
+    width: 50%;
   }
 
   @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-notebook - 1px) {
+    width: auto;
     &:nth-child(2) {
       min-width: 0;
     }

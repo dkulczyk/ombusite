@@ -16,20 +16,18 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 from django.http import JsonResponse
 import website.views
+from website.sitemap import UrlPatternsSitemap
 
-urlpatterns = [
-    url(r'^health-check$', lambda response: JsonResponse({"status":"ok"})),
+content_urlpatterns = [
     url(r'^$', website.views.home, name='home'),
-    # url(r'^admin/', admin.site.urls),
     url(r'^about$', website.views.about, name='about'),
-    url(r'^kitchen-sink$', website.views.kitchensink),
     url(r'^work$', website.views.work, name='work'),
     url(r'^services$', website.views.services, name='services'),
     url(r'^contact$', website.views.contact, name='contact'),
     # url(r'^careers$', website.views.careers, name='careers'),
-    url(r'^404$', website.views.pagenotfound, name='404'),
 
     # Projects
     url(r'^work/occ$', website.views.project_occ, name='project-occ'),
@@ -48,6 +46,16 @@ urlpatterns = [
     url(r'^work/nwpp$', website.views.casestudy_nwpp, name='case-study-nwpp'),
     url(r'^work/navex-global$', website.views.casestudy_navex, name='case-study-navex'),
     url(r'^work/saturday-academy$', website.views.casestudy_sa, name='case-study-sa'),
+]
+
+content_sitemap = UrlPatternsSitemap(content_urlpatterns)
+
+urlpatterns = content_urlpatterns + [
+    url(r'^health-check$', lambda response: JsonResponse({"status":"ok"})),
+    url(r'^404$', website.views.pagenotfound, name='404'),
+    url(r'^sitemap.xml$', sitemap, {'sitemaps': {'content': content_sitemap}}, name='sitemap'),
+    url(r'^kitchen-sink$', website.views.kitchensink),
+    url(r'^robots.txt$', website.views.robots, name='robots'),
 
     # browserconfig.xml for Microsoft browsers & devices
     url(r'^browserconfig.xml$', website.views.browserconfig, name='browserconfig'),

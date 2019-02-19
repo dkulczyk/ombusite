@@ -1,4 +1,5 @@
-from django.shortcuts import render, render_to_response
+from django.conf import settings
+from django.shortcuts import render, render_to_response, reverse
 from website.models.project import *
 
 def home(request, context={}):
@@ -503,4 +504,16 @@ def casestudy_sa(request, context={}):
 def browserconfig(request):
     response = render_to_response('browserconfig.xml')
     response['Content-Type'] = 'application/xml;'
+    return response
+
+def robots(request):
+    domain = settings.DOMAIN
+    if not domain:
+        domain = '{scheme}://{host}'.format(
+                    scheme=request.scheme,
+                    host=request.get_host(),
+                )
+    sitemap_url = '{domain}{path}'.format(domain=domain, path=reverse('sitemap'))
+    response = render_to_response('robots.txt', {'sitemap_url': sitemap_url})
+    response['Content-Type'] = 'text/plain'
     return response
