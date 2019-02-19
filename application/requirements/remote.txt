@@ -1,3 +1,4 @@
 -r base.txt
 uwsgi==2.0.18
+django-debug-toolbar==1.11
 git+https://github.com/ombu/django-basicauth.git#egg=django-basicauth
