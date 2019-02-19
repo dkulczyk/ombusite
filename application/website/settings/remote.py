@@ -19,9 +19,13 @@ DATABASES['default']['PORT'] = '5432'
 ALLOWED_HOSTS = ['', get_local_ip(), os.environ.get('DOMAIN', None)]
 STATIC_ROOT = '/var/www/static/'
 STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 MEDIA_ROOT = '/var/www/media/'
 MEDIA_URL = '/media/'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 if os.getenv('ENVIRONMENT_TYPE', None) in ('qa', 'staging'):
     MIDDLEWARE = ['basicauth.middleware.BasicAuthMiddleware',] + MIDDLEWARE
+
+if os.getenv('ENVIRONMENT_TYPE', None) == 'production':
+    GOOGLE_ANALYTICS_ID = 'UA-16055309-1'
