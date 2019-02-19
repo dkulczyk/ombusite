@@ -507,13 +507,7 @@ def browserconfig(request):
     return response
 
 def robots(request):
-    domain = settings.DOMAIN
-    if not domain:
-        domain = '{scheme}://{host}'.format(
-                    scheme=request.scheme,
-                    host=request.get_host(),
-                )
-    sitemap_url = '{domain}{path}'.format(domain=domain, path=reverse('sitemap'))
+    sitemap_url = request.build_absolute_uri(reverse('sitemap'))
     response = render_to_response('robots.txt', {'sitemap_url': sitemap_url})
     response['Content-Type'] = 'text/plain'
     return response

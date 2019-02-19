@@ -21,7 +21,7 @@ STATIC_ROOT = '/var/www/static/'
 STATIC_URL = '/static/'
 MEDIA_ROOT = '/var/www/media/'
 MEDIA_URL = '/media/'
-DOMAIN = os.environ.get('DOMAIN', None)
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 if os.getenv('ENVIRONMENT_TYPE', None) in ('qa', 'staging'):
     MIDDLEWARE = ['basicauth.middleware.BasicAuthMiddleware',] + MIDDLEWARE
