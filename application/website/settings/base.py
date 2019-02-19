@@ -131,5 +131,3 @@ DATABASES = {
 BASICAUTH_USERS = {
     "ombudev": "red-mic-lify",
 }
-
-DOMAIN = os.environ.get('DOMAIN', None)
