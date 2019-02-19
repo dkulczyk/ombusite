@@ -24,6 +24,21 @@ MEDIA_ROOT = '/var/www/media/'
 MEDIA_URL = '/media/'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+MIDDLEWARE = [
+    'django.middleware.cache.UpdateCacheMiddleware', # View caching.
+    'django.middleware.gzip.GZipMiddleware', # GZip.
+    'htmlmin.middleware.HtmlMinifyMiddleware', # Minify HTML.
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware', # View caching.
+    'htmlmin.middleware.MarkRequestMiddleware', # View caching.
+]
+
 if os.getenv('ENVIRONMENT_TYPE', None) in ('qa', 'staging'):
     MIDDLEWARE = ['basicauth.middleware.BasicAuthMiddleware',] + MIDDLEWARE
 
