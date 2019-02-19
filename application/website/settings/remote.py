@@ -37,6 +37,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware', # View caching.
     'htmlmin.middleware.MarkRequestMiddleware', # View caching.
+    'csp.middleware.CSPMiddleware',
 ]
 
 if os.getenv('ENVIRONMENT_TYPE', None) in ('qa', 'staging'):
