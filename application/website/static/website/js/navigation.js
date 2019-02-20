@@ -1,8 +1,9 @@
 // Menu
 $(function() {
+  var KEYCODE_ESC = 27;
 
   // Keep focus in navigation
-  // Adapted from https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/solution/modal.js  
+  // Adapted from https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/solution/modal.js
 
   // Find the modal and its overlay
   var modal = document.querySelector('#menu');
@@ -19,32 +20,36 @@ $(function() {
   var firstTabStop = focusableElements[0];
   var lastTabStop = focusableElements[focusableElements.length - 1];
 
-  $('.header--menu-toggle').on('click', function(e){
-    e.preventDefault();
-    $('html').toggleClass('navigation--active');
-    $('#menu').toggleClass('navigation--active');
-    // Focus first child
-    setTimeout(function(){ firstTabStop.focus(); }, 300);
-  });
+  $('.header--menu-toggle').on('click', preventDefault(openNavigation));
 
   $('.header--menu-close').on('click', function(e){
-    e.preventDefault();    
-    $('html').removeClass('navigation--active');
-    $('#menu').removeClass('navigation--active');    
+    e.preventDefault();
+    closeNavigation();
     $('.header--menu-toggle').focus();
   });
 
   $('.navigation--secondary-link').on('click', function(e) {
     if (isSamePageAnchor(e.currentTarget.href)) {
-      $('html').removeClass('navigation--active');
-      $('#menu').removeClass('navigation--active');
+      closeNavigation();
     }
   });
 
-  $(window).on('beforeunload', function(e) {
+  $(window).on('beforeunload', closeNavigation);
+
+  function openNavigation() {
+    $('html').addClass('navigation--active');
+    $('#menu').addClass('navigation--active');
+    // Focus first child
+    setTimeout(function(){ firstTabStop.focus(); }, 300);
+    $('html').on('keyup.navigation', onlyKeyCode(KEYCODE_ESC, closeNavigation));
+  }
+
+  function closeNavigation() {
+    console.log('closeNavigation()');
     $('html').removeClass('navigation--active');
     $('#menu').removeClass('navigation--active');
-  });
+    $('html').off('.navigation');
+  }
 
   function trapTabKey(e) {
     // Check for TAB key press
