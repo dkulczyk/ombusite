@@ -11,15 +11,6 @@ SETTINGS = getattr(settings, 'PRECOMPRESSED_SETTINGS', {})
 GZIP_PATTERNS = SETTINGS.get('GZIP_PATTERNS', ('*.css', '*.js'))
 DEFAULT_COMPRESS_LEVEL = SETTINGS.get('DEFAULT_COMPRESS_LEVEL', 9)
 
-def accepts_gzip(request):
-    """
-    returns True if the request accepts Content-Encoding: gzip
-    """
-    return 'gzip' in request.META.get('HTTP_ACCEPT_ENCODING', '')
-
-if 'accepts_gzip' in SETTINGS:
-    accepts_gzip = SETTINGS['accepts_gzip']
-
 def get_gzipped_name(name):
     """
     returns the location of the gzipped version of a specified file
