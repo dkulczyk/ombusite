@@ -16,7 +16,7 @@ INSTALLED_APPS += [
 ]
 
 if DEBUG and 'debug_toolbar' in INSTALLED_APPS:
-    MIDDLEWARE = ['debug_toolbar.middleware.DebugToolbarMiddleware',] + MIDDLEWARE
+    MIDDLEWARE +=  ['debug_toolbar.middleware.DebugToolbarMiddleware',]
 
 def show_toolbar_callback(request):
     return True

@@ -2037,7 +2037,6 @@ input[type="submit"] {
   padding-top: 0;
   padding-bottom: 0; }
   .page-title--menu-link.page-title--menu-link--cta:after {
-    background-color: #6dc5d4;
     content: "";
     display: block;
     height: 14px;
@@ -2045,11 +2044,19 @@ input[type="submit"] {
     right: 0;
     top: 9px;
     width: 24px;
+    background-color: #6dc5d4;
     -webkit-mask-image: url("../images/arrow-right-long.svg");
     mask-image: url("../images/arrow-right-long.svg");
     transition: all 0.2s ease; }
+    @supports not ((mask-image: test) or (-webkit-mask-image: test)) {
+      .page-title--menu-link.page-title--menu-link--cta:after {
+        background-color: transparent;
+        background-image: url("../images/arrow-right-long.svg"); } }
   .page-title--menu-link.page-title--menu-link--cta:hover:after, .page-title--menu-link.page-title--menu-link--cta:focus:after, .page-title--menu-link.page-title--menu-link--cta:active:after {
     background-color: #3eb2c6; }
+    @supports not ((mask-image: test) or (-webkit-mask-image: test)) {
+      .page-title--menu-link.page-title--menu-link--cta:hover:after, .page-title--menu-link.page-title--menu-link--cta:focus:after, .page-title--menu-link.page-title--menu-link--cta:active:after {
+        background-color: transparent; } }
   .page-title--menu-link.page-title--menu-link--cta, .page-title--menu-link.page-title--menu-link--cta:hover, .page-title--menu-link.page-title--menu-link--cta:focus {
     background-image: none; }
   .page-title--menu-link.page-title--menu-link--cta:hover, .page-title--menu-link.page-title--menu-link--cta:focus, .page-title--menu-link.page-title--menu-link--cta:active {
@@ -2733,7 +2740,6 @@ html.navigation--active, html.navigation--active body {
   display: inline-block;
   font-family: "halis_rregular", "Helvetica", sans-serif; }
   .navigation--secondary-link.navigation--secondary-link--cta:after {
-    background-color: #6dc5d4;
     content: "";
     display: block;
     height: 14px;
@@ -2741,11 +2747,19 @@ html.navigation--active, html.navigation--active body {
     right: 0;
     top: 9px;
     width: 24px;
+    background-color: #6dc5d4;
     -webkit-mask-image: url("../images/arrow-right-long.svg");
     mask-image: url("../images/arrow-right-long.svg");
     transition: all 0.2s ease; }
+    @supports not ((mask-image: test) or (-webkit-mask-image: test)) {
+      .navigation--secondary-link.navigation--secondary-link--cta:after {
+        background-color: transparent;
+        background-image: url("../images/arrow-right-long.svg"); } }
   .navigation--secondary-link.navigation--secondary-link--cta:hover:after, .navigation--secondary-link.navigation--secondary-link--cta:focus:after, .navigation--secondary-link.navigation--secondary-link--cta:active:after {
     background-color: #3eb2c6; }
+    @supports not ((mask-image: test) or (-webkit-mask-image: test)) {
+      .navigation--secondary-link.navigation--secondary-link--cta:hover:after, .navigation--secondary-link.navigation--secondary-link--cta:focus:after, .navigation--secondary-link.navigation--secondary-link--cta:active:after {
+        background-color: transparent; } }
   .navigation--secondary-link.navigation--secondary-link--cta, .navigation--secondary-link.navigation--secondary-link--cta:hover, .navigation--secondary-link.navigation--secondary-link--cta:focus {
     background-image: none; }
   .navigation--secondary-link.navigation--secondary-link--cta:hover, .navigation--secondary-link.navigation--secondary-link--cta:focus, .navigation--secondary-link.navigation--secondary-link--cta:active {
@@ -2871,7 +2885,6 @@ html.navigation--active, html.navigation--active body {
   font-family: "halis_rregular", "Helvetica", sans-serif; }
   .btn-tertiary:after,
   .cta-tertiary:after {
-    background-color: #6dc5d4;
     content: "";
     display: block;
     height: 14px;
@@ -2879,14 +2892,26 @@ html.navigation--active, html.navigation--active body {
     right: 0;
     top: 9px;
     width: 24px;
+    background-color: #6dc5d4;
     -webkit-mask-image: url("../images/arrow-right-long.svg");
     mask-image: url("../images/arrow-right-long.svg");
     transition: all 0.2s ease; }
+    @supports not ((mask-image: test) or (-webkit-mask-image: test)) {
+      .btn-tertiary:after,
+      .cta-tertiary:after {
+        background-color: transparent;
+        background-image: url("../images/arrow-right-long.svg"); } }
   .btn-tertiary:hover:after, .btn-tertiary:focus:after, .btn-tertiary:active:after,
   .cta-tertiary:hover:after,
   .cta-tertiary:focus:after,
   .cta-tertiary:active:after {
     background-color: #3eb2c6; }
+    @supports not ((mask-image: test) or (-webkit-mask-image: test)) {
+      .btn-tertiary:hover:after, .btn-tertiary:focus:after, .btn-tertiary:active:after,
+      .cta-tertiary:hover:after,
+      .cta-tertiary:focus:after,
+      .cta-tertiary:active:after {
+        background-color: transparent; } }
   .btn-tertiary, .btn-tertiary:hover, .btn-tertiary:focus,
   .cta-tertiary,
   .cta-tertiary:hover,
@@ -3125,7 +3150,6 @@ html.navigation--active, html.navigation--active body {
   font-family: "halis_rregular", "Helvetica", sans-serif;
   margin-top: calc(30 / 18 * 1rem); }
   .callout--cta:after {
-    background-color: #6dc5d4;
     content: "";
     display: block;
     height: 14px;
@@ -3133,11 +3157,19 @@ html.navigation--active, html.navigation--active body {
     right: 0;
     top: 9px;
     width: 24px;
+    background-color: #6dc5d4;
     -webkit-mask-image: url("../images/arrow-right-long.svg");
     mask-image: url("../images/arrow-right-long.svg");
     transition: all 0.2s ease; }
+    @supports not ((mask-image: test) or (-webkit-mask-image: test)) {
+      .callout--cta:after {
+        background-color: transparent;
+        background-image: url("../images/arrow-right-long.svg"); } }
   .callout--cta:hover:after, .callout--cta:focus:after, .callout--cta:active:after {
     background-color: #3eb2c6; }
+    @supports not ((mask-image: test) or (-webkit-mask-image: test)) {
+      .callout--cta:hover:after, .callout--cta:focus:after, .callout--cta:active:after {
+        background-color: transparent; } }
   .callout--cta, .callout--cta:hover, .callout--cta:focus {
     background-image: none; }
   .callout--cta:hover, .callout--cta:focus, .callout--cta:active {
@@ -5529,7 +5561,6 @@ blockquote.testimonial--quote {
   display: inline-block;
   font-family: "halis_rregular", "Helvetica", sans-serif; }
   .project-pager--cta:after {
-    background-color: #6dc5d4;
     content: "";
     display: block;
     height: 14px;
@@ -5537,11 +5568,19 @@ blockquote.testimonial--quote {
     right: 0;
     top: 9px;
     width: 24px;
+    background-color: #6dc5d4;
     -webkit-mask-image: url("../images/arrow-right-long.svg");
     mask-image: url("../images/arrow-right-long.svg");
     transition: all 0.2s ease; }
+    @supports not ((mask-image: test) or (-webkit-mask-image: test)) {
+      .project-pager--cta:after {
+        background-color: transparent;
+        background-image: url("../images/arrow-right-long.svg"); } }
   .project-pager--cta:hover:after, .project-pager--cta:focus:after, .project-pager--cta:active:after {
     background-color: #3eb2c6; }
+    @supports not ((mask-image: test) or (-webkit-mask-image: test)) {
+      .project-pager--cta:hover:after, .project-pager--cta:focus:after, .project-pager--cta:active:after {
+        background-color: transparent; } }
   .project-pager--cta, .project-pager--cta:hover, .project-pager--cta:focus {
     background-image: none; }
   .project-pager--cta:hover, .project-pager--cta:focus, .project-pager--cta:active {
@@ -5780,7 +5819,6 @@ blockquote.testimonial--quote {
   display: inline-block;
   font-family: "halis_rregular", "Helvetica", sans-serif; }
   .careers--opening-cta:after {
-    background-color: #6dc5d4;
     content: "";
     display: block;
     height: 14px;
@@ -5788,11 +5826,19 @@ blockquote.testimonial--quote {
     right: 0;
     top: 9px;
     width: 24px;
+    background-color: #6dc5d4;
     -webkit-mask-image: url("../images/arrow-right-long.svg");
     mask-image: url("../images/arrow-right-long.svg");
     transition: all 0.2s ease; }
+    @supports not ((mask-image: test) or (-webkit-mask-image: test)) {
+      .careers--opening-cta:after {
+        background-color: transparent;
+        background-image: url("../images/arrow-right-long.svg"); } }
   .careers--opening-cta:hover:after, .careers--opening-cta:focus:after, .careers--opening-cta:active:after {
     background-color: #3eb2c6; }
+    @supports not ((mask-image: test) or (-webkit-mask-image: test)) {
+      .careers--opening-cta:hover:after, .careers--opening-cta:focus:after, .careers--opening-cta:active:after {
+        background-color: transparent; } }
   .careers--opening-cta, .careers--opening-cta:hover, .careers--opening-cta:focus {
     background-image: none; }
   .careers--opening-cta:hover, .careers--opening-cta:focus, .careers--opening-cta:active {
@@ -5938,7 +5984,6 @@ blockquote.testimonial--quote {
   display: inline-block;
   font-family: "halis_rregular", "Helvetica", sans-serif; }
   .error--secondary-link:after {
-    background-color: #6dc5d4;
     content: "";
     display: block;
     height: 14px;
@@ -5946,11 +5991,19 @@ blockquote.testimonial--quote {
     right: 0;
     top: 9px;
     width: 24px;
+    background-color: #6dc5d4;
     -webkit-mask-image: url("../images/arrow-right-long.svg");
     mask-image: url("../images/arrow-right-long.svg");
     transition: all 0.2s ease; }
+    @supports not ((mask-image: test) or (-webkit-mask-image: test)) {
+      .error--secondary-link:after {
+        background-color: transparent;
+        background-image: url("../images/arrow-right-long.svg"); } }
   .error--secondary-link:hover:after, .error--secondary-link:focus:after, .error--secondary-link:active:after {
     background-color: #3eb2c6; }
+    @supports not ((mask-image: test) or (-webkit-mask-image: test)) {
+      .error--secondary-link:hover:after, .error--secondary-link:focus:after, .error--secondary-link:active:after {
+        background-color: transparent; } }
   .error--secondary-link, .error--secondary-link:hover, .error--secondary-link:focus {
     background-image: none; }
   .error--secondary-link:hover, .error--secondary-link:focus, .error--secondary-link:active {

@@ -23,6 +23,25 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesSto
 MEDIA_ROOT = '/var/www/media/'
 MEDIA_URL = '/media/'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_HSTS_SECONDS = 3600 # Trigger Strict-Transport-Security header.
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+
+MIDDLEWARE = [
+    'django.middleware.cache.UpdateCacheMiddleware', # View caching.
+    'django.middleware.gzip.GZipMiddleware', # GZip.
+    'htmlmin.middleware.HtmlMinifyMiddleware', # Minify HTML.
+    'django.middleware.security.SecurityMiddleware',
+    # 'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.contrib.auth.middleware.AuthenticationMiddleware',
+    # 'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware', # View caching.
+    'htmlmin.middleware.MarkRequestMiddleware', # View caching.
+    'csp.middleware.CSPMiddleware',
+]
 
 if os.getenv('ENVIRONMENT_TYPE', None) in ('qa', 'staging'):
     MIDDLEWARE = ['basicauth.middleware.BasicAuthMiddleware',] + MIDDLEWARE

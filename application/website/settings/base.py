@@ -40,14 +40,18 @@ INSTALLED_APPS = [
     'website',
 ]
 
+# Redefined in remote.py
 MIDDLEWARE = [
+    'django.middleware.gzip.GZipMiddleware',
+    'htmlmin.middleware.HtmlMinifyMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    # 'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.contrib.auth.middleware.AuthenticationMiddleware',
+    # 'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'csp.middleware.CSPMiddleware',
 ]
 
 ROOT_URLCONF = 'website.urls'
@@ -134,3 +138,9 @@ BASICAUTH_USERS = {
 }
 
 GOOGLE_ANALYTICS_ID = None
+
+CSP_DEFAULT_SRC = ("'none'",)
+CSP_SCRIPT_SRC = ("'self'", 'www.googletagmanager.com')
+CSP_IMG_SRC = ("'self'", 'www.googletagmanager.com')
+CSP_STYLE_SRC = ("'self'", "'unsafe-inline'",) # Needed to support inline background images.
+CSP_FONT_SRC = ("'self'",)
