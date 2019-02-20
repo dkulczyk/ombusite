@@ -29,6 +29,7 @@ Mappings:
       DatabaseUser: ombusite_production
       Domain: beta.ombuweb.com
       ListernerPriority: 100
+      SentryDsn: https://3c867561b1fb4f71809e9f5a8da9f3fc@sentry.io/1398714
 
     staging:
       DatabaseHost: qa-db-2.cpuj5trym3at.us-west-2.rds.amazonaws.com
@@ -36,6 +37,7 @@ Mappings:
       DatabaseUser: ombusite_staging
       Domain: staging.ombuweb.com
       ListernerPriority: 101
+      SentryDsn: https://02574ed1acff461faa1d3a2def384815@sentry.io/1398713
 
 Resources:
 
@@ -96,6 +98,7 @@ Resources:
             !Sub "${InfrastructureStack}-Listener"
         Priority: !FindInMap [ Environments, !Ref EnvironmentType, ListernerPriority ]
         RoleArn: !Ref DefaultRole
+        SentryDsn: !FindInMap [ Environments, !Ref EnvironmentType, SentryDsn]
         VPC:
           Fn::ImportValue:
             !Sub "${InfrastructureStack}-VPC"

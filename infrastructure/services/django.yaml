@@ -51,6 +51,11 @@ Parameters:
     Description: The ARN of an IAM role for the service
     Type: String
 
+  SentryDsn:
+    Default: ''
+    Description: A Sentry DSN for pushing exceptions
+    Type: String
+
   VPC:
     Description: The VPC for the cluster
     Type: AWS::EC2::VPC::Id
@@ -114,6 +119,8 @@ Resources:
               Value: !Ref EnvironmentType
             - Name: DATABASE_PASSWORD
               Value: !Ref DatabasePassword
+            - Name: SENTRY_DSN
+              Value: !Ref SentryDsn
 
   ListenerRule:
     Type: AWS::ElasticLoadBalancingV2::ListenerRule
