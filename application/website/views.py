@@ -415,13 +415,26 @@ def casestudy_navex(request, context={}):
 
 def casestudy_sa(request, context={}):
     context['client'] = "Saturday Academy"
-    context['title'] = "Case study for Saturday Academy’s class registration system"
-    context['meta_description'] = 'OMBU implemented a rich CRM for Saturday Academy to serve as the repository of data about families, classes, registrations, and more, built on Salesforce.'
+    context['title'] = "Salesforce CRM case study for Saturday Academy’s class registration system"
+    context['meta_description'] = 'OMBU implemented an website and integrated Salesforce CRM for Saturday Academy.'
     context['banner_image'] = "website/images/case-studies/sa/hero-tinted@2x.jpg"
     context['banner_title'] = "Engaging the Next Generation of Scientists, Engineers, and Artists"
-    context['banner_subtitle'] = "Class Registration System"
+    context['banner_subtitle'] = "CRM, Website and a Live Class Registration System"
     context['banner_position'] = '50% 30%'
-    context['intro_text'] = "<p><span class=\"cs-intro--emphasis\">Saturday Academy</span> strives to engage all motivated young people in hands-on, in-depth learning by connecting them to community experts as educators and mentors by offering over 850 STEAM-curriculum classes per year. But registration was cumbersome for parents and data collection was poor and incomplete.</p><p>OMBU conducted an organization-wide survey of processes, workflows and technology usage and designed and built a nonprofit Salesforce CRM and integrated website that enables families to register to classes and engage with mentors, funneling data in real time into Salesforce for instant reporting and analysis. This IT revision transformed how Saturday Academy engages with its customers.</p>"
+    context['intro_text'] = """
+    <p>
+        <span class=\"cs-intro--emphasis\">Saturday Academy</span> strives to engage all motivated young people in 
+        hands-on, in-depth learning by connecting them to community experts as educators and mentors by offering over 
+        850 STEAM-curriculum classes per year. But young students and their families relied on paper class catalogs
+        and the organization lacked tools for registration and outcome tracking.  
+    </p>
+    <p>
+        After conducting an organization-wide survey processes and technology survey, OMBU designed and built 
+        for Saturday Academy an integrated solution based on a new website and a nonprofit Salesforce CRM that enables 
+        families to register to classes and engage with mentors, and gives Saturday Academy real time access to
+        registration data and outcomes, transforming how Saturday Academy engages with its customers.
+    </p>
+    """
     context['testimonial_image'] = "website/images/case-studies/sa/testimonial-logo.png"
     context['contributions'] = {
         'image': {
@@ -431,10 +444,34 @@ def casestudy_sa(request, context={}):
                 'url' : 'saturdayacademy.org',
             },
         },
-        'skills': ["Technology Strategy", "User Experience Design", "Visual Design", "Salesforce CRM Development", "Drupal Application Development", "AWS Design & Implementation"],
+        'skills': [
+            "Technology Strategy", "Design", "Salesforce",
+            "Drupal", "Data migration", "AWS infrastructure"
+        ]
     }
     context['visionary'] = {
-        'body': '<p>Founded in 1983, Saturday Academy offers over 850 classes and camps per year and over 100 internships for students, with focus on STEAM education and an emphasis on engaging underprivileged students by offering over $70k per year in financial aid.</p><p>Saturday Academy’s unique model is to partner with community subject experts as teachers and mentors, such as practicing doctors, working scientists, and professional actors in the Portland metropolitan area and around Oregon.</p><p>Despite their growth and technology focus, Saturday Academy had been limping along with an old and creaky homegrown Access database and registration process that involved printouts and laborious manual staff interaction for every registration and application.</p><p>The vision: Saturday Academy needed a database of students and their families with a real-time integrated web registration system, so families can self-serve and SA can gain insights from data in real-time.</p>',
+        'body': """
+            <p>
+                Founded in 1983, Saturday Academy offers over 850 classes and camps and over 100 internships 
+                for students, with focus on STEAM education and an emphasis on engaging underprivileged students.
+                Their vision is that all interested, pre-college students in our region will have the opportunity 
+                to interact with community experts and experience professional environments in ways that assist 
+                them in developing intellectually and preparing for rewarding careers.
+            </p>
+            <p>
+                But their technology infrastructure kept getting in the way of this vision. An old Wordpress website
+                was not just hard to manage, but offered families no way to discover and register to the exciting 
+                classes happening around them. So Saturday Academy relied on hardcoded web forms
+                fed data directly into an Access database. Over time, this database became piled with duplicate and
+                erroneous information, so Saturday Academy lacked reliable insight into operations.
+            </p>    
+            <p>
+                Saturday Academy's staff knew there was better technology out there, but they needed a partner who
+                could help them identify and implement a solution that was affordable and sustainable technology, and 
+                who could help them migrate and help sanitize their legacy data, and stay around to help the them adopt 
+                the new solution.
+            </p>
+        """,
         'image': {
             'src' : 'website/images/case-studies/sa/visionary@2x.png',
             'alt': 'A screenshot of a Saturday Academy class registration page',
@@ -449,7 +486,36 @@ def casestudy_sa(request, context={}):
         # },
     }
     context['solution'] = {
-        'body': '<p>OMBU implemented a rich CRM to serve as the canonical repository of data about families, classes, registrations, internships, and donors, built on Salesforce. By building on top of Salesforce, we were able to provide Saturday Academy with a leading CRM database platform, including using add-ons such as the Nonprofit Success Pack (NPSP) and data management tools. Additionally, Saturday Academy benefits from the knowledge and expertise of the huge number of other nonprofits who use Salesforce to run their organizations.</p><p>To reach parents, students, instructors, and mentors, we designed and built a fun, easy-to-use Content Management website. Parents can set up their household information online, and register their children for any of Saturday Academy’s many classes quickly and easily, and even be granted auto-calculated financial aid to help make the classes accessible to all.</p><p>Saturday Academy’s unique internship program, Apprenticeships in Science and Engineering (ASE), pairs teens with industry mentors for a summer of on-the-job learning. Hundreds of motivated students apply for the program, so we designed a process that makes it easy to apply, as well as a portal for the mentors to rank applicants and a system for final approval and communication with selected interns.</p><p>While we’re proud of transforming Saturday Academy’s online presence and making everything smooth and easy for parents and students, the most transformative part of the solution we built for Saturday Academy is the real-time data flow and the accompanying reporting within the CRM. Leadership can now ask questions and gain insights instantly, such as seeing breakdown of financial aid relative to family demographics, intelligence that previously would either have days of data processing or have been entirely impossible.</p>',
+        'body': """
+        <p>
+            OMBU implemented a nonprofit Salesforce CRM to serve as the data store for all operational data:
+            households, students, classes, registrations, internships, and donations. By building on top of 
+            Salesforce, we were able to provide Saturday Academy with enterprise business intelligence and 
+            reporting capabilities. We configured the Salesfor Nonprofit Success Pack (NPSP), so Saturday Academy
+            could access free licenses through the generous offering fom the Salesforce Foundation.</p>
+        <p>
+            To reach parents, students, instructors, and mentors, we designed and built a fun, 
+            easy-to-use website powered by the Drupal Content Management System (CMS). Parents can set up their 
+            household information online, and register their children for any of Saturday Academy’s many classes 
+            quickly and easily, and even be granted financial aid automatically to help make the classes accessible.
+        </p>
+        <p>
+            Saturday Academy’s unique internship program, Apprenticeships in Science and Engineering (ASE), pairs 
+            teens with industry mentors for a summer of on-the-job learning. Hundreds of motivated students apply 
+            for the program, so we designed a process that makes a multi-step application and screening process
+            easy for applicants, and a portal for mentors to review mentors and rank applicants. Finally, the process
+            has a step for Saturday Academy staff to complete approval and trigger a series of automated 
+            emails communication to the selected interns and mentors.
+        </p>
+        <p>
+            While we’re proud of transforming Satturday Academy’s online presence and making everything smooth and 
+            easy for parents and students, the most transformative part of the solution  
+            is the real-time data flow between the website and the CRM, and the reporting capabilities that it unleashed
+            for Saturday Academy. Leadership can now ask questions and gain insights instantly, such as seeing 
+            breakdown of financial aid relative to family demographics, intelligence that previously would either 
+            have days of data processing or have been entirely impossible.
+        </p>
+        """,
         'image': {
             'src' : 'website/images/case-studies/sa/solution@2x.png',
             'alt': 'A screenshot of a Saturday Academy application review page',
@@ -465,39 +531,45 @@ def casestudy_sa(request, context={}):
     }
     context['innovations'] = [
         {
-            'title': 'Real-Time Class Registration System',
+            'title': 'Real-Time Class Registrations',
             'background': 'website/images/case-studies/sa/innov-slide-01@2x.png',
-            'text': 'A live class catalog syncs between the website and the Salesforce datastore, so parents and students can see Saturday Academy’s classes and seating availability in real-time. When it’s time to register, a parent can apply for and instantly receive financial aid, calculated based on their adjusted gross income (AGI) using a formula Saturday Academy can adjust over time. Payment is processed immediately through Stripe’s API and is recorded within&nbsp;Salesforce.',
+            'text': "A live class catalog syncs between the website and the Salesforce datastore, so parents "
+                    "and students can see Saturday Academy’s classes and seating availability in real-time. "
+                    "Parents can apply for and instantly receive financial aid, calculated "
+                    "based on their adjusted gross income (AGI).",
             'action_text': '',
         },
         {
-            'title': 'Salesforce Business Datastore and Intelligence',
+            'title': 'Salesforce Business Intelligence',
             'background': 'website/images/case-studies/sa/innov-slide-02@2x.png',
-            'text': 'Since all registrations and interactions on the Saturday Academy speak to Salesforce in real-time via REST API, this means both systems are always in sync. Real-time data, with customized data structures optimized for their business, means that Saturday Academy can run reports in real-time and gain insights in areas such as financials, demographics, and success&nbsp;metrics.',
+            'text': "Website interactions and class registration report to Salesforce "
+                    "via a REST API, so Saturday Academy "
+                    "can run reports in real-time to gain find out how classes are filling up, how finacial aid is"
+                    "being distributed, and maintain a suite of live operational reports",
             'action_text': '',
         },
         {
             'title': 'Data Migration',
             'background': 'website/images/case-studies/sa/innov-slide-03@2x.png',
-            'text': 'Saturday Academy had over a decade of records stored in disparate homegrown Access databases and spreadsheets prior to launching the new system. For archival and reporting purposes we built an automated migration system to bring those old records into the new system. On launch day, we were able to automatically enable 10,592 household accounts, allowing existing parents and students to immediately log in and see their legacy&nbsp;information.',
+            'text': "We wrote a migration script that processed over a decade's worth of records from an Access "
+                    "database and several spreadsheets cleaning and consolidating a previous trove of operational "
+                    "data into Salesforce.",
             'action_text': '',
-        },
-        {
-            'title': 'Content Management',
-            'background': 'website/images/case-studies/sa/innov-slide-04@2x.png',
-            'text': 'Saturday Academy works with creative and inquisitive families, so we designed and built a website that communicates that quirky, intelligent brand while maintaining an easy-to-use, mobile-responsive interface. Powerful content management gives Saturday Academy’s marketing team the ability to quickly customize layouts with new page elements as their content needs change and the organization&nbsp;grows.',
-            'action_text': '',
-        },
+        }
     ]
     context['outcomes'] = [
         { 'title': 'Live', 'summary': 'Operational data for the first time' },
-        { 'title': '0', 'summary': 'Registrations printed on paper' },
-        { 'title': 'Realtime', 'summary': 'Class registration with instant financial aid calculation', 'titleclass': ' rings--title--subtle' },
-        { 'title': '23<sup>%<sup>', 'summary': 'Increased engagement on mobile' },
-        { 'title': '3,184', 'summary': 'Brand new registrants' },
+        { 'title': '0', 'summary': 'Paper registrations' },
+        { 'title': '0', 'summary': 'Time processing financial aid', 'titleclass': ' rings--title--subtle' },
     ]
-    context['outcome_conclusion'] = '<p>Galaxies encyclopaedia galactica, cosmos at the edge of forever the sky calls to us from which we spring Rig Veda Euclid made in the interiors of collapsing stars consciousness.</p>'
-    context['cta_text'] = '<span class=\"footer--cta-intro--phrase\">We helped Saturday Academy</span> <span class=\"footer--cta-intro--phrase\">modernize their class registration system.</span> <strong>What can we modernize for&nbsp;you?</strong>'
+
+    context['cta_text'] = """
+          <span class="footer--cta-intro--phrase">We helped Saturday Academy</span> 
+          <span class="footer--cta-intro--phrase">transform how they engage with families</span> 
+          <strong>What can we tranform for&nbsp;you?</strong>
+    """
+
+
     # context['pdf_download'] = '/static/website/documents/case-studies/phytolacca-dioica.pdf'
     return render(request, 'case-study.html', context)
 
