@@ -76,6 +76,54 @@
 }
 
 // Modal 
+#image-overlay-modal {
+  .modal-dialog {
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+  }
+}
 .image-overlay {
   max-height: calc(100vh - (#{$modal-padding} * 4));
+}
+.show-controls .image-overlay {
+  max-height: calc(100vh - (#{$modal-padding} * 5));
+}
+
+
+.image-overlay--controls {
+  position: relative;
+  bottom: -1 * $modal-padding / 2;
+  display: flex;
+  justify-content: center;
+
+  .image-overlay--next,
+  .image-overlay--prev {
+    text-decoration: none;
+    background-image: none;
+    width: 48px;
+    height: 36px;
+
+    > svg {
+      width: 48px;
+      height: 36px;
+
+      polygon {
+        transition: fill $transition-duration-default ease;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      polygon {
+        fill: darken($color-primary, 12%);
+      }
+    }
+  }
+
+  .image-overlay--next {
+    margin-left: 1rem;
+  }
+  .image-overlay--prev {
+    margin-right: 1rem;
+  }
 }
