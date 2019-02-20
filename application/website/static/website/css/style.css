@@ -5188,8 +5188,42 @@ blockquote.testimonial--quote {
     opacity: 1;
     visibility: visible; }
 
+#image-overlay-modal .modal-dialog {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15); }
+
 .image-overlay {
   max-height: calc(100vh - (30px * 4)); }
+
+.show-controls .image-overlay {
+  max-height: calc(100vh - (30px * 5)); }
+
+.image-overlay--controls {
+  position: relative;
+  bottom: -15px;
+  display: flex;
+  justify-content: center; }
+  .image-overlay--controls .image-overlay--next,
+  .image-overlay--controls .image-overlay--prev {
+    text-decoration: none;
+    background-image: none;
+    width: 48px;
+    height: 36px; }
+    .image-overlay--controls .image-overlay--next > svg,
+    .image-overlay--controls .image-overlay--prev > svg {
+      width: 48px;
+      height: 36px; }
+      .image-overlay--controls .image-overlay--next > svg polygon,
+      .image-overlay--controls .image-overlay--prev > svg polygon {
+        transition: fill 0.2s ease; }
+    .image-overlay--controls .image-overlay--next:hover polygon, .image-overlay--controls .image-overlay--next:focus polygon, .image-overlay--controls .image-overlay--next:active polygon,
+    .image-overlay--controls .image-overlay--prev:hover polygon,
+    .image-overlay--controls .image-overlay--prev:focus polygon,
+    .image-overlay--controls .image-overlay--prev:active polygon {
+      fill: #3eb2c6; }
+  .image-overlay--controls .image-overlay--next {
+    margin-left: 1rem; }
+  .image-overlay--controls .image-overlay--prev {
+    margin-right: 1rem; }
 
 .video-overlay--link {
   display: block; }

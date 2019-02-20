@@ -10,6 +10,8 @@ var bootstrapJsDir = bootstrapDir + '/javascripts/bootstrap';
 var owlDir = './node_modules/owl.carousel/dist';
 var jqueryDir = './node_modules/jquery/dist';
 var waypointsDir = './node_modules/waypoints/lib';
+var touchSwipeDir = './node_modules/jquery-touchswipe';
+
 
 gulp.task('sass', function() {
   return gulp.src('css/style.scss')
@@ -32,6 +34,7 @@ var jsFiles = [
   jqueryDir + '/jquery.min.js',
   owlDir + '/owl.carousel.min.js',
   waypointsDir + '/jquery.waypoints.min.js',
+  touchSwipeDir + '/jquery.touchSwipe.min.js',
   bootstrapJsDir + '/modal.js',
   './js/utils.js',
   './js/navigation.js',
