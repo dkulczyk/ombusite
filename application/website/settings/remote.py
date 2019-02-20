@@ -19,7 +19,10 @@ DATABASES['default']['PORT'] = '5432'
 ALLOWED_HOSTS = ['', get_local_ip(), os.environ.get('DOMAIN', None)]
 STATIC_ROOT = '/var/www/static/'
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'website.staticfiles_storage.ManifestPrecompressedStaticFilesStorage'
+PRECOMPRESSED_SETTINGS = {
+    'get_gzipped_name': lambda name: '{}.gz'.format(name),
+}
 MEDIA_ROOT = '/var/www/media/'
 MEDIA_URL = '/media/'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
