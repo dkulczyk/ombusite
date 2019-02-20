@@ -45,7 +45,6 @@ $(function() {
   }
 
   function closeNavigation() {
-    console.log('closeNavigation()');
     $('html').removeClass('navigation--active');
     $('#menu').removeClass('navigation--active');
     $('html').off('.navigation');
