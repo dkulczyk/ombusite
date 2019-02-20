@@ -1,6 +1,8 @@
 import os
 from website.settings.base import *
 import http.client
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
 
 def get_local_ip():
     try:
@@ -51,3 +53,54 @@ if os.getenv('ENVIRONMENT_TYPE', None) in ('qa', 'staging'):
 
 if os.getenv('ENVIRONMENT_TYPE', None) == 'production':
     GOOGLE_ANALYTICS_ID = 'UA-16055309-1'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'root': {
+        'level': 'DEBUG',
+        'handlers': ['console'],
+    },
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'level': 'WARNING',
+            'handlers': ['console'],
+            'propagate': True,
+        },
+        'django.template': {
+            'level': 'WARNING',
+            'handlers': ['console'],
+            'propagate': False,
+        },
+        'django.db': {
+            'level': 'WARNING',
+            'handlers': ['console'],
+            'propagate': False,
+        },
+    },
+}
+
+
+def sentry_before_send(event, hint):
+    if event.get('logger') == 'django.security.DisallowedHost':
+        return None
+    return event
+
+if os.environ.get('SENTRY_DSN', None):
+    sentry_sdk.init(
+        dsn=os.environ.get('SENTRY_DSN', None),
+        integrations=[DjangoIntegration()],
+        before_send=sentry_before_send,
+    )

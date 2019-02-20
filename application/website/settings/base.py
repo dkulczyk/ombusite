@@ -144,3 +144,26 @@ CSP_SCRIPT_SRC = ("'self'", 'www.googletagmanager.com')
 CSP_IMG_SRC = ("'self'", 'www.googletagmanager.com')
 CSP_STYLE_SRC = ("'self'", "'unsafe-inline'",) # Needed to support inline background images.
 CSP_FONT_SRC = ("'self'",)
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    },
+}
