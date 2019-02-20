@@ -43,8 +43,8 @@ MIDDLEWARE = [
     'csp.middleware.CSPMiddleware',
 ]
 
-if os.getenv('ENVIRONMENT_TYPE', None) in ('qa', 'staging'):
-    MIDDLEWARE = ['basicauth.middleware.BasicAuthMiddleware',] + MIDDLEWARE
+# if os.getenv('ENVIRONMENT_TYPE', None) in ('qa', 'staging'):
+    # MIDDLEWARE = ['basicauth.middleware.BasicAuthMiddleware',] + MIDDLEWARE
 
 if os.getenv('ENVIRONMENT_TYPE', None) == 'production':
     GOOGLE_ANALYTICS_ID = 'UA-16055309-1'
