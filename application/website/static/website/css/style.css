@@ -4812,6 +4812,7 @@ blockquote.testimonial--quote {
       height: 100%; } }
 
 .ic--slide-inner {
+  position: relative;
   background-size: cover;
   background-position: center center; }
   @media (max-width: 767px) {
@@ -4825,6 +4826,14 @@ blockquote.testimonial--quote {
   @media (min-width: 768px) {
     .ic--slide-inner {
       height: 100%; } }
+  .ic--slide-inner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -50%;
+    right: -50%;
+    background: radial-gradient(ellipse at top, rgba(29, 45, 61, 0.7) 0%, rgba(29, 45, 61, 0.5) 30%, rgba(29, 45, 61, 0) 50%); }
 
 .ic--slide-contents {
   position: relative;
