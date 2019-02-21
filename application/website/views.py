@@ -218,14 +218,14 @@ def casestudy_nwpp(request, context={}):
     context['innovations'] = [
         {
             'title': 'Drag & Drop Course Builder',
-            'background': 'website/images/case-studies/nwpp/innov-slide-01@2x.png',
+            'background': 'website/images/case-studies/nwpp/innov-slide-01@2x.jpg',
             'text': 'Content creators can create courses easily using drag-and-drop to organize activity flow, '
                     'upload videos and setup quizzes',
             'action_text': '',
         },
         {
             'title': 'Digital Asset Management',
-            'background': 'website/images/case-studies/nwpp/innov-slide-02@2x.png',
+            'background': 'website/images/case-studies/nwpp/innov-slide-02@2x.jpg',
             'text': "Media assets, like videos, documents and images are organized in central asset library, so "
                     "content creators can easily find assets to use in their activities, and LMS administrators"
                     "can track what's being used where",
@@ -233,7 +233,7 @@ def casestudy_nwpp(request, context={}):
         },
         {
             'title': 'Self-Service Teams',
-            'background': 'website/images/case-studies/nwpp/innov-slide-04@2x.png',
+            'background': 'website/images/case-studies/nwpp/innov-slide-04@2x.jpg',
             'text': "Member organizations are teams in the LMS with self-management functions. This allows NWPP to "
                     "securely delegate tasks like user invitations, status updates, role assignment, "
                     "license management, etc",
@@ -241,14 +241,14 @@ def casestudy_nwpp(request, context={}):
         },
         {
             'title': 'High-Availability AWS infrastructure',
-            'background': 'website/images/case-studies/nwpp/innov-slide-03@2x.png',
+            'background': 'website/images/case-studies/nwpp/innov-slide-03@2x.jpg',
             'text': "The LMS is a business critical application used around the clock, so we implemented a "
                     "multi data center hosting solution that is cost effective and scales during high usage periods.",
             'action_text': '',
         },
         {
             'title': 'xAPI / Tin Can',
-            'background': 'website/images/case-studies/nwpp/innov-slide-05@2x.png',
+            'background': 'website/images/case-studies/nwpp/innov-slide-05@2x.jpg',
             'text': "We built one of the first learning management systems with native real-time integration "
                     "with a learning record store (LRS) that supports xAPI (also called Tin Can), so"
                     "NWPP can follow member’s engagement and progress, and access live analytics that help "
@@ -361,7 +361,7 @@ def casestudy_navex(request, context={}):
     context['innovations'] = [
         {
             'title': 'Page Builder',
-            'background': 'website/images/case-studies/navex/innov-slide-01@2x.png',
+            'background': 'website/images/case-studies/navex/innov-slide-01@2x.jpg',
             'text': '''
                 A page builder feature enables marketers to assemble custom landing pages for new products and campaigns
                 without technical help. The page builder has blocks for text, callouts, media and custom campaign forms
@@ -372,7 +372,7 @@ def casestudy_navex(request, context={}):
         },
         {
             'title': 'Localization',
-            'background': 'website/images/case-studies/navex/innov-slide-02@2x.png',
+            'background': 'website/images/case-studies/navex/innov-slide-02@2x.jpg',
             'text': '''
                 NAVEX Global has customers in over 200 countries, so we built powerful localization into the core of
                 their content management system. NAVEX's  team can quickly launch locales, clone
@@ -384,7 +384,7 @@ def casestudy_navex(request, context={}):
         },
         {
             'title': 'Marketo Marketing Automation',
-            'background': 'website/images/case-studies/navex/innov-slide-04@2x.png',
+            'background': 'website/images/case-studies/navex/innov-slide-04@2x.jpg',
             'text': '''
                 We built custom integration with the Marketo marketing automation platform at the core of NAVEX's
                 website to empower their marketing teams to reach new new leads, gather insights about visitors and
@@ -396,7 +396,7 @@ def casestudy_navex(request, context={}):
         },
         {
             'title': 'AWS infrastructure',
-            'background': 'website/images/case-studies/navex/innov-slide-05@2x.png',
+            'background': 'website/images/case-studies/navex/innov-slide-05@2x.jpg',
             'text': '''
                 NAVEX Global website get's global traffic at large scale. When NAVEX is in the news or one of their
                 resource center pieces goes viral, the site sees quick massive spikes in traffic. OMBU designed the
@@ -538,7 +538,7 @@ def casestudy_sa(request, context={}):
     context['innovations'] = [
         {
             'title': 'Real-Time Class Registrations',
-            'background': 'website/images/case-studies/sa/innov-slide-01@2x.png',
+            'background': 'website/images/case-studies/sa/innov-slide-01@2x.jpg',
             'text': "A live class catalog syncs between the website and the Salesforce datastore, so parents "
                     "and students can see Saturday Academy’s classes and seating availability in real-time. "
                     "Parents can apply for and instantly receive financial aid, calculated "
@@ -547,7 +547,7 @@ def casestudy_sa(request, context={}):
         },
         {
             'title': 'Salesforce Business Intelligence',
-            'background': 'website/images/case-studies/sa/innov-slide-02@2x.png',
+            'background': 'website/images/case-studies/sa/innov-slide-02@2x.jpg',
             'text': "Website interactions and class registration report to Salesforce "
                     "via a REST API, so Saturday Academy "
                     "can run reports in real-time to gain find out how classes are filling up, how finacial aid is"
@@ -556,7 +556,7 @@ def casestudy_sa(request, context={}):
         },
         {
             'title': 'Data Migration',
-            'background': 'website/images/case-studies/sa/innov-slide-03@2x.png',
+            'background': 'website/images/case-studies/sa/innov-slide-03@2x.jpg',
             'text': "We wrote a migration script that processed over a decade's worth of records from an Access "
                     "database and several spreadsheets cleaning and consolidating a previous trove of operational "
                     "data into Salesforce.",
