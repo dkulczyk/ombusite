@@ -18,7 +18,7 @@ def kitchensink(request, context={}):
     return render(request, 'kitchen_sink.html', context)
 
 def work(request, context={}):
-    context['title'] = "Case studies and project profiles for our web technology solutions"
+    context['title'] = "Case studies and project profiles from OMBU"
     context['meta_description'] = 'OMBU’s portfolio of web technology case studies, project profiles, and clients.'
     return render(request, 'work.html', context)
 
@@ -33,8 +33,8 @@ def services(request, context={}):
     return render(request, 'services.html', context)
 
 def contact(request, context={}):
-    context['title'] = "Contact OMBU for web technology solutions, consultations, and RFPs"
-    context['meta_description'] = 'Get in touch with OMBU.'
+    context['title'] = "Contact OMBU for web technology solutions and RFPs"
+    context['meta_description'] = "Get in touch with OMBU and let's talk about your vision."
     return render(request, 'contact.html', context)
 
 def careers(request, context={}):
@@ -115,7 +115,7 @@ def project_smithsonian(request, context={}):
 
 def casestudy_nwpp(request, context={}):
     context['client'] = "Northwest PowerPool"
-    context['title'] = "Learning management system (LMS) case study for Northwest Power Pool’s"
+    context['title'] = "Learning management system (LMS) case study for NWPP"
     context['meta_description'] = "NWPP and OMBU created a modern learning management system (LMS) " \
                                   "to transform energy utility online training."
     context['banner_image'] = "website/images/case-studies/nwpp/hero-tinted@2x.jpg"
@@ -415,7 +415,7 @@ def casestudy_navex(request, context={}):
 
 def casestudy_sa(request, context={}):
     context['client'] = "Saturday Academy"
-    context['title'] = "Salesforce CRM case study for Saturday Academy’s class registration system"
+    context['title'] = "Salesforce CRM case study with a class registration system"
     context['meta_description'] = 'OMBU implemented an website and integrated Salesforce CRM for Saturday Academy.'
     context['banner_image'] = "website/images/case-studies/sa/hero-tinted@2x.jpg"
     context['banner_title'] = "Engaging the Next Generation of Scientists, Engineers, and Artists"
@@ -429,7 +429,7 @@ def casestudy_sa(request, context={}):
         and the organization lacked tools for registration and outcome tracking.  
     </p>
     <p>
-        After conducting an organization-wide survey processes and technology survey, OMBU designed and built 
+        After conducting an organization-wide survey of processes and technology, OMBU designed and built 
         for Saturday Academy an integrated solution based on a new website and a nonprofit Salesforce CRM that enables 
         families to register to classes and engage with mentors, and gives Saturday Academy real time access to
         registration data and outcomes, transforming how Saturday Academy engages with its customers.
@@ -459,17 +459,16 @@ def casestudy_sa(request, context={}):
                 them in developing intellectually and preparing for rewarding careers.
             </p>
             <p>
-                But their technology infrastructure kept getting in the way of this vision. An old Wordpress website
-                was not just hard to manage, but offered families no way to discover and register to the exciting 
-                classes happening around them. So Saturday Academy relied on hardcoded web forms
-                fed data directly into an Access database. Over time, this database became piled with duplicate and
-                erroneous information, so Saturday Academy lacked reliable insight into operations.
-            </p>    
+                But their technology infrastructure kept getting in the way. An old Wordpress website
+                was not just hard to manage, but offered families no way to discover and register for the exciting 
+                classes happening around them. So Saturday Academy relied on hardcoded web forms that
+                fed data directly into an Access database. Over time, this database was overwhelmed with duplicate and
+                erroneous data, with no way for Saturday Academy to extract reliable business intelligence.
+            </p>
             <p>
                 Saturday Academy's staff knew there was better technology out there, but they needed a partner who
-                could help them identify and implement a solution that was affordable and sustainable technology, and 
-                who could help them migrate and help sanitize their legacy data, and stay around to help the them adopt 
-                the new solution.
+                could help them package it into a custom solution that was affordable and sustainable for them. And 
+                they needed a data expert who could sanitize and migrate their legacy data for a fresh restart.
             </p>
         """,
         'image': {
