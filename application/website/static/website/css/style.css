@@ -4988,7 +4988,8 @@ blockquote.testimonial--quote {
   flex: 1 1 auto;
   font-family: "tisaproregular", "Georgia", serif;
   font-size: calc(17 / 16 * 1em);
-  line-height: calc(30 / 17 * 1em); }
+  line-height: calc(30 / 17 * 1em);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); }
   @media (min-width: 768px) {
     .ic--slide-text {
       font-size: calc(26 / 18 * 1em);
