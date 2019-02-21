@@ -28,7 +28,7 @@
             <div class="cs-main--media--visionary-browser">
             {% include 'svg/browser.svg.html' with url=contributions.image.browser.url %}
           {% endif %}
-          <img src="{% static visionary.image.src %}" alt="{{visionary.image.alt}}" />
+          <img class="lazy" data-src="{% static visionary.image.src %}" alt="{{visionary.image.alt}}" />
           {% if visionary.image.browser %}
             </div>
           {% endif %}          
@@ -58,7 +58,7 @@
             <div class="cs-main--media--solution-browser">
             {% include 'svg/browser.svg.html' with url=contributions.image.browser.url %}
           {% endif %}          
-          <img src="{% static solution.image.src %}" alt="{{solution.image.alt}}" />
+          <img class="lazy" data-src="{% static solution.image.src %}" alt="{{solution.image.alt}}" />
           {% if solution.image.browser %}
             </div>
           {% endif %}             
