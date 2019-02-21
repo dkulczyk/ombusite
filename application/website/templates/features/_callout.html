@@ -15,11 +15,11 @@
   </div>
   <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
     {% if fullwidth %}
-      <a href="{% url 'case-study-navex' %}"><img src="{% static 'website/images/case-studies/navex/hero-slim@2x.jpg' %}" alt="NAVEX Global screenshot"></a>
+      <a href="{% url 'case-study-navex' %}"><img class="lazy" data-src="{% static 'website/images/case-studies/navex/hero-slim@2x.jpg' %}" alt="NAVEX Global screenshot"></a>
     {% else %}
       <div class="browser-chrome">
         {% include 'svg/browser.svg.html' with url='navexglobal.com' %}
-        <img src="{% static 'website/images/case-studies/navex/callout@1x.jpg' %}" alt="NAVEX Global screenshot">
+        <img class="lazy" data-src="{% static 'website/images/case-studies/navex/callout@1x.jpg' %}" alt="NAVEX Global screenshot">
       </div>
     {% endif %}
   </aside>
@@ -36,13 +36,13 @@
   </div>
   <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
     {% if fullwidth %}
-      <a href="{% url 'case-study-nwpp' %}"><img src="{% static 'website/images/case-studies/nwpp/hero-slim@2x.jpg' %}" alt="NWPP screenshot"></a>
+      <a href="{% url 'case-study-nwpp' %}"><img class="lazy" data-src="{% static 'website/images/case-studies/nwpp/hero-slim@2x.jpg' %}" alt="NWPP screenshot"></a>
     {% else %}
       <div class="colored-bg">
         <div class="colored-bg--inner">
           <div class="browser-chrome browser-chrome--mobile">
             {% include 'svg/browser-mobile.svg.html' with url='http://nwpp.info/' %}
-            <img src="{% static 'website/images/callout/callout_nwpp-1.png' %}" alt="NWPP screenshot">
+            <img class="lazy" data-src="{% static 'website/images/callout/callout_nwpp-1.png' %}" alt="NWPP screenshot">
           </div>
         </div>
       </div>
@@ -64,11 +64,11 @@
   </div>
   <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
     {% if fullwidth %}
-      <a href="{% url 'case-study-sa' %}"><img src="{% static 'website/images/case-studies/sa/hero-slim@2x.jpg' %}" alt="Saturday Academy screenshot"></a>
+      <a href="{% url 'case-study-sa' %}"><img class="lazy" data-src="{% static 'website/images/case-studies/sa/hero-slim@2x.jpg' %}" alt="Saturday Academy screenshot"></a>
     {% else %}
       <div class="browser-chrome">
         {% include 'svg/browser.svg.html' with url='saturdayacademy.org' %}
-        <img src="{% static 'website/images/case-studies/sa/callout@1x.jpg' %}" alt="Saturday Academy screenshot">
+        <img class="lazy" data-src="{% static 'website/images/case-studies/sa/callout@1x.jpg' %}" alt="Saturday Academy screenshot">
       </div>
     {% endif %}
   </aside>
@@ -88,7 +88,7 @@
     </div>
   </div>
   <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
-    <img src="{% static 'website/images/callout/about-story.png' %}" alt="Van image">
+    <img class="lazy" data-src="{% static 'website/images/callout/about-story.png' %}" alt="Van image">
   </aside>
 </div>
 
@@ -110,7 +110,7 @@
     </div>
   </div>
   <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
-    <img src="{% static 'website/images/callout/callout_enterprise.png' %}" alt="Enterprise Graphics">
+    <img class="lazy" data-src="{% static 'website/images/callout/callout_enterprise.png' %}" alt="Enterprise Graphics">
   </aside>
 </div>
 
@@ -132,7 +132,7 @@
       </div>
     </div>
     <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
-      <img src="{% static 'website/images/callout/callout_business.png' %}" alt="Business Graphics">
+      <img class="lazy" data-src="{% static 'website/images/callout/callout_business.png' %}" alt="Business Graphics">
     </aside>
   </div>
 
@@ -158,7 +158,7 @@
       </div>
     </div>
     <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
-      <img src="{% static 'website/images/callout/callout_infrastructure.png' %}" alt="Infrastructure Graphics">
+      <img class="lazy" data-src="{% static 'website/images/callout/callout_infrastructure.png' %}" alt="Infrastructure Graphics">
     </aside>
   </div>
 
@@ -178,7 +178,7 @@
     </div>
   </div>
   <aside class="callout--media{% if prominent %} callout--media--prominent{% endif %}{% if mediaSubtle %} callout--media--subtle{% endif %}">
-    <img src="{% static 'website/images/callout/callout_technology.png' %}" alt="Technology Graphics">
+    <img class="lazy" data-src="{% static 'website/images/callout/callout_technology.png' %}" alt="Technology Graphics">
   </aside>
 </div>
 

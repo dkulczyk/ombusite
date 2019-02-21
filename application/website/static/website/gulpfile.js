@@ -37,6 +37,7 @@ var jsFiles = [
   touchSwipeDir + '/jquery.touchSwipe.min.js',
   bootstrapJsDir + '/modal.js',
   './js/utils.js',
+  './js/image-lazy-load.js',
   './js/navigation.js',
   './js/callout-fullwidth.js',
   './js/slider.js',

@@ -15,7 +15,7 @@
       {% for innovation in innovations %}
         <div id="ic-slide-{{forloop.counter}}" class="ic--slide">
           <a href="#ic-slide-{{forloop.counter}}" class="ic--slide-title link-disable-animation">{{innovation.title}}</a>
-          <div class="ic--slide-inner" style="background-image: url('{% static innovation.background %}');">
+          <div class="ic--slide-inner lazy-background" data-src="{% static innovation.background %}">
             <div class="container">
               <div class="row">
                 <div class="ic--slide-contents">
