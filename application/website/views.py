@@ -125,8 +125,8 @@ def casestudy_nwpp(request, context={}):
     context['intro_text'] = """
     <p>
         <span class="cs-intro--emphasis">Northwest PowerPool (NWPP)</span> partnered with us to design an implement
-        a learning platform that modernized electric utility training delivery. The new platform was so much easier to 
-        maintain. More importantly, it allowed NWPP to use modern learning tools which drastically improved 
+        a learning platform that modernized electric utility training delivery. The new platform was so much easier to
+        maintain. More importantly, it allowed NWPP to use modern learning tools which drastically improved
         trainee engagement and compliance with federally regulated training requirement.
      </p>
     """
@@ -150,21 +150,21 @@ def casestudy_nwpp(request, context={}):
     }
     context['visionary'] = {
         'body': """
-        <p>           
-            Northwest PowerPool (NWPP)</span> brings together 32 power utilities in 
-            eight US states and two Canadian provinces. One of their missions is to deliver training to
-            electric power operators to increase power grid safety, help with new technology adoption, meet 
-            federally regulated training requirements.
-        </p> 
         <p>
-            For years, NWPP suffered with an off-the-shelf LMS solution to deliver training that could not keep 
-            up with NWPP's pace of innovation. The platform was slow, tedious for learners and administrators, and 
+            Northwest PowerPool (NWPP)</span> brings together 32 power utilities in
+            eight US states and two Canadian provinces. One of their missions is to deliver training to
+            electric power operators to increase power grid safety, help with new technology adoption, meet
+            federally regulated training requirements.
+        </p>
+        <p>
+            For years, NWPP suffered with an off-the-shelf LMS solution to deliver training that could not keep
+            up with NWPP's pace of innovation. The platform was slow, tedious for learners and administrators, and
             could not support the modern training methods that NWPP was pioneering.
         </p>
         <p>
-            NWPP knew that, if they could could control the experience and functionality of a new platform, they would 
-            drastically improve quality of training, drive engagement and help member utilities compliant. So NWPP 
-            came to us with a simple vision: <strong>help us design, implement and rollout a learning management 
+            NWPP knew that, if they could could control the experience and functionality of a new platform, they would
+            drastically improve quality of training, drive engagement and help member utilities compliant. So NWPP
+            came to us with a simple vision: <strong>help us design, implement and rollout a learning management
             system that will transform how we work</strong>.
         </p>
         """,
@@ -185,19 +185,19 @@ def casestudy_nwpp(request, context={}):
     context['solution'] = {
         'body': """
             <p>
-                We built a modern and engaging training platform targeted specifically for training electric 
-                utility workers. The easy-to-use Learning Management System (LMS) allows content creators quickly 
+                We built a modern and engaging training platform targeted specifically for training electric
+                utility workers. The easy-to-use Learning Management System (LMS) allows content creators quickly
                 put together new courses and activities, with video, interactive quizzes, scoring and reporting.
             </p>
             <p>
-                This platform integrates with modern providers of digital media, like YouTube, Vimeo, Soundcloud and 
-                Sketchfab, with a Department of Energy system for reporting, and with a Learning Record Store (LRS) 
+                This platform integrates with modern providers of digital media, like YouTube, Vimeo, Soundcloud and
+                Sketchfab, with a Department of Energy system for reporting, and with a Learning Record Store (LRS)
                 through the Experience API (xAPI).
             </p>
             <p>
-                Ultimately, the key feature or OMBU's solution is the powerful and pleasant user experience  
-                that makes content creation and management tasks fun and easy, and stays out of the way during 
-                training, shifting all focus to the learning experience, driving high engagement in an industry 
+                Ultimately, the key feature or OMBU's solution is the powerful and pleasant user experience
+                that makes content creation and management tasks fun and easy, and stays out of the way during
+                training, shifting all focus to the learning experience, driving high engagement in an industry
                 where knowledge and safety are critical.
             </p>
         """,
@@ -269,7 +269,7 @@ def casestudy_nwpp(request, context={}):
     #  </p>'
     # """
     context['cta_text'] = """
-        <span class="footer--cta-intro--phrase">We helped Northwest PowerPool</span> 
+        <span class="footer--cta-intro--phrase">We helped Northwest PowerPool</span>
         <span class="footer--cta-intro--phrase">modernize power utility training.</span>
         <strong>What can we do for you?</strong>'
     """
@@ -285,8 +285,8 @@ def casestudy_navex(request, context={}):
     context['banner_position'] = '85% 40%'
     context['intro_text'] = '''
     <p>
-        <span class="cs-intro--emphasis">NAVEX Global</span> was formed in 2012 to become the leader in the emerging 
-        field of Ethics & Compliance. They engaged OMBU to help implement content marketing tools that would support and 
+        <span class="cs-intro--emphasis">NAVEX Global</span> was formed in 2012 to become the leader in the emerging
+        field of Ethics & Compliance. They engaged OMBU to help implement content marketing tools that would support and
         accelerate their rapid growth and global expansion.
     </p>
     '''
@@ -311,10 +311,10 @@ def casestudy_navex(request, context={}):
         'body': '''
             <p>
                 When NAVEX expansion efforts started to bear results, their website and content management system (CMS)
-                soon got in the way. The existing website and content management tools had not been designed to support 
+                soon got in the way. The existing website and content management tools had not been designed to support
                 change and growth. Creating pages and campaigns to support new initiative took too long and the site
                 lacked the integrations necessary to track engagement and success metrics. Additionally, the website
-                started feel slow and unreliable. The business teams had a vision for the tools they would need to 
+                started feel slow and unreliable. The business teams had a vision for the tools they would need to
                 engage with new customers today and tomorrow.
             </p>
         ''',
@@ -329,36 +329,43 @@ def casestudy_navex(request, context={}):
     context['solution'] = {
         'body': '''
             <p>
-                OMBU designed and implemented a website backed by a enterprise content management system (CMS) that 
-                empowers NAVEX Global to 
-                personally engage customers across their global markets.  Marketing teams are able to launch a rich 
-                custom landing pages for new products and campaigns in minutes, with no IT involvement, allowing them to 
+                OMBU designed and implemented a website backed by a enterprise content management system (CMS) that
+                empowers NAVEX Global to
+                personally engage customers across their global markets.  Marketing teams are able to launch a rich
+                custom landing pages for new products and campaigns in minutes, with no IT involvement, allowing them to
                 iterate, test and optimize at breakthrough speeds. The campaigns support system integrations that allow
-                marketing teams to track omni-channel campaign performance in Marketo and Salesforce. 
+                marketing teams to track omni-channel campaign performance in Marketo and Salesforce.
             </p>
             <p>
                 The website features a resource center designed to position NAVEX as the global thought leader in
                 ethics and compliance. The resource center publishes reports, guides, white papers, webinars and videos
-                and is a key conversion point for new business, deeply integrated with Marketo's progressive 
+                and is a key conversion point for new business, deeply integrated with Marketo's progressive
                 enhancement to intelligently and automatically grow lead&nbsp;profiles.
             </p>
             <p>
-                While building the new website NAVEX had ambitious plans to expand to international markets, so we built 
+                While building the new website NAVEX had ambitious plans to expand to international markets, so we built
                 a backend with translation, URL and SEO functions to support any number of locales on day one. As NAVEX
                 started opening offices in new markets, the website was ready to keep up and empower the local teams
                 not only to translate content, but tailor the website experience and campaigns to local products and
                 market conditions.
             </p>
         ''',
+        'image': {
+            'src' : 'website/images/case-studies/navex/solution@2x.png',
+            'alt': 'A screenshot of a NAVEX Global resource page.',
+            'browser' : {
+                'url' : 'navexglobal.com',
+            },
+        },
     }
     context['innovations'] = [
         {
             'title': 'Page Builder',
             'background': 'website/images/case-studies/navex/innov-slide-01@2x.png',
             'text': '''
-                A page builder feature enables marketers to assemble custom landing pages for new products and campaigns 
+                A page builder feature enables marketers to assemble custom landing pages for new products and campaigns
                 without technical help. The page builder has blocks for text, callouts, media and custom campaign forms
-                that can be sized and arranged and for the best layout for every situation and enable iterative 
+                that can be sized and arranged and for the best layout for every situation and enable iterative
                 optimization.
             ''',
             'action_text': '',
@@ -368,8 +375,8 @@ def casestudy_navex(request, context={}):
             'background': 'website/images/case-studies/navex/innov-slide-02@2x.png',
             'text': '''
                 NAVEX Global has customers in over 200 countries, so we built powerful localization into the core of
-                their content management system. NAVEX's  team can quickly launch locales, clone 
-                pages between locales and translate any site content. For visitors, the experience is seamless, as the 
+                their content management system. NAVEX's  team can quickly launch locales, clone
+                pages between locales and translate any site content. For visitors, the experience is seamless, as the
                 site gently guides users to their relevant content.
             ''',
 
@@ -381,7 +388,7 @@ def casestudy_navex(request, context={}):
             'text': '''
                 We built custom integration with the Marketo marketing automation platform at the core of NAVEX's
                 website to empower their marketing teams to reach new new leads, gather insights about visitors and
-                content performance, and run omni-channel campaigns. Using our solution, marketers can embed custom 
+                content performance, and run omni-channel campaigns. Using our solution, marketers can embed custom
                 Marketo forms on landing pages, without technical help, allowing them to launch campaigns in minutes.'
             ''',
 
@@ -423,14 +430,14 @@ def casestudy_sa(request, context={}):
     context['banner_position'] = '50% 30%'
     context['intro_text'] = """
     <p>
-        <span class=\"cs-intro--emphasis\">Saturday Academy</span> strives to engage all motivated young people in 
-        hands-on, in-depth learning by connecting them to community experts as educators and mentors by offering over 
+        <span class=\"cs-intro--emphasis\">Saturday Academy</span> strives to engage all motivated young people in
+        hands-on, in-depth learning by connecting them to community experts as educators and mentors by offering over
         850 STEAM-curriculum classes per year. But young students and their families relied on paper class catalogs
-        and the organization lacked tools for registration and outcome tracking.  
+        and the organization lacked tools for registration and outcome tracking.
     </p>
     <p>
-        After conducting an organization-wide survey of processes and technology, OMBU designed and built 
-        for Saturday Academy an integrated solution based on a new website and a nonprofit Salesforce CRM that enables 
+        After conducting an organization-wide survey of processes and technology, OMBU designed and built
+        for Saturday Academy an integrated solution based on a new website and a nonprofit Salesforce CRM that enables
         families to register to classes and engage with mentors, and gives Saturday Academy real time access to
         registration data and outcomes, transforming how Saturday Academy engages with its customers.
     </p>
@@ -452,22 +459,22 @@ def casestudy_sa(request, context={}):
     context['visionary'] = {
         'body': """
             <p>
-                Founded in 1983, Saturday Academy offers over 850 classes and camps and over 100 internships 
+                Founded in 1983, Saturday Academy offers over 850 classes and camps and over 100 internships
                 for students, with focus on STEAM education and an emphasis on engaging underprivileged students.
-                Their vision is that all interested, pre-college students in our region will have the opportunity 
-                to interact with community experts and experience professional environments in ways that assist 
+                Their vision is that all interested, pre-college students in our region will have the opportunity
+                to interact with community experts and experience professional environments in ways that assist
                 them in developing intellectually and preparing for rewarding careers.
             </p>
             <p>
                 But their technology infrastructure kept getting in the way. An old Wordpress website
-                was not just hard to manage, but offered families no way to discover and register for the exciting 
+                was not just hard to manage, but offered families no way to discover and register for the exciting
                 classes happening around them. So Saturday Academy relied on hardcoded web forms that
                 fed data directly into an Access database. Over time, this database was overwhelmed with duplicate and
                 erroneous data, with no way for Saturday Academy to extract reliable business intelligence.
             </p>
             <p>
                 Saturday Academy's staff knew there was better technology out there, but they needed a partner who
-                could help them package it into a custom solution that was affordable and sustainable for them. And 
+                could help them package it into a custom solution that was affordable and sustainable for them. And
                 they needed a data expert who could sanitize and migrate their legacy data for a fresh restart.
             </p>
         """,
@@ -488,30 +495,30 @@ def casestudy_sa(request, context={}):
         'body': """
         <p>
             OMBU implemented a nonprofit Salesforce CRM to serve as the data store for all operational data:
-            households, students, classes, registrations, internships, and donations. By building on top of 
-            Salesforce, we were able to provide Saturday Academy with enterprise business intelligence and 
+            households, students, classes, registrations, internships, and donations. By building on top of
+            Salesforce, we were able to provide Saturday Academy with enterprise business intelligence and
             reporting capabilities. We configured the Salesfor Nonprofit Success Pack (NPSP), so Saturday Academy
             could access free licenses through the generous offering fom the Salesforce Foundation.</p>
         <p>
-            To reach parents, students, instructors, and mentors, we designed and built a fun, 
-            easy-to-use website powered by the Drupal Content Management System (CMS). Parents can set up their 
-            household information online, and register their children for any of Saturday Academy’s many classes 
+            To reach parents, students, instructors, and mentors, we designed and built a fun,
+            easy-to-use website powered by the Drupal Content Management System (CMS). Parents can set up their
+            household information online, and register their children for any of Saturday Academy’s many classes
             quickly and easily, and even be granted financial aid automatically to help make the classes accessible.
         </p>
         <p>
-            Saturday Academy’s unique internship program, Apprenticeships in Science and Engineering (ASE), pairs 
-            teens with industry mentors for a summer of on-the-job learning. Hundreds of motivated students apply 
+            Saturday Academy’s unique internship program, Apprenticeships in Science and Engineering (ASE), pairs
+            teens with industry mentors for a summer of on-the-job learning. Hundreds of motivated students apply
             for the program, so we designed a process that makes a multi-step application and screening process
             easy for applicants, and a portal for mentors to review mentors and rank applicants. Finally, the process
-            has a step for Saturday Academy staff to complete approval and trigger a series of automated 
+            has a step for Saturday Academy staff to complete approval and trigger a series of automated
             emails communication to the selected interns and mentors.
         </p>
         <p>
-            While we’re proud of transforming Satturday Academy’s online presence and making everything smooth and 
-            easy for parents and students, the most transformative part of the solution  
+            While we’re proud of transforming Satturday Academy’s online presence and making everything smooth and
+            easy for parents and students, the most transformative part of the solution
             is the real-time data flow between the website and the CRM, and the reporting capabilities that it unleashed
-            for Saturday Academy. Leadership can now ask questions and gain insights instantly, such as seeing 
-            breakdown of financial aid relative to family demographics, intelligence that previously would either 
+            for Saturday Academy. Leadership can now ask questions and gain insights instantly, such as seeing
+            breakdown of financial aid relative to family demographics, intelligence that previously would either
             have days of data processing or have been entirely impossible.
         </p>
         """,
@@ -563,8 +570,8 @@ def casestudy_sa(request, context={}):
     ]
 
     context['cta_text'] = """
-          <span class="footer--cta-intro--phrase">We helped Saturday Academy</span> 
-          <span class="footer--cta-intro--phrase">transform how they engage with families</span> 
+          <span class="footer--cta-intro--phrase">We helped Saturday Academy</span>
+          <span class="footer--cta-intro--phrase">transform how they engage with families</span>
           <strong>What can we tranform for&nbsp;you?</strong>
     """
 
