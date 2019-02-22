@@ -4812,6 +4812,7 @@ blockquote.testimonial--quote {
       height: 100%; } }
 
 .ic--slide-inner {
+  position: relative;
   background-size: cover;
   background-position: center center; }
   @media (max-width: 767px) {
@@ -4825,6 +4826,14 @@ blockquote.testimonial--quote {
   @media (min-width: 768px) {
     .ic--slide-inner {
       height: 100%; } }
+  .ic--slide-inner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -50%;
+    right: -50%;
+    background: radial-gradient(ellipse at top, rgba(29, 45, 61, 0.7) 0%, rgba(29, 45, 61, 0.5) 30%, rgba(29, 45, 61, 0) 50%); }
 
 .ic--slide-contents {
   position: relative;
@@ -4988,7 +4997,8 @@ blockquote.testimonial--quote {
   flex: 1 1 auto;
   font-family: "tisaproregular", "Georgia", serif;
   font-size: calc(17 / 16 * 1em);
-  line-height: calc(30 / 17 * 1em); }
+  line-height: calc(30 / 17 * 1em);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); }
   @media (min-width: 768px) {
     .ic--slide-text {
       font-size: calc(26 / 18 * 1em);

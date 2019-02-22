@@ -2,7 +2,7 @@
 
 <div class="testimonial">
   {% if testimonial_image %}
-  <img class="testimonial--image" src="{% static testimonial_image %}">
+  <img class="testimonial--image" src="{% static testimonial_image %}" alt="{{testimonial_image_alt}}">
   {% endif %}
   {% if testimonial_quote %}
   <blockquote class="testimonial--quote">{{ testimonial_quote }}</blockquote>
