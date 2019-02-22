@@ -131,6 +131,7 @@ def casestudy_nwpp(request, context={}):
      </p>
     """
     context['testimonial_image'] = "website/images/case-studies/nwpp/testimonial-logo.png"
+    context['testimonial_image_alt'] = "Company logo for Northwest PowerPool"
     context['testimonial_quote'] = "“Partnering with OMBU on this evolution of our platform " \
                                    "was one of the best decisions I’ve ever made.”"
     context['testimonial_attribution_name'] = "David P."
@@ -291,6 +292,7 @@ def casestudy_navex(request, context={}):
     </p>
     '''
     context['testimonial_image'] = "website/images/case-studies/navex/testimonial-logo.png"
+    context['testimonial_image_alt'] = "Company logo for NAVEX Global"
     # context['intro_testimonial_quote'] = "“Based on projects, the current uplift in high-value forms from the new pages will result in $4.6M in pipe and $1.4M in closed won business in the next 12 months!”"
     # context['intro_testimonial_attribution_name'] = "Hillary E."
     # context['intro_testimonial_attribution_title'] = "Demand Generation Manager, NAVEX Global"
@@ -443,6 +445,7 @@ def casestudy_sa(request, context={}):
     </p>
     """
     context['testimonial_image'] = "website/images/case-studies/sa/testimonial-logo.png"
+    context['testimonial_image_alt'] = "Organization logo for Saturday Academy"
     context['contributions'] = {
         'image': {
             'src' : 'website/images/case-studies/sa/intro@2x.png',
