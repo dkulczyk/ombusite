@@ -25,7 +25,7 @@
         <header id="header" {% block header_attributes %}{% endblock %}>
           <div class="container">
             <div class="header--contents">
-              <a href="{% url 'home' %}" class="header--logo">{% include 'svg/logo.svg.html' %}</a>
+              <a href="{% url 'home' %}" class="header--logo" title="Home page">{% include 'svg/logo.svg.html' %}</a>
               {% block header_title_supplement %}{% endblock %}
               <a href="#menu" class="header--menu-toggle">{% include 'svg/menu.svg.html' %}<span>Menu</span></a>
             </div>
