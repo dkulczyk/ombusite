@@ -14,6 +14,7 @@ occ = {
     'DevOps'
   ],
   'testimonial_image': 'website/images/project-images/occ/aerial-photo@2x.png',
+  'testimonial_image_alt': 'An aerial photo of the Oregon Convention Center',
   'testimonial_quote': 'The OCC website is our front door and delivers exactly what we are – a place where things happen, modern, exciting, sustainable and service oriented.  OMBU created a very successful site for us on time and on budget',
   'testimonial_attribution': 'Matt Pizzuti, Interim Executive Director',
   'technologies': [

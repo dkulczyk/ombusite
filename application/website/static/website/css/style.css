@@ -5419,20 +5419,6 @@ blockquote.testimonial--quote {
     .project-title--cta {
       display: none; } }
 
-.project-title--cta-link {
-  color: #6dc5d4;
-  font-family: "halis_rbold", "Helvetica", sans-serif;
-  font-size: calc(18 / 16 * 1em);
-  line-height: calc(32 / 18 * 1em);
-  text-decoration: none; }
-  .project-title--cta-link svg {
-    display: inline-block;
-    height: 16px;
-    margin-left: 10px;
-    width: 16px; }
-  .project-title--cta-link:hover, .project-title--cta-link:focus, .project-title--cta-link:active {
-    text-decoration: none; }
-
 .project--content {
   position: relative;
   float: left;
@@ -5500,7 +5486,8 @@ blockquote.testimonial--quote {
     width: 16px; }
   @media (max-width: 991px) {
     .project-section--cta {
-      display: none; } }
+      margin-top: calc(32 / 18 * 1rem);
+      margin-bottom: calc(32 / 18 * 1rem); } }
 
 .project-section--main {
   position: relative;

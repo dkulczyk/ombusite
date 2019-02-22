@@ -25,9 +25,6 @@
         <div class="project--content">
           <section class="page-title project-section">
             <div class="project-section--main">
-              {% if visit_url %}
-              <div class="project-title--cta"><a href="{{visit_url}}" class="project-title--cta-link">{{visit_text}} {% include 'svg/website.svg.html' %}</a></div>
-              {% endif %}
               <h1 class="page-title--title page-title--title--project">{{client|safe}}</h1>
               {% if intro %}
               <div class="rte project-intro--body">{{intro|safe}}</div>
@@ -52,7 +49,7 @@
             </aside>
           </section>
           {% if testimonial_quote %}
-          <blockquote class="blockquote--has-image"><aside class="blockquote--image"><img src="{% static testimonial_image %}" width="260"></aside><div class="blockquote--content">{{testimonial_quote}}<cite>{{testimonial_attribution}}</cite><div></blockquote>
+          <blockquote class="blockquote--has-image"><aside class="blockquote--image"><img src="{% static testimonial_image %}" width="260" alt="{{testimonial_image_alt}}"></aside><div class="blockquote--content">{{testimonial_quote}}<cite>{{testimonial_attribution}}</cite><div></blockquote>
           {% endif %}
           <section class="project-section">
             {% if insights_content_template %}
