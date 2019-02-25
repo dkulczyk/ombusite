@@ -49,14 +49,14 @@ $slider-height-mobile: 190px;
 
   &.slider--slide--has-text {
     align-items: center;
-    background-color: $color-secondary-dark;    
+    background-color: $color-darkened-secondary-dark;
     display: flex;
     height: $slider-height-desktop;
     justify-content: space-around;
     padding: $gutter-side-tile;
   }
 
-  @media (max-width: $breakpoint-tablet - 1px) { 
+  @media (max-width: $breakpoint-tablet - 1px) {
 
     img {
       object-fit: cover;
@@ -115,7 +115,7 @@ $slider-height-mobile: 190px;
           .image-overlay--link {
             height: auto;
             max-height: calc(#{$slider-height-mobile} / 2 - 8px);
-          }          
+          }
         }
       }
     }
@@ -144,12 +144,12 @@ $slider-height-mobile: 190px;
       img {
         height: $slider-height-desktop;
       }
-    }    
+    }
 
     &.slider--slide--has-text {
       padding: 2 * $gutter-side-tile;
       width: 300px;
-    }   
+    }
 
     &.slider--slide--has-two-images {
       height: $slider-height-desktop - $gutter-side-tile;
@@ -176,7 +176,7 @@ $slider-height-mobile: 190px;
          vertical-align: middle;
       }
     }
-  } 
+  }
 }
 
 .slider--slide--browser {
@@ -215,14 +215,14 @@ $slider-height-mobile: 190px;
 
   @media (min-width: $breakpoint-tablet) {
     font-size: calc(111 / 18 * 1em);
-    line-height: calc(90 / 111 * 1em);    
+    line-height: calc(90 / 111 * 1em);
   }
 }
 
 .slide--text-default {
   display: block;
   font-family: $font-halisr-book;
-  font-size: calc(18 / 16 * 1em);  
+  font-size: calc(18 / 16 * 1em);
   line-height: calc(24 / 18 * 1em);
 
   @media (min-width: $breakpoint-tablet) {
@@ -231,19 +231,19 @@ $slider-height-mobile: 190px;
 }
 
 .slide--text-default.slide--text-default--subtle {
-  font-size: calc(12 / 16 * 1em);  
+  font-size: calc(12 / 16 * 1em);
   line-height: calc(18 / 12 * 1em);
 
   @media (min-width: $breakpoint-tablet) {
     font-size: calc(12 / 18 * 1em);
-  }  
+  }
 }
 
 .slide--text-default.slide--text-default--prominent {
-  font-size: calc(24 / 16 * 1em);  
+  font-size: calc(24 / 16 * 1em);
   line-height: calc(32/ 24 * 1em);
 
   @media (min-width: $breakpoint-tablet) {
     font-size: calc(24 / 18 * 1em);
-  }  
+  }
 }
