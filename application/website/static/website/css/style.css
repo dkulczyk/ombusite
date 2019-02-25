@@ -2365,7 +2365,7 @@ input[type="submit"] {
       padding-top: 8.8rem; } }
 
 .footer--cta-intro {
-  color: white;
+  color: #344a5b;
   font-family: "halis_rregular", "Helvetica", sans-serif;
   font-size: calc(24 / 16 * 1em);
   line-height: calc(35 / 24 * 1em);
@@ -2512,7 +2512,7 @@ input[type="submit"] {
     vertical-align: top; } }
 
 .footer--link {
-  color: white;
+  color: #344a5b;
   display: block;
   font-family: "halis_rregular", "Helvetica", sans-serif;
   font-size: calc(19 / 16 * 1em);
@@ -2523,10 +2523,10 @@ input[type="submit"] {
   .footer--link, .footer--link:hover, .footer--link:focus {
     background-image: none; }
   .footer--link:hover, .footer--link:focus, .footer--link:active {
-    color: white;
+    color: #21303b;
     text-decoration: none; }
   .footer--link > span:hover, .footer--link > span:focus {
-    background-image: linear-gradient(to top, transparent 0, transparent 2px, white 2px, transparent 3px, transparent 100%); }
+    background-image: linear-gradient(to top, transparent 0, transparent 2px, #344a5b 2px, transparent 3px, transparent 100%); }
   @media (min-width: 992px) {
     .footer--link {
       font-size: calc(16 / 18 * 1em);
