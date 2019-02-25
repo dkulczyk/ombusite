@@ -52,12 +52,12 @@
   .project-card:hover &,
   .project-card:focus &,
   .project-card:active & {
-    color: $color-primary;
-    
+    color: $color-darkened-primary;
+
     > span {
-      background-image: linear-gradient(to top, transparent 0, transparent 2px, $color-primary 2px, transparent 3px, transparent 100%);
+      background-image: linear-gradient(to top, transparent 0, transparent 2px, $color-darkened-primary 2px, transparent 3px, transparent 100%);
     }
-  }  
+  }
 }
 
 .project-card--body {
@@ -68,6 +68,6 @@
   .project-card:focus &,
   .project-card:active & {
     color: $color-body;
-    text-decoration: none;  
+    text-decoration: none;
   }
 }

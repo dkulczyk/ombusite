@@ -53,12 +53,12 @@
 
     &:last-child {
       margin-bottom: 0;
-    }    
+    }
   }
 }
 
 .error--link {
-  color: $color-primary;
+  color: $color-darkened-primary;
   display: inline-block;
   font-family: $font-halisr-regular;
   @include default-link-off();
@@ -66,9 +66,9 @@
   &:hover,
   &:focus,
   &:active {
-    color: darken($color-primary, 12%);
+    color: darken($color-darkened-primary, 10%);
     text-decoration: none;
-  }  
+  }
 
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(24 / 18 * 1em);
