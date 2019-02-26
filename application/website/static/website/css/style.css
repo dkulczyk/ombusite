@@ -2588,12 +2588,12 @@ html.navigation--active, html.navigation--active body {
   .navigation:after {
     background-image: linear-gradient(to right, #6dc5d4, #f3a7ad);
     content: "";
-    height: 7.5px;
+    height: 7px;
     left: 0;
     position: absolute;
     right: 0;
     top: 0; }
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       .navigation:after {
         height: 10px; } }
   .navigation.navigation--active {
