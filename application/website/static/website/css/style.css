@@ -2013,7 +2013,8 @@ input[type="submit"] {
   font-size: calc(16 / 16 * 1em);
   line-height: calc(28 / 16 * 1em);
   margin-bottom: calc(20 / 16 * 1em);
-  margin-top: 0; }
+  margin-top: 0;
+  text-align: center; }
   @media (min-width: 992px) {
     .page-title--cta-label {
       font-size: calc(18 / 18 * 1em);
