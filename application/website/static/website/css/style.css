@@ -6353,14 +6353,15 @@ blockquote.testimonial--quote {
     display: flex;
     flex-wrap: wrap; } }
 
-.cs-contributions--media video, .cs-contributions--media img {
-  width: 100%; }
-
-@media (max-width: 768px -1px) {
-  .cs-contributions--media {
-    flex: 0 0 auto;
-    order: 2;
-    width: 100%; } }
+.cs-contributions--media {
+  margin-bottom: calc(54 / 18 * 1rem); }
+  .cs-contributions--media video, .cs-contributions--media img {
+    width: 100%; }
+  @media (max-width: 768px -1px) {
+    .cs-contributions--media {
+      flex: 0 0 auto;
+      order: 2;
+      width: 100%; } }
 
 .cs-contributions--media-browser {
   background-color: white;
