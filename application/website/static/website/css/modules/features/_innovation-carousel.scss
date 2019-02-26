@@ -214,7 +214,7 @@
 
 .ic--slide-action {
   align-items: center;
-  border: 2px solid $color-primary;
+  border: 2px solid $color-darkened-primary;
   border-radius: 100%;
   color: $color-white;
   display: flex;
@@ -267,14 +267,14 @@
   padding-right: 1.5em;
 
   &.active {
-    background-color: $color-primary;
-    border-color: $color-primary;
+    background-color: $color-darkened-primary;
+    border-color: $color-darkened-primary;
     color: $color-white;
 
     &:hover,
     &:focus {
-      background-color: darken($color-primary, 10%);
-      border-color: darken($color-primary, 10%);
+      background-color: darken($color-darkened-primary, 10%);
+      border-color: darken($color-darkened-primary, 10%);
       color: $color-white;
     }
   }

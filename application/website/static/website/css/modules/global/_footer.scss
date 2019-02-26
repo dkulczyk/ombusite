@@ -18,7 +18,7 @@
 }
 
 .footer--cta-intro {
-  color: $color-white;
+  color: $color-darkened-midnight;
   font-family: $font-halisr-regular;
   font-size: calc(24 / 16 * 1em);
   line-height: calc(35 / 24 * 1em);
@@ -168,7 +168,7 @@
 }
 
 .footer--link {
-  color: $color-white;
+  color: $color-darkened-midnight;
   display: block;
   font-family: $font-halisr-regular;
   font-size: calc(19 / 16 * 1em);
@@ -181,14 +181,14 @@
   &:hover,
   &:focus,
   &:active {
-    color: $color-white;
+    color: darken($color-darkened-midnight, 10%);
     text-decoration: none;
   }
 
   > span {
     &:hover,
     &:focus {
-      background-image: linear-gradient(to top, transparent 0, transparent 2px, $color-white 2px, transparent 3px, transparent 100%);
+      background-image: linear-gradient(to top, transparent 0, transparent 2px, $color-darkened-midnight 2px, transparent 3px, transparent 100%);
     }
   }
 
