@@ -3813,6 +3813,9 @@ html.navigation--active, html.navigation--active body {
   font-family: "halis_rbook", "Helvetica", sans-serif;
   font-size: calc(12 / 16 * 1em);
   line-height: calc(18 / 12 * 1em); }
+  @media (min-width: 768px) {
+    .cta-card--label {
+      margin-top: calc(20 / 18 * 1em); } }
   @media (min-width: 992px) {
     .cta-card--label {
       font-size: calc(12 / 18 * 1em); } }
@@ -3821,13 +3824,12 @@ html.navigation--active, html.navigation--active body {
   font-family: "halis_rmedium", "Helvetica", sans-serif;
   font-size: calc(16 / 16 * 1em);
   line-height: calc(28 / 16 * 1em);
-  margin-top: calc(10 / 16 * 1em);
+  margin-top: 0;
   margin-bottom: calc(10 / 16 * 1em); }
   @media (min-width: 992px) {
     .cta-card--title {
       font-size: calc(18 / 18 * 1em);
       line-height: calc(30 / 18 * 1em);
-      margin-top: 0;
       margin-bottom: calc(15 / 18 * 1em); } }
 
 .cta-card--media {
@@ -3836,7 +3838,7 @@ html.navigation--active, html.navigation--active body {
   text-align: center; }
   @media (min-width: 768px) {
     .cta-card--media {
-      margin-bottom: 0;
+      margin-bottom: calc(20 / 18 * 1rem);
       margin-right: calc(20 / 18 * 1rem); } }
 
 .cta-card--body {
