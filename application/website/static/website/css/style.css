@@ -3798,7 +3798,7 @@ html.navigation--active, html.navigation--active body {
       padding: calc(40 / 18 * 1rem); } }
 
 .cta-card--primary {
-  align-items: center;
+  align-items: left;
   display: flex;
   flex-direction: column; }
   @media (min-width: 768px) {
@@ -3832,7 +3832,8 @@ html.navigation--active, html.navigation--active body {
 
 .cta-card--media {
   order: -1;
-  margin-bottom: calc(10 / 18 * 1rem); }
+  margin-bottom: calc(10 / 18 * 1rem);
+  text-align: center; }
   @media (min-width: 768px) {
     .cta-card--media {
       margin-bottom: 0;

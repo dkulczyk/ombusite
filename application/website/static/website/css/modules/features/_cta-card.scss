@@ -12,7 +12,7 @@
 }
 
 .cta-card--primary {
-  align-items: center;
+  align-items: left;
   display: flex;
   flex-direction: column;
 
@@ -54,6 +54,7 @@
 .cta-card--media {
   order: -1;
   margin-bottom: calc(10 / 18 * 1rem);
+  text-align: center;
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: 0;
@@ -91,7 +92,7 @@
   @media (max-width: $breakpoint-tablet - 1px) {
     font-size: calc(16 / 18 * 1em);
     padding-top: calc(13 / 18 * 1em);
-    padding-bottom: calc(13 / 18 * 1em);    
+    padding-bottom: calc(13 / 18 * 1em);
 
     svg {
       display: none;
