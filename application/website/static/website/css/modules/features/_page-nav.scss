@@ -18,40 +18,43 @@
 }
 
 .page-nav--item {
+  margin-bottom: (22 / 16 * 1rem);
+  position: relative;
 
-  @media (max-width: $breakpoint-notebook - 1px) {
-    margin-bottom: (22 / 16 * 1rem);
-    position: relative;
-    
+  &:before {
+    background-color: $color-body;
+    content: "";
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    top: calc(100% + 10px);
+    transform: translateX(-50%);
+    width: calc(40 / 16 * 1rem);
+  }
+
+  &:last-child {
     &:before {
-      background-color: $color-body;
-      content: "";
-      height: 1px;
-      left: 50%;
-      position: absolute;
-      top: calc(100% + 10px);
-      transform: translateX(-50%);
-      width: calc(40 / 16 * 1rem);
-    }
-
-    &:last-child {
-      &:before {
-        display: none;
-      }
+      display: none;
     }
   }
 
   @media (min-width: $breakpoint-notebook) {
-    border-right: 1px solid $color-body;
-    display: inline-block;
-    padding-left: calc(30 / 18 * 1rem);
-    padding-right: calc(30 / 18 * 1rem);
-    vertical-align: top;
+    .page-nav--inline & {
+      border-right: 1px solid $color-body;
+      display: inline-block;
+      padding-left: calc(30 / 18 * 1rem);
+      padding-right: calc(30 / 18 * 1rem);
+      vertical-align: top;
 
-    &:last-child {
-      border-right: none;
+      &:before {
+        display: none;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
     }
-  }  
+  }
 }
 
 .page-nav--link {
