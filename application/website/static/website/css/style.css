@@ -2648,7 +2648,11 @@ html.navigation--active, html.navigation--active body {
 .navigation--primary {
   list-style: none;
   margin: 0;
+  padding-bottom: 3rem;
   padding-left: 0; }
+  @media (min-width: 992px) {
+    .navigation--primary {
+      padding-bottom: 6rem; } }
 
 @media (min-width: 992px) {
   .navigation--primary-group.navigation--primary-group--single-item {
