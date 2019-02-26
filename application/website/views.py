@@ -4,7 +4,7 @@ from website.models.project import *
 
 def home(request, context={}):
     context['title'] = "Web solutions for CMS, applications, and DevOps"
-    context['meta_description'] = 'OMBU designs and builds the web’s best technology. Our clients come to us for three solution areas: content management, business applications, and DevOps.'
+    context['meta_description'] = 'OMBU designs and builds the web’s best technology. Our clients come to us for three solution areas: content management, custom applications, and DevOps.'
     return render(request, 'home.html', context)
 
 def about(request, context={}):
@@ -23,11 +23,11 @@ def work(request, context={}):
     return render(request, 'work.html', context)
 
 def services(request, context={}):
-    context['title'] = "Content Management, business applications, and DevOps"
-    context['meta_description'] = 'OMBU designs and builds technology for visionaries.  We specialize in content management, business applications, and DevOps.'
+    context['title'] = "Content Management, custom applications, and DevOps"
+    context['meta_description'] = 'OMBU designs and builds technology for visionaries.  We specialize in content management, custom applications, and DevOps.'
     context['services'] = [
         { 'title': 'Content Management' },
-        { 'title': 'Business Applications' },
+        { 'title': 'Custom Applications' },
         { 'title': 'Cloud Infrastructure' },
     ]
     return render(request, 'services.html', context)
