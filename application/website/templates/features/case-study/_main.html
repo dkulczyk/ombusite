@@ -31,7 +31,7 @@
           <img class="lazy" data-src="{% static visionary.image.src %}" alt="{{visionary.image.alt}}" />
           {% if visionary.image.browser %}
             </div>
-          {% endif %}          
+          {% endif %}
         </div>
         {% endif %}
         <div class="cs-main--body-section">
@@ -57,18 +57,20 @@
           {% if solution.image.browser %}
             <div class="cs-main--media--solution-browser">
             {% include 'svg/browser.svg.html' with url=contributions.image.browser.url %}
-          {% endif %}          
+          {% endif %}
           <img class="lazy" data-src="{% static solution.image.src %}" alt="{{solution.image.alt}}" />
           {% if solution.image.browser %}
             </div>
-          {% endif %}             
+          {% endif %}
         </div>
         {% endif %}
       </div>
+      {% if outcomes %}
       <aside class="cs-main--secondary cs-sidebar">
         <h2 class="cs-sidebar--title">Outcomes</h2>
         {% include 'features/_rings.html' with vertical=True delayed=True rings=outcomes %}
       </aside>
+      {% endif %}
     </div>
   </div>
 </section>
