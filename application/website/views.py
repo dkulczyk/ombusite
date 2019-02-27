@@ -4,7 +4,7 @@ from website.models.project import *
 
 def home(request, context={}):
     context['title'] = "Web solutions for CMS, applications, and DevOps"
-    context['meta_description'] = 'OMBU designs and builds the web’s best technology. Our clients come to us for three solution areas: content management, business applications, and DevOps.'
+    context['meta_description'] = 'OMBU designs and builds the web’s best technology. Our clients come to us for three solution areas: content management, custom applications, and DevOps.'
     return render(request, 'home.html', context)
 
 def about(request, context={}):
@@ -23,11 +23,11 @@ def work(request, context={}):
     return render(request, 'work.html', context)
 
 def services(request, context={}):
-    context['title'] = "Content Management, business applications, and DevOps"
-    context['meta_description'] = 'OMBU designs and builds technology for visionaries.  We specialize in content management, business applications, and DevOps.'
+    context['title'] = "Content Management, custom applications, and DevOps"
+    context['meta_description'] = 'OMBU designs and builds technology for visionaries.  We specialize in content management, custom applications, and DevOps.'
     context['services'] = [
         { 'title': 'Content Management' },
-        { 'title': 'Business Applications' },
+        { 'title': 'Custom Applications' },
         { 'title': 'Cloud Infrastructure' },
     ]
     return render(request, 'services.html', context)
@@ -124,10 +124,10 @@ def casestudy_nwpp(request, context={}):
     context['banner_position'] = '20% 40%'
     context['intro_text'] = """
     <p>
-        <span class="cs-intro--emphasis">Northwest PowerPool (NWPP)</span> partnered with us to design an implement
+        <span class="cs-intro--emphasis">Northwest PowerPool (NWPP)</span> partnered with us to design and implement
         a learning platform that modernized electric utility training delivery. The new platform was so much easier to
         maintain. More importantly, it allowed NWPP to use modern learning tools which drastically improved
-        trainee engagement and compliance with federally regulated training requirement.
+        trainee engagement and compliance with federally regulated training&nbsp;requirement.
      </p>
     """
     context['testimonial_image'] = "website/images/case-studies/nwpp/testimonial-logo.png"
@@ -154,18 +154,18 @@ def casestudy_nwpp(request, context={}):
         <p>
             Northwest PowerPool (NWPP)</span> brings together 32 power utilities in
             eight US states and two Canadian provinces. One of their missions is to deliver training to
-            electric power operators to increase power grid safety, help with new technology adoption, meet
+            electric power operators to increase power grid safety, help with new technology adoption, and meet
             federally regulated training requirements.
         </p>
         <p>
             For years, NWPP suffered with an off-the-shelf LMS solution to deliver training that could not keep
-            up with NWPP's pace of innovation. The platform was slow, tedious for learners and administrators, and
+            up with NWPP’s pace of innovation. The platform was slow and tedious for learners and administrators, and
             could not support the modern training methods that NWPP was pioneering.
         </p>
         <p>
-            NWPP knew that, if they could could control the experience and functionality of a new platform, they would
-            drastically improve quality of training, drive engagement and help member utilities compliant. So NWPP
-            came to us with a simple vision: <strong>help us design, implement and rollout a learning management
+            NWPP knew that if they could could control the experience and functionality of a new platform, they would
+            drastically improve the quality of training, drive engagement and help member utilities achieve compliance. So NWPP
+            came to us with a simple vision: <strong>help us design, implement and roll out a learning management
             system that will transform how we work</strong>.
         </p>
         """,
@@ -187,8 +187,8 @@ def casestudy_nwpp(request, context={}):
         'body': """
             <p>
                 We built a modern and engaging training platform targeted specifically for training electric
-                utility workers. The easy-to-use Learning Management System (LMS) allows content creators quickly
-                put together new courses and activities, with video, interactive quizzes, scoring and reporting.
+                utility workers. The easy-to-use Learning Management System (LMS) allows content creators to quickly
+                put together new courses and activities with video, interactive quizzes, scoring and reporting.
             </p>
             <p>
                 This platform integrates with modern providers of digital media, like YouTube, Vimeo, Soundcloud and
@@ -196,7 +196,7 @@ def casestudy_nwpp(request, context={}):
                 through the Experience API (xAPI).
             </p>
             <p>
-                Ultimately, the key feature or OMBU's solution is the powerful and pleasant user experience
+                Ultimately, the key feature of OMBU’s solution is the powerful and pleasant user experience
                 that makes content creation and management tasks fun and easy, and stays out of the way during
                 training, shifting all focus to the learning experience, driving high engagement in an industry
                 where knowledge and safety are critical.
@@ -221,15 +221,15 @@ def casestudy_nwpp(request, context={}):
             'title': 'Drag & Drop Course Builder',
             'background': 'website/images/case-studies/nwpp/innov-slide-01@2x.jpg',
             'text': 'Content creators can create courses easily using drag-and-drop to organize activity flow, '
-                    'upload videos and setup quizzes',
+                    'upload videos and setup quizzes.',
             'action_text': '',
         },
         {
             'title': 'Digital Asset Management',
             'background': 'website/images/case-studies/nwpp/innov-slide-02@2x.jpg',
-            'text': "Media assets, like videos, documents and images are organized in central asset library, so "
-                    "content creators can easily find assets to use in their activities, and LMS administrators"
-                    "can track what's being used where",
+            'text': "Media assets like videos, documents and images are organized in a central asset library, so "
+                    "content creators can easily find assets to use in their activities and LMS administrators "
+                    "can track what’s being used&nbsp;where.",
             'action_text': '',
         },
         {
@@ -237,13 +237,13 @@ def casestudy_nwpp(request, context={}):
             'background': 'website/images/case-studies/nwpp/innov-slide-04@2x.jpg',
             'text': "Member organizations are teams in the LMS with self-management functions. This allows NWPP to "
                     "securely delegate tasks like user invitations, status updates, role assignment, "
-                    "license management, etc",
+                    "license management, etc.",
             'action_text': '',
         },
         {
             'title': 'High-Availability AWS infrastructure',
             'background': 'website/images/case-studies/nwpp/innov-slide-03@2x.jpg',
-            'text': "The LMS is a business critical application used around the clock, so we implemented a "
+            'text': "The LMS is a business-critical application used around the clock, so we implemented a "
                     "multi data center hosting solution that is cost effective and scales during high usage periods.",
             'action_text': '',
         },
@@ -331,7 +331,7 @@ def casestudy_navex(request, context={}):
     context['solution'] = {
         'body': '''
             <p>
-                OMBU designed and implemented a website backed by a enterprise content management system (CMS) that
+                OMBU designed and implemented a website backed by an enterprise content management system (CMS) that
                 empowers NAVEX Global to
                 personally engage customers across their global markets.  Marketing teams are able to launch a rich
                 custom landing pages for new products and campaigns in minutes, with no IT involvement, allowing them to
@@ -341,11 +341,11 @@ def casestudy_navex(request, context={}):
             <p>
                 The website features a resource center designed to position NAVEX as the global thought leader in
                 ethics and compliance. The resource center publishes reports, guides, white papers, webinars and videos
-                and is a key conversion point for new business, deeply integrated with Marketo's progressive
+                and is a key conversion point for new business, deeply integrated with Marketo’s progressive
                 enhancement to intelligently and automatically grow lead&nbsp;profiles.
             </p>
             <p>
-                While building the new website NAVEX had ambitious plans to expand to international markets, so we built
+                While building the new website, NAVEX had ambitious plans to expand to international markets, so we built
                 a backend with translation, URL and SEO functions to support any number of locales on day one. As NAVEX
                 started opening offices in new markets, the website was ready to keep up and empower the local teams
                 not only to translate content, but tailor the website experience and campaigns to local products and
@@ -377,9 +377,9 @@ def casestudy_navex(request, context={}):
             'background': 'website/images/case-studies/navex/innov-slide-02@2x.jpg',
             'text': '''
                 NAVEX Global has customers in over 200 countries, so we built powerful localization into the core of
-                their content management system. NAVEX's  team can quickly launch locales, clone
+                their content management system. NAVEX’s  team can quickly launch locales, clone
                 pages between locales and translate any site content. For visitors, the experience is seamless, as the
-                site gently guides users to their relevant content.
+                site gently guides users to their relevant&nbsp;content.
             ''',
 
             'action_text': '',
@@ -388,10 +388,10 @@ def casestudy_navex(request, context={}):
             'title': 'Marketo Marketing Automation',
             'background': 'website/images/case-studies/navex/innov-slide-04@2x.jpg',
             'text': '''
-                We built custom integration with the Marketo marketing automation platform at the core of NAVEX's
+                We built custom integration with the Marketo marketing automation platform at the core of NAVEX’s
                 website to empower their marketing teams to reach new new leads, gather insights about visitors and
                 content performance, and run omni-channel campaigns. Using our solution, marketers can embed custom
-                Marketo forms on landing pages, without technical help, allowing them to launch campaigns in minutes.'
+                Marketo forms on landing pages, without technical help, allowing them to launch campaigns in&nbsp;minutes.
             ''',
 
             'action_text': '',
@@ -400,11 +400,11 @@ def casestudy_navex(request, context={}):
             'title': 'AWS infrastructure',
             'background': 'website/images/case-studies/navex/innov-slide-05@2x.jpg',
             'text': '''
-                NAVEX Global website get's global traffic at large scale. When NAVEX is in the news or one of their
+                NAVEX Global’s website gets global traffic at large scale. When NAVEX is in the news or one of their
                 resource center pieces goes viral, the site sees quick massive spikes in traffic. OMBU designed the
                 CMS to leverage the best cloud technology available, such as load-balancing, auto-scaling, cross-region
-                replication, and content delivery networks to make sure the site remains fast and available in under
-                any condition.
+                replication, and content delivery networks to make sure the site remains fast and available under
+                any&nbsp;conditions.
             ''',
             'action_text': '',
         },
@@ -476,7 +476,7 @@ def casestudy_sa(request, context={}):
                 erroneous data, with no way for Saturday Academy to extract reliable business intelligence.
             </p>
             <p>
-                Saturday Academy's staff knew there was better technology out there, but they needed a partner who
+                Saturday Academy’s staff knew there was better technology out there, but they needed a partner who
                 could help them package it into a custom solution that was affordable and sustainable for them. And
                 they needed a data expert who could sanitize and migrate their legacy data for a fresh restart.
             </p>
@@ -553,15 +553,15 @@ def casestudy_sa(request, context={}):
             'background': 'website/images/case-studies/sa/innov-slide-02@2x.jpg',
             'text': "Website interactions and class registration report to Salesforce "
                     "via a REST API, so Saturday Academy "
-                    "can run reports in real-time to gain find out how classes are filling up, how finacial aid is"
-                    "being distributed, and maintain a suite of live operational reports",
+                    "can run reports in real-time to gain find out how classes are filling up, how finacial aid is "
+                    "being distributed, and maintain a suite of live operational reports.",
             'action_text': '',
         },
         {
             'title': 'Data Migration',
             'background': 'website/images/case-studies/sa/innov-slide-03@2x.jpg',
-            'text': "We wrote a migration script that processed over a decade's worth of records from an Access "
-                    "database and several spreadsheets cleaning and consolidating a previous trove of operational "
+            'text': "We wrote a migration script that processed over a decade’s worth of records from an Access "
+                    "database and several spreadsheets, cleaning and consolidating a trove of legacy operational "
                     "data into Salesforce.",
             'action_text': '',
         }

@@ -20,7 +20,7 @@
 
     & + p {
       margin-top: calc(10 / 16 * 1em);
-    }    
+    }
 
     @media (min-width: $breakpoint-notebook) {
       margin-bottom: calc(10 / 18 * 1em);
@@ -37,8 +37,8 @@
 
     &:hover,
     &:focus {
-      background-image: linear-gradient(to top, transparent 0, transparent 0px, $color-primary 0px, $color-primary 0.5px, transparent 0.5px, transparent 100%);
-    }    
+      background-image: linear-gradient(to top, transparent 0, transparent 0px, $color-darkened-primary 0px, $color-darkened-primary 0.5px, transparent 0.5px, transparent 100%);
+    }
   }
 
   strong {
@@ -78,7 +78,7 @@
     list-style: none;
 
     li {
-      padding-left: 1em;      
+      padding-left: 1em;
       position: relative;
 
       &:before {
@@ -126,7 +126,7 @@
     @media (min-width: $breakpoint-tablet) {
       max-width: 300px;
     }
-  }  
+  }
 
   .pull-right,
   .ombuassets-document-right {

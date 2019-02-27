@@ -34,8 +34,6 @@ kaufmanhall = {
   'client': 'Kaufman Hall',
   'title': 'Project profile for Kaufman Hall’s website redesign',
   'meta_description': 'Kaufman Hall came to OMBU to create a unified web presence with an enterprise content management system to support their growth and thought leadership.',
-  'visit_url': 'https://www.kaufmanhall.com/',
-  'visit_text': 'Visit Website',
   'hero_carousel_content_template': 'content/project/hero-carousels/_kaufmanhall.html',
   'intro': '<h6>Powering the Enterprise</h6><p>Kaufman Hall is a management consulting and enterprise software company with clients around the globe. After expanding their business by acquiring the leading software provider in their field, Kaufman Hall needed a unified web presence with an enterprise content management system (CMS) to support their growth and thought leadership.</p><p>OMBU designed and built an Content Management website featuring a modern design and powerful marketing tools. The site features a filterable resource center for white papers, case studies, webinars, and more, to prove Kaufman Hall’s thought leadership. Flexible layout tools mean the marketing team can spin up new landing pages, complete with lead capture, in minutes instead of weeks. Rich integration with Marketo and Salesforce allows the sales team to prospect and funnel attractive leads into their sales pipeline.</p>',
   'services': [ 'User Experience Design', 'Visual Design', 'Drupal Content Management Development', 'Data Migration' ],

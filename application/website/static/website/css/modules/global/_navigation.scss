@@ -28,14 +28,14 @@ html.navigation--active {
   &:after {
     background-image: linear-gradient(to right, $color-primary, $color-secondary);
     content: "";
-    height: $border-width-resting / 2;
+    height: floor($border-width-resting / 2);
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
 
-    @media (min-width: $breakpoint-notebook) {
-      height: $border-width-resting-desktop / 2;
+    @media (min-width: $breakpoint-desktop) {
+      height: floor($border-width-resting-desktop / 2);
     }
   }
 
@@ -97,7 +97,12 @@ html.navigation--active {
 .navigation--primary {
   list-style: none;
   margin: 0;
+  padding-bottom: 3rem;
   padding-left: 0;
+
+  @media (min-width: $breakpoint-notebook) {
+    padding-bottom: 6rem;
+  }
 }
 
 .navigation--primary-group {

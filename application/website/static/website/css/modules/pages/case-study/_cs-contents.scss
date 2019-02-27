@@ -66,6 +66,7 @@
 }
 
 .cs-contributions--media {
+  margin-bottom: calc(54 / 18 * 1rem);
 
   video,img {
     width: 100%;
@@ -211,23 +212,23 @@
 
 .cs-outcomes--cta {
   @include btn-download();
-  color: $color-primary;
-  border-color: $color-primary;
+  color: $color-darkened-primary;
+  border-color: $color-darkened-primary;
 
   svg {
     * {
-      stroke: $color-primary;
+      stroke: $color-darkened-primary;
     }
   }
 
   &:hover,
   &:focus {
-    color: darken($color-primary, 10%);
-    border-color: darken($color-primary, 10%);
+    color: darken($color-darkened-primary, 10%);
+    border-color: darken($color-darkened-primary, 10%);
 
     svg {
       * {
-        stroke: darken($color-primary, 10%);
+        stroke: darken($color-darkened-primary, 10%);
       }
     }
   }

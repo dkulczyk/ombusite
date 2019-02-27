@@ -186,6 +186,7 @@
   line-height: calc(28 / 16 * 1em);
   margin-bottom: calc(20 / 16 * 1em);
   margin-top: 0;
+  text-align: center;
 
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(18 / 18 * 1em);

@@ -12,7 +12,7 @@
 }
 
 .cta-card--primary {
-  align-items: center;
+  align-items: left;
   display: flex;
   flex-direction: column;
 
@@ -31,6 +31,10 @@
   font-size: calc(12 / 16 * 1em);
   line-height: calc(18 / 12 * 1em);
 
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: calc(20 / 18 * 1em);
+  }
+
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(12 / 18 * 1em);
   }
@@ -40,13 +44,12 @@
   font-family: $font-halisr-medium;
   font-size: calc(16 / 16 * 1em);
   line-height: calc(28 / 16 * 1em);
-  margin-top: calc(10 / 16 * 1em);
+  margin-top: 0;
   margin-bottom: calc(10 / 16 * 1em);
 
   @media (min-width: $breakpoint-notebook) {
     font-size: calc(18 / 18 * 1em);
     line-height: calc(30 / 18 * 1em);
-    margin-top: 0;
     margin-bottom: calc(15 / 18 * 1em);
   }
 }
@@ -54,9 +57,10 @@
 .cta-card--media {
   order: -1;
   margin-bottom: calc(10 / 18 * 1rem);
+  text-align: center;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: 0;
+    margin-bottom: calc(20 / 18 * 1rem);
     margin-right: calc(20 / 18 * 1rem);
   }
 }
@@ -91,7 +95,7 @@
   @media (max-width: $breakpoint-tablet - 1px) {
     font-size: calc(16 / 18 * 1em);
     padding-top: calc(13 / 18 * 1em);
-    padding-bottom: calc(13 / 18 * 1em);    
+    padding-bottom: calc(13 / 18 * 1em);
 
     svg {
       display: none;

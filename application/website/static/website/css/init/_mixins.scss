@@ -10,7 +10,7 @@
 
 @mixin element-invisible {
   position: absolute !important;
-  height: 1px; width: 1px; 
+  height: 1px; width: 1px;
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
@@ -29,20 +29,20 @@
 
   &:hover,
   &:focus {
-    background-image: linear-gradient(to top, transparent 0, transparent 2px, $color-primary 2px, transparent 3px, transparent 100%);
+    background-image: linear-gradient(to top, transparent 0, transparent 2px, $color-darkened-primary 2px, transparent 3px, transparent 100%);
   }
 }
 
 @mixin default-link-off() {
   &,
   &:hover,
-  &:focus {  
+  &:focus {
     background-image: none;
   }
 }
 
 // Helper function for arrow svg
-@mixin arrow-right-long($color: $color-primary) {
+@mixin arrow-right-long($color: $color-darkened-primary) {
   padding-right: 33px;
   position: relative;
 
@@ -86,7 +86,7 @@
 }
 
 // Buttons
-@mixin btn-base($color: $color-white, $bg: $color-primary, $border-color: $color-primary) {
+@mixin btn-base($color: $color-white, $bg: $color-darkened-primary, $border-color: $color-darkened-primary) {
   background-color: $bg;
   background-image: none;
   border: 2px solid $border-color;
@@ -109,7 +109,7 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  @include default-link-off();  
+  @include default-link-off();
 
   &:hover,
   &:focus {
@@ -119,31 +119,31 @@
 }
 
 @mixin btn-primary() {
-  @include btn-base($color: $color-white, $bg: $color-primary, $border-color: $color-primary);
+  @include btn-base($color: $color-white, $bg: $color-darkened-primary, $border-color: $color-darkened-primary);
 
   &:hover,
   &:focus,
   &:active {
-    background-color: darken($color-primary, 12%);
-    border-color: darken($color-primary, 12%);
+    background-color: darken($color-darkened-primary, 12%);
+    border-color: darken($color-darkened-primary, 12%);
   }
 }
 
 @mixin btn-secondary() {
-  @include btn-base($color: $color-primary, $bg: transparent, $border-color: $color-primary);
+  @include btn-base($color: $color-darkened-primary, $bg: transparent, $border-color: $color-darkened-primary);
 
   &:hover,
   &:focus,
   &:active {
     background-color: transparent;
-    border-color: darken($color-primary, 12%);
-    color: darken($color-primary, 12%);
-  }  
+    border-color: darken($color-darkened-primary, 12%);
+    color: darken($color-darkened-primary, 12%);
+  }
 }
 
 @mixin btn-tertiary() {
   @include arrow-right-long();
-  color: $color-primary;
+  color: $color-darkened-primary;
   display: inline-block;
   font-family: $font-halisr-regular;
   @include default-link-off();
@@ -151,7 +151,7 @@
   &:hover,
   &:focus,
   &:active {
-    color: darken($color-primary, 12%);
+    color: darken($color-darkened-primary, 12%);
     text-decoration: none;
   }
 }
@@ -179,7 +179,7 @@
       * {
         stroke: $color-tertiary;
       }
-    } 
+    }
   }
 }
 
@@ -221,7 +221,7 @@ $browser-chrome-border-color: rgb(206, 206, 206);
     left: 12px;
     position: absolute;
     top: $browser-chrome-position-top;
-  } 
+  }
 
   img {
     border-top: 1px solid $browser-chrome-border-color;
