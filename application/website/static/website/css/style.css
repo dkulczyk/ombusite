@@ -3108,7 +3108,7 @@ html.navigation--active, html.navigation--active body {
     .callout--content {
       width: calc(50% - 20px); }
       .callout.callout--gap .callout--content {
-        width: calc(50% - calc(40 / 18 * 1rem)); } }
+        width: calc(50% - 2.22222rem); } }
   @media (min-width: 768px) {
     .callout--fullwidth .callout--content {
       width: calc(7 / 12 * 100%); } }
@@ -3206,7 +3206,7 @@ html.navigation--active, html.navigation--active body {
       text-align: right;
       width: calc(50% - 20px); }
       .callout.callout--gap .callout--media {
-        width: calc(50% - calc(40 / 18 * 1rem)); } }
+        width: calc(50% - 2.22222rem); } }
   @media (min-width: 768px) {
     .callout--media.callout--media--prominent {
       order: -1;
@@ -3947,7 +3947,7 @@ html.navigation--active, html.navigation--active body {
       justify-content: space-between;
       margin-bottom: calc(200 / 18 * 1rem); }
       .card-grid--row > div {
-        width: calc(50% - calc(40 / 18 * 1rem)); } }
+        width: calc(50% - 2.22222rem); } }
 
 @media (min-width: 768px) {
   .card-grid--row.card-grid--row--secondary {
