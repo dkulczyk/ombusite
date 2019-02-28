@@ -1,6 +1,6 @@
 .project-slider {
   overflow: hidden;
-  padding-bottom: calc(44 / 18 * 1rem);
+  padding-bottom: calc(44 / 14 * 1rem);
 
   @media (min-width: $breakpoint-tablet) {
     padding-top: 4px;
@@ -23,33 +23,49 @@
   }
 }
 
-.owl-dots {
+.owl-nav {
   .project-slider & {
-    bottom: -34px;
+    bottom: -54px;
     left: 0;
     position: absolute;
     text-align: center;
     width: 100%;
 
-    @media (min-width: $breakpoint-tablet) {
-      bottom: -44px;
+  .owl-next,
+  .owl-prev {
+    text-decoration: none;
+    background-image: none;
+    width: 36px;
+    height: 27px;
+
+    > svg {
+      width: 36px;
+      height: 27px;
+      display: block;
+
+      * {
+        transition: fill $transition-duration-default ease;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      * {
+        fill: darken($color-primary, 12%);
+      }
     }
   }
-}
 
-button.owl-dot {
-  .project-slider & {
-    background: $color-body;
-    border-radius: 100%;
-    display: inline-block;
-    height: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    opacity: 0.3;
-    width: 10px;
+  .owl-next {
+    margin-left: 1rem;
+  }
+  .owl-prev {
+    margin-right: 1rem;
+  }
 
-    &.active {
-      opacity: 1;
+    @media (min-width: $breakpoint-tablet) {
+      bottom: -62px;
     }
   }
 }

@@ -613,7 +613,13 @@ $(function() {
     });
     var owlCarousel = $slider.owlCarousel({
       loop: true,
-      dots: true,
+      dots: false,
+      nav: true,
+      navText: [
+        $('.image-overlay--prev').html(),
+        $('.image-overlay--next').html()
+      ],
+      navElement: 'button',
       responsive: {
         0: {
           items: 1,
@@ -627,11 +633,9 @@ $(function() {
       },
       onInitialized: function(e) {
         var $slider = $(e.currentTarget);
-        var $dots = $slider.find('.owl-dots .owl-dot');
-        $dots.each(function(i, button) {
-          var text = 'Go to slider page ' + (i + 1) + ' of ' + $dots.length;
-          $(button).attr('aria-label', text);
-        });
+
+        $slider.find('.owl-prev').attr('aria-label', 'Previous');
+        $slider.find('.owl-next').attr('aria-label', 'Next');
 
         $slider.find('.owl-item.cloned a').attr('tabindex', -1);
 

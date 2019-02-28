@@ -46,7 +46,13 @@ $(function() {
     });
     var owlCarousel = $slider.owlCarousel({
       loop: true,
-      dots: true,
+      dots: false,
+      nav: true,
+      navText: [
+        $('.image-overlay--prev').html(),
+        $('.image-overlay--next').html()
+      ],
+      navElement: 'button',
       responsive: {
         // breakpoint from 0 up
         0: {
@@ -61,13 +67,11 @@ $(function() {
         }
       },
       onInitialized: function(e) {
-        // Add label text to dot page buttons.
         var $slider = $(e.currentTarget);
-        var $dots = $slider.find('.owl-dots .owl-dot');
-        $dots.each(function(i, button) {
-          var text = 'Go to slider page ' + (i + 1) + ' of ' + $dots.length;
-          $(button).attr('aria-label', text);
-        });
+
+        // Add label text and href to the prev/next buttons.
+        $slider.find('.owl-prev').attr('aria-label', 'Previous');
+        $slider.find('.owl-next').attr('aria-label', 'Next');
 
         // Prevent tab navigation on cloned items.
         $slider.find('.owl-item.cloned a').attr('tabindex', -1);
