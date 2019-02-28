@@ -142,7 +142,7 @@ GOOGLE_ANALYTICS_ID = None
 CSP_DEFAULT_SRC = ("'none'",)
 CSP_CONNECT_SRC = ("'self'",)
 CSP_SCRIPT_SRC = ("'self'", 'www.googletagmanager.com')
-CSP_IMG_SRC = ("'self'", 'www.googletagmanager.com')
+CSP_IMG_SRC = ("'self'", 'data:', 'www.googletagmanager.com')
 CSP_STYLE_SRC = ("'self'", "'unsafe-inline'",) # Needed to support inline background images.
 CSP_FONT_SRC = ("'self'",)
 
