@@ -54,13 +54,16 @@
     right: 0;
     top: 9px;
     width: 24px;
-    background-color: $color;
-    -webkit-mask-image: url('../images/arrow-right-long.svg');
-    mask-image: url('../images/arrow-right-long.svg');
     transition: all $transition-duration-default ease;
-    @supports (not ((mask-image: test) or (-webkit-mask-image: test))) {
-      background-color: transparent;
-      background-image: url('../images/arrow-right-long.svg');
+
+    background-color: transparent;
+    background-image: url('../images/arrow-right-long.svg');
+    @supports ((mask-image: url("")) or (-webkit-mask-image: url(""))) {
+      background-image: none;
+      background-color: $color;
+      -webkit-mask-image: url('../images/arrow-right-long.svg');
+      mask-image: url('../images/arrow-right-long.svg');
+    
     }
   }
 
@@ -68,12 +71,13 @@
   &:focus,
   &:active {
     &:after {
-      background-color: darken($color, 12%);
-      @supports (not ((mask-image: test) or (-webkit-mask-image: test))) {
-        background-color: transparent;
+      background-color: transparent;
+      @supports ((mask-image: url("")) or (-webkit-mask-image: url(""))) {
+        background-color: darken($color, 12%);
       }
     }
   }
+
 }
 
 // Captions
@@ -142,11 +146,11 @@
 }
 
 @mixin btn-tertiary() {
+  @include default-link-off();
   @include arrow-right-long();
   color: $color-darkened-primary;
   display: inline-block;
   font-family: $font-halisr-regular;
-  @include default-link-off();
 
   &:hover,
   &:focus,
