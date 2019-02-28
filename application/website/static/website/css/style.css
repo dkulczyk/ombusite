@@ -5238,13 +5238,13 @@ blockquote.testimonial--quote {
     .image-overlay--controls .image-overlay--prev > svg {
       width: 48px;
       height: 36px; }
-      .image-overlay--controls .image-overlay--next > svg polygon,
-      .image-overlay--controls .image-overlay--prev > svg polygon {
+      .image-overlay--controls .image-overlay--next > svg *,
+      .image-overlay--controls .image-overlay--prev > svg * {
         transition: fill 0.2s ease; }
-    .image-overlay--controls .image-overlay--next:hover polygon, .image-overlay--controls .image-overlay--next:focus polygon, .image-overlay--controls .image-overlay--next:active polygon,
-    .image-overlay--controls .image-overlay--prev:hover polygon,
-    .image-overlay--controls .image-overlay--prev:focus polygon,
-    .image-overlay--controls .image-overlay--prev:active polygon {
+    .image-overlay--controls .image-overlay--next:hover *, .image-overlay--controls .image-overlay--next:focus *, .image-overlay--controls .image-overlay--next:active *,
+    .image-overlay--controls .image-overlay--prev:hover *,
+    .image-overlay--controls .image-overlay--prev:focus *,
+    .image-overlay--controls .image-overlay--prev:active * {
       fill: #3eb2c6; }
   .image-overlay--controls .image-overlay--next {
     margin-left: 1rem; }
