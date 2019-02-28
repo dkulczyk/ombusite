@@ -128,8 +128,7 @@ $slider-height-mobile: 190px;
 
   @media (min-width: $breakpoint-tablet) {
     height: $slider-height-desktop;
-    margin-left: $gutter-side-tile / 2;
-    margin-right: $gutter-side-tile / 2;
+    margin-right: $gutter-side-tile;
     width: auto;
 
     img {

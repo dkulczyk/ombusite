@@ -3520,8 +3520,7 @@ html.navigation--active, html.navigation--active body {
   @media (min-width: 768px) {
     .slider--slide {
       height: 360px;
-      margin-left: 10px;
-      margin-right: 10px;
+      margin-right: 20px;
       width: auto; }
       .slider--slide img {
         height: 360px;
