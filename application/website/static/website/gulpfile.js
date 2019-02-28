@@ -36,6 +36,7 @@ var jsFiles = [
   waypointsDir + '/jquery.waypoints.min.js',
   touchSwipeDir + '/jquery.touchSwipe.min.js',
   bootstrapJsDir + '/modal.js',
+  './node_modules/imagesloaded/imagesloaded.pkgd.min.js',
   './js/utils.js',
   './js/image-lazy-load.js',
   './js/navigation.js',
