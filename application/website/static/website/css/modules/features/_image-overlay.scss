@@ -79,13 +79,15 @@
 #image-overlay-modal {
   .modal-dialog {
     box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+    max-width: 100%;
+    max-width: calc(100vw - #{$modal-padding});
   }
 }
 .image-overlay {
-  max-height: calc(100vh - (#{$modal-padding} * 4));
+  max-height: calc(100vh - #{$modal-padding * 4});
 }
 .show-controls .image-overlay {
-  max-height: calc(100vh - (#{$modal-padding} * 5));
+  max-height: calc(100vh - #{$modal-padding * 5});
 }
 
 

@@ -5215,13 +5215,15 @@ blockquote.testimonial--quote {
     visibility: visible; }
 
 #image-overlay-modal .modal-dialog {
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  max-width: calc(100vw - 30px); }
 
 .image-overlay {
-  max-height: calc(100vh - (30px * 4)); }
+  max-height: calc(100vh - 120px); }
 
 .show-controls .image-overlay {
-  max-height: calc(100vh - (30px * 5)); }
+  max-height: calc(100vh - 150px); }
 
 .image-overlay--controls {
   position: relative;
