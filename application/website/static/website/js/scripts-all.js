@@ -608,7 +608,10 @@ $(function() {
 
 
   function initializeCarousel($slider) {
-    $slider.owlCarousel({
+    $slider.find('.slider--slide').each(function(i, el) {
+      $(el).attr('data-slide-index', i);
+    });
+    var owlCarousel = $slider.owlCarousel({
       loop: true,
       dots: true,
       responsive: {
@@ -622,16 +625,34 @@ $(function() {
           margin: 0
         }
       },
-      onInitialized: function(event) {
-        var $slider = $(event.currentTarget);
+      onInitialized: function(e) {
+        var $slider = $(e.currentTarget);
         var $dots = $slider.find('.owl-dots .owl-dot');
         $dots.each(function(i, button) {
           var text = 'Go to slider page ' + (i + 1) + ' of ' + $dots.length;
           $(button).attr('aria-label', text);
         });
+
+        $slider.find('.owl-item.cloned a').attr('tabindex', -1);
+
+        $slider.find('.slider--slide').each(function(i, el) {
+          var $slide = $(el);
+          var $item = $slide.parents('.owl-item');
+          $item.attr('data-slide-index', $slide.attr('data-slide-index'));
+          $slide.removeAttr('data-slide-index');
+        });
       }
     });
     $slider.addClass('owl-carousel');
+    $slider.on('focus', '.slider--slide a', function(e) {
+      var $item = $(e.currentTarget).parents('.owl-item');
+      var $activeItems = $slider.find('.owl-item.active');
+      var focusedIsFirstActiveItem = $activeItems.index($item[0]) == 0;
+      if (!focusedIsFirstActiveItem) {
+        var itemIndex = parseInt($item.attr('data-slide-index'), 10);
+        $slider.trigger('to.owl.carousel', itemIndex);
+      }
+    });
   }
 
 });
