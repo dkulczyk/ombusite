@@ -612,7 +612,7 @@ $(function() {
     $slider.find('.slider--slide').each(function(i, el) {
       $(el).attr('data-slide-index', i);
     });
-    var owlCarousel = $slider.owlCarousel({
+    $slider.owlCarousel({
       loop: true,
       dots: false,
       nav: true,
@@ -627,8 +627,8 @@ $(function() {
           margin: 20
         },
         768: {
-          autoWidth:true,
-          items: 4,
+          autoWidth: true,
+          items: 1,
           margin: 0
         }
       },

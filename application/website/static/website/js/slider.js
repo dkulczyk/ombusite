@@ -44,7 +44,7 @@ $(function() {
     $slider.find('.slider--slide').each(function(i, el) {
       $(el).attr('data-slide-index', i);
     });
-    var owlCarousel = $slider.owlCarousel({
+    $slider.owlCarousel({
       loop: true,
       dots: false,
       nav: true,
@@ -61,8 +61,14 @@ $(function() {
         },
         // breakpoint from 768 up
         768: {
-          autoWidth:true,
-          items: 4,
+          // With autoWidth: true OwlCarousel will use the elements width
+          // instead of setting a width to make x items fit. Because of this,
+          // the `items` value here is largely ignored. Even through more than
+          // 1 item is shown at once, `items` needs to be 1 otherwise the nav
+          // won't show. The nav only shows if the number of DOM items is
+          // greater than the `items` value here.
+          autoWidth: true,
+          items: 1,
           margin: 0
         }
       },
