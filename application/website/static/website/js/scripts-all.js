@@ -446,6 +446,7 @@ function onlyKeyCode(keyCode, fn) {
 
     } else {
       lazyImages.forEach(loadImage);
+      lazyBackgroundImages.forEach(loadBackgroundImage);
     }
   });
 

@@ -63,6 +63,7 @@
 
     } else {
       lazyImages.forEach(loadImage);
+      lazyBackgroundImages.forEach(loadBackgroundImage);
     }
   });
 
