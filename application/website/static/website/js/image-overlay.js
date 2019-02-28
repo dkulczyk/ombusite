@@ -32,7 +32,7 @@
    * @param {string[]} imageSrcs - Optional. All of the image urls, including imageSrc, to
    * cycle through in the modal.
    */
-  function openImageOverlayModal(imageSrc, imageSrcs) {
+  function openImageOverlayModal(imageSrc, imageSrcs, onCloseFocusEl) {
     imageSrcs = imageSrcs || [imageSrc];
     if (imageSrcs.length == 0) {
       imageSrcs.push(imageSrc);
@@ -81,6 +81,9 @@
       $modal.swipe('destroy');
       // Unbind this event handler so it doesn't pile up.
       $modal.off('hidden.bs.modal');
+      if (onCloseFocusEl) {
+        $(onCloseFocusEl).focus();
+      }
     });
 
     // Set the firs image.
@@ -110,7 +113,7 @@
                           })
                           .get(); // Make it a basic Array instead of a jQuery object.
 
-      openImageOverlayModal(imageSrc, imageSrcs);
+      openImageOverlayModal(imageSrc, imageSrcs, $imageOverlayLink[0]);
     });
 
   });

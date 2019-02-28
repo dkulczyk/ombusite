@@ -663,7 +663,7 @@ $(function() {
     return currentIndex - 1;
   }
 
-  function openImageOverlayModal(imageSrc, imageSrcs) {
+  function openImageOverlayModal(imageSrc, imageSrcs, onCloseFocusEl) {
     imageSrcs = imageSrcs || [imageSrc];
     if (imageSrcs.length == 0) {
       imageSrcs.push(imageSrc);
@@ -709,6 +709,9 @@ $(function() {
       $prev.off('.image-overlay');
       $modal.swipe('destroy');
       $modal.off('hidden.bs.modal');
+      if (onCloseFocusEl) {
+        $(onCloseFocusEl).focus();
+      }
     });
 
     $modal.find('.image-overlay').attr('src', imageSrc);
@@ -734,7 +737,7 @@ $(function() {
                           })
                           .get(); 
 
-      openImageOverlayModal(imageSrc, imageSrcs);
+      openImageOverlayModal(imageSrc, imageSrcs, $imageOverlayLink[0]);
     });
 
   });
