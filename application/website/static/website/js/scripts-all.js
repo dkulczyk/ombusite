@@ -724,7 +724,7 @@ $(function() {
 
   $(function() {
 
-    $('.image-overlay--link').on('click', function(e) {
+    $('body').on('click', '.image-overlay--link', function(e) {
       e.preventDefault();
       var $imageOverlayLink = $(this);
       var imageSrc = imageOverlayLinkGetSrc($imageOverlayLink);
