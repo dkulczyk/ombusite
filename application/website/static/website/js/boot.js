@@ -15,6 +15,6 @@ document.documentElement.classList.remove("no-js");
             gtag('js', new Date());
             gtag('config', GOOGLE_ANALYTICS_ID);
         }
-    } catch {}
+    } catch(e) {}
 
 })();
