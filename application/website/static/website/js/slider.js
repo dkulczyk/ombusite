@@ -41,20 +41,28 @@ $(function() {
 
   function initializeCarousel($slider) {
     $slider.owlCarousel({
-      loop:true,
-      dots:true,
-      responsive : {
+      loop: true,
+      dots: true,
+      responsive: {
         // breakpoint from 0 up
-        0 : {
+        0: {
           items: 1,
           margin: 20
         },
         // breakpoint from 768 up
-        768 : {
+        768: {
           autoWidth:true,
           items: 4,
           margin: 0
         }
+      },
+      onInitialized: function(event) {
+        var $slider = $(event.currentTarget);
+        var $dots = $slider.find('.owl-dots .owl-dot');
+        $dots.each(function(i, button) {
+          var text = 'Go to slider page ' + (i + 1) + ' of ' + $dots.length;
+          $(button).attr('aria-label', text);
+        });
       }
     });
     $slider.addClass('owl-carousel');
