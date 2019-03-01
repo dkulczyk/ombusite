@@ -418,6 +418,9 @@ function onlyKeyCode(keyCode, fn) {
             let el = entry.target;
             loadImage(el);
             lazyImageObserver.unobserve(el);
+            $(el).imagesLoaded(function() {
+              $(el).trigger('lazy-image-loaded');
+            });
           }
         });
       }, {
@@ -550,25 +553,54 @@ $(function() {
 });
 
 $(function() {
+
   $('.callout--fullwidth').each(function( index, element ) {
-    var calloutBottomWaypoint = new Waypoint({
-      element: $(this).find('.callout--media img'),
+      initializeCallout(element);
+  });
+
+  function initializeCallout(element) {
+    var $callout = $(element);
+    var $img = $callout.find('.callout--media img');
+
+    $callout.on('lazy-image-loaded', function(e) {
+      Waypoint.refreshAll();
+    });
+
+    new Waypoint({
+      element: $img,
       handler: function(direction) {
-        $(this.element).closest('.callout--fullwidth').toggleClass('callout--fullwidth--active')
+        if (direction == 'down') {
+          $callout.addClass('callout--fullwidth--active');
+        }
+        else {
+          $callout.removeClass('callout--fullwidth--active');
+        }
       },
-      offset: function () {
-        return this.context.innerHeight() - this.adapter.outerHeight() + 100
+      offset: function() {
+        var halfImageHeight = ($img.height() / 2);
+        var viewportHeight = $(window).outerHeight();
+        var offset = viewportHeight - halfImageHeight;
+        return offset;
       }
     });
 
-    var calloutTopWaypoint = new Waypoint({
-      element: $(this).find('.callout--media img'),
+    new Waypoint({
+      element: $img,
       handler: function(direction) {
-        $(this.element).closest('.callout--fullwidth').toggleClass('callout--fullwidth--active')
+        if (direction == 'down') {
+          $callout.removeClass('callout--fullwidth--active');
+        }
+        else {
+          $callout.addClass('callout--fullwidth--active');
+        }
       },
-      offset: -150
+      offset: function() {
+        return - ($img.height() / 2);
+      }
     });
-  });
+
+  }
+
 });
 
 $(function() {

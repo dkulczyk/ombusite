@@ -35,6 +35,9 @@
             let el = entry.target;
             loadImage(el);
             lazyImageObserver.unobserve(el);
+            $(el).imagesLoaded(function() {
+              $(el).trigger('lazy-image-loaded');
+            });
           }
         });
       }, {
