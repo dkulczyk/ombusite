@@ -22,6 +22,16 @@
     </div>
   </a>
 
+{% elif energytrust %}
+  <a href="{% url 'project-energytrust' %}" class="project-card">
+    <div class="project-card--media">
+      <img class="lazy" data-src="{% static 'website/images/project-cards/project-card_energy-trust@2x.jpg' %}"
+           alt="A person’s hands holding a smartphone with the Energy Trust website loaded">
+    </div>
+    <h3 class="project-card--title"><span>Energy Trust of Oregon</span></h3>
+    <div class="project-card--body">Encouraging energy efficiency by improving the incentive application&nbsp;process.</div>
+  </a>
+
 {% elif kaufmanhall %}
   <a href="{% url 'project-kaufmanhall' %}" class="project-card">
     <div class="project-card--media">
