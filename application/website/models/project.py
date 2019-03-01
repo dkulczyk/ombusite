@@ -47,6 +47,43 @@ occ = {
     'url': '/work/occ',
 }
 
+
+energytrust = {
+    'client': 'Energy Trust of Oregon',
+    'title': 'Online Incentives Application',
+    'meta_description': 'Energy Trust of Oregon hired hired OMBU to simplify '
+                        'the process that residents of Oregon and Washington '
+                        'use to apply for cash incentives for energy '
+                        'efficiency improvements.',
+    'hero_carousel_content_template':
+        'content/project/hero-carousels/_energy-trust.html',
+    'intro': '<h6>Encouraging Energy Efficiency by Improving the Incentive '
+             'Application&nbsp;Process.</h6>'
+             '<p>Energy Trust of Oregon hired hired OMBU to simplify the '
+             'process that residents of Oregon and Washington use to apply '
+             'for cash incentives for energy efficiency&nbsp;improvements.</p>'
+             '<p>Determining a customer’s project qualification for a cash '
+             'incentive is complex and error prone. Incentives have '
+             'multi-dimensional dependencies and validity rules that expire '
+             'quickly. Energy Trust struggled with this problem in prior '
+             'iterations of the incentive application. OMBU’s solution has two '
+             'parts: First, we created a backend system aligned closely with '
+             'Energy Trust’s incentive management process. Their staff now '
+             'simply uploads the current incentive portfolio without '
+             'manipulation, and a test suite alerts them to any potential '
+             'problems. Second, OMBU designed a simple, user-friendly, and '
+             'accessible application flow that drastically reduced errors and '
+             'form&nbsp;abandonment.</p>',
+    'visit_url': 'https://form.energytrust.org/',
+    'visit_text': 'Visit Website',
+    'services': ['Technology Strategy', 'User Experience Design',
+                 'Visual Design', 'Accessibility Compliance Audit',
+                 'Import of Measures',
+                 'Training'],
+    'technologies': ['Django', 'Azure', 'SSO'],
+    'url': '/work/energy-trust',
+}
+
 kaufmanhall = {
     'client': 'Kaufman Hall',
     'title': 'Project profile for Kaufman Hall’s website redesign',

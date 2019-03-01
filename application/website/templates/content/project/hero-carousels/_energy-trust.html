@@ -1,0 +1,45 @@
+{% load static %}
+
+<div class="slider">
+  <div class="slider--slide">
+    <a href="#image-overlay-modal" class="image-overlay--link image-overlay--link--gallery">
+      <div class="slider--slide slider--slide--browser">
+        {% include 'svg/browser.svg.html' with url='forms.energytrust.org' %}
+        <img src="{% static 'website/images/slider/energy-trust/01@2x.png' %}" alt="A screen capture of Energy Trust’s Online Application for Residential Incentives.">
+        <span class="image-overlay--prompt-wrapper"><span class="image-overlay--prompt">{% include 'svg/expand.svg.html' %}<span>View</span></span></span>
+      </div>
+    </a>
+  </div>
+  <div class="slider--slide slider--slide--has-two-images slider--slide--has-shadow">
+    <div class="slider--slide-image">
+      <a href="#image-overlay-modal" class="image-overlay--link image-overlay--link--gallery">
+        <img src="{% static 'website/images/slider/energy-trust/02@2x.jpg' %}" alt="A person’s hands holding a smartphone with Energy Trust’s Online Application for Residential Incentives loaded.">
+        <span class="image-overlay--prompt-wrapper"><span class="image-overlay--prompt">{% include 'svg/expand.svg.html' %}<span>View</span></span></span>
+      </a>
+    </div>
+    <div class="slider--slide-image">
+      <a href="#image-overlay-modal" class="image-overlay--link image-overlay--link--gallery">
+        <img src="{% static 'website/images/slider/energy-trust/03@2x.png' %}" alt="A screen capture of Energy Trust’s Online Application for Residential Incentives.">
+        <span class="image-overlay--prompt-wrapper"><span class="image-overlay--prompt">{% include 'svg/expand.svg.html' %}<span>View</span></span></span>
+      </a>
+    </div>
+  </div>
+  <div class="slider--slide slider--slide--has-shadow">
+    <a href="#image-overlay-modal" class="image-overlay--link image-overlay--link--gallery">
+      <img src="{% static 'website/images/slider/energy-trust/04@1x.gif' %}" alt="A looping animated capture of Energy Trust’s Online Application for Residential Incentives.">
+      <span class="image-overlay--prompt-wrapper"><span class="image-overlay--prompt">{% include 'svg/expand.svg.html' %}<span>View</span></span></span>
+    </a>
+  </div>
+  <div class="slider--slide">
+    <a href="#image-overlay-modal" class="image-overlay--link image-overlay--link--gallery">
+      <div class="slider--slide--browser slider--slide--browser-mobile">
+        {% include 'svg/browser-mobile.svg.html' with url='forms.energytrust.org' %}
+        <img src="{% static 'website/images/slider/energy-trust/05@2x.png' %}" alt="A screen capture of Energy Trust’s Online Application for Residential Incentives.">
+        <span class="image-overlay--prompt-wrapper"><span class="image-overlay--prompt">{% include 'svg/expand.svg.html' %}<span>View</span></span></span>
+      </div>
+    </a>
+  </div>
+  <div class="slider--slide slider--slide--has-shadow">
+    <img src="{% static 'website/images/slider/energy-trust/06@2x.png' %}" alt="A video capture of Energy Trust’s Online Application for Residential Incentives.">
+  </div>
+</div>

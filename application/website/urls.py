@@ -31,6 +31,7 @@ content_urlpatterns = [
 
     # Projects
     url(r'^work/occ$', website.views.project_occ, name='project-occ'),
+    url(r'^work/energy-trust$', website.views.project_energytrust, name='project-energytrust'),
     url(r'^work/kaufman-hall$', website.views.project_kaufmanhall, name='project-kaufmanhall'),
     url(r'^work/nw-council-rtf$', website.views.project_nwcouncilrtf, name='project-nwcouncilrtf'),
     url(r'^work/metro$', website.views.project_metro, name='project-metro'),

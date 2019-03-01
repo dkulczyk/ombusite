@@ -53,12 +53,18 @@ def pagenotfound(request, context={}):
 def project_occ(request, context={}):
     context.update(occ)
     context['project_prev'] = smithsonian
+    context['project_next'] = energytrust
+    return render(request, 'project.html', context)
+
+def project_energytrust(request, context={}):
+    context.update(energytrust)
+    context['project_prev'] = occ
     context['project_next'] = kaufmanhall
     return render(request, 'project.html', context)
 
 def project_kaufmanhall(request, context={}):
     context.update(kaufmanhall)
-    context['project_prev'] = occ
+    context['project_prev'] = energytrust
     context['project_next'] = nwcouncilrtf
     return render(request, 'project.html', context)
 
