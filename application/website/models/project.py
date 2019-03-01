@@ -36,7 +36,7 @@ occ = {
                          'modern, exciting, sustainable and service oriented. '
                          ' OMBU created a very successful site for us on time '
                          'and on budget',
-    'testimonial_attribution': 'Matt P., Deputy Director',
+    'testimonial_attribution': 'Matt Pizzuti, Deputy Director',
     'technologies': [
         'Drupal',
         'Apache Solr',
