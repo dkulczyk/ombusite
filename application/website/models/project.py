@@ -14,14 +14,14 @@ occ = {
              'certified convention centers in the US. When the OCC approached '
              'OMBU, however, their website was failing them: it looked outdated '
              'and the site '
-             'content was lacking and often incorrect due to the lack of good '
+             'content was lacking and often incorrect due to the lack of effective '
              'content management '
-             'tools.</p><p>The OCC first engaged OMBU for'
+             'tools.</p><p>The OCC first engaged OMBU for '
              'a guided Discovery phase, to figure out how to organize, '
-             'design, and build a web presence that communicated the OCC’s '
-             'prestigious yet friendly brand and guide audiences to the '
+             'design and build a web presence that communicated the OCC’s '
+             'prestigious yet friendly brand, and guided audiences to the '
              'information they need. </p><p>With that information, OMBU designed and implemented a sleek, modern, '
-             'mobile-friendly and easy-to-navigate website that showcases the'
+             'mobile-friendly and easy-to-navigate website that showcases the '
              'modern, sustainable and progressive institution.</p>',
     'services': [
         'Definition',
@@ -35,12 +35,12 @@ occ = {
                          'exactly what we are – a place where things happen, '
                          'modern, exciting, sustainable and service oriented. '
                          ' OMBU created a very successful site for us on time '
-                         'and on budget',
+                         'and on budget.',
     'testimonial_attribution': 'Matt Pizzuti, Deputy Director',
     'technologies': [
         'Drupal',
         'Apache Solr',
-        'iBMS integration',
+        'EBMS integration',
         'Live chat',
     ],
     'insights_content_template': 'content/project/insights/_occ.html',
@@ -58,7 +58,7 @@ energytrust = {
     'hero_carousel_content_template':
         'content/project/hero-carousels/_energy-trust.html',
     'intro': '<h6>Encouraging Energy Efficiency by Improving the Incentive '
-             'Application&nbsp;Process.</h6>'
+             'Application&nbsp;Process</h6>'
              '<p>Energy Trust of Oregon hired hired OMBU to simplify the '
              'process that residents of Oregon and Washington use to apply '
              'for cash incentives for energy efficiency&nbsp;improvements.</p>'
@@ -102,11 +102,11 @@ kaufmanhall = {
              'leadership.</p><p>OMBU designed and built an Content Management '
              'website featuring a modern design and powerful marketing tools. '
              'The site features a filterable resource center for white '
-             'papers, case studies, webinars, and more, to prove Kaufman '
+             'papers, case studies, webinars, and more, to demonstrate Kaufman '
              'Hall’s thought leadership. Flexible layout tools mean the '
              'marketing team can spin up new landing pages, complete with '
-             'lead capture, in minutes instead of weeks. Rich integration '
-             'with Marketo and Salesforce allows the sales team to prospect '
+             'lead capture, in minutes instead of weeks. Rich integrations '
+             'with Marketo and Salesforce allow the sales team to prospect '
              'and funnel attractive leads into their sales pipeline.</p>',
     'services': ['User Experience Design', 'Visual Design',
                  'Drupal Content Management Development', 'Data Migration'],
@@ -114,25 +114,25 @@ kaufmanhall = {
 }
 
 nwcouncilrtf = {
-    'client': 'NW Council Regional Technical Forum',
-    'title': 'Project profile for NW Council RTF’s website redesign',
-    'meta_description': 'The website OMBU produced for NW Council Regional '
+    'client': 'Northwest Power and Conservation Council’s Regional Technical Forum',
+    'title': 'Project profile for the Council’s RTF website redesign',
+    'meta_description': 'The website OMBU produced for the Council’s Regional '
                         'Technical Forum serves its audience with a modern '
                         'visual design and task-oriented integrations.',
     'hero_carousel_content_template':
         'content/project/hero-carousels/_nw-council-rtf.html',
-    'intro': '<h6>Modernizing Interaction with Energy Efficiency Program '
+    'intro': '<h6>Modernizing Interactions with Energy Efficiency Program '
              'Development</h6><p>OMBU designed and built the new Regional '
              'Technical Forum website for NWPCC. The new website serves a '
              'technical audience with a modern and task-oriented visual '
              'design, and supports content providers with Content Management '
              'functions and integrations behind the scenes. For example, '
              'content editors can use assets stored in Box as if they were '
-             'native files in the CMS.</p><p>NWPCC’s mission required '
+             'native files in the CMS.</p><p>NWPCC’s mission requires '
              'transparency and public input. OMBU conceived and built a '
              'discussion component that can be placed anywhere on the new '
-             'website to engage the public. OMBU is currently working with '
-             'NWPCC to redesign their main council website.</p>',
+             'website to engage the public. OMBU also worked with '
+             'NWPCC to redesign their main Council website.</p>',
     'visit_url': 'https://rtf.nwcouncil.org/',
     'visit_text': 'Visit Website',
     'services': ['Technology Strategy', 'User Experience Design',
@@ -147,24 +147,24 @@ nwcouncilrtf = {
 }
 
 metro = {
-    'client': 'Oregon Metro',
-    'title': 'Project profile for Oregon Metro’s website redesign',
+    'client': 'Metro',
+    'title': 'Project profile for Metro’s website redesign',
     'meta_description': 'OMBU built a powerful and scalable enterprise Drupal '
                         'platform for Metro to communicate its mission and to '
                         'provide online resources to its constituents.',
     'hero_carousel_content_template':
         'content/project/hero-carousels/_metro.html',
-    'intro': '<h6>Connecting Millions with Their Regional '
+    'intro': '<h6>Connecting Millions with their Regional '
              'Government</h6><p>OMBU built a powerful and scalable enterprise '
              'Drupal platform for Metro to communicate its mission and '
              'services, and to provide online resources to its constituents '
-             'such as the Find a Recycler search application. Using our rich '
+             'such as the Find a Recycler search application. Using rich '
              'and intuitive publishing tools, over 150 Metro staff from '
              'across the agency can draft, moderate, translate and approve '
              'content according to customizable permissions. Thanks to an '
              'agile process with predictable iterations, oregonmetro.gov '
-             'launched on time, smoothly and has scaled gracefully '
-             '.</p><p>Since launch, Metro has engaged OMBU for several '
+             'launched on time, smoothly and has scaled gracefully. '
+             '</p><p>Since launch, Metro has engaged OMBU for several '
              'follow-up projects, including a major new constituent '
              'engagement application, a map tool to solicit public comments '
              'on Metro projects, and enhancements to their news section.</p>',
@@ -182,8 +182,8 @@ metro = {
 }
 
 metropcmt = {
-    'client': 'Oregon Metro Public Comment Map App',
-    'title': 'Oregon Metro PCMT’s web application design',
+    'client': 'Metro’s Public Comment Map',
+    'title': 'Metro PCMT’s web application design',
     'meta_description': 'To demonstrate transit planning projects and request '
                         'community input, Metro engaged OMBU design and '
                         'implement a map-based public comment tool.',
@@ -191,7 +191,7 @@ metropcmt = {
         'content/project/hero-carousels/_metro-pcmt.html',
     'intro': '<h6>Engaging the Public with Interactive Maps</h6><p>Metro '
              'engaged OMBU to design and implement a map-based public comment '
-             'tool. Metro uses this tool to engage with the community on '
+             'tool. Metro uses this tool to engage with residents of the region on '
              'large transit planning projects, such as the Southwest Corridor '
              'and the Powell-Division Transit and Development '
              'Project.</p><p>OMBU’s web application allows Metro staff to '
@@ -218,18 +218,18 @@ stand = {
              'Students</h6><p>Stand for Children reached out to OMBU to '
              'develop an iPad app with an ambitious goal: to transform the '
              'way Stand’s field organizers reach, manage, and activate their '
-             'volunteer base across the nation.</p><p>OMBU’s Discovery '
+             'volunteer base across the nation.</p><p>OMBU’s Discovery phase '
              'determined that, rather than building an iPad-only app that '
              'would restrict the audience to these tablets, Stand would be '
              'better off with a mobile web app that would work on any device '
              'and platform. This early decision meant that, when Stand later '
-             'switched it’s tablets from Apple to Microsoft, the app we built '
-             'worked out- of-the-box and didn’t require additional '
-             'investment.</p><p>The app integrates in real-time with Stand’s '
+             'switched its tablets from Apple to Microsoft, the app we built '
+             'worked out-of-the-box and did not require additional '
+             'investment.</p><p>The app integrates in real time with Stand’s '
              'Salesforce CRM, which means that app data is always in sync '
              'with gift, membership development, and contact data that are '
              'critical for Stand’s daily operations.</p><p>The app was rolled '
-             'out nationally and has become a critical tool for Stand’s '
+             'out nationally and has become a critical tool in Stand’s '
              'efforts to drive parent engagement and improve outcomes for '
              'kids.</p>',
     'services': ['Technology Strategy', 'Table Application Design',
@@ -240,7 +240,7 @@ stand = {
 }
 
 compliancenext = {
-    'client': 'NAVEX Global <span class="widow-prevention">Compliance '
+    'client': 'NAVEX Global’s <span class="widow-prevention">Compliance '
               'Next</span>',
     'title': 'Project profile for Compliance Next’s website design',
     'meta_description': 'To help NAVEX Global establish leadership in their '
@@ -248,14 +248,14 @@ compliancenext = {
                         'compliance think tank.',
     'hero_carousel_content_template':
         'content/project/hero-carousels/_compliance-next.html',
-    'intro': '<h6>A Community Platform for a Burgeoning New '
+    'intro': '<h6>A Community Platform for a Burgeoning '
              'Industry</h6><p>OMBU built the world’s first community-driven '
              'compliance think tank for NAVEX Global. Compliance is an '
              'emerging and rapidly growing career field with limited '
-             'resources for members. To help our client seize the '
-             'opportunity,  OMBU launched Compliance Next in 5-months. The '
-             'website features learning tracks and resources and is quickly '
-             'evolving with features that allow peer-to-peer networking.</p>',
+             'resources for members and career development. To help our client seize the '
+             'opportunity,  OMBU launched Compliance Next in five months. The '
+             'website features learning tracks and resources, and is quickly '
+             'evolving with enhancements that allow peer-to-peer networking.</p>',
     'visit_url': 'https://www.navexglobal.com/compliancenext/',
     'visit_text': 'Visit Website',
     'services': ['Services', 'Technology Strategy', 'Application Architecture',
@@ -266,7 +266,7 @@ compliancenext = {
 }
 
 smithsonian = {
-    'client': 'Smithsonian Institute <span class="widow-prevention">Lemelson '
+    'client': 'Smithsonian Institute’s <span class="widow-prevention">Lemelson '
               'Center</span>',
     'title': 'Smithsonian Institute Lemelson Center’s website design',
     'meta_description': 'The Smithsonian Institute needed a bold website to '
@@ -277,7 +277,7 @@ smithsonian = {
     'intro': '<h6>An Innovative Website for the Museum of '
              'Innovation</h6><p>The Smithsonian Institute needed a website '
              'unique and advanced enough to represent their Lemelson Center '
-             'for Invention and Innovation, and OMBU were thrilled to be '
+             'for Invention and Innovation, and OMBU was thrilled to be '
              'tasked with this challenge. In addition to a quirky design that '
              'showcases the center’s bold, forward-thinking identity, '
              'the powerful Drupal website boasts features such as real-time '
@@ -286,8 +286,8 @@ smithsonian = {
              'engagement.</p><p>The Lemelson site integrates with other '
              'Smithsonian systems, such as an institution-wide calendaring '
              'solution, email marketing tools, and even an in-museum exhibit. '
-             'These integrations make the site a  rst-class citizen in the '
-             'Smithsonian ecosystem, and keep rich data  owing without staff '
+             'These integrations make the site a first-class citizen in the '
+             'Smithsonian ecosystem, and keeps rich data flowing without staff '
              'intervention.</p>',
     'visit_url': 'http://invention.si.edu/',
     'visit_text': 'Visit Website',
