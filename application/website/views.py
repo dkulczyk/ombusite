@@ -226,39 +226,39 @@ def casestudy_nwpp(request, context={}):
         {
             'title': 'Drag & Drop Course Builder',
             'background': 'website/images/case-studies/nwpp/innov-slide-01@2x.jpg',
-            'text': 'Content creators can create courses easily using drag-and-drop to organize activity flow, '
+            'text': 'Content creators can create courses easily using a drag-and-drop user interface to organize activity order, '
                     'upload videos and setup quizzes.',
             'action_text': '',
         },
         {
             'title': 'Digital Asset Management',
             'background': 'website/images/case-studies/nwpp/innov-slide-02@2x.jpg',
-            'text': "Media assets like videos, documents and images are organized in a central asset library, so "
-                    "content creators can easily find assets to use in their activities and LMS administrators "
-                    "can track what’s being used&nbsp;where.",
+            'text': "Media assets like videos, documents and images are organized in a central asset library, so that "
+                    "content creators can easily find assets to use in their activities, and LMS administrators "
+                    "can track what is being used&nbsp;where.",
             'action_text': '',
         },
         {
             'title': 'Self-Service Teams',
             'background': 'website/images/case-studies/nwpp/innov-slide-04@2x.jpg',
-            'text': "Member organizations are teams in the LMS with self-management functions. This allows NWPP to "
+            'text': "Member organizations are teams inside the LMS with self-management functions. This allows NWPP to "
                     "securely delegate tasks like user invitations, status updates, role assignment, "
-                    "license management, etc.",
+                    "license management and more.",
             'action_text': '',
         },
         {
             'title': 'High-Availability AWS infrastructure',
             'background': 'website/images/case-studies/nwpp/innov-slide-03@2x.jpg',
-            'text': "The LMS is a business-critical application used around the clock, so we implemented a "
-                    "multi data center hosting solution that is cost effective and scales during high usage periods.",
+            'text': "The LMS is a business-critical application used around the clock, so OMBU implemented a "
+                    "multi-data-center hosting solution that is cost effective and scales during high usage periods.",
             'action_text': '',
         },
         {
             'title': 'xAPI / Tin Can',
             'background': 'website/images/case-studies/nwpp/innov-slide-05@2x.jpg',
-            'text': "We built one of the first learning management systems with native real-time integration "
-                    "with a learning record store (LRS) that supports xAPI (also called Tin Can), so"
-                    "NWPP can follow member’s engagement and progress, and access live analytics that help "
+            'text': "We built one of the first learning management systems with native, real-time integration "
+                    "with a learning record store (LRS) that supports xAPI (also called Tin Can), so that"
+                    "NWPP can follow members’ engagement and progress, and access live analytics that help "
                     "them improve and evolve training.",
             'action_text': '',
         },
@@ -373,7 +373,7 @@ def casestudy_navex(request, context={}):
             'text': '''
                 A page builder feature enables marketers to assemble custom landing pages for new products and campaigns
                 without technical help. The page builder has blocks for text, callouts, media and custom campaign forms
-                that can be sized and arranged and for the best layout for every situation and enable iterative
+                that can be sized and arranged for the best layout for every situation, and enable iterative
                 optimization.
             ''',
             'action_text': '',
@@ -394,8 +394,8 @@ def casestudy_navex(request, context={}):
             'title': 'Marketo Marketing Automation',
             'background': 'website/images/case-studies/navex/innov-slide-04@2x.jpg',
             'text': '''
-                We built custom integration with the Marketo marketing automation platform at the core of NAVEX’s
-                website to empower their marketing teams to reach new new leads, gather insights about visitors and
+                We built custom integrations with the Marketo marketing automation platform at the core of NAVEX’s
+                website to empower their marketing teams to reach new leads, gather insights about visitors and
                 content performance, and run omni-channel campaigns. Using our solution, marketers can embed custom
                 Marketo forms on landing pages, without technical help, allowing them to launch campaigns in&nbsp;minutes.
             ''',
@@ -406,10 +406,10 @@ def casestudy_navex(request, context={}):
             'title': 'AWS infrastructure',
             'background': 'website/images/case-studies/navex/innov-slide-05@2x.jpg',
             'text': '''
-                NAVEX Global’s website gets global traffic at large scale. When NAVEX is in the news or one of their
-                resource center pieces goes viral, the site sees quick massive spikes in traffic. OMBU designed the
+                NAVEX’s website gets global traffic at large scale. When NAVEX is in the news or one of their
+                resources goes viral, the site sees quick, massive spikes in traffic. OMBU designed the
                 CMS to leverage the best cloud technology available, such as load-balancing, auto-scaling, cross-region
-                replication, and content delivery networks to make sure the site remains fast and available under
+                replication, and content delivery networks, to make sure the site remains fast and available under
                 any&nbsp;conditions.
             ''',
             'action_text': '',
